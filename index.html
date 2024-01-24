@@ -12,6 +12,9 @@
 			border: solid 1px #cbcbc8;
 			background-color: #fbfbfb;
 		}
+		.links .link-card{
+			display: block;
+		}
 	</style>
 </head>
 <body>
@@ -31,10 +34,12 @@
     <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 links">
       <!-- Item -->
       <div class="grid grid-cols-1 gap-6 rounded-xl p-8 md:p-10">
-      	<img src="/static/img/similarweb.svg" alt="Features Icon" class="inline-block h-16" />
-        <p class="text-xl font-semibold"><a href="https://www.similarweb.com/" target="_blank">Similarweb</a></p>
-        <p class="text-sm text-[#636262]">Similarweb is a digital intelligence platform that provides insights into competitors' web traffic and performance, helping businesses understand their market share and online strategy effectiveness.</p>
-      </div>
+      	<a href="https://www.similarweb.com/" class="link-card" target="_blank">
+	      	<img src="/static/img/similarweb.svg" alt="Features Icon" class="inline-block h-16" />
+	        <p class="text-xl font-semibold">Similarweb</p>
+	        <p class="text-sm text-[#636262]">Similarweb is a digital intelligence platform that provides insights into competitors' web traffic and performance, helping businesses understand their market share and online strategy effectiveness.</p>
+	      </a>
+	  </div>
       <!-- Item -->
       <div class="grid grid-cols-1 gap-6 rounded-xl p-8 md:p-10">
       	<img src="/static/img/semrush.svg" alt="Features Icon" class="inline-block h-16" />
@@ -85,7 +90,7 @@
         <p class="text-sm text-[#636262]">Finally, an SEO extension built for full-time SEOs. Built by SEOs, for SEOs. Free forever.</p>
       </div>
       
-      
+
     </div>
   </div>
 </section>
