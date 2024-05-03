@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>不用 JS 实现 Faqs 动态交互</title>
+	<meta name="description" content="使用 tailspark 的 Faqs 代码片段时，如何实现点击才展开回答？">
+	<script src="https://seo.box/static/css/tailwind.3.4.3.js"></script>
+	<link rel="shortcut icon" href="./favicon.ico" />
+	<link rel="canonical" href="https://seo.box/faq.demo.html"/>
+	<style type="text/css">
+    .faqs-item{width: 100%;}
+		.faqs-answer{display: none;}
+	</style>
+</head>
+<body>
+
+
+
+<!-- Section FAQ -->
+<section>
+  <!-- FAQ Container -->
+  <div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
+    <!-- FAQ Title -->
+    <div class="mb-8 text-center md:mb-12 lg:mb-16">
+      <h2 class="text-3xl font-bold md:text-5xl">Frequently Asked</h2>
+      <p class="mx-auto mt-4 max-w-lg text-[#647084]">Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam,purus sit amet luctus magna fringilla urna</p>
+    </div>
+    <!-- FAQ Content -->
+    <div class="mb-12 flex flex-col items-center">
+      <!-- FAQ Item -->
+      <!-- 注意这里给每一个 faq item 增加了类名 faqs-item，还增加了id，简单按照顺序命名即可，目的是后续写js时更简单 -->
+      <div class="mb-6 max-w-4xl border border-solid border-[#dfdfdf] bg-[#f2f2f7] p-8 faqs-item" id="faq01">
+        <div class="flex cursor-pointer justify-between">
+          <p class="text-xl font-bold">How this theme is different from others in market?</p>
+          <!-- 注意这里给每一个 faq item 右侧的展开图标增加了类名 faqs-show-hide-btn，还加了属性 faq-id，值为 faqs-item 的 id -->
+          <div class="relative ml-10 mt-1 flex h-5 w-5 items-center justify-center faqs-show-hide-btn" faq-id="faq01">
+            <!-- 注意这里给每一个 faq item 右侧的展开图标的竖条增加了类名 faqs-show-btn -->
+            <div class="absolute h-5 w-0.5 bg-[#276ef1] faqs-show-btn"></div>
+            <div class="h-0.5 w-5 bg-[#276ef1]"></div>
+          </div>
+        </div>
+        <p class="mb-4 faqs-answer">Pellentesque in nisi aliquet, pellentesque purus eget, imperdiet turpis. Fusce at enim quis neque viverra convallis. Vivamus ut elementum leo, eget tempus nisl. Sed viverra enim ac turpis posuere consectetur. Sed enim nibh, consequat vitae lacus eu, ullamcorper ullamcorper massa. Pellentesque purus eget, imperdiet turpis.</p>
+      </div>
+      <!-- FAQ Item -->
+      <div class="mb-6 max-w-4xl border border-solid border-[#dfdfdf] bg-[#f2f2f7] p-8 faqs-item" id="faq02">
+        <div class="flex cursor-pointer justify-between">
+          <p class="text-xl font-bold">What is your policy on distributon of Flowspark assets?</p>
+          <div class="relative ml-10 mt-1 flex h-5 w-5 items-center justify-center faqs-show-hide-btn" faq-id="faq02">
+            <div class="absolute h-5 w-0.5 bg-[#276ef1] faqs-show-btn"></div>
+            <div class="h-0.5 w-5 bg-[#276ef1]"></div>
+          </div>
+        </div>
+        <p class="mb-4 faqs-answer">Pellentesque in nisi aliquet, pellentesque purus eget, imperdiet turpis. Fusce at enim quis neque viverra convallis. Vivamus ut elementum leo, eget tempus nisl. Sed viverra enim ac turpis posuere consectetur. Sed enim nibh, consequat vitae lacus eu, ullamcorper ullamcorper massa. Pellentesque purus eget, imperdiet turpis.</p>
+      </div>
+      <!-- FAQ Item -->
+      <div class="mb-6 max-w-4xl border border-solid border-[#dfdfdf] bg-[#f2f2f7] p-8 faqs-item" id="faq03">
+        <div class="flex cursor-pointer justify-between">
+          <p class="text-xl font-bold">How can I contribute to Flowspark?</p>
+          <div class="relative ml-10 mt-1 flex h-5 w-5 items-center justify-center faqs-show-hide-btn" faq-id="faq03">
+            <div class="absolute h-5 w-0.5 bg-[#276ef1] faqs-show-btn"></div>
+            <div class="h-0.5 w-5 bg-[#276ef1]"></div>
+          </div>
+        </div>
+        <p class="mb-4 faqs-answer">Pellentesque in nisi aliquet, pellentesque purus eget, imperdiet turpis. Fusce at enim quis neque viverra convallis. Vivamus ut elementum leo, eget tempus nisl. Sed viverra enim ac turpis posuere consectetur. Sed enim nibh, consequat vitae lacus eu, ullamcorper ullamcorper massa. Pellentesque purus eget, imperdiet turpis.</p>
+      </div>
+      <!-- FAQ Item -->
+      <div class="mb-6 max-w-4xl border border-solid border-[#dfdfdf] bg-[#f2f2f7] p-8 faqs-item" id="faq04">
+        <div class="flex cursor-pointer justify-between">
+          <p class="text-xl font-bold">What other themes do you have?</p>
+          <div class="relative ml-10 mt-1 flex h-5 w-5 items-center justify-center faqs-show-hide-btn" faq-id="faq04">
+            <div class="absolute h-5 w-0.5 bg-[#276ef1] faqs-show-btn"></div>
+            <div class="h-0.5 w-5 bg-[#276ef1]"></div>
+          </div>
+        </div>
+        <p class="mb-4 faqs-answer">Pellentesque in nisi aliquet, pellentesque purus eget, imperdiet turpis. Fusce at enim quis neque viverra convallis. Vivamus ut elementum leo, eget tempus nisl. Sed viverra enim ac turpis posuere consectetur. Sed enim nibh, consequat vitae lacus eu, ullamcorper ullamcorper massa. Pellentesque purus eget, imperdiet turpis.</p>
+      </div>
+    </div>
+    <!-- FAQ Text -->
+    <p class="text-center">Can’t find the answer you’re looking for? Reach out to our <a href="#">customer support team</a>.</p>
+  </div>
+</section>
+
+
+<script type="text/javascript">
+
+// 等全部 dom 加载完成再执行 js
+document.addEventListener('DOMContentLoaded', function() {
+
+  // 获取所有的 faq item
+  var faqs = document.querySelectorAll('.faqs-item');
+  
+  // 初始化 faq 状态，默认所有回答都是隐藏的
+  var faqStatus = {};
+  for(var i = 0; i < faqs.length; i++){
+    var faqId = faqs[i].getAttribute('id');
+    faqStatus[faqId] = false;
+  }
+
+  // 获取所有的 faq item 右侧图标
+  var showHideButtons = document.querySelectorAll('.faqs-show-hide-btn');
+
+  // 对所有的 faq item 右侧图标执行代码
+  showHideButtons.forEach(function(button) {
+
+    // 给图标绑定点击事件
+    button.addEventListener('click', function() {
+
+      // 获取当前点击图标所对应的 faq-id
+      var faqId = this.getAttribute('faq-id');
+
+      if(faqStatus[faqId]){
+        // 如果已经显示，则隐藏
+        document.getElementById(faqId).getElementsByClassName('faqs-answer')[0].style.display="none";
+        document.getElementById(faqId).getElementsByClassName('faqs-show-btn')[0].style.display="block";
+      }else{
+        // 如果目前隐藏，则显示
+
+        // 显示当前这条之前，先把其他的给隐藏
+        for(var i = 0; i < faqs.length; i++){
+          faqStatus[faqs[i].getAttribute('id')] = false;
+          faqs[i].getElementsByClassName('faqs-answer')[0].style.display="none";
+          faqs[i].getElementsByClassName('faqs-show-btn')[0].style.display="block";
+        }
+
+        // 显示当前这条
+        document.getElementById(faqId).getElementsByClassName('faqs-answer')[0].style.display="block";
+        document.getElementById(faqId).getElementsByClassName('faqs-show-btn')[0].style.display="none";
+      }
+
+      // 当前这条切换状态
+      faqStatus[faqId] = !faqStatus[faqId];
+    });
+
+  });
+
+});
+</script>
+
+<div style="display: none;">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BE6037ZLBE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BE6037ZLBE');
+</script>
+</div>
+</body>
+</html>
