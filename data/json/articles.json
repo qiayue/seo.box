@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "title": "Installing and Deploying GitBase: A Step-by-Step Guide",
+    "description": "A comprehensive guide for setting up GitBase locally and deploying it to Vercel, suitable for beginners.",
+    "date": "2023-07-13",
+    "lastModified": "4352e54d5248a6e354e6ff10835641196ac58460",
+    "path": "data/md/gitbase-install-guide.md"
+  },
+  {
+    "title": "GitBase: A Dynamic, Database-Free Website Solution",
+    "description": "Explore the features and implementation of GitBase, an innovative open-source project that combines Next.js, Tailwind CSS, and GitHub API for content management.",
+    "date": "2023-07-12",
+    "lastModified": "f8416bcab4c462de04f3f6f074a4a8b71e505c0e",
+    "path": "data/md/gitbase-introduction.md"
+  }
+]
