@@ -1,16 +1,16 @@
 ---
-title: 'Installing and Deploying GitBase: A Step-by-Step Guide Edit Test'
+title: 'Installing and Deploying GitBase: A Step-by-Step Guide Edit Test 1'
 description: >-
   A comprehensive guide for setting up GitBase locally and deploying it to
-  Vercel, suitable for beginners. Edit Test
+  Vercel, suitable for beginners. Edit Test 1
 date: '2023-07-13'
-lastModified: '2024-08-11T09:01:29.885Z'
+lastModified: '2024-08-11T10:44:15.716Z'
 ---
 
-# Installing and Deploying GitBase: A Step-by-Step Guide Edit Test
+# Installing and Deploying GitBase: A Step-by-Step Guide Edit Test 1
 
-Edit Test
-
+Edit Test 1
+ 
 This guide will walk you through the process of setting up GitBase on your local machine and deploying it to Vercel. Even if you're new to web development, you should be able to follow these steps to get your GitBase instance up and running.
 
 ## Prerequisites
