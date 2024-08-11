@@ -12,5 +12,12 @@
     "date": "2023-07-12",
     "lastModified": "2024-08-11T08:23:22Z",
     "path": "data/md/gitbase-introduction.md"
+  },
+  {
+    "title": "This is Article Title",
+    "description": "This is Article Description",
+    "date": "2024-08-11T09:33:15.108Z",
+    "lastModified": "2024-08-11T09:33:15Z",
+    "path": "data/md/test-create-article.md"
   }
 ]
