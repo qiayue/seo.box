@@ -1,16 +1,30 @@
 [
   {
-    "title": "Installing and Deploying GitBase: A Step-by-Step Guide",
-    "description": "A comprehensive guide for setting up GitBase locally and deploying it to Vercel, suitable for beginners.",
+    "title": "Installing and Deploying GitBase: A Step-by-Step Guide Edit Test 1",
+    "description": "A comprehensive guide for setting up GitBase locally and deploying it to Vercel, suitable for beginners. Edit Test 1",
     "date": "2023-07-13",
-    "lastModified": "4352e54d5248a6e354e6ff10835641196ac58460",
+    "lastModified": "2024-08-11T10:44:15Z",
     "path": "data/md/gitbase-install-guide.md"
   },
   {
     "title": "GitBase: A Dynamic, Database-Free Website Solution",
     "description": "Explore the features and implementation of GitBase, an innovative open-source project that combines Next.js, Tailwind CSS, and GitHub API for content management.",
     "date": "2023-07-12",
-    "lastModified": "f8416bcab4c462de04f3f6f074a4a8b71e505c0e",
+    "lastModified": "2024-08-11T08:23:22Z",
     "path": "data/md/gitbase-introduction.md"
+  },
+  {
+    "title": "This is Article Title",
+    "description": "This is Article Description",
+    "date": "2024-08-11T09:33:15.108Z",
+    "lastModified": "2024-08-11T09:33:15Z",
+    "path": "data/md/test-create-article.md"
+  },
+  {
+    "title": "文章标题",
+    "description": "文章描述",
+    "date": "2024-08-11T09:38:43.667Z",
+    "lastModified": "2024-08-11T09:38:43Z",
+    "path": "data/md/wen-zhang-url.md"
   }
 ]
