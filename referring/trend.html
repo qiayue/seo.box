@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout.stripe.com Top Referring Websites Trend Analysis Charts</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #ffffff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin: 0;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .charts-container {
+            margin-top: 120px; /* Adjust based on header height */
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+        .chart-wrapper {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .chart-wrapper.expanded {
+            grid-column: span 5;
+            height: 500px;
+        }
+        canvas {
+            width: 100% !important;
+            height: 150px !important;
+        }
+        .chart-wrapper.expanded canvas {
+            height: 450px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Checkout.stripe.com Top Referring Websites Trend Analysis Charts</h1>
+        <div style="text-align: center;margin-bottom: 10px;">
+            <a href="./">Table</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./trend.html">Charts</a>
+        </div>
+        <div class="controls">
+            <select id="metricSelect">
+                <option value="Number">No.</option>
+                <option value="Rank">Rank</option>
+                <option value="Share">Share</option>
+                <option value="TotalVisits">Total Visits</option>
+                <option value="Change">Change</option>
+            </select>
+        </div>
+    </div>
+    <div class="charts-container" id="chartsContainer">
+        <!-- Individual charts will be inserted here -->
+    </div>
+
+    <script>
+        const months = ['202401', '202402', '202403', '202404', '202405', '202406', '202407', '202408'];
+        let allData = {};
+        let charts = {};
+
+        async function loadAllData() {
+            for (const month of months) {
+                const response = await fetch(`./${month}.json`);
+                let jsonData = await response.json();
+                jsonData.Records.forEach((item, index) => {
+                    item.Number = index + 1;
+                });
+                allData[month] = jsonData;
+            }
+            createCharts();
+        }
+
+        function createCharts() {
+            const chartsContainer = document.getElementById('chartsContainer');
+            chartsContainer.innerHTML = ''; // Clear existing charts
+
+            const websites = new Set();
+            for (const monthData of Object.values(allData)) {
+                monthData.Records.forEach(record => websites.add(record.Domain));
+            }
+
+            websites.forEach(website => {
+                const chartWrapper = document.createElement('div');
+                chartWrapper.className = 'chart-wrapper';
+                chartWrapper.innerHTML = `<canvas id="chart-${website}"></canvas>`;
+                chartWrapper.addEventListener('click', () => toggleChartSize(chartWrapper));
+                chartsContainer.appendChild(chartWrapper);
+
+                createChart(website);
+            });
+        }
+
+        function createChart(website) {
+            const ctx = document.getElementById(`chart-${website}`).getContext('2d');
+            const metric = document.getElementById('metricSelect').value;
+            const data = getDataForWebsite(website, metric);
+
+            charts[website] = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: months.map(m => m.replace('2024', '')),
+                    datasets: [{
+                        label: website,
+                        data: data,
+                        borderColor: getRandomColor(),
+                        fill: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: website
+                        },
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            display: true,
+                            title: {
+                                display: false
+                            }
+                        },
+                        y: {
+                            display: true,
+                            title: {
+                                display: false
+                            },
+                            ticks: {
+                                callback: function(value, index, values) {
+                                    return formatValue(value, metric);
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function formatValue(value, metric) {
+            if (metric === 'Share' || metric === 'Change') {
+                // 使用 Math.round 来处理浮点数精度问题
+                return (Math.round(value * 100) / 100).toFixed(2) + '%';
+            } else if (metric === 'TotalVisits') {
+                // 对于大数字，使用 toLocaleString 来添加千位分隔符
+                return value.toLocaleString(undefined, { maximumFractionDigits: 2 });
+            } else {
+                // 对于其他数值，四舍五入到两位小数
+                return (Math.round(value * 100) / 100).toFixed(2);
+            }
+        }
+
+        function getDataForWebsite(website, metric) {
+            return months.map(month => {
+                const record = allData[month].Records.find(r => r.Domain === website);
+                if (!record) return null;
+                switch (metric) {
+                    case 'Number': return record.Number;
+                    case 'Rank': return record.Rank;
+                    case 'Share': return record.Share * 100; // Convert to percentage
+                    case 'TotalVisits': return record.TotalVisits;
+                    case 'Change': return record.Change * 100; // Convert to percentage
+                    default: return null;
+                }
+            });
+        }
+
+        function updateCharts() {
+            const metric = document.getElementById('metricSelect').value;
+            Object.keys(charts).forEach(website => {
+                const data = getDataForWebsite(website, metric);
+                charts[website].data.datasets[0].data = data;
+                charts[website].options.scales.y.title.text = metric;
+                charts[website].options.scales.y.ticks.callback = function(value, index, values) {
+                    if (metric === 'Share' || metric === 'Change') {
+                        return formatValue(value, metric);
+                    }
+                    return value;
+                };
+                charts[website].update();
+            });
+        }
+
+        function toggleChartSize(chartWrapper) {
+            chartWrapper.classList.toggle('expanded');
+            const websiteId = chartWrapper.querySelector('canvas').id.replace('chart-', '');
+            charts[websiteId].resize();
+        }
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        document.getElementById('metricSelect').addEventListener('change', updateCharts);
+
+        loadAllData();
+    </script>
+    <div style="display: none;">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BE6037ZLBE"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-BE6037ZLBE');
+        </script>
+        <script defer data-domain="seo.box" src="https://click.pageview.click/js/script.js"></script>
+    </div>
+</body>
+</html>
