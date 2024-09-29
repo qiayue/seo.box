@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout.stripe.com Top Referring Websites</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -166,7 +167,13 @@
                 const row = `
                     <tr>
                         <td>${index + 1}</td>
-                        <td><a href="//${item.Domain}" target="_blank">${item.Domain}</a></td>
+                        <td>
+                            <a href="./website.html?domain=${item.Domain}" target="_blank" title="View Details">${item.Domain}</a>
+                            &nbsp;
+                            <a href="//${item.Domain}" target="_blank" title="Open Website">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </td>
                         <td>${item.Rank=='-1'?'～':'#'+item.Rank}</td>
                         <td>${(currentShare * 100).toFixed(2)}%</td>
                         <td>${currentVisits.toFixed(2)}</td>
