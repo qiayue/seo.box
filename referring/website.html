@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Detailed Analysis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .chart-container {
+            margin-bottom: 30px;
+        }
+        .chart-wrapper {
+            height: 400px;
+            margin-bottom: 20px;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: #007bff;
+            padding: 10px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+        }
+        .navigation a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="websiteTitle">Website Detailed Analysis</h1>
+        <div id="navigation" class="navigation">
+            <!-- Navigation links will be inserted here -->
+        </div>
+        <div id="chartsContainer">
+            <!-- Charts will be inserted here -->
+        </div>
+    </div>
+
+    <script>
+        const months = ['202401', '202402', '202403', '202404', '202405', '202406', '202407', '202408'];
+        let allWebsitesData = [];
+        let currentWebsiteIndex = -1;
+        let websiteData = {};
+
+        // Get the domain from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const domain = urlParams.get('domain');
+
+        if (!domain) {
+            redirectToHomePage();
+        } else {
+            loadData();
+        }
+
+        function redirectToHomePage() {
+            window.location.href = './'; // Assuming your homepage is named 'index.html'
+        }
+
+        async function loadData() {
+            // Load data for the most recent month (assuming it's the last in the array)
+            const latestMonth = months[months.length - 1];
+            try {
+                const response = await fetch(`./${latestMonth}.json`);
+                const data = await response.json();
+                
+                // Sort websites by Total Visits
+                allWebsitesData = data.Records.sort((a, b) => b.TotalVisits - a.TotalVisits);
+                
+                // Find the index of the current website
+                currentWebsiteIndex = allWebsitesData.findIndex(record => record.Domain === domain);
+                
+                if (currentWebsiteIndex === -1) {
+                    redirectToHomePage();
+                    return;
+                }
+
+                updateNavigation();
+                await loadWebsiteData();
+            } catch (error) {
+                console.error(`Error loading data:`, error);
+                redirectToHomePage();
+            }
+        }
+
+        function updateNavigation() {
+            const navContainer = document.getElementById('navigation');
+            navContainer.innerHTML = '';
+
+            if (currentWebsiteIndex > 0) {
+                const prevDomain = allWebsitesData[currentWebsiteIndex - 1].Domain;
+                navContainer.innerHTML += `<a href="?domain=${encodeURIComponent(prevDomain)}">← Previous Website</a>`;
+            }
+
+            if (currentWebsiteIndex < allWebsitesData.length - 1) {
+                const nextDomain = allWebsitesData[currentWebsiteIndex + 1].Domain;
+                navContainer.innerHTML += `<a href="?domain=${encodeURIComponent(nextDomain)}">Next Website →</a>`;
+            }
+        }
+
+        async function loadWebsiteData() {
+            for (const month of months) {
+                try {
+                    const response = await fetch(`./${month}.json`);
+                    const data = await response.json();
+                    const websiteIndex = data.Records.findIndex(record => record.Domain === domain);
+                    if (websiteIndex !== -1) {
+                        const websiteRecord = data.Records[websiteIndex];
+                        websiteData[month] = {
+                            ...websiteRecord,
+                            Number: websiteIndex + 1 // Adding 1 because array index is 0-based
+                        };
+                    }
+                } catch (error) {
+                    console.error(`Error loading data for ${month}:`, error);
+                }
+            }
+            
+            document.getElementById('websiteTitle').textContent = `Detailed Analysis for ${domain}`;
+            createCharts();
+        }
+
+        function createCharts() {
+            const metrics = ['Number', 'Rank', 'Share', 'TotalVisits', 'Change'];
+            const chartsContainer = document.getElementById('chartsContainer');
+            chartsContainer.innerHTML = ''; // Clear existing charts
+
+            metrics.forEach(metric => {
+                const chartWrapper = document.createElement('div');
+                chartWrapper.className = 'chart-wrapper';
+                chartWrapper.innerHTML = `<canvas id="chart-${metric}"></canvas>`;
+                chartsContainer.appendChild(chartWrapper);
+
+                createChart(metric);
+            });
+        }
+
+        function createChart(metric) {
+            const ctx = document.getElementById(`chart-${metric}`).getContext('2d');
+            const data = months.map(month => {
+                const record = websiteData[month];
+                if (!record) return null;
+                switch (metric) {
+                    case 'Number': return record.Number;
+                    case 'Rank': return record.Rank;
+                    case 'Share': return record.Share * 100; // Convert to percentage
+                    case 'TotalVisits': return record.TotalVisits / 1000; // Convert to K
+                    case 'Change': return record.Change * 100; // Convert to percentage
+                    default: return null;
+                }
+            });
+
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: months.map(m => m.replace('2024', '')),
+                    datasets: [{
+                        label: metric,
+                        data: data,
+                        borderColor: getRandomColor(),
+                        fill: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: `${metric} Over Time`
+                        }
+                    },
+                    scales: {
+                        x: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'Month'
+                            }
+                        },
+                        y: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: metric
+                            },
+                            ticks: {
+                                callback: function(value, index, values) {
+                                    return formatValue(value, metric);
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function formatValue(value, metric) {
+            if (metric === 'Share' || metric === 'Change') {
+                return value.toFixed(2) + '%';
+            } else if (metric === 'TotalVisits') {
+                return value.toLocaleString(undefined, { maximumFractionDigits: 2 }) + 'K';
+            } else if (metric === 'Rank' || metric === 'Number') {
+                return Math.round(value).toLocaleString();
+            } else {
+                return value.toFixed(2);
+            }
+        }
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+
+    <div style="display: none;">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BE6037ZLBE"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-BE6037ZLBE');
+        </script>
+        <script defer data-domain="seo.box" src="https://click.pageview.click/js/script.js"></script>
+    </div>
+</body>
+</html>
