@@ -51,9 +51,37 @@
             font-weight: bold;
             color: red;
         }
+        .loader-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 1000;
+        }
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
+
+    <div id="loader" class="loader-container">
+        <div class="loader"></div>
+    </div>
     <div class="container">
         <h1 id="websiteTitle">Website Detailed Analysis</h1>
         <div style="text-align: center;margin-bottom: 10px;">
@@ -85,11 +113,20 @@
             loadData();
         }
 
+        function showLoader() {
+            document.getElementById('loader').style.display = 'flex';
+        }
+
+        function hideLoader() {
+            document.getElementById('loader').style.display = 'none';
+        }
+
         function redirectToHomePage() {
             window.location.href = './'; // Assuming your homepage is named 'index.html'
         }
 
         async function loadData() {
+            showLoader();
             // Load data for the most recent month (assuming it's the last in the array)
             const latestMonth = months[months.length - 1];
             try {
@@ -110,6 +147,7 @@
                 updateNavigation();
                 await loadWebsiteData();
                 updateWebsiteTitle();
+                hideLoader();
             } catch (error) {
                 console.error(`Error loading data:`, error);
                 redirectToHomePage();
