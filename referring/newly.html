@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Data Table - Month Comparison with Dynamic Traffic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .filter-container, .month-selector {
+            margin-bottom: 20px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .month-selector {
+            display: flex;
+            justify-content: space-between;
+        }
+        .month-selector select {
+            width: 48%;
+        }
+        .total-traffic {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JSON Data Table - Month Comparison with Dynamic Traffic</h1>
+        <div class="month-selector">
+            <select id="month1">
+                <!-- Options will be added dynamically -->
+            </select>
+            <select id="month2">
+                <option value="">Select second month for comparison</option>
+                <!-- Options will be added dynamically -->
+            </select>
+        </div>
+        <div class="total-traffic">
+            <span id="traffic1"></span>
+            <span id="traffic2"></span>
+        </div>
+        <div class="filter-container">
+            <label for="filter">Filter by Domain:</label>
+            <input type="text" id="filter" placeholder="Enter domain to filter...">
+        </div>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">No.</th>
+                    <th onclick="sortTable(1)">Domain</th>
+                    <th onclick="sortTable(2)">Share (%)</th>
+                    <th onclick="sortTable(3)">Traffic (K)</th>
+                    <th id="compareHeader" style="display: none;">Comparison</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Table rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let monthData = {};
+        let trafficData = {};
+        let currentData = [];
+        let comparisonData = [];
+        let currentTraffic = 0;
+        let comparisonTraffic = 0;
+
+        // Fetch month data
+        Promise.all([
+            fetch('./month.json').then(response => response.json()),
+            fetch('./traffic.json').then(response => response.json())
+        ]).then(([monthJson, trafficJson]) => {
+            monthData = monthJson;
+            trafficData = trafficJson;
+            populateMonthSelectors();
+            loadDefaultMonth();
+        });
+
+        function populateMonthSelectors() {
+            const month1Select = document.getElementById('month1');
+            const month2Select = document.getElementById('month2');
+            
+            for (const [month, file] of Object.entries(monthData)) {
+                month1Select.innerHTML += `<option value="${file}">${month}</option>`;
+                month2Select.innerHTML += `<option value="${file}">${month}</option>`;
+            }
+
+            month1Select.addEventListener('change', () => loadMonthData(month1Select.value, 'primary'));
+            month2Select.addEventListener('change', () => loadMonthData(month2Select.value, 'comparison'));
+        }
+
+        function loadDefaultMonth() {
+            const defaultMonth = Object.values(monthData)[0];
+            document.getElementById('month1').value = defaultMonth;
+            loadMonthData(defaultMonth, 'primary');
+        }
+
+        function loadMonthData(fileName, dataType) {
+            const month = Object.keys(monthData).find(key => monthData[key] === fileName);
+            const traffic = parseTraffic(trafficData[month]);
+
+            fetch(`./${fileName}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (dataType === 'primary') {
+                        currentData = data.Data;
+                        currentTraffic = traffic;
+                        document.getElementById('traffic1').textContent = `${month} Total Traffic: ${trafficData[month]}`;
+                    } else {
+                        comparisonData = data.Data;
+                        comparisonTraffic = traffic;
+                        document.getElementById('traffic2').textContent = `${month} Total Traffic: ${trafficData[month]}`;
+                    }
+                    populateTable();
+                });
+        }
+
+        function parseTraffic(trafficString) {
+            return parseFloat(trafficString.replace('M', '')) * 1000; // Convert to K
+        }
+
+        function populateTable() {
+            const tableBody = document.getElementById('tableBody');
+            const compareHeader = document.getElementById('compareHeader');
+            tableBody.innerHTML = '';
+            
+            if (comparisonData.length > 0) {
+                compareHeader.style.display = '';
+            } else {
+                compareHeader.style.display = 'none';
+            }
+
+            currentData.forEach((item, index) => {
+                const actualTraffic = item.Share * currentTraffic;
+                let comparisonHtml = '';
+                
+                if (comparisonData.length > 0) {
+                    const comparisonItem = comparisonData.find(cItem => cItem.Domain === item.Domain);
+                    if (comparisonItem) {
+                        const comparisonTrafficValue = comparisonItem.Share * comparisonTraffic;
+                        const trafficDiff = actualTraffic - comparisonTrafficValue;
+                        const diffColor = trafficDiff >= 0 ? 'green' : 'red';
+                        comparisonHtml = `<td style="color: ${diffColor}">${trafficDiff > 0 ? '+' : ''}${trafficDiff.toFixed(2)}K</td>`;
+                    } else {
+                        comparisonHtml = '<td>N/A</td>';
+                    }
+                }
+
+                const row = `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${item.Domain}</td>
+                        <td>${(item.Share * 100).toFixed(2)}%</td>
+                        <td>${actualTraffic.toFixed(2)}</td>
+                        ${comparisonHtml}
+                    </tr>
+                `;
+                tableBody.innerHTML += row;
+            });
+        }
+
+        function sortTable(n) {
+            const table = document.getElementById("dataTable");
+            let rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            switching = true;
+            dir = "asc";
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("TD")[n];
+                    y = rows[i + 1].getElementsByTagName("TD")[n];
+                    if (dir == "asc") {
+                        if (n === 0 || n === 2 || n === 3) { // For numeric columns
+                            if (Number(x.innerHTML.replace('%', '').replace('K', '')) > Number(y.innerHTML.replace('%', '').replace('K', ''))) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else { // For other columns (string sorting)
+                            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                    } else if (dir == "desc") {
+                        if (n === 0 || n === 2 || n === 3) { // For numeric columns
+                            if (Number(x.innerHTML.replace('%', '').replace('K', '')) < Number(y.innerHTML.replace('%', '').replace('K', ''))) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else { // For other columns (string sorting)
+                            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    switchcount++;
+                } else {
+                    if (switchcount == 0 && dir == "asc") {
+                        dir = "desc";
+                        switching = true;
+                    }
+                }
+            }
+        }
+
+        document.getElementById('filter').addEventListener('input', function() {
+            const filterValue = this.value.toLowerCase();
+            const filteredData = currentData.filter(item => 
+                item.Domain.toLowerCase().includes(filterValue)
+            );
+            currentData = filteredData;
+            populateTable();
+        });
+    </script>
+</body>
+</html>

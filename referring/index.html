@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout.stripe.com Top Referring Websites</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .filter-container, .month-selector {
+            margin-bottom: 20px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .total-info {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Checkout.stripe.com Top Referring Websites</h1>
+        <div class="month-selector">
+            Month
+            <label>
+                <input type="radio" name="month" value="202408" checked> 2024.08
+            </label>
+            <label>
+                <input type="radio" name="month" value="202407"> 2024.07
+            </label>
+            <label>
+                <input type="radio" name="month" value="202406"> 2024.06
+            </label>
+            <label>
+                <input type="radio" name="month" value="202405"> 2024.05
+            </label>
+            <label>
+                <input type="radio" name="month" value="202404"> 2024.04
+            </label>
+            <label>
+                <input type="radio" name="month" value="202403"> 2024.03
+            </label>
+            <label>
+                <input type="radio" name="month" value="202402"> 2024.02
+            </label>
+            <label>
+                <input type="radio" name="month" value="202401"> 2024.01
+            </label>
+        </div>
+        <div class="total-info" id="totalInfo"></div>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">No.</th>
+                    <th onclick="sortTable(1)">Domain</th>
+                    <th onclick="sortTable(2)">Global Rank</th>
+                    <th onclick="sortTable(3)">Share (%)</th>
+                    <th onclick="sortTable(4)">Visits (K)</th>
+                    <th onclick="sortTable(5)">Change (%)</th>
+                    <th id="compareHeader" style="display: none;">Comparison</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Table rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let jsonData;
+        let currentMonth = '202408';
+        let comparisonMonth = '';
+
+        // Fetch JSON data
+        getMonthData(currentMonth);
+
+        function getMonthData(month){
+            fetch('./'+month+'.json')
+                .then(response => response.json())
+                .then(data => {
+                    jsonData = data;
+                    populateTable();
+                    updateTotalInfo();
+                });
+        }
+
+        function populateTable() {
+            const tableBody = document.getElementById('tableBody');
+            const compareHeader = document.getElementById('compareHeader');
+            tableBody.innerHTML = '';
+            
+            if (comparisonMonth) {
+                compareHeader.style.display = '';
+            } else {
+                compareHeader.style.display = 'none';
+            }
+
+            jsonData.Records.forEach((item, index) => {
+                const currentShare = item.Share || 0;
+                const comparisonShare = comparisonMonth ? 
+                    (item.TotalSharePerMonth.find(m => m.Key === comparisonMonth)?.Value || 0) : 0;
+                const shareDiff = currentShare - comparisonShare;
+                const diffColor = shareDiff >= 0 ? 'green' : 'red';
+                
+                const currentVisits = (item.TotalVisits)/1000;
+                const comparisonVisits = comparisonMonth ? 
+                    (item.TotalVisitsAndSharePerMonth[comparisonMonth]?.[0]?.AbsValue || 0) : 0;
+                const visitsDiff = currentVisits - comparisonVisits;
+
+                let comparisonHtml = '';
+                if (comparisonMonth) {
+                    comparisonHtml = `
+                        <td>
+                            <span style="color: ${diffColor}">${shareDiff >= 0 ? '+' : ''}${(shareDiff * 100).toFixed(2)}%</span><br>
+                            <span style="color: ${visitsDiff >= 0 ? 'green' : 'red'}">${visitsDiff >= 0 ? '+' : ''}${visitsDiff.toFixed(2)}</span>
+                        </td>
+                    `;
+                }
+
+                const row = `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td><a href="//${item.Domain}" target="_blank">${item.Domain}</a></td>
+                        <td>${item.Rank=='-1'?'-':'#'+item.Rank}</td>
+                        <td>${(currentShare * 100).toFixed(2)}%</td>
+                        <td>${currentVisits.toFixed(2)}</td>
+                        <td style="color:${item.Change>0?'green':'red'}">${item.Change>0?'+':''}${(item.Change * 100).toFixed(2)}%</td>
+                        ${comparisonHtml}
+                    </tr>
+                `;
+                tableBody.innerHTML += row;
+            });
+        }
+
+        function updateTotalInfo() {
+            const totalInfo = document.getElementById('totalInfo');
+            totalInfo.innerHTML = `
+                Total Share: ${(jsonData.TotalShare * 100).toFixed(2)}%<br>
+                Total Visits: ${(jsonData.TotalVisits/1000).toFixed(2)} K<br>
+            `;
+        }
+
+        function sortTable(n) {
+            const table = document.getElementById("dataTable");
+            let rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            switching = true;
+            dir = "asc";
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("TD")[n];
+                    y = rows[i + 1].getElementsByTagName("TD")[n];
+                    if (dir == "asc") {
+                        if (n === 0 || n === 2 || n === 3 || n === 4 || n === 5) { // For numeric columns
+                            if (Number(x.innerHTML.replace('%', '').replace('#', '').replace('-', '99999999')) > Number(y.innerHTML.replace('%', '').replace('#', '').replace('-', '99999999'))) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else { // For other columns (string sorting)
+                            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                    } else if (dir == "desc") {
+                        if (n === 0 || n === 2 || n === 3 || n === 4 || n === 5) { // For numeric columns
+                            if (Number(x.innerHTML.replace('%', '').replace('#', '').replace('-', '99999999')) < Number(y.innerHTML.replace('%', '').replace('#', '').replace('-', '99999999'))) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else { // For other columns (string sorting)
+                            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    switchcount++;
+                } else {
+                    if (switchcount == 0 && dir == "asc") {
+                        dir = "desc";
+                        switching = true;
+                    }
+                }
+            }
+        }
+
+        document.querySelectorAll('input[name="month"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                currentMonth = this.value;
+                getMonthData(currentMonth);
+            });
+        });
+
+    </script>
+    <div style="display: none;">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BE6037ZLBE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BE6037ZLBE');
+    </script>
+    <script defer data-domain="seo.box" src="https://click.pageview.click/js/script.js"></script>
+    </div>
+</body>
+</html>

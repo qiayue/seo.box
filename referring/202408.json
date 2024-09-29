@@ -1,0 +1,3591 @@
+{
+	"TotalShare": 0.9999999999999993,
+	"TotalVisits": 14391458.877051258,
+	"TotalCount": 1497,
+	"TotalUnGroupedCount": 1499,
+	"Records": [{
+		"Category": "Games~Video_Games_Consoles_and_Accessories",
+		"SourceType": "ST",
+		"Change": 0.26483554723261354,
+		"NewChange": false,
+		"Share": 0.2647957566114764,
+		"FilteredShare": 0.2647957566114763,
+		"TotalVisits": 3810797.242091735,
+		"Domain": "roblox.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=roblox.com&t=2&s=0&h=25fffffefa6ca95ed540e8a090f7fb9ecd4a54187105a3b15c3cc761ba04d90c",
+		"Rank": 46,
+		"TotalShare": 0.2647957566114764,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.2647957566114764
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 3810797.242091735
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"Children": [{
+			"Category": "Games~Video_Games_Consoles_and_Accessories",
+			"Change": 0.2646757276962218,
+			"NewChange": false,
+			"Share": 0.263262598681255,
+			"FilteredShare": 0.2632625986812549,
+			"TotalVisits": 3788732.8627869287,
+			"Domain": "roblox.com",
+			"Favicon": "https://site-images.similarcdn.com/image?url=roblox.com&t=2&s=0&h=25fffffefa6ca95ed540e8a090f7fb9ecd4a54187105a3b15c3cc761ba04d90c",
+			"Rank": 46,
+			"TotalShare": 0.263262598681255,
+			"SiteOrigins": {
+				"checkout.stripe.com": 1.0
+			},
+			"HasAdsense": true
+		}, {
+			"Category": "Games~Video_Games_Consoles_and_Accessories",
+			"Change": 0.29289084044460145,
+			"NewChange": false,
+			"Share": 0.0015331579302213926,
+			"FilteredShare": 0.001533157930221392,
+			"TotalVisits": 22064.379304806185,
+			"Domain": "create.roblox.com",
+			"Favicon": "https://site-images.similarcdn.com/image?url=create.roblox.com&t=2&s=0&h=6fffa3779dbb85c9e123452dcbbf9a0ee6a2867c9f0bce8a7b74d3a98c94fc1b",
+			"Rank": -1,
+			"TotalShare": 0.0015331579302213926,
+			"SiteOrigins": {
+				"checkout.stripe.com": 1.0
+			},
+			"HasAdsense": false
+		}],
+		"HasAdsense": true,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": 0.02945055066111807,
+		"NewChange": false,
+		"Share": 0.027449706998010148,
+		"FilteredShare": 0.027449706998010137,
+		"TotalVisits": 395041.32944896905,
+		"Domain": "midjourney.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=midjourney.com&t=2&s=0&h=e428d1b6ef9796b0fb4e9788e517378fefe236715f2c961788895dd0ebdfbd9b",
+		"Rank": 1720,
+		"TotalShare": 0.027449706998010148,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.027449706998010148
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 395041.32944896905
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Unknown",
+		"SourceType": "ST",
+		"Change": 317.54306694888464,
+		"NewChange": false,
+		"Share": 0.027222279038703074,
+		"FilteredShare": 0.027222279038703064,
+		"TotalVisits": 391768.3093251096,
+		"Domain": "twitter.wordware.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=twitter.wordware.ai&t=2&s=0&h=c2a2a8c07ae4d711373747c49ba546f7c7393b4967a540b1bb970d64c083a1d1",
+		"Rank": -1,
+		"TotalShare": 0.027222279038703074,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.027222279038703074
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 391768.3093251096
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+		"SourceType": "ST",
+		"Change": -0.04655734566352034,
+		"NewChange": false,
+		"Share": 0.02377887406720661,
+		"FilteredShare": 0.0237788740672066,
+		"TotalVisits": 342212.6882807844,
+		"Domain": "elevenlabs.io",
+		"Favicon": "https://site-images.similarcdn.com/image?url=elevenlabs.io&t=2&s=0&h=c5c4d64bb75290a0de4b628597c146554185ee43dfb18dfb7f63b6afb873be11",
+		"Rank": 3665,
+		"TotalShare": 0.02377887406720661,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.02377887406720661
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 342212.6882807844
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Games~Games",
+		"SourceType": "ST",
+		"Change": 1.1062670076314252,
+		"NewChange": false,
+		"Share": 0.020938452144856408,
+		"FilteredShare": 0.0209384521448564,
+		"TotalVisits": 301334.8729918066,
+		"Domain": "humblebundle.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=humblebundle.com&t=2&s=0&h=805cc9c04810eb331710b3a72968e97f36a5730b75be66f1bf9d1b563e7ebc01",
+		"Rank": 4784,
+		"TotalShare": 0.020938452144856408,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.020938452144856408
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 301334.8729918066
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology",
+		"SourceType": "ST",
+		"Change": -0.24025512285123038,
+		"NewChange": false,
+		"Share": 0.014142686077460371,
+		"FilteredShare": 0.014142686077460366,
+		"TotalVisits": 203533.8850948162,
+		"Domain": "suno.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=suno.com&t=2&s=0&h=79c88e907cbe2544bab7dc50d918fc2ca6c997f7f8ddccc438f95c6fb80ed2d9",
+		"Rank": 843,
+		"TotalShare": 0.014142686077460371,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.014142686077460371
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 203533.8850948162
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+		"SourceType": "ST",
+		"Change": -0.0567791708273833,
+		"NewChange": false,
+		"Share": 0.010694997253744783,
+		"FilteredShare": 0.010694997253744778,
+		"TotalVisits": 153916.61316744413,
+		"Domain": "manychat.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=manychat.com&t=2&s=0&h=6d8bdde9b15425c700512e6ad18f318e9689d76e83d3539887c9bac6a5f52ebc",
+		"Rank": 7510,
+		"TotalShare": 0.010694997253744783,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.010694997253744783
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 153916.61316744413
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Games~Video_Games_Consoles_and_Accessories",
+		"SourceType": "ST",
+		"Change": -0.2235590080998084,
+		"NewChange": false,
+		"Share": 0.01064224533672872,
+		"FilteredShare": 0.010642245336728714,
+		"TotalVisits": 153157.43612302182,
+		"Domain": "app.runwayml.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=app.runwayml.com&t=2&s=0&h=e4b02b7b229820ab3d18ad473b7a03c5f67865ec3e3f8d6148c8455d8ecb2891",
+		"Rank": -1,
+		"TotalShare": 0.01064224533672872,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.01064224533672872
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 153157.43612302182
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+		"SourceType": "ST",
+		"Change": 2.9803477033261108,
+		"NewChange": false,
+		"Share": 0.008762462277485063,
+		"FilteredShare": 0.00876246227748506,
+		"TotalVisits": 126104.61552813914,
+		"Domain": "cursor.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=cursor.com&t=2&s=0&h=ec1dec8bba004f8a3d3bceb19ca183b3002ec3fcbb5dd8db4aa3050d53721c2c",
+		"Rank": 18868,
+		"TotalShare": 0.008762462277485063,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.008762462277485063
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 126104.61552813914
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Jobs_and_Career~Human_Resources",
+		"SourceType": "ST",
+		"Change": -0.15838780556710277,
+		"NewChange": false,
+		"Share": 0.008644525470764889,
+		"FilteredShare": 0.008644525470764886,
+		"TotalVisits": 124407.33282413502,
+		"Domain": "16personalities.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=16personalities.com&t=2&s=0&h=53015c6eecd12ea9a3cad22b592eec6ef29be6c7e9ab5cd709035eae62f07c80",
+		"Rank": 2714,
+		"TotalShare": 0.008644525470764889,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.008644525470764889
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 124407.33282413502
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Lifestyle~Fashion_and_Apparel",
+		"SourceType": "ST",
+		"Change": 0.20803727984692358,
+		"NewChange": false,
+		"Share": 0.007143340291450465,
+		"FilteredShare": 0.0071433402914504625,
+		"TotalVisits": 102803.08804919268,
+		"Domain": "pipiads.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=pipiads.com&t=2&s=0&h=42fb8676e562765d86b67c5f2f4d8b2f95082cf01f88191ebdfd38db0dfc2ff8",
+		"Rank": 51886,
+		"TotalShare": 0.007143340291450465,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.007143340291450465
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 102803.08804919268
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Social_Networks_and_Online_Communities",
+		"SourceType": "ST",
+		"Change": -0.7687848067983534,
+		"NewChange": false,
+		"Share": 0.006612202599245187,
+		"FilteredShare": 0.006612202599245184,
+		"TotalVisits": 95159.24179376851,
+		"Domain": "x.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=x.com&t=2&s=0&h=181f9f2250b958cc0ca20fb16f33049b6e13425f038a279637ce1da9dc20d56f",
+		"Rank": 5,
+		"TotalShare": 0.006612202599245187,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.006612202599245187
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 95159.24179376851
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Computers_Electronics_and_Technology",
+		"SourceType": "ST",
+		"Change": 0.09351680731576109,
+		"NewChange": false,
+		"Share": 0.006299340273359256,
+		"FilteredShare": 0.006299340273359253,
+		"TotalVisits": 90656.69649660253,
+		"Domain": "app.leonardo.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=app.leonardo.ai&t=2&s=0&h=7726a12054837bf46597770b002888c3734e738cbc4317c50c786d94754081d6",
+		"Rank": -1,
+		"TotalShare": 0.006299340273359256,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.006299340273359256
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 90656.69649660253
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+		"SourceType": "ST",
+		"Change": 0.7713189590549192,
+		"NewChange": false,
+		"Share": 0.006153263922689649,
+		"FilteredShare": 0.006153263922689646,
+		"TotalVisits": 88554.44470303116,
+		"Domain": "ideogram.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=ideogram.ai&t=2&s=0&h=4ec09da7c9632bc855e25e869e6c6869e5ab4a88fa916a861446565a23ab8cc5",
+		"Rank": 3229,
+		"TotalShare": 0.006153263922689649,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.006153263922689649
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 88554.44470303116
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Science_and_Education~Education",
+		"SourceType": "ST",
+		"Change": 3.889677556208049,
+		"NewChange": false,
+		"Share": 0.005791397905977207,
+		"FilteredShare": 0.005791397905977204,
+		"TotalVisits": 83346.6648045117,
+		"Domain": "verticalraise.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=verticalraise.com&t=2&s=0&h=924ae2f357423828042788967dd7e09b84c7207bd9151d3c6758265631328070",
+		"Rank": 62481,
+		"TotalShare": 0.005791397905977207,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.005791397905977207
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 83346.6648045117
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Games~Video_Games_Consoles_and_Accessories",
+		"SourceType": "ST",
+		"Change": 0.38320016624113323,
+		"NewChange": false,
+		"Share": 0.005714787321138513,
+		"FilteredShare": 0.005714787321138511,
+		"TotalVisits": 82244.1267232588,
+		"Domain": "csfloat.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=csfloat.com&t=2&s=0&h=90351c44be74ae0597ca73baf8b6c5c4b9cbef5f063cf6d88a54c922c4147959",
+		"Rank": 17340,
+		"TotalShare": 0.005714787321138513,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.005714787321138513
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 82244.1267232588
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Web_Hosting_and_Domain_Names",
+		"SourceType": "ST",
+		"Change": 0.022020009286797423,
+		"NewChange": false,
+		"Share": 0.005617523584995036,
+		"FilteredShare": 0.0056175235849950335,
+		"TotalVisits": 80844.35966432159,
+		"Domain": "porkbun.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=porkbun.com&t=2&s=0&h=da4522679c9ba7156d139ed7cfcc363b3d3c2b3bd77db0d4df60b96e6e19fe29",
+		"Rank": 37379,
+		"TotalShare": 0.005617523584995036,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.005617523584995036
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 80844.35966432159
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Health~Health",
+		"SourceType": "ST",
+		"Change": 0.4093318424829661,
+		"NewChange": false,
+		"Share": 0.005509752153310738,
+		"FilteredShare": 0.005509752153310736,
+		"TotalVisits": 79293.37153711608,
+		"Domain": "drmax.it",
+		"Favicon": "https://site-images.similarcdn.com/image?url=drmax.it&t=2&s=0&h=247812122db2b83ad3d7e27aa26957aea27ccc44e907b4e73949b8e345dea2c5",
+		"Rank": 25885,
+		"TotalShare": 0.005509752153310738,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.005509752153310738
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 79293.37153711608
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": 0.01478263009361241,
+		"NewChange": false,
+		"Share": 0.005451017344573331,
+		"FilteredShare": 0.005451017344573328,
+		"TotalVisits": 78448.0919525202,
+		"Domain": "invideo.io",
+		"Favicon": "https://site-images.similarcdn.com/image?url=invideo.io&t=2&s=0&h=072e85c0c7cb85a3f1ae62310d392f94c1c65ef35e614d6783127c9241defc3e",
+		"Rank": 4762,
+		"TotalShare": 0.005451017344573331,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.005451017344573331
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 78448.0919525202
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"Children": [{
+			"Category": "Reference_Materials~Public_Records_and_Directories",
+			"Change": 0.0,
+			"NewChange": true,
+			"Share": 0.003583494799526625,
+			"FilteredShare": 0.0035834947995266237,
+			"TotalVisits": 51571.71804351445,
+			"Domain": "ai.invideo.io",
+			"Favicon": "https://site-images.similarcdn.com/image?url=ai.invideo.io&t=2&s=0&h=f94e679bc9ce4647045ad8c0e6b7f70d1850b57cdfe100d37b5f8170bd3027c9",
+			"Rank": -1,
+			"TotalShare": 0.003583494799526625,
+			"SiteOrigins": {
+				"checkout.stripe.com": 1.0
+			},
+			"HasAdsense": false
+		}, {
+			"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+			"Change": -0.6523347257538491,
+			"NewChange": false,
+			"Share": 0.0018675225450467052,
+			"FilteredShare": 0.0018675225450467045,
+			"TotalVisits": 26876.373909005753,
+			"Domain": "pay.invideo.io",
+			"Favicon": "https://site-images.similarcdn.com/image?url=pay.invideo.io&t=2&s=0&h=d781fbd81d508bb813cf8dfbb0e790466f5185e5b2493a390ffd7b707113bd27",
+			"Rank": -1,
+			"TotalShare": 0.0018675225450467052,
+			"SiteOrigins": {
+				"checkout.stripe.com": 1.0
+			},
+			"HasAdsense": false
+		}],
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Arts_and_Entertainment~TV_Movies_and_Streaming",
+		"SourceType": "ST",
+		"Change": -0.2651401506906236,
+		"NewChange": false,
+		"Share": 0.004977596579975392,
+		"FilteredShare": 0.00497759657997539,
+		"TotalVisits": 71634.87648726681,
+		"Domain": "cinemex.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=cinemex.com&t=2&s=0&h=4a6edf00fd121e690924ce468ad5d299e19411bd18e26290be2b1a1164d2a7e7",
+		"Rank": 9217,
+		"TotalShare": 0.004977596579975392,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.004977596579975392
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 71634.87648726681
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": true,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Computer_Security",
+		"SourceType": "ST",
+		"Change": 0.14063313741275413,
+		"NewChange": false,
+		"Share": 0.004666154717959875,
+		"FilteredShare": 0.0046661547179598735,
+		"TotalVisits": 67152.77373747823,
+		"Domain": "account.brave.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=account.brave.com&t=2&s=0&h=1857269aa6c7cf069403c4a2f6774bea3751adc074420ef4c18bcbf94001b6b3",
+		"Rank": -1,
+		"TotalShare": 0.004666154717959875,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.004666154717959875
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 67152.77373747823
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Travel_and_Tourism~Travel_and_Tourism",
+		"SourceType": "ST",
+		"Change": 0.0662727517631217,
+		"NewChange": false,
+		"Share": 0.004315727739220984,
+		"FilteredShare": 0.004315727739220982,
+		"TotalVisits": 62109.61828354816,
+		"Domain": "nomadlist.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=nomadlist.com&t=2&s=0&h=87ec4ca79ddddc2700f070bb2f101976260c769bc852922fa112499f27966e7a",
+		"Rank": 75623,
+		"TotalShare": 0.004315727739220984,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.004315727739220984
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 62109.61828354816
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Sports~Fantasy_Sports",
+		"SourceType": "ST",
+		"Change": 12.521898517335092,
+		"NewChange": false,
+		"Share": 0.004315202568464113,
+		"FilteredShare": 0.0043152025684641115,
+		"TotalVisits": 62102.06031019722,
+		"Domain": "app.fantalab.it",
+		"Favicon": "https://site-images.similarcdn.com/image?url=app.fantalab.it&t=2&s=0&h=ce6b2aa6caaa667e76238d743f21bb96dac0984f1f320b2c520fde9fefbe7ade",
+		"Rank": -1,
+		"TotalShare": 0.004315202568464113,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.004315202568464113
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 62102.06031019722
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Finance~Finance",
+		"SourceType": "ST",
+		"Change": 0.11660238805018133,
+		"NewChange": false,
+		"Share": 0.0042743550210530105,
+		"FilteredShare": 0.004274355021053009,
+		"TotalVisits": 61514.20451140194,
+		"Domain": "customuse.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=customuse.com&t=2&s=0&h=7290474b758f412a720e0ae0cd62c9d1306c0593d170fc11b4e15cb9373d0ed1",
+		"Rank": 86600,
+		"TotalShare": 0.0042743550210530105,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0042743550210530105
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 61514.20451140194
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+		"SourceType": "ST",
+		"Change": -0.1972549502894527,
+		"NewChange": false,
+		"Share": 0.0042590286415448335,
+		"FilteredShare": 0.004259028641544832,
+		"TotalVisits": 61293.63555097593,
+		"Domain": "lumalabs.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=lumalabs.ai&t=2&s=0&h=40373c169b77164c7d7ce85d165e958bccb658a19a16336b01a227058f28b590",
+		"Rank": 3399,
+		"TotalShare": 0.0042590286415448335,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0042590286415448335
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 61293.63555097593
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Games~Video_Games_Consoles_and_Accessories",
+		"SourceType": "ST",
+		"Change": -0.5666366745533103,
+		"NewChange": false,
+		"Share": 0.003754655833769093,
+		"FilteredShare": 0.0037546558337690915,
+		"TotalVisits": 54034.97502916848,
+		"Domain": "synthesia.app",
+		"Favicon": "https://site-images.similarcdn.com/image?url=synthesia.app&t=2&s=0&h=490dd8160f66b4ac66d1716af14e69de3248f39dfa87e97f74976feab60f8f73",
+		"Rank": 368188,
+		"TotalShare": 0.003754655833769093,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.003754655833769093
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 54034.97502916848
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Games~Games",
+		"SourceType": "ST",
+		"Change": 0.30653400358129385,
+		"NewChange": false,
+		"Share": 0.0036132559820169397,
+		"FilteredShare": 0.0036132559820169384,
+		"TotalVisits": 52000.02487745623,
+		"Domain": "mannco.store",
+		"Favicon": "https://site-images.similarcdn.com/image?url=mannco.store&t=2&s=0&h=7b49170bbbbd5adadfc393357fc7d33b3ec16187c87f038e41664c9120256f28",
+		"Rank": 77051,
+		"TotalShare": 0.0036132559820169397,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0036132559820169397
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 52000.02487745623
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+		"SourceType": "ST",
+		"Change": -0.04779782278835955,
+		"NewChange": false,
+		"Share": 0.0035507777096431053,
+		"FilteredShare": 0.003550777709643104,
+		"TotalVisits": 51100.87138987899,
+		"Domain": "turboscribe.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=turboscribe.ai&t=2&s=0&h=0db0678e23907d67c58a710431d90ca6cb8b42fe0bbc759d05757290be60e8d1",
+		"Rank": 27367,
+		"TotalShare": 0.0035507777096431053,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0035507777096431053
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 51100.87138987899
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Games~Video_Games_Consoles_and_Accessories",
+		"SourceType": "ST",
+		"Change": -0.26918972455434725,
+		"NewChange": false,
+		"Share": 0.003526354455508629,
+		"FilteredShare": 0.0035263544555086276,
+		"TotalVisits": 50749.3851323589,
+		"Domain": "poe.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=poe.com&t=2&s=0&h=90f955b73ccac4739ca5a2e33bd979870ae147f226234cc09eaae25e0f337bb5",
+		"Rank": 1773,
+		"TotalShare": 0.003526354455508629,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.003526354455508629
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 50749.3851323589
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": true,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Unknown",
+		"SourceType": "ST",
+		"Change": 0.0,
+		"NewChange": true,
+		"Share": 0.00351291239294397,
+		"FilteredShare": 0.0035129123929439686,
+		"TotalVisits": 50555.93424173685,
+		"Domain": "myinstapersonality.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=myinstapersonality.com&t=2&s=0&h=0f8a6b79d477b8a1dc5e3e09ba1e3f9921ae569a2be4483fa79f3830b0f4f87e",
+		"Rank": 351192,
+		"TotalShare": 0.00351291239294397,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.00351291239294397
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 50555.93424173685
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+		"SourceType": "ST",
+		"Change": 0.0,
+		"NewChange": true,
+		"Share": 0.0033276315166372262,
+		"FilteredShare": 0.003327631516637225,
+		"TotalVisits": 47889.47212966433,
+		"Domain": "fal.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=fal.ai&t=2&s=0&h=69689a835a0c5b48cb0a05fc80f54924502327d587abf3d670be1a0c0bf52d7c",
+		"Rank": 26473,
+		"TotalShare": 0.0033276315166372262,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0033276315166372262
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 47889.47212966433
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Business_and_Consumer_Services~Business_and_Consumer_Services",
+		"SourceType": "ST",
+		"Change": -0.016029943563614903,
+		"NewChange": false,
+		"Share": 0.0032917941979946092,
+		"FilteredShare": 0.003291794197994608,
+		"TotalVisits": 47373.720832155326,
+		"Domain": "clipto.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=clipto.com&t=2&s=0&h=393dfd5a054efbc9c85d64e14be24461042aa3b2643e2afa54f5740568e47f60",
+		"Rank": 102768,
+		"TotalShare": 0.0032917941979946092,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0032917941979946092
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 47373.720832155326
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": true,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Heavy_Industry_and_Engineering~Agriculture",
+		"SourceType": "ST",
+		"Change": -0.15916195038787076,
+		"NewChange": false,
+		"Share": 0.003219237325176343,
+		"FilteredShare": 0.003219237325176342,
+		"TotalVisits": 46329.521580743814,
+		"Domain": "yardbook.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=yardbook.com&t=2&s=0&h=e9e6d3bf549a2280956a5df22f8f39a83abde911dd4636eafba4fd5b55cae896",
+		"Rank": 39850,
+		"TotalShare": 0.003219237325176343,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.003219237325176343
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 46329.521580743814
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Unknown",
+		"SourceType": "ST",
+		"Change": 22.188614546954078,
+		"NewChange": false,
+		"Share": 0.0032087483794731057,
+		"FilteredShare": 0.0032087483794731044,
+		"TotalVisits": 46178.57034999205,
+		"Domain": "fams.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=fams.ai&t=2&s=0&h=d592f457c190112f2a4b43f15e114f76c9c5dee16cbd1c9fcf4a4aec0420a97e",
+		"Rank": 5327,
+		"TotalShare": 0.0032087483794731057,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0032087483794731057
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 46178.57034999205
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false
+	}, {
+		"Category": "Games~Video_Games_Consoles_and_Accessories",
+		"SourceType": "ST",
+		"Change": -0.3056416950429651,
+		"NewChange": false,
+		"Share": 0.0030665194414090627,
+		"FilteredShare": 0.003066519441409062,
+		"TotalVisits": 44131.68843671671,
+		"Domain": "u7buy.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=u7buy.com&t=2&s=0&h=b0c5aab070f0b9e6f3cabaacdbf3394b4b15bfd2fb7fc478963b3c3a93ca22ca",
+		"Rank": 33626,
+		"TotalShare": 0.0030665194414090627,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0030665194414090627
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 44131.68843671671
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": -0.3098910187760776,
+		"NewChange": false,
+		"Share": 0.0030489427514295265,
+		"FilteredShare": 0.0030489427514295256,
+		"TotalVisits": 43878.73422568153,
+		"Domain": "crayo.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=crayo.ai&t=2&s=0&h=768e75e02366c1348852357d9c334bcce2389b55abe1e022f94a22880eca54ae",
+		"Rank": 37326,
+		"TotalShare": 0.0030489427514295265,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0030489427514295265
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 43878.73422568153
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Email",
+		"SourceType": "ST",
+		"Change": 0.08601791468619537,
+		"NewChange": false,
+		"Share": 0.0030486410823906494,
+		"FilteredShare": 0.003048641082390648,
+		"TotalVisits": 43874.39276811405,
+		"Domain": "app.instantly.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=app.instantly.ai&t=2&s=0&h=61a56e3541270920a671ab31d0ed276e02fcf060fc791fe64e514d8658a212f7",
+		"Rank": -1,
+		"TotalShare": 0.0030486410823906494,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0030486410823906494
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 43874.39276811405
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+		"SourceType": "ST",
+		"Change": 0.41771969589258157,
+		"NewChange": false,
+		"Share": 0.0029861899504249824,
+		"FilteredShare": 0.002986189950424981,
+		"TotalVisits": 42975.629870604855,
+		"Domain": "immersivetranslate.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=immersivetranslate.com&t=2&s=0&h=13398304f4fb22aef1d55d9f679c2ce5d8264e9a7dd4c6fdcf237ead6794a1db",
+		"Rank": 23569,
+		"TotalShare": 0.0029861899504249824,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0029861899504249824
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 42975.629870604855
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Lifestyle~Weddings",
+		"SourceType": "ST",
+		"Change": -0.002609659231476014,
+		"NewChange": false,
+		"Share": 0.002851385545578114,
+		"FilteredShare": 0.0028513855455781128,
+		"TotalVisits": 41035.59782180578,
+		"Domain": "withjoy.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=withjoy.com&t=2&s=0&h=35fcc4d1337397df0f364af2c8a958e63a7d3cc68351f2a817fd65e066fd24bf",
+		"Rank": 5555,
+		"TotalShare": 0.002851385545578114,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.002851385545578114
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 41035.59782180578
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Social_Networks_and_Online_Communities",
+		"SourceType": "ST",
+		"Change": 0.5268364344724507,
+		"NewChange": false,
+		"Share": 0.002832762260397765,
+		"FilteredShare": 0.002832762260397764,
+		"TotalVisits": 40767.58157897719,
+		"Domain": "emeraldchat.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=emeraldchat.com&t=2&s=0&h=0be3539ab6beb68ce330d71028fa747d170d7cc09dfa141237f83ea6e7883796",
+		"Rank": 14133,
+		"TotalShare": 0.002832762260397765,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.002832762260397765
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 40767.58157897719
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Finance~Banking_Credit_and_Lending",
+		"SourceType": "ST",
+		"Change": 0.69894740260445,
+		"NewChange": false,
+		"Share": 0.0028157054482956753,
+		"FilteredShare": 0.0028157054482956744,
+		"TotalVisits": 40522.109169036376,
+		"Domain": "team3.inmatecanteen.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=team3.inmatecanteen.com&t=2&s=0&h=8d60b8b10f1d70502a4de0f4686025869a64ebd340b411b5e7045416878e6882",
+		"Rank": -1,
+		"TotalShare": 0.0028157054482956753,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0028157054482956753
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 40522.109169036376
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Computers_Electronics_and_Technology",
+		"SourceType": "ST",
+		"Change": 0.12552476783241737,
+		"NewChange": false,
+		"Share": 0.0026716891847365838,
+		"FilteredShare": 0.0026716891847365825,
+		"TotalVisits": 38449.50503439913,
+		"Domain": "framer.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=framer.com&t=2&s=0&h=a56603e952a4902429ad2de7b0edef03a72a9104a8b4bba2af9d978217d3c77c",
+		"Rank": 12828,
+		"TotalShare": 0.0026716891847365838,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0026716891847365838
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 38449.50503439913
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": 1.1728053596899353,
+		"NewChange": false,
+		"Share": 0.0025808023913461583,
+		"FilteredShare": 0.0025808023913461574,
+		"TotalVisits": 37141.51148485377,
+		"Domain": "app.arcads.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=app.arcads.ai&t=2&s=0&h=488c3e48bcc953ee370da1da2ce9ab2c683cf2289ff7aea4b0541ba72e833394",
+		"Rank": -1,
+		"TotalShare": 0.0025808023913461583,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0025808023913461583
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 37141.51148485377
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Unknown",
+		"SourceType": "ST",
+		"Change": 0.0,
+		"NewChange": true,
+		"Share": 0.0025228778614228772,
+		"FilteredShare": 0.0025228778614228764,
+		"TotalVisits": 36307.89299449035,
+		"Domain": "postma.io",
+		"Favicon": "https://site-images.similarcdn.com/image?url=postma.io&t=2&s=0&h=95889e8f8e1911f69bc8f35b2f92331e8e3324a680b869cf03fb2e7598c14858",
+		"Rank": 428907,
+		"TotalShare": 0.0025228778614228772,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0025228778614228772
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 36307.89299449035
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Computers_Electronics_and_Technology",
+		"SourceType": "ST",
+		"Change": 17.07295990969011,
+		"NewChange": false,
+		"Share": 0.0025086814301528773,
+		"FilteredShare": 0.0025086814301528764,
+		"TotalVisits": 36103.58563766726,
+		"Domain": "app.pentester.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=app.pentester.com&t=2&s=0&h=b5cc6db90bf1bebba897a9a404acaab64fae94a2b986ed5d9bf1d11bf32165e5",
+		"Rank": -1,
+		"TotalShare": 0.0025086814301528773,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0025086814301528773
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 36103.58563766726
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": 1.0529434351899376,
+		"NewChange": false,
+		"Share": 0.002506695182727461,
+		"FilteredShare": 0.00250669518272746,
+		"TotalVisits": 36075.00063952473,
+		"Domain": "faceless.video",
+		"Favicon": "https://site-images.similarcdn.com/image?url=faceless.video&t=2&s=0&h=306f754ed7f423901446ebc9d8c263758591320fd0aa8aa2cc2fb48be002d7ac",
+		"Rank": 101722,
+		"TotalShare": 0.002506695182727461,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.002506695182727461
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 36075.00063952473
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": -0.04387331822957232,
+		"NewChange": false,
+		"Share": 0.00247127153745414,
+		"FilteredShare": 0.0024712715374541386,
+		"TotalVisits": 35565.20270529848,
+		"Domain": "shipfa.st",
+		"Favicon": "https://site-images.similarcdn.com/image?url=shipfa.st&t=2&s=0&h=b8ce1f9c1e45ef90595ddbf1d52aafa8d903756ccd01cb9617e1cc4a687ac6cb",
+		"Rank": 207369,
+		"TotalShare": 0.00247127153745414,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.00247127153745414
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 35565.20270529848
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Sports~Sports",
+		"SourceType": "ST",
+		"Change": -0.03556969095710362,
+		"NewChange": false,
+		"Share": 0.0024374544455932046,
+		"FilteredShare": 0.0024374544455932038,
+		"TotalVisits": 35078.52541844037,
+		"Domain": "app.scoreboard.coach",
+		"Favicon": "https://site-images.similarcdn.com/image?url=app.scoreboard.coach&t=2&s=0&h=4d28fc1172146547ef4b01e6f873ef2a752e90d252748f29022490d67f1b84ef",
+		"Rank": -1,
+		"TotalShare": 0.0024374544455932046,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0024374544455932046
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 35078.52541844037
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": 5.9996636937753935,
+		"NewChange": false,
+		"Share": 0.002370263289188546,
+		"FilteredShare": 0.002370263289188545,
+		"TotalVisits": 34111.5466541412,
+		"Domain": "mutualdropship.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=mutualdropship.com&t=2&s=0&h=25fd6c7f122eca16dffeca6d4d3b8c71076a383556d51349f3270587add49534",
+		"Rank": 181662,
+		"TotalShare": 0.002370263289188546,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.002370263289188546
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 34111.5466541412
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "News_and_Media",
+		"SourceType": "ST",
+		"Change": -0.2091956684623154,
+		"NewChange": false,
+		"Share": 0.0023304194417143737,
+		"FilteredShare": 0.002330419441714373,
+		"TotalVisits": 33538.13556171315,
+		"Domain": "linternaute.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=linternaute.com&t=2&s=0&h=5256fc08d662f89f8f44c20fce27dc3a4a5194cf2f55556fa85748404d4df8f7",
+		"Rank": 2222,
+		"TotalShare": 0.0023304194417143737,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0023304194417143737
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 33538.13556171315
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": true,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Games~Video_Games_Consoles_and_Accessories",
+		"SourceType": "ST",
+		"Change": -0.18438654546737862,
+		"NewChange": false,
+		"Share": 0.002305103747110023,
+		"FilteredShare": 0.002305103747110022,
+		"TotalVisits": 33173.805783870645,
+		"Domain": "mtcgame.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=mtcgame.com&t=2&s=0&h=e448961e4b94a9df6d7dc4b71b312112a846b8a9879b82a728063d7a11c7456e",
+		"Rank": 61962,
+		"TotalShare": 0.002305103747110023,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.002305103747110023
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 33173.805783870645
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Health~Health",
+		"SourceType": "ST",
+		"Change": 0.3334142746379423,
+		"NewChange": false,
+		"Share": 0.002276124905809356,
+		"FilteredShare": 0.002276124905809355,
+		"TotalVisits": 32756.757980987502,
+		"Domain": "uk.dentalhub.online",
+		"Favicon": "https://site-images.similarcdn.com/image?url=uk.dentalhub.online&t=2&s=0&h=a3445f6ed2130c4497fe82e1edbcd0e2e8f8b2ef714c908a81c724caf903183d",
+		"Rank": -1,
+		"TotalShare": 0.002276124905809356,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.002276124905809356
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 32756.757980987502
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Science_and_Education~Education",
+		"SourceType": "ST",
+		"Change": -0.03427498124483822,
+		"NewChange": false,
+		"Share": 0.0022678736875771737,
+		"FilteredShare": 0.002267873687577173,
+		"TotalVisits": 32638.010913113474,
+		"Domain": "undetectable.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=undetectable.ai&t=2&s=0&h=bb15a3858a861802adb2274067f119143141991b8ee268666194e5272070d7db",
+		"Rank": 21524,
+		"TotalShare": 0.0022678736875771737,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0022678736875771737
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 32638.010913113474
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Finance~Banking_Credit_and_Lending",
+		"SourceType": "ST",
+		"Change": 18.80893191849709,
+		"NewChange": false,
+		"Share": 0.002171928932355421,
+		"FilteredShare": 0.00217192893235542,
+		"TotalVisits": 31257.225913870872,
+		"Domain": "home.classdojo.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=home.classdojo.com&t=2&s=0&h=6b5ebc96cb276951f176f56775b7b61a0b3d2344112221b50a109cd11ce25b7f",
+		"Rank": -1,
+		"TotalShare": 0.002171928932355421,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.002171928932355421
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 31257.225913870872
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": -0.18930467823462904,
+		"NewChange": false,
+		"Share": 0.002081026277522624,
+		"FilteredShare": 0.0020810262775226235,
+		"TotalVisits": 29949.004095029894,
+		"Domain": "support.image-line.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=support.image-line.com&t=2&s=0&h=8628f0a38a051679600a3bde30c79291b6de1959822acf3df6c5e821152932e1",
+		"Rank": -1,
+		"TotalShare": 0.002081026277522624,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.002081026277522624
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 29949.004095029894
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Unknown",
+		"SourceType": "ST",
+		"Change": 2.7836215942689257,
+		"NewChange": false,
+		"Share": 0.002043305088212746,
+		"FilteredShare": 0.0020433050882127453,
+		"TotalVisits": 29406.141150283318,
+		"Domain": "livearchives.tv",
+		"Favicon": "https://site-images.similarcdn.com/image?url=livearchives.tv&t=2&s=0&h=6df8644255262d079d23baa64bc8a2316c7111bc668800c33c837e672ca6a340",
+		"Rank": 200282,
+		"TotalShare": 0.002043305088212746,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.002043305088212746
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 29406.141150283318
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 3.0
+	}, {
+		"Category": "Food_and_Drink~Restaurants_and_Delivery",
+		"SourceType": "ST",
+		"Change": 0.0,
+		"NewChange": true,
+		"Share": 0.002031990941846026,
+		"FilteredShare": 0.0020319909418460252,
+		"TotalVisits": 29243.314078117728,
+		"Domain": "smartweb-ecms.tabsquare.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=smartweb-ecms.tabsquare.com&t=2&s=0&h=a933549e9d860971980dec3164c9401b5ea37e211288d2cb477ae82f8fc69f68",
+		"Rank": -1,
+		"TotalShare": 0.002031990941846026,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.002031990941846026
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 29243.314078117728
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Games~Video_Games_Consoles_and_Accessories",
+		"SourceType": "ST",
+		"Change": -0.1426056037145705,
+		"NewChange": false,
+		"Share": 0.002019589705849647,
+		"FilteredShare": 0.002019589705849646,
+		"TotalVisits": 29064.84220025123,
+		"Domain": "uploadhaven.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=uploadhaven.com&t=2&s=0&h=6fabf507d33d9e3705bb81b8531e06f0ea3bf37d2024eb36d83208c53ee12726",
+		"Rank": 11916,
+		"TotalShare": 0.002019589705849647,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.002019589705849647
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 29064.84220025123
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Business_and_Consumer_Services~Real_Estate",
+		"SourceType": "ST",
+		"Change": -0.12525916662566547,
+		"NewChange": false,
+		"Share": 0.0020192432197054986,
+		"FilteredShare": 0.0020192432197054977,
+		"TotalVisits": 29059.85575915625,
+		"Domain": "rentspree.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=rentspree.com&t=2&s=0&h=fcb58076a9bfcbcfe7906227bc6d0cc0b288e9101529abda84f3a196755615c7",
+		"Rank": 56428,
+		"TotalShare": 0.0020192432197054986,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0020192432197054986
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 29059.85575915625
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Science_and_Education~Education",
+		"SourceType": "ST",
+		"Change": 0.11557153249593716,
+		"NewChange": false,
+		"Share": 0.002004119010277192,
+		"FilteredShare": 0.002004119010277191,
+		"TotalVisits": 28842.19632112086,
+		"Domain": "app.gptzero.me",
+		"Favicon": "https://site-images.similarcdn.com/image?url=app.gptzero.me&t=2&s=0&h=fa07591acf8c6be1361cb62ec02495a936d33690aa11181b0357d8227af2800e",
+		"Rank": -1,
+		"TotalShare": 0.002004119010277192,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.002004119010277192
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 28842.19632112086
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": -0.03693431589889874,
+		"NewChange": false,
+		"Share": 0.0019934324739895553,
+		"FilteredShare": 0.0019934324739895545,
+		"TotalVisits": 28688.401473599224,
+		"Domain": "webflow.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=webflow.com&t=2&s=0&h=a0e10148683cdd32a21d635f5c0eb7962f7a6713e128f9ea3fe7a1d4429a11f2",
+		"Rank": 5623,
+		"TotalShare": 0.0019934324739895553,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0019934324739895553
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 28688.401473599224
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Sports~Soccer",
+		"SourceType": "ST",
+		"Change": -0.1796899266663587,
+		"NewChange": false,
+		"Share": 0.0019917474955676072,
+		"FilteredShare": 0.0019917474955676064,
+		"TotalVisits": 28664.15217593104,
+		"Domain": "video.liverpoolfc.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=video.liverpoolfc.com&t=2&s=0&h=e7eff57efc959cbb33623394e0abe8ae0878024388112a6c47719e0d23044c59",
+		"Rank": -1,
+		"TotalShare": 0.0019917474955676072,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0019917474955676072
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 28664.15217593104
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Business_and_Consumer_Services~Business_Services",
+		"SourceType": "ST",
+		"Change": -0.3899963359298878,
+		"NewChange": false,
+		"Share": 0.0019112449340564718,
+		"FilteredShare": 0.0019112449340564712,
+		"TotalVisits": 27505.60287244625,
+		"Domain": "eprolo.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=eprolo.com&t=2&s=0&h=013d93a00cb386c6d90837c1b2f6cc19e101623e3fbbd8e39881db9f6030f615",
+		"Rank": 182388,
+		"TotalShare": 0.0019112449340564718,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0019112449340564718
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 27505.60287244625
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": 11.056967675310249,
+		"NewChange": false,
+		"Share": 0.001851317363457201,
+		"FilteredShare": 0.0018513173634572002,
+		"TotalVisits": 26643.157704565256,
+		"Domain": "adaptify.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=adaptify.ai&t=2&s=0&h=3537bde0915ab61f7a02a6ad3563c4456a2087efe10e6958e49aa94c02cf5803",
+		"Rank": 653227,
+		"TotalShare": 0.001851317363457201,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.001851317363457201
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 26643.157704565256
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Arts_and_Entertainment~Music",
+		"SourceType": "ST",
+		"Change": -0.018438613217027628,
+		"NewChange": false,
+		"Share": 0.0018095707525492264,
+		"FilteredShare": 0.0018095707525492256,
+		"TotalVisits": 26042.36307042688,
+		"Domain": "app.landr.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=app.landr.com&t=2&s=0&h=ff338f4910be3c098ad764dba2dc6a2bda5e1a972cd982a12b15422947605319",
+		"Rank": -1,
+		"TotalShare": 0.0018095707525492264,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0018095707525492264
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 26042.36307042688
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+		"SourceType": "ST",
+		"Change": 0.0,
+		"NewChange": true,
+		"Share": 0.00180206243740394,
+		"FilteredShare": 0.0018020624374039393,
+		"TotalVisits": 25934.30746177755,
+		"Domain": "my.zerotier.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=my.zerotier.com&t=2&s=0&h=d62123aa96483360d860606325a848191711b303681fe064d36abdcb0131374e",
+		"Rank": -1,
+		"TotalShare": 0.00180206243740394,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.00180206243740394
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 25934.30746177755
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Social_Networks_and_Online_Communities",
+		"SourceType": "ST",
+		"Change": 0.09589635104123342,
+		"NewChange": false,
+		"Share": 0.0018000152756393886,
+		"FilteredShare": 0.001800015275639388,
+		"TotalVisits": 25904.845817428337,
+		"Domain": "seaart.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=seaart.ai&t=2&s=0&h=6e0bf8470088d65d5acd6074e58ffe96267c0ab98f5d6567ec52ad1b270dd33a",
+		"Rank": 5879,
+		"TotalShare": 0.0018000152756393886,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0018000152756393886
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 25904.845817428337
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Sports~Tennis",
+		"SourceType": "ST",
+		"Change": -0.3685005211618845,
+		"NewChange": false,
+		"Share": 0.0017055694064550765,
+		"FilteredShare": 0.0017055694064550759,
+		"TotalVisits": 24545.631974954948,
+		"Domain": "playtennis.usta.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=playtennis.usta.com&t=2&s=0&h=93b5908ee0b9d5b27c8c89855707549f5c9124b89a2ffd21d72b292d22ecf259",
+		"Rank": -1,
+		"TotalShare": 0.0017055694064550765,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0017055694064550765
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 24545.631974954948
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": 0.09483474676924608,
+		"NewChange": false,
+		"Share": 0.0016942285662439223,
+		"FilteredShare": 0.0016942285662439216,
+		"TotalVisits": 24382.420739424913,
+		"Domain": "remaker.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=remaker.ai&t=2&s=0&h=cbb04afa8649337dc8c554f59b94e2daca115dcbaf55f34bc72f04596243d0e8",
+		"Rank": 12548,
+		"TotalShare": 0.0016942285662439223,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0016942285662439223
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 24382.420739424913
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Unknown",
+		"SourceType": "ST",
+		"Change": 0.0,
+		"NewChange": true,
+		"Share": 0.0016845592269346334,
+		"FilteredShare": 0.0016845592269346327,
+		"TotalVisits": 24243.264840387026,
+		"Domain": "vidu.studio",
+		"Favicon": "https://site-images.similarcdn.com/image?url=vidu.studio&t=2&s=0&h=15adc1de389a8750f867a8427153989545e7c9e812252fe8a00df13cbf1730b7",
+		"Rank": 10990,
+		"TotalShare": 0.0016845592269346334,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0016845592269346334
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 24243.264840387026
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": -0.23887513743955746,
+		"NewChange": false,
+		"Share": 0.0016353808588915704,
+		"FilteredShare": 0.0016353808588915697,
+		"TotalVisits": 23535.516379054792,
+		"Domain": "video.creatify.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=video.creatify.ai&t=2&s=0&h=85634666d28c36ced43fa95e327a7b6fab4868231af5a71f09c6c1ecaafb1e52",
+		"Rank": -1,
+		"TotalShare": 0.0016353808588915704,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0016353808588915704
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 23535.516379054792
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Unknown",
+		"SourceType": "ST",
+		"Change": 0.0,
+		"NewChange": true,
+		"Share": 0.001583832577641092,
+		"FilteredShare": 0.0015838325776410913,
+		"TotalVisits": 22793.66140925586,
+		"Domain": "bookbyanyone.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=bookbyanyone.com&t=2&s=0&h=9a2e64277558b8b8eacc08150725dbd17bc931554b8686a7e9c9c68c44c3936f",
+		"Rank": 330369,
+		"TotalShare": 0.001583832577641092,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.001583832577641092
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 22793.66140925586
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false
+	}, {
+		"Category": "Business_and_Consumer_Services~Business_Services",
+		"SourceType": "ST",
+		"Change": 0.18870333025566646,
+		"NewChange": false,
+		"Share": 0.001579256569237083,
+		"FilteredShare": 0.0015792565692370824,
+		"TotalVisits": 22727.805972488524,
+		"Domain": "productly.app",
+		"Favicon": "https://site-images.similarcdn.com/image?url=productly.app&t=2&s=0&h=eb934380e53400354264c866be1490af2cce7641a3cf7f9193f2f1aee66941b1",
+		"Rank": 643332,
+		"TotalShare": 0.001579256569237083,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.001579256569237083
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 22727.805972488524
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Computers_Electronics_and_Technology",
+		"SourceType": "ST",
+		"Change": 0.6248151402643576,
+		"NewChange": false,
+		"Share": 0.0015572297896353513,
+		"FilteredShare": 0.0015572297896353506,
+		"TotalVisits": 22410.80847965633,
+		"Domain": "secure.zamzar.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=secure.zamzar.com&t=2&s=0&h=ad8f19c7eda1bc92a5f3d09dfc3a8d97a75e719f54d820cd9c1dd17941e3e52e",
+		"Rank": -1,
+		"TotalShare": 0.0015572297896353513,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0015572297896353513
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 22410.80847965633
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": true,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Sports~Sports",
+		"SourceType": "ST",
+		"Change": 0.2686374689540648,
+		"NewChange": false,
+		"Share": 0.0015562243576515617,
+		"FilteredShare": 0.001556224357651561,
+		"TotalVisits": 22396.338846607952,
+		"Domain": "cinemasocietyclub.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=cinemasocietyclub.com&t=2&s=0&h=3e7644ac0a4d87ec08737e2cc4bbc182a08755111ec3d1b11733ec1b36b93131",
+		"Rank": 136664,
+		"TotalShare": 0.0015562243576515617,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0015562243576515617
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 22396.338846607952
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": 0.0,
+		"NewChange": true,
+		"Share": 0.0015088323003362033,
+		"FilteredShare": 0.0015088323003362028,
+		"TotalVisits": 21714.298002655116,
+		"Domain": "pixelcut.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=pixelcut.ai&t=2&s=0&h=9351b3a21e139722ffb8ee826b8eb13cd5fbcd98c59a874d6b737cf94ab9acdd",
+		"Rank": 8928,
+		"TotalShare": 0.0015088323003362033,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0015088323003362033
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 21714.298002655116
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Sports~Sports",
+		"SourceType": "ST",
+		"Change": 0.11482359365388976,
+		"NewChange": false,
+		"Share": 0.001500901026331758,
+		"FilteredShare": 0.0015009010263317573,
+		"TotalVisits": 21600.155398977513,
+		"Domain": "apps.rpstrength.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=apps.rpstrength.com&t=2&s=0&h=3e889f8269636c433a1cd5f2d62aa1e2c53d51db50ed8722cfe605a9607169d8",
+		"Rank": -1,
+		"TotalShare": 0.001500901026331758,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.001500901026331758
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 21600.155398977513
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Unknown",
+		"SourceType": "ST",
+		"Change": 0.0,
+		"NewChange": true,
+		"Share": 0.0014905342586977654,
+		"FilteredShare": 0.0014905342586977648,
+		"TotalVisits": 21450.962488884965,
+		"Domain": "pizzaland.app4food.co.uk",
+		"Favicon": "https://site-images.similarcdn.com/image?url=pizzaland.app4food.co.uk&t=2&s=0&h=979cc5cc3dcf273e092208bdf521f9054d6651c2ef93e1dd1298ed17a7702acd",
+		"Rank": -1,
+		"TotalShare": 0.0014905342586977654,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0014905342586977654
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 21450.962488884965
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false
+	}, {
+		"Category": "Health~Health",
+		"SourceType": "ST",
+		"Change": -0.1288657197668872,
+		"NewChange": false,
+		"Share": 0.0014855686575689787,
+		"FilteredShare": 0.001485568657568978,
+		"TotalVisits": 21379.50024444019,
+		"Domain": "drmax.ro",
+		"Favicon": "https://site-images.similarcdn.com/image?url=drmax.ro&t=2&s=0&h=7f998fcbf4aab1acf5715b402703262b41ee18dcc4245fd0fd6288fcdf1e65df",
+		"Rank": 11477,
+		"TotalShare": 0.0014855686575689787,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0014855686575689787
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 21379.50024444019
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "E-commerce_and_Shopping~Marketplace",
+		"SourceType": "ST",
+		"Change": -0.07170353904847955,
+		"NewChange": false,
+		"Share": 0.0014848446995024522,
+		"FilteredShare": 0.0014848446995024515,
+		"TotalVisits": 21369.081431697065,
+		"Domain": "drmax.sk",
+		"Favicon": "https://site-images.similarcdn.com/image?url=drmax.sk&t=2&s=0&h=01c1453c9c09a922dad31daec64a5d20dc58e896e679dd5b67ca3a7e0dcdbc51",
+		"Rank": 26978,
+		"TotalShare": 0.0014848446995024522,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0014848446995024522
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 21369.081431697065
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": 0.3691903100984373,
+		"NewChange": false,
+		"Share": 0.0014701819086026437,
+		"FilteredShare": 0.0014701819086026433,
+		"TotalVisits": 21158.06247943967,
+		"Domain": "kalodata.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=kalodata.com&t=2&s=0&h=de5678fd4fbde28c883b77eaff470f174d65cdbeec186456f572b2dbf7bf80a4",
+		"Rank": 47107,
+		"TotalShare": 0.0014701819086026437,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0014701819086026437
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 21158.06247943967
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+		"SourceType": "ST",
+		"Change": 0.05274172894514566,
+		"NewChange": false,
+		"Share": 0.0014491488480177256,
+		"FilteredShare": 0.0014491488480177252,
+		"TotalVisits": 20855.366052973295,
+		"Domain": "chatpdf.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=chatpdf.com&t=2&s=0&h=72afbe6766166c95b523cc0f1534584701344ae52c73b29362de4bb7179acbd4",
+		"Rank": 18354,
+		"TotalShare": 0.0014491488480177256,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0014491488480177256
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 20855.366052973295
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Computers_Electronics_and_Technology",
+		"SourceType": "ST",
+		"Change": 0.057606880967256476,
+		"NewChange": false,
+		"Share": 0.0013947995115511469,
+		"FilteredShare": 0.0013947995115511462,
+		"TotalVisits": 20073.199812219504,
+		"Domain": "mailtracker.hunter.io",
+		"Favicon": "https://site-images.similarcdn.com/image?url=mailtracker.hunter.io&t=2&s=0&h=90c772f9453924ebc2f126a1093a095362e99ae9e2a90b38834fe184a1c027ca",
+		"Rank": -1,
+		"TotalShare": 0.0013947995115511469,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0013947995115511469
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 20073.199812219504
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Computers_Electronics_and_Technology",
+		"SourceType": "ST",
+		"Change": -0.6424283767933401,
+		"NewChange": false,
+		"Share": 0.0013780797763203027,
+		"FilteredShare": 0.0013780797763203022,
+		"TotalVisits": 19832.578430209625,
+		"Domain": "tinyurl.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=tinyurl.com&t=2&s=0&h=333443c9d75ac4edb3c5a76a541b79995e86cf6d3df1be921e97f3e409b32267",
+		"Rank": 1326,
+		"TotalShare": 0.0013780797763203027,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0013780797763203027
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 19832.578430209625
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": true,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Unknown",
+		"SourceType": "ST",
+		"Change": 0.0,
+		"NewChange": true,
+		"Share": 0.0013644852914544642,
+		"FilteredShare": 0.0013644852914544638,
+		"TotalVisits": 19636.933960308215,
+		"Domain": "videoai-c2f16.web.app",
+		"Favicon": "https://site-images.similarcdn.com/image?url=videoai-c2f16.web.app&t=2&s=0&h=ab7e32052d52f4c4c8f4e0c1875d566e7c8ac46680db451a0ba1a1fb25e5f97d",
+		"Rank": -1,
+		"TotalShare": 0.0013644852914544642,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0013644852914544642
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 19636.933960308215
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": 1.4379033418642797,
+		"NewChange": false,
+		"Share": 0.0013524761650860685,
+		"FilteredShare": 0.001352476165086068,
+		"TotalVisits": 19464.105112028137,
+		"Domain": "noxtools.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=noxtools.com&t=2&s=0&h=58a4c368a8e80a8410818c33a7082761ad6b2dfe7b8d051f5154b6698b67a840",
+		"Rank": 61635,
+		"TotalShare": 0.0013524761650860685,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0013524761650860685
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 19464.105112028137
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": -0.4832324090720164,
+		"NewChange": false,
+		"Share": 0.0013317419555778681,
+		"FilteredShare": 0.0013317419555778675,
+		"TotalVisits": 19165.709588542704,
+		"Domain": "app.heygen.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=app.heygen.com&t=2&s=0&h=0853faeb3c58d89e96cc2c51cd99153dff388f98b5ebe201be2ffe6a82c8c697",
+		"Rank": -1,
+		"TotalShare": 0.0013317419555778681,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0013317419555778681
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 19165.709588542704
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Law_and_Government~Government",
+		"SourceType": "ST",
+		"Change": 0.8477504062417132,
+		"NewChange": false,
+		"Share": 0.0013283693667068956,
+		"FilteredShare": 0.001328369366706895,
+		"TotalVisits": 19117.1731144969,
+		"Domain": "updoc.com.au",
+		"Favicon": "https://site-images.similarcdn.com/image?url=updoc.com.au&t=2&s=0&h=d1cf067f0889d30b85063fd63e41cb1af5b522884d139912babd32797f346011",
+		"Rank": 140313,
+		"TotalShare": 0.0013283693667068956,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0013283693667068956
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 19117.1731144969
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Lifestyle~Childcare",
+		"SourceType": "ST",
+		"Change": -0.1490359634748504,
+		"NewChange": false,
+		"Share": 0.0013219736914272823,
+		"FilteredShare": 0.001321973691427282,
+		"TotalVisits": 19025.130016719377,
+		"Domain": "app.sbpay.me",
+		"Favicon": "https://site-images.similarcdn.com/image?url=app.sbpay.me&t=2&s=0&h=1b7b49309a2830960a7c1eb49e73297bc883a39adfd4f4abaf33a9dd212eede6",
+		"Rank": -1,
+		"TotalShare": 0.0013219736914272823,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0013219736914272823
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 19025.130016719377
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "News_and_Media",
+		"SourceType": "ST",
+		"Change": 0.2480852224326985,
+		"NewChange": false,
+		"Share": 0.0013147678083975712,
+		"FilteredShare": 0.0013147678083975706,
+		"TotalVisits": 18921.426847424445,
+		"Domain": "assistant.stability.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=assistant.stability.ai&t=2&s=0&h=c866e5e49711ac7506925d15ee28adf8628745ade846d99ff6069fae45e95528",
+		"Rank": -1,
+		"TotalShare": 0.0013147678083975712,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0013147678083975712
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 18921.426847424445
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Unknown",
+		"SourceType": "ST",
+		"Change": 11.775546582243946,
+		"NewChange": false,
+		"Share": 0.0013035318192221998,
+		"FilteredShare": 0.0013035318192221991,
+		"TotalVisits": 18759.724571264094,
+		"Domain": "shortspilot.ai",
+		"Favicon": "https://site-images.similarcdn.com/image?url=shortspilot.ai&t=2&s=0&h=7024745946c9e7bcb0b2b621d538b7a1e93e9bced70b9da9043b0847e0f6f13e",
+		"Rank": 481935,
+		"TotalShare": 0.0013035318192221998,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0013035318192221998
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 18759.724571264094
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Telecommunications",
+		"SourceType": "ST",
+		"Change": 4.656705602785744,
+		"NewChange": false,
+		"Share": 0.0013026904847427798,
+		"FilteredShare": 0.0013026904847427793,
+		"TotalVisits": 18747.616540701678,
+		"Domain": "promo.hushed.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=promo.hushed.com&t=2&s=0&h=886b00bf1491c4fa8445c05b84a4d30cb13fcd4ce0eae7cd364d9d027799b4d0",
+		"Rank": -1,
+		"TotalShare": 0.0013026904847427798,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0013026904847427798
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 18747.616540701678
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Arts_and_Entertainment~Animation_and_Comics",
+		"SourceType": "ST",
+		"Change": 5.185784663341861,
+		"NewChange": false,
+		"Share": 0.0012990832718420948,
+		"FilteredShare": 0.0012990832718420941,
+		"TotalVisits": 18695.7034845807,
+		"Domain": "animationexplorer.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=animationexplorer.com&t=2&s=0&h=90ac3a6d54f904bdcb1e5c36a53dc7643c77b0be7bdbe43b05f24f9e518149a9",
+		"Rank": 721996,
+		"TotalShare": 0.0012990832718420948,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0012990832718420948
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 18695.7034845807
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Unknown",
+		"SourceType": "ST",
+		"Change": -0.44373766383337543,
+		"NewChange": false,
+		"Share": 0.0012954942833354282,
+		"FilteredShare": 0.0012954942833354277,
+		"TotalVisits": 18644.0527040768,
+		"Domain": "mkp.icomebien.mx",
+		"Favicon": "https://site-images.similarcdn.com/image?url=mkp.icomebien.mx&t=2&s=0&h=cfc32543fcf0c109e127d8f8dfe0b9f00ebe8bd5b20066993e1712e8843c8e07",
+		"Rank": -1,
+		"TotalShare": 0.0012954942833354282,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0012954942833354282
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 18644.0527040768
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+		"SourceType": "ST",
+		"Change": 0.0,
+		"NewChange": true,
+		"Share": 0.001293544186783678,
+		"FilteredShare": 0.0012935441867836775,
+		"TotalVisits": 18615.987969746006,
+		"Domain": "inlead.online",
+		"Favicon": "https://site-images.similarcdn.com/image?url=inlead.online&t=2&s=0&h=78debfdb5706ae28804b44ae901b15a2d0597d79cde07fd3602b9fecd4bafb52",
+		"Rank": 73006,
+		"TotalShare": 0.001293544186783678,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.001293544186783678
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 18615.987969746006
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Food_and_Drink~Cooking_and_Recipes",
+		"SourceType": "ST",
+		"Change": 0.17783671294622863,
+		"NewChange": false,
+		"Share": 0.0012670410393440963,
+		"FilteredShare": 0.001267041039344096,
+		"TotalVisits": 18234.56901325684,
+		"Domain": "cuisine.journaldesfemmes.fr",
+		"Favicon": "https://site-images.similarcdn.com/image?url=cuisine.journaldesfemmes.fr&t=2&s=0&h=84abbc78c51195ffc7e97da7968b2948d6485c1c69321f6dfa3a73c40d40b631",
+		"Rank": -1,
+		"TotalShare": 0.0012670410393440963,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0012670410393440963
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 18234.56901325684
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": true,
+		"EngagementScore": 1.0
+	}, {
+		"Category": "Computers_Electronics_and_Technology~Search_Engines",
+		"SourceType": "ST",
+		"Change": 0.14467231833948477,
+		"NewChange": false,
+		"Share": 0.0012612433788007436,
+		"FilteredShare": 0.0012612433788007432,
+		"TotalVisits": 18151.132219964078,
+		"Domain": "sproutgigs.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=sproutgigs.com&t=2&s=0&h=801d59c9debf1ea7755d717289917b7149c0add0c39217c050d07512e0b199d1",
+		"Rank": 27649,
+		"TotalShare": 0.0012612433788007436,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0012612433788007436
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 18151.132219964078
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}, {
+		"Category": "Games~Video_Games_Consoles_and_Accessories",
+		"SourceType": "ST",
+		"Change": -0.19913529604585742,
+		"NewChange": false,
+		"Share": 0.0012472241942824978,
+		"FilteredShare": 0.0012472241942824973,
+		"TotalVisits": 17949.37570247995,
+		"Domain": "takethislollipop.com",
+		"Favicon": "https://site-images.similarcdn.com/image?url=takethislollipop.com&t=2&s=0&h=0ae265d87fa91ad1922d7830494dbbcc62ef30f1d907942ced02ec6ae8531963",
+		"Rank": 604373,
+		"TotalShare": 0.0012472241942824978,
+		"TotalSharePerMonth": [{
+			"Key": "2024-07-01",
+			"Value": 0.0
+		}, {
+			"Key": "2024-08-01",
+			"Value": 0.0012472241942824978
+		}],
+		"TotalVisitsAndSharePerMonth": {
+			"2024-08-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 1.0,
+				"AbsValue": 17949.37570247995
+			}],
+			"2024-07-01": [{
+				"Site": "checkout.stripe.com",
+				"Value": 0.0,
+				"AbsValue": 0.0
+			}]
+		},
+		"SiteOrigins": {
+			"checkout.stripe.com": 1.0
+		},
+		"HasAdsense": false,
+		"EngagementScore": 2.0
+	}]
+}
