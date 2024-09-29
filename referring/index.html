@@ -162,7 +162,7 @@
                     <tr>
                         <td>${index + 1}</td>
                         <td><a href="//${item.Domain}" target="_blank">${item.Domain}</a></td>
-                        <td>${item.Rank=='-1'?'-':'#'+item.Rank}</td>
+                        <td>${item.Rank=='-1'?'～':'#'+item.Rank}</td>
                         <td>${(currentShare * 100).toFixed(2)}%</td>
                         <td>${currentVisits.toFixed(2)}</td>
                         <td style="color:${item.Change>0?'green':'red'}">${item.Change>0?'+':''}${(item.Change * 100).toFixed(2)}%</td>
@@ -195,7 +195,7 @@
                     y = rows[i + 1].getElementsByTagName("TD")[n];
                     if (dir == "asc") {
                         if (n === 0 || n === 2 || n === 3 || n === 4 || n === 5) { // For numeric columns
-                            if (Number(x.innerHTML.replace('%', '').replace('#', '').replace('-', '99999999')) > Number(y.innerHTML.replace('%', '').replace('#', '').replace('-', '99999999'))) {
+                            if (Number(x.innerHTML.replace('%', '').replace('#', '').replace('～', '99999999')) > Number(y.innerHTML.replace('%', '').replace('#', '').replace('～', '99999999'))) {
                                 shouldSwitch = true;
                                 break;
                             }
@@ -207,7 +207,7 @@
                         }
                     } else if (dir == "desc") {
                         if (n === 0 || n === 2 || n === 3 || n === 4 || n === 5) { // For numeric columns
-                            if (Number(x.innerHTML.replace('%', '').replace('#', '').replace('-', '99999999')) < Number(y.innerHTML.replace('%', '').replace('#', '').replace('-', '99999999'))) {
+                            if (Number(x.innerHTML.replace('%', '').replace('#', '').replace('～', '99999999')) < Number(y.innerHTML.replace('%', '').replace('#', '').replace('～', '99999999'))) {
                                 shouldSwitch = true;
                                 break;
                             }
