@@ -172,6 +172,8 @@
         function updateWebsiteTitle() {
             const titleElement = document.getElementById('websiteTitle');
             const currentRanking = currentWebsiteIndex + 1;
+            const titleText = `#${currentRanking} ${domain} - Website Detailed Analysis`;
+            document.title = titleText;
             titleElement.innerHTML = `Website Detailed Analysis for <span class="ranking">#${currentRanking}</span> ${domain} <a href="//${domain}" target="_blank" title="Open Website"><i class="fas fa-external-link-alt"></i></a>`;
         }
 
