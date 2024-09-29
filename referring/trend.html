@@ -151,6 +151,20 @@
                         },
                         legend: {
                             display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += formatValue(context.parsed.y, metric);
+                                    }
+                                    return label;
+                                }
+                            }
                         }
                     },
                     scales: {
@@ -176,15 +190,40 @@
             });
         }
 
+        function updateCharts() {
+            const metric = document.getElementById('metricSelect').value;
+            Object.keys(charts).forEach(website => {
+                const data = getDataForWebsite(website, metric);
+                charts[website].data.datasets[0].data = data;
+                charts[website].options.scales.y.ticks.callback = function(value, index, values) {
+                    return formatValue(value, metric);
+                };
+                charts[website].options.plugins.tooltip.callbacks.label = function(context) {
+                    let label = context.dataset.label || '';
+                    if (label) {
+                        label += ': ';
+                    }
+                    if (context.parsed.y !== null) {
+                        label += formatValue(context.parsed.y, metric);
+                    }
+                    return label;
+                };
+                charts[website].update();
+            });
+        }
+
+        
+
+
         function formatValue(value, metric) {
+            //console.log('formatValue called:', value, metric); // 添加日志
             if (metric === 'Share' || metric === 'Change') {
-                // 使用 Math.round 来处理浮点数精度问题
                 return (Math.round(value * 100) / 100).toFixed(2) + '%';
             } else if (metric === 'TotalVisits') {
-                // 对于大数字，使用 toLocaleString 来添加千位分隔符
-                return value.toLocaleString(undefined, { maximumFractionDigits: 2 });
+                return (value / 1000).toLocaleString(undefined, { maximumFractionDigits: 2 }) + 'K';
+            } else if (metric === 'Number' || metric === 'Rank') {
+                return Math.round(value).toLocaleString();
             } else {
-                // 对于其他数值，四舍五入到两位小数
                 return (Math.round(value * 100) / 100).toFixed(2);
             }
         }
@@ -197,28 +236,13 @@
                     case 'Number': return record.Number;
                     case 'Rank': return record.Rank;
                     case 'Share': return record.Share * 100; // Convert to percentage
-                    case 'TotalVisits': return record.TotalVisits;
+                    case 'TotalVisits': return record.TotalVisits; 
                     case 'Change': return record.Change * 100; // Convert to percentage
                     default: return null;
                 }
             });
         }
 
-        function updateCharts() {
-            const metric = document.getElementById('metricSelect').value;
-            Object.keys(charts).forEach(website => {
-                const data = getDataForWebsite(website, metric);
-                charts[website].data.datasets[0].data = data;
-                charts[website].options.scales.y.title.text = metric;
-                charts[website].options.scales.y.ticks.callback = function(value, index, values) {
-                    if (metric === 'Share' || metric === 'Change') {
-                        return formatValue(value, metric);
-                    }
-                    return value;
-                };
-                charts[website].update();
-            });
-        }
 
         function toggleChartSize(chartWrapper) {
             chartWrapper.classList.toggle('expanded');
