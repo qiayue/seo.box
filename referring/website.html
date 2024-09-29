@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Detailed Analysis</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -46,11 +47,20 @@
             background-color: #007bff;
             color: white;
         }
+        .ranking {
+            font-weight: bold;
+            color: red;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 id="websiteTitle">Website Detailed Analysis</h1>
+        <div style="text-align: center;margin-bottom: 10px;">
+            <a href="./">Table</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./trend.html">Charts</a>
+        </div>
         <div id="navigation" class="navigation">
             <!-- Navigation links will be inserted here -->
         </div>
@@ -99,6 +109,7 @@
 
                 updateNavigation();
                 await loadWebsiteData();
+                updateWebsiteTitle();
             } catch (error) {
                 console.error(`Error loading data:`, error);
                 redirectToHomePage();
@@ -110,14 +121,20 @@
             navContainer.innerHTML = '';
 
             if (currentWebsiteIndex > 0) {
-                const prevDomain = allWebsitesData[currentWebsiteIndex - 1].Domain;
-                navContainer.innerHTML += `<a href="?domain=${encodeURIComponent(prevDomain)}">← Previous Website</a>`;
+                const prevWebsite = allWebsitesData[currentWebsiteIndex - 1];
+                navContainer.innerHTML += `<a href="?domain=${encodeURIComponent(prevWebsite.Domain)}">← #${currentWebsiteIndex} ${prevWebsite.Domain}</a>`;
             }
 
             if (currentWebsiteIndex < allWebsitesData.length - 1) {
-                const nextDomain = allWebsitesData[currentWebsiteIndex + 1].Domain;
-                navContainer.innerHTML += `<a href="?domain=${encodeURIComponent(nextDomain)}">Next Website →</a>`;
+                const nextWebsite = allWebsitesData[currentWebsiteIndex + 1];
+                navContainer.innerHTML += `<a href="?domain=${encodeURIComponent(nextWebsite.Domain)}">#${currentWebsiteIndex + 2} ${nextWebsite.Domain} →</a>`;
             }
+        }
+
+        function updateWebsiteTitle() {
+            const titleElement = document.getElementById('websiteTitle');
+            const currentRanking = currentWebsiteIndex + 1;
+            titleElement.innerHTML = `Website Detailed Analysis for <span class="ranking">#${currentRanking}</span> ${domain} <a href="//${domain}" target="_blank" title="Open Website"><i class="fas fa-external-link-alt"></i></a>`;
         }
 
         async function loadWebsiteData() {
@@ -138,7 +155,7 @@
                 }
             }
             
-            document.getElementById('websiteTitle').textContent = `Detailed Analysis for ${domain}`;
+            document.getElementById('websiteTitle').textContent = `Website Detailed Analysis for ${domain} `;
             createCharts();
         }
 
