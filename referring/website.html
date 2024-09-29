@@ -20,9 +20,21 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
         }
         h1, h2 {
             color: #333;
+        }
+        .header{
+            position: fixed;
+            margin: 0 auto;
+            max-width: 1200px;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background-color: #ffffff;
+            border-bottom: solid 1px #eee;
         }
         .chart-container {
             margin-bottom: 30px;
@@ -75,6 +87,9 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        #chartsContainer{
+            margin-top: 170px; /* Adjust based on header height */
+        }
     </style>
 </head>
 <body>
@@ -83,14 +98,16 @@
         <div class="loader"></div>
     </div>
     <div class="container">
-        <h1 id="websiteTitle">Website Detailed Analysis</h1>
-        <div style="text-align: center;margin-bottom: 10px;">
-            <a href="./">Table</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="./trend.html">Charts</a>
-        </div>
-        <div id="navigation" class="navigation">
-            <!-- Navigation links will be inserted here -->
+        <div class="header">
+            <h1 id="websiteTitle">Website Detailed Analysis</h1>
+            <div style="text-align: center;margin-bottom: 10px;">
+                <a href="./">Table</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="./trend.html">Charts</a>
+            </div>
+            <div id="navigation" class="navigation">
+                <!-- Navigation links will be inserted here -->
+            </div>
         </div>
         <div id="chartsContainer">
             <!-- Charts will be inserted here -->
