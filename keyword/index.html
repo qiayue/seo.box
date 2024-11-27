@@ -195,7 +195,11 @@
 
         <div style="margin-top: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; color: #666;">
             <p>The calculation is based on three assumptions:</p>
-            <p>1. Each backlink costs $100;<br>
+            <p>1. Backlink costs follow a tiered pricing model:<br>
+               • First 10 links: $100 each<br>
+               • Links 11-50: Cost increases by 1% per additional link<br>
+               • Links 51-200: Cost increases by 1.5% per additional link<br>
+               • Links 201+: Cost increases by 2% per additional link<br>
             2. Each click generates $0.1 in revenue;<br>
             3. You can capture all potential clicks.</p>
             <p>While capturing all clicks may not be realistic, we prefer to stay optimistic in our calculations.</p>
@@ -299,7 +303,7 @@
         function calculateROI(dailySearchVolume, kd) {
             const requiredDomains = getRequiredDomains(kd);
             const annualRevenue = dailySearchVolume * 0.1 * 365; // $1 per search
-            const investment = requiredDomains * 100; // $100 per domain
+            const investment = getTotalLinkCost(requiredDomains); // $100 per domain
             const roi = ((annualRevenue - investment) / investment) * 100;
             return {
                 requiredDomains,
@@ -307,6 +311,30 @@
                 investment,
                 roi
             };
+        }
+
+        function getLinkCost(linkOrder) {
+            if (linkOrder <= 10) {
+                return 100;
+            }
+            
+            if (linkOrder <= 50) {
+                return 100 * (1 + (linkOrder - 10) * 0.01);
+            }
+            
+            if (linkOrder <= 200) {
+                return 100 * (1 + (50 - 10) * 0.01 + (linkOrder - 50) * 0.015);
+            }
+            
+            return 100 * (1 + (50 - 10) * 0.01 + (200 - 50) * 0.015 + (linkOrder - 200) * 0.02);
+        }
+
+        function getTotalLinkCost(totalLinks) {
+            let totalCost = 0;
+            for (let i = 1; i <= totalLinks; i++) {
+                totalCost += getLinkCost(i);
+            }
+            return totalCost;
         }
 
         function calculateAll() {
@@ -354,8 +382,13 @@
             
             document.getElementById('kdroi-calculation').innerHTML = `
                 Required Backlinks: ${roiData.requiredDomains}<br>
-                Investment Cost: $${roiData.investment.toLocaleString()}<br>
-                Annual Revenue ($0.1/click): $${roiData.annualRevenue.toLocaleString()}<br>
+                Investment Cost Calculation:<br>
+                • First 10 links: $100 each<br>
+                • Links 11-50: +1% per link<br>
+                • Links 51-200: +1.5% per link<br>
+                • Links 201+: +2% per link<br>
+                Total Investment: $${roiData.investment.toLocaleString()}<br>
+                Estimated Annual Revenue ($0.1/click): $${roiData.annualRevenue.toLocaleString()}<br>
                 ROI: ${roiData.roi.toFixed(1)}%
             `;
             
@@ -392,15 +425,18 @@
 
             // Set KDROI recommendation
             const kdroiRec = document.getElementById('kdroi-recommendation');
-            if (roiData.roi > 100) {
+            if (roiData.roi > 500) {
                 kdroiRec.className = 'recommendation low-competition';
                 kdroiRec.innerHTML = 'Excellent ROI - Highly recommended investment';
-            } else if (roiData.roi > 0) {
+            } else if (roiData.roi > 300) {
                 kdroiRec.className = 'recommendation medium-competition';
-                kdroiRec.innerHTML = 'Positive ROI - Consider if budget allows';
+                kdroiRec.innerHTML = 'Good ROI - Recommended investment';
+            } else if (roiData.roi > 100) {
+                kdroiRec.className = 'recommendation medium-competition';
+                kdroiRec.innerHTML = 'Low ROI - Proceed with caution';
             } else {
                 kdroiRec.className = 'recommendation high-competition';
-                kdroiRec.innerHTML = 'Negative ROI - Not recommended for investment';
+                kdroiRec.innerHTML = 'Negative ROI - Not recommended';
             }
 
             

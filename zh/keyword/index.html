@@ -195,7 +195,11 @@
 
         <div style="margin-top: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; color: #666;">
             <p>计算时做了三个假设：</p>
-            <p>1. 假设每一个外链成本100美元；<br>
+            <p>1. 外链成本采用阶梯定价：<br>
+               • 前10个链接：每个$100<br>
+               • 11-50个链接：每增加1个，成本增加1%<br>
+               • 51-200个链接：每增加1个，成本增加1.5%<br>
+               • 200个以上：每增加1个，成本增加2%<br>
             2. 假设每一个点击能够带来0.1美元的回报；<br>
             3. 假设你能够拿到全部点击。</p>
             <p>实际不太可能拿到全部点击，但是我们计算嘛，就要乐观一点。</p>
@@ -299,7 +303,7 @@
         function calculateROI(dailySearchVolume, kd) {
             const requiredDomains = getRequiredDomains(kd);
             const annualRevenue = dailySearchVolume * 0.1 * 365; // $1 per search
-            const investment = requiredDomains * 100; // $100 per domain
+            const investment = getTotalLinkCost(requiredDomains); // $100 per domain
             const roi = ((annualRevenue - investment) / investment) * 100;
             return {
                 requiredDomains,
@@ -307,6 +311,34 @@
                 investment,
                 roi
             };
+        }
+
+        function getLinkCost(linkOrder) {
+            // 前10个链接固定价格
+            if (linkOrder <= 10) {
+                return 100;
+            }
+            
+            // 11-50个链接，每个增加1%
+            if (linkOrder <= 50) {
+                return 100 * (1 + (linkOrder - 10) * 0.01);
+            }
+            
+            // 51-200个链接，每个增加1.5%
+            if (linkOrder <= 200) {
+                return 100 * (1 + (50 - 10) * 0.01 + (linkOrder - 50) * 0.015);
+            }
+            
+            // 200个以上，每个增加2%
+            return 100 * (1 + (50 - 10) * 0.01 + (200 - 50) * 0.015 + (linkOrder - 200) * 0.02);
+        }
+
+        function getTotalLinkCost(totalLinks) {
+            let totalCost = 0;
+            for (let i = 1; i <= totalLinks; i++) {
+                totalCost += getLinkCost(i);
+            }
+            return totalCost;
         }
 
         function calculateAll() {
@@ -353,9 +385,14 @@
             const roiData = calculateROI(dailySearchVolume, kd);
             
             document.getElementById('kdroi-calculation').innerHTML = `
-                所需反链数量: ${roiData.requiredDomains}<br>
-                投资成本: $${roiData.investment.toLocaleString()}<br>
-                年收入 ($0.1/点击): $${roiData.annualRevenue.toLocaleString()}<br>
+                所需反链数量: ${roiData.requiredDomains}个<br>
+                投资成本计算方式:<br>
+                • 前10个链接: $100/个<br>
+                • 11-50个链接: 每个增加1%<br>
+                • 51-200个链接: 每个增加1.5%<br>
+                • 200个以上: 每个增加2%<br>
+                总投资成本: $${roiData.investment.toLocaleString()}<br>
+                预计年收入 ($0.1/点击): $${roiData.annualRevenue.toLocaleString()}<br>
                 投资回报率: ${roiData.roi.toFixed(1)}%
             `;
             
@@ -392,12 +429,15 @@
 
             // Set KDROI recommendation
             const kdroiRec = document.getElementById('kdroi-recommendation');
-            if (roiData.roi > 100) {
+            if (roiData.roi > 500) {
                 kdroiRec.className = 'recommendation low-competition';
                 kdroiRec.innerHTML = '优秀的投资回报 - 强烈推荐投资';
-            } else if (roiData.roi > 0) {
+            } else if (roiData.roi > 300) {
                 kdroiRec.className = 'recommendation medium-competition';
-                kdroiRec.innerHTML = '正向回报 - 可考虑投资';
+                kdroiRec.innerHTML = '不错的投资回报 - 推荐投资';
+            } else if (roiData.roi > 100) {
+                kdroiRec.className = 'recommendation medium-competition';
+                kdroiRec.innerHTML = '低回报 - 谨慎投资';
             } else {
                 kdroiRec.className = 'recommendation high-competition';
                 kdroiRec.innerHTML = '负回报 - 不建议投资';
