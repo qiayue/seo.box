@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SEO Keyword Analysis Tools | SEO.BOX</title>
+    <meta name="description" content="Calculate KGR, EKGR, and KDROI to analyze keyword competition and ROI potential">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        .header p {
+            color: #666;
+            margin-top: 0;
+        }
+        .formula-display {
+            background: #fff;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            border-radius: 8px;
+            box-shadow: inset 0 0 4px rgba(0,0,0,0.1);
+        }
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #34495e;
+            font-weight: 500;
+        }
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .results {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+        .result-box {
+            padding: 1rem;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            display: none;
+        }
+        .result-box h2 {
+            margin-top: 0;
+            font-size: 1.25rem;
+            color: #2c3e50;
+        }
+        .formula {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        .recommendation {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .low-competition { background-color: #d4edda; color: #155724; }
+        .medium-competition { background-color: #fff3cd; color: #856404; }
+        .high-competition { background-color: #f8d7da; color: #721c24; }
+        .footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .info-tooltip {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+        .metric-scales {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .scale-card {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .scale-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><a href="https://seo.box/keyword/" style="color: black;text-decoration: none;">SEO Keyword Analysis Tools</a></h1>
+            <p>Calculate KGR, EKGR, and KDROI to evaluate keyword opportunities</p>
+        </div>
+        
+        
+
+        <div class="input-group">
+            <label for="allintitle">Allintitle Search Results:</label>
+            <input type="number" id="allintitle" placeholder="Enter number of allintitle results" min="0">
+            <div class="info-tooltip">The number of pages with your exact keyword in their title tag</div>
+        </div>
+        
+        <div class="input-group">
+            <label for="searchVolume">Monthly Search Volume:</label>
+            <input type="number" id="searchVolume" placeholder="Enter monthly search volume" min="1">
+            <div class="info-tooltip">Average monthly searches for this keyword</div>
+        </div>
+        
+        <div class="input-group">
+            <label for="kd">Keyword Difficulty (KD):</label>
+            <input type="number" id="kd" placeholder="Enter KD value (0-100)" min="0" max="100">
+            <div class="info-tooltip">Keyword difficulty score from 0 to 100</div>
+        </div>
+        
+        <button onclick="calculateAll()">Calculate All Metrics</button>
+        
+        <div class="results">
+            <div id="kgr-result" class="result-box">
+                <h2>KGR Analysis</h2>
+                <div class="formula" id="kgr-calculation"></div>
+                <div>KGR Value: <strong id="kgrValue"></strong></div>
+                <div class="recommendation" id="kgr-recommendation"></div>
+            </div>
+            
+            <div id="ekgr-result" class="result-box">
+                <h2>EKGR Analysis</h2>
+                <div class="formula" id="ekgr-calculation"></div>
+                <div>EKGR Value: <strong id="ekgrValue"></strong></div>
+                <div class="recommendation" id="ekgr-recommendation"></div>
+            </div>
+
+            <div id="kdroi-result" class="result-box">
+                <h2>KDROI Analysis</h2>
+                <div class="formula" id="kdroi-calculation"></div>
+                <div>KDROI Value: <strong id="kdroiValue"></strong></div>
+                <div class="recommendation" id="kdroi-recommendation"></div>
+            </div>
+        </div>
+
+        <div class="formula-display">
+            <svg width="100%" height="350" viewBox="0 0 800 350">
+                <!-- KGR Formula -->
+                <g transform="translate(50,50)">
+                    <text x="0" y="0" font-size="20" font-weight="bold">KGR (Keyword Golden Ratio):</text>
+                    <text x="300" y="0" font-size="20">= </text>
+                    <line x1="320" y1="-5" x2="520" y2="-5" stroke="#333" stroke-width="2"/>
+                    <text x="420" y="-15" text-anchor="middle" font-size="20">allintitle results</text>
+                    <text x="420" y="20" text-anchor="middle" font-size="20">monthly search volume</text>
+                </g>
+                
+                <!-- EKGR Formula -->
+                <g transform="translate(50,150)">
+                    <text x="0" y="0" font-size="20" font-weight="bold">EKGR (Enhanced KGR):</text>
+                    <text x="300" y="0" font-size="20">= </text>
+                    <line x1="320" y1="-5" x2="620" y2="-5" stroke="#333" stroke-width="2"/>
+                    <text x="470" y="-15" text-anchor="middle" font-size="20">allintitle × (1 + KD/100)</text>
+                    <text x="470" y="20" text-anchor="middle" font-size="20">monthly search volume</text>
+                </g>
+
+                <!-- KDROI Formula -->
+                <g transform="translate(50,250)">
+                    <text x="0" y="0" font-size="20" font-weight="bold">KDROI (Keyword ROI):</text>
+                    <text x="300" y="0" font-size="20">= </text>
+                    <line x1="320" y1="-5" x2="520" y2="-5" stroke="#333" stroke-width="2"/>
+                    <text x="420" y="-15" text-anchor="middle" font-size="20">daily search volume</text>
+                    <text x="420" y="20" text-anchor="middle" font-size="20">keyword difficulty</text>
+                </g>
+
+                <g transform="translate(50,320)">
+                    <!-- KGR/EKGR Scale -->
+                    <text x="0" y="-5" font-size="14" font-weight="bold">KGR/EKGR Scale:</text>
+                    <rect x="0" y="0" width="160" height="25" fill="#90EE90"/>
+                    <text x="80" y="17" text-anchor="middle" font-size="12">Low: < 0.25</text>
+                    
+                    <rect x="170" y="0" width="160" height="25" fill="#FFE4B5"/>
+                    <text x="250" y="17" text-anchor="middle" font-size="12">Medium: 0.25-1.0</text>
+                    
+                    <rect x="340" y="0" width="160" height="25" fill="#FFB6C6"/>
+                    <text x="420" y="17" text-anchor="middle" font-size="12">High: > 1.0</text>
+
+                    <!-- KDROI Scale -->
+                    <text x="520" y="-5" font-size="14" font-weight="bold">KDROI Scale:</text>
+                    <rect x="520" y="0" width="160" height="25" fill="#90EE90"/>
+                    <text x="600" y="17" text-anchor="middle" font-size="12">ROI > 100%</text>
+                    
+                    <rect x="690" y="0" width="100" height="25" fill="#FFB6C6"/>
+                    <text x="740" y="17" text-anchor="middle" font-size="12">ROI < 0%</text>
+                </g>
+            </svg>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 <a href="https://seo.box/">SEO.BOX</a> - SEO Tools Box</p>
+        </div>
+    </div>
+
+    <script>
+
+        const kdToReferringDomains = {
+            0: 0,
+            10: 10,
+            20: 22,
+            30: 36,
+            40: 56,
+            50: 84,
+            60: 129,
+            70: 202,
+            80: 353,
+            90: 756
+        };
+
+        function getRequiredDomains(kd) {
+            // Find the closest KD value and interpolate
+            const kdValues = Object.keys(kdToReferringDomains).map(Number);
+            const lowerKd = Math.max(...kdValues.filter(k => k <= kd));
+            const upperKd = Math.min(...kdValues.filter(k => k >= kd));
+            
+            if (lowerKd === upperKd) return kdToReferringDomains[lowerKd];
+            
+            const lowerDomains = kdToReferringDomains[lowerKd];
+            const upperDomains = kdToReferringDomains[upperKd];
+            
+            // Linear interpolation
+            return Math.round(
+                lowerDomains + 
+                (kd - lowerKd) * (upperDomains - lowerDomains) / (upperKd - lowerKd)
+            );
+        }
+
+        function calculateROI(dailySearchVolume, kd) {
+            const requiredDomains = getRequiredDomains(kd);
+            const annualRevenue = dailySearchVolume * 365 * 0.1; // $1 per search
+            const investment = requiredDomains * 100; // $100 per domain
+            const roi = ((annualRevenue - investment) / investment) * 100;
+            return {
+                requiredDomains,
+                annualRevenue,
+                investment,
+                roi
+            };
+        }
+
+        function calculateAll() {
+            const allintitle = parseFloat(document.getElementById('allintitle').value);
+            const searchVolume = parseFloat(document.getElementById('searchVolume').value);
+            const kd = parseFloat(document.getElementById('kd').value);
+            
+            if (isNaN(allintitle) || isNaN(searchVolume) || isNaN(kd)) {
+                alert('Please fill in all required fields!');
+                return;
+            }
+            
+            if (searchVolume <= 0) {
+                alert('Monthly search volume must be greater than 0!');
+                return;
+            }
+            
+            if (kd < 0 || kd > 100) {
+                alert('KD value must be between 0 and 100!');
+                return;
+            }
+
+            // Calculate KGR
+            const kgr = allintitle / searchVolume;
+            document.getElementById('kgr-calculation').innerHTML = `
+                KGR = allintitle / monthly search volume<br>
+                = ${allintitle} / ${searchVolume}<br>
+                = ${kgr.toFixed(3)}
+            `;
+            document.getElementById('kgrValue').textContent = kgr.toFixed(3);
+            
+            // Calculate EKGR
+            const kdFactor = 1 + (kd / 100);
+            const ekgr = (allintitle * kdFactor) / searchVolume;
+            document.getElementById('ekgr-calculation').innerHTML = `
+                EKGR = (allintitle × (1 + KD/100)) / monthly search volume<br>
+                = (${allintitle} × ${kdFactor.toFixed(2)}) / ${searchVolume}<br>
+                = ${ekgr.toFixed(3)}
+            `;
+            document.getElementById('ekgrValue').textContent = ekgr.toFixed(3);
+
+            // Calculate KDROI
+            const dailySearchVolume = searchVolume / 30;
+            const roiData = calculateROI(dailySearchVolume, kd);
+            
+            document.getElementById('kdroi-calculation').innerHTML = `
+                Required Backlinks: ${roiData.requiredDomains}<br>
+                Investment Cost: $${roiData.investment.toLocaleString()}<br>
+                Annual Revenue: $${roiData.annualRevenue.toLocaleString()}<br>
+                ROI: ${roiData.roi.toFixed(1)}%
+            `;
+            
+            // Show result boxes
+            document.getElementById('kgr-result').style.display = 'block';
+            document.getElementById('ekgr-result').style.display = 'block';
+            document.getElementById('kdroi-result').style.display = 'block';
+            
+            // Set KGR recommendation
+            const kgrRec = document.getElementById('kgr-recommendation');
+            if (kgr < 0.25) {
+                kgrRec.className = 'recommendation low-competition';
+                kgrRec.innerHTML = 'Low competition - Great opportunity!';
+            } else if (kgr <= 1.0) {
+                kgrRec.className = 'recommendation medium-competition';
+                kgrRec.innerHTML = 'Medium competition - Consider your site strength';
+            } else {
+                kgrRec.className = 'recommendation high-competition';
+                kgrRec.innerHTML = 'High competition - Challenging to rank';
+            }
+            
+            // Set EKGR recommendation
+            const ekgrRec = document.getElementById('ekgr-recommendation');
+            if (ekgr < 0.25 && kd < 30) {
+                ekgrRec.className = 'recommendation low-competition';
+                ekgrRec.innerHTML = 'Low competition with manageable difficulty';
+            } else if (ekgr <= 1.0 && kd <= 50) {
+                ekgrRec.className = 'recommendation medium-competition';
+                ekgrRec.innerHTML = 'Medium competition - Evaluate resources needed';
+            } else {
+                ekgrRec.className = 'recommendation high-competition';
+                ekgrRec.innerHTML = 'High competition - Significant effort required';
+            }
+
+            // Set KDROI recommendation
+            const kdroiRec = document.getElementById('kdroi-recommendation');
+            if (roiData.roi > 100) {
+                kdroiRec.className = 'recommendation low-competition';
+                kdroiRec.innerHTML = 'Excellent ROI - Highly recommended investment';
+            } else if (roiData.roi > 0) {
+                kdroiRec.className = 'recommendation medium-competition';
+                kdroiRec.innerHTML = 'Positive ROI - Consider if budget allows';
+            } else {
+                kdroiRec.className = 'recommendation high-competition';
+                kdroiRec.innerHTML = 'Negative ROI - Not recommended for investment';
+            }
+
+            // Add detailed analysis to each metric
+            kgrRec.innerHTML += `<br><br>Additional Insights:<br>• Average monthly searches per result: ${(searchVolume/allintitle).toFixed(1)}`;
+            
+            ekgrRec.innerHTML += `<br><br>Additional Insights:
+                <br>• KD Factor: ${kdFactor.toFixed(2)}
+                <br>• Difficulty Level: ${kd < 30 ? 'Low' : kd <= 50 ? 'Medium' : 'High'}`;
+            
+            kdroiRec.innerHTML += `<br><br>Investment Analysis:
+                <br>• Required Backlinks: ${roiData.requiredDomains}
+                <br>• Total Investment: $${roiData.investment.toLocaleString()}
+                <br>• Annual Revenue: $${roiData.annualRevenue.toLocaleString()}
+                <br>• Return on Investment: ${roiData.roi.toFixed(1)}%
+                <br>• Monthly Revenue: $${(roiData.annualRevenue/12).toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
