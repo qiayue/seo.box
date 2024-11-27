@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SEO Keyword Analysis Tools | SEO.BOX</title>
+    <title>SEO关键词分析工具 | SEO.BOX</title>
     <meta name="description" content="Calculate KGR, EKGR, and KDROI to analyze keyword competition and ROI potential">
     <style>
         body {
@@ -139,8 +139,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1><a href="https://seo.box/keyword/" style="color: black;text-decoration: none;">SEO Keyword Analysis Tools</a></h1>
-            <p>Calculate KGR, EKGR, and KDROI to evaluate keyword opportunities</p>
+            <h1><a href="https://seo.box/keyword/" style="color: black;text-decoration: none;">SEO关键词分析工具</a></h1>
+            <p>通过计算KGR、EKGR和KDROI来评估关键词机会</p>
             <div class="language-switch">
                 <a href="https://seo.box/keyword/" style="color: #3498db; margin-right: 10px;">English</a>
                 <span style="color: #666;">|</span>
@@ -151,44 +151,44 @@
         
 
         <div class="input-group">
-            <label for="allintitle">Allintitle Search Results:</label>
-            <input type="number" id="allintitle" placeholder="Enter number of allintitle results" min="0">
-            <div class="info-tooltip">The number of pages with your exact keyword in their title tag</div>
+            <label for="allintitle">Allintitle搜索结果数量:</label>
+            <input type="number" id="allintitle" placeholder="输入allintitle搜索结果数量" min="0">
+            <div class="info-tooltip">标题中包含完整关键词的页面数量</div>
         </div>
-        
+
         <div class="input-group">
-            <label for="searchVolume">Monthly Search Volume:</label>
-            <input type="number" id="searchVolume" placeholder="Enter monthly search volume" min="1">
-            <div class="info-tooltip">Average monthly searches for this keyword</div>
+            <label for="searchVolume">月搜索量:</label>
+            <input type="number" id="searchVolume" placeholder="输入月搜索量" min="1">
+            <div class="info-tooltip">该关键词的平均月搜索量</div>
         </div>
-        
+
         <div class="input-group">
-            <label for="kd">Keyword Difficulty (KD):</label>
-            <input type="number" id="kd" placeholder="Enter KD value (0-100)" min="0" max="100">
-            <div class="info-tooltip">Keyword difficulty score from 0 to 100</div>
+            <label for="kd">关键词难度(KD):</label>
+            <input type="number" id="kd" placeholder="输入KD值(0-100)" min="0" max="100">
+            <div class="info-tooltip">关键词难度得分，范围0-100</div>
         </div>
-        
-        <button onclick="calculateAll()">Calculate All Metrics</button>
+
+        <button onclick="calculateAll()">计算所有指标</button>
         
         <div class="results">
             <div id="kgr-result" class="result-box">
-                <h2>KGR Analysis</h2>
+                <h2>KGR分析</h2>
                 <div class="formula" id="kgr-calculation"></div>
-                <div>KGR Value: <strong id="kgrValue"></strong></div>
+                <div>KGR值: <strong id="kgrValue"></strong></div>
                 <div class="recommendation" id="kgr-recommendation"></div>
             </div>
-            
+
             <div id="ekgr-result" class="result-box">
-                <h2>EKGR Analysis</h2>
+                <h2>EKGR分析</h2>
                 <div class="formula" id="ekgr-calculation"></div>
-                <div>EKGR Value: <strong id="ekgrValue"></strong></div>
+                <div>EKGR值: <strong id="ekgrValue"></strong></div>
                 <div class="recommendation" id="ekgr-recommendation"></div>
             </div>
 
             <div id="kdroi-result" class="result-box">
-                <h2>KDROI Analysis</h2>
+                <h2>KDROI分析</h2>
                 <div class="formula" id="kdroi-calculation"></div>
-                <div>KDROI Value: <strong id="kdroiValue"></strong></div>
+                <div>KDROI值: <strong id="kdroiValue"></strong></div>
                 <div class="recommendation" id="kdroi-recommendation"></div>
             </div>
         </div>
@@ -307,24 +307,24 @@
             const kd = parseFloat(document.getElementById('kd').value);
             
             if (isNaN(allintitle) || isNaN(searchVolume) || isNaN(kd)) {
-                alert('Please fill in all required fields!');
+                alert('请填写所有必填字段！');
                 return;
             }
             
             if (searchVolume <= 0) {
-                alert('Monthly search volume must be greater than 0!');
+                alert('月搜索量必须大于0！');
                 return;
             }
             
             if (kd < 0 || kd > 100) {
-                alert('KD value must be between 0 and 100!');
+                alert('KD值必须在0到100之间！');
                 return;
             }
 
             // Calculate KGR
             const kgr = allintitle / searchVolume;
             document.getElementById('kgr-calculation').innerHTML = `
-                KGR = allintitle / monthly search volume<br>
+                KGR = allintitle / 月搜索量<br>
                 = ${allintitle} / ${searchVolume}<br>
                 = ${kgr.toFixed(3)}
             `;
@@ -334,7 +334,7 @@
             const kdFactor = 1 + (kd / 100);
             const ekgr = (allintitle * kdFactor) / searchVolume;
             document.getElementById('ekgr-calculation').innerHTML = `
-                EKGR = (allintitle × (1 + KD/100)) / monthly search volume<br>
+                EKGR = (allintitle × (1 + KD/100)) / 月搜索量<br>
                 = (${allintitle} × ${kdFactor.toFixed(2)}) / ${searchVolume}<br>
                 = ${ekgr.toFixed(3)}
             `;
@@ -345,10 +345,10 @@
             const roiData = calculateROI(dailySearchVolume, kd);
             
             document.getElementById('kdroi-calculation').innerHTML = `
-                Required Backlinks: ${roiData.requiredDomains}<br>
-                Investment Cost: $${roiData.investment.toLocaleString()}<br>
-                Annual Revenue ($0.1/click): $${roiData.annualRevenue.toLocaleString()}<br>
-                ROI: ${roiData.roi.toFixed(1)}%
+                所需反链数量: ${roiData.requiredDomains}<br>
+                投资成本: $${roiData.investment.toLocaleString()}<br>
+                年收入 ($0.1/点击): $${roiData.annualRevenue.toLocaleString()}<br>
+                投资回报率: ${roiData.roi.toFixed(1)}%
             `;
             
             // Show result boxes
@@ -360,57 +360,57 @@
             const kgrRec = document.getElementById('kgr-recommendation');
             if (kgr < 0.25) {
                 kgrRec.className = 'recommendation low-competition';
-                kgrRec.innerHTML = 'Low competition - Great opportunity!';
+                kgrRec.innerHTML = '低竞争 - 极好的机会！';
             } else if (kgr <= 1.0) {
                 kgrRec.className = 'recommendation medium-competition';
-                kgrRec.innerHTML = 'Medium competition - Consider your site strength';
+                kgrRec.innerHTML = '中等竞争 - 需考虑网站实力';
             } else {
                 kgrRec.className = 'recommendation high-competition';
-                kgrRec.innerHTML = 'High competition - Challenging to rank';
+                kgrRec.innerHTML = '高竞争 - 排名具有挑战性';
             }
             
             // Set EKGR recommendation
             const ekgrRec = document.getElementById('ekgr-recommendation');
             if (ekgr < 0.25 && kd < 30) {
                 ekgrRec.className = 'recommendation low-competition';
-                ekgrRec.innerHTML = 'Low competition with manageable difficulty';
+                ekgrRec.innerHTML = '低竞争且难度适中';
             } else if (ekgr <= 1.0 && kd <= 50) {
                 ekgrRec.className = 'recommendation medium-competition';
-                ekgrRec.innerHTML = 'Medium competition - Evaluate resources needed';
+                ekgrRec.innerHTML = '中等竞争 - 评估所需资源';
             } else {
                 ekgrRec.className = 'recommendation high-competition';
-                ekgrRec.innerHTML = 'High competition - Significant effort required';
+                ekgrRec.innerHTML = '高竞争 - 需要大量资源投入';
             }
 
             // Set KDROI recommendation
             const kdroiRec = document.getElementById('kdroi-recommendation');
             if (roiData.roi > 100) {
                 kdroiRec.className = 'recommendation low-competition';
-                kdroiRec.innerHTML = 'Excellent ROI - Highly recommended investment';
+                kdroiRec.innerHTML = '优秀的投资回报 - 强烈推荐投资';
             } else if (roiData.roi > 0) {
                 kdroiRec.className = 'recommendation medium-competition';
-                kdroiRec.innerHTML = 'Positive ROI - Consider if budget allows';
+                kdroiRec.innerHTML = '正向回报 - 可考虑投资';
             } else {
                 kdroiRec.className = 'recommendation high-competition';
-                kdroiRec.innerHTML = 'Negative ROI - Not recommended for investment';
+                kdroiRec.innerHTML = '负回报 - 不建议投资';
             }
 
             
 
             // Add detailed analysis to each metric
-            kgrRec.innerHTML += `<br><br>Additional Insights:<br>• Average monthly searches per result: ${(searchVolume/allintitle).toFixed(1)}`;
+            kgrRec.innerHTML += `<br><br>附加分析:<br>• 每个结果的月均搜索量: ${(searchVolume/allintitle).toFixed(1)}`;
             
-            ekgrRec.innerHTML += `<br><br>Additional Insights:
-                <br>• KD Factor: ${kdFactor.toFixed(2)}
-                <br>• Difficulty Level: ${kd < 30 ? 'Low' : kd <= 50 ? 'Medium' : 'High'}`;
+            ekgrRec.innerHTML += `<br><br>附加分析:
+                <br>• KD系数: ${kdFactor.toFixed(2)}
+                <br>• 难度等级: ${kd < 30 ? '低' : kd <= 50 ? '中等' : '高'}`;
             
-            kdroiRec.innerHTML += `<br><br>Investment Analysis:
-                <br>• Required Backlinks: ${roiData.requiredDomains}
-                <br>• Total Investment: $${roiData.investment.toLocaleString()}
-                <br>• Annual Revenue ($0.1/click): $${roiData.annualRevenue.toLocaleString()}
-                <br>• Daily Revenue: $${(roiData.annualRevenue/365).toFixed(2)}
-                <br>• Monthly Revenue: $${(roiData.annualRevenue/12).toFixed(2)}
-                <br>• Return on Investment: ${roiData.roi.toFixed(1)}%`;
+            kdroiRec.innerHTML += `<br><br>投资分析:
+                <br>• 所需反链: ${roiData.requiredDomains}
+                <br>• 总投资: $${roiData.investment.toLocaleString()}
+                <br>• 年收入 ($0.1/点击): $${roiData.annualRevenue.toLocaleString()}
+                <br>• 日收入: $${(roiData.annualRevenue/365).toFixed(2)}
+                <br>• 月收入: $${(roiData.annualRevenue/12).toFixed(2)}
+                <br>• 投资回报率: ${roiData.roi.toFixed(1)}%`;
         }
     </script>
 </body>
