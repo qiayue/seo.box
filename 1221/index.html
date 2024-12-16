@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 30px;
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.1),
+                0 0 0 1px rgba(0,0,0,0.05);
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+            opacity: 0.03;
+            z-index: 0;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0 40px;
+            position: relative;
+            margin-bottom: 40px;
+        }
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #4b6cb7, transparent);
+        }
+        .title {
+            font-size: 36px;
+            color: #182848;
+            margin: 0 0 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 0 rgba(255,255,255,0.8);
+        }
+        .event-info {
+            background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 20px;
+            margin: 0 auto 40px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            max-width: 90%;
+        }
+        .event-info p {
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.6;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+        .session {
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 16px;
+            background: white;
+            box-shadow: 
+                0 4px 6px rgba(0,0,0,0.02),
+                0 1px 3px rgba(0,0,0,0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        .session::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: #4b6cb7;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .session:hover {
+            transform: translateX(10px);
+            box-shadow: 
+                0 10px 20px rgba(0,0,0,0.05),
+                0 4px 8px rgba(0,0,0,0.05);
+        }
+        .session:hover::before {
+            opacity: 1;
+        }
+        .time {
+            display: inline-block;
+            color: #4b6cb7;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 6px 12px;
+            background: rgba(75,108,183,0.1);
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+        .speaker {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .speaker b {
+            color: #182848;
+            font-size: 17px;
+            font-weight: 700;
+        }
+        .topic {
+            color: #182848;
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+        .break {
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
+        }
+        .break .time {
+            background: rgba(255,255,255,0.5);
+            color: #3c8b6b;
+        }
+        .social {
+            background: linear-gradient(135deg, #bbd2ec 0%, #d6e3f3 100%);
+        }
+        .social .time {
+            background: rgba(255,255,255,0.5);
+            color: #4b6cb7;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                border-radius: 20px;
+            }
+            .title {
+                font-size: 28px;
+            }
+            .event-info {
+                padding: 20px;
+            }
+            .session {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">12.21·深圳·哥飞的朋友们线下聚会</h1>
+        </div>
+
+        <div class="event-info">
+            <p><i>🗓</i> 时间：2024年12月21日 12:30 开始入场</p>
+            <p><i>📍</i> 地点：深圳后海·鹏润达广场11楼·夫子国际会议中心·海容厅</p>
+        </div>
+
+        <div class="session">
+            <div class="time">12:30~13:25</div>
+            <div class="speaker">签到入场</div>
+            <div class="topic">自由交流、合影拍照</div>
+        </div>
+
+        <div class="session">
+            <div class="time">13:30~13:55</div>
+            <div class="speaker"><b>idoubi</b>（前大厂高级研发，现独立全栈开发，自由职业，all in AI）</div>
+            <div class="topic">2024，我追过的 AI 风口</div>
+        </div>
+
+        <div class="session">
+            <div class="time">14:00~14:25</div>
+            <div class="speaker"><b>Lucas小杨</b>（前字节产品经理，两个月转型独立开发）</div>
+            <div class="topic">产品经理探索AI工具出海经验分享</div>
+        </div>
+
+        <div class="session">
+            <div class="time">14:30~14:55</div>
+            <div class="speaker"><b>龙轼</b>（前大厂技术专家，现出海独立开发者）</div>
+            <div class="topic">从技术人到独立开发者: 一个技术人的出海之旅</div>
+        </div>
+
+        <div class="session">
+            <div class="time">15:00~15:25</div>
+            <div class="speaker"><b>蛋壳</b>（初中自学编程，曾创百万级用户产品，24年应届毕业生，现投身出海创业）</div>
+            <div class="topic">探索与突破：应届毕业生的出海创业之路</div>
+        </div>
+
+        <div class="session break">
+            <div class="time">15:30~15:55</div>
+            <div class="speaker">茶歇</div>
+            <div class="topic">吃点水果点心，喝点饮料，休息一下</div>
+        </div>
+
+        <div class="session">
+            <div class="time">16:00~16:25</div>
+            <div class="speaker"><b>良辰美</b>（全职奶爸，不懂代码，开创出新词新站游戏赚美金玩法）</div>
+            <div class="topic">不懂代码，AI上站赚美金的故事</div>
+        </div>
+
+        <div class="session">
+            <div class="time">16:30~16:55</div>
+            <div class="speaker"><b>Baird</b>（前字节后端开发，现出海新人，已实现月收入超工资）</div>
+            <div class="topic">从出海小白到收入超越工资：一个大厂程序员的转型之路</div>
+        </div>
+
+        <div class="session">
+            <div class="time">17:00~17:25</div>
+            <div class="speaker"><b>Clara</b>（前腾讯后台开发，收入超过工资后离职。现自由职业2个月， 探索ai应用场景。）</div>
+            <div class="topic">从大厂程序员到自由职业：如何拥有自己的小生意</div>
+        </div>
+
+        <div class="session">
+            <div class="time">17:30~17:55</div>
+            <div class="speaker"><b>BingNi</b>（前腾讯开发，现独立开发）</div>
+            <div class="topic">从做新词到高KD词的心路历程</div>
+        </div>
+
+        <div class="session">
+            <div class="time">18:00~18:25</div>
+            <div class="speaker"><b>哥飞</b>（出海AI工具创业者，出海鼓励师，SEO鼓励师）</div>
+            <div class="topic">如何从零开始你的出海赚钱之旅</div>
+        </div>
+
+        <div class="session social">
+            <div class="time">18:30~19:30</div>
+            <div class="speaker">晚宴</div>
+            <div class="topic">10人一桌，吃吃喝喝，畅聊人生</div>
+        </div>
+
+        <div class="session social">
+            <div class="time">19:30~21:00</div>
+            <div class="speaker">自由交流</div>
+            <div class="topic">三五成群小圈子自由交流</div>
+        </div>
+    </div>
+</body>
+</html>
