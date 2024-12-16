@@ -8,9 +8,15 @@
 <head>
     <meta charset="UTF-8">
     <style>
+        <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
         body {
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background: #f0f2f5;
             min-height: 100vh;
             display: flex;
@@ -20,8 +26,8 @@
         .container {
             width: 100%;
             max-width: 800px;
+            min-height: 100vh;
             background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
-            border-radius: 30px;
             box-shadow: 
                 0 20px 40px rgba(0,0,0,0.1),
                 0 0 0 1px rgba(0,0,0,0.05);
@@ -29,6 +35,22 @@
             position: relative;
             overflow: hidden;
         }
+        @media (min-width: 880px) {
+            body {
+                padding: 40px;
+            }
+            .container {
+                min-height: auto;
+                border-radius: 30px;
+            }
+        }
+        @media (max-width: 879px) {
+            .container {
+                padding: 20px;
+            }
+        }
+
+        /* 其余CSS保持不变 */
         .container::before {
             content: '';
             position: absolute;
@@ -157,10 +179,6 @@
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-                border-radius: 20px;
-            }
             .title {
                 font-size: 28px;
             }
