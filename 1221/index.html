@@ -2,191 +2,425 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <style>
-        <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <style>
-        <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
-            background: #f0f2f5;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #eef2f6;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
+
         .container {
             width: 100%;
-            max-width: 800px;
-            min-height: 100vh;
+            max-width: 1000px;
+            margin: 0 auto;
             background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
             box-shadow: 
-                0 20px 40px rgba(0,0,0,0.1),
-                0 0 0 1px rgba(0,0,0,0.05);
-            padding: 40px;
+                0 20px 40px rgba(0,0,0,0.08),
+                0 0 0 1px rgba(0,0,0,0.04);
             position: relative;
             overflow: hidden;
         }
-        @media (min-width: 880px) {
-            body {
-                padding: 40px;
-            }
-            .container {
-                min-height: auto;
-                border-radius: 30px;
-            }
-        }
-        @media (max-width: 879px) {
-            .container {
-                padding: 20px;
-            }
+
+        .header {
+            background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
         }
 
-        /* 其余CSS保持不变 */
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 200px;
-            background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
-            opacity: 0.03;
-            z-index: 0;
-        }
-        .header {
-            text-align: center;
-            padding: 20px 0 40px;
-            position: relative;
-            margin-bottom: 40px;
-        }
         .header::after {
             content: '';
             position: absolute;
             bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 200px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #4b6cb7, transparent);
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: linear-gradient(to bottom right, transparent 49%, white 51%);
         }
+
         .title {
-            font-size: 36px;
-            color: #182848;
-            margin: 0 0 20px;
+            font-size: 2.5em;
             font-weight: 800;
+            margin-bottom: 30px;
             letter-spacing: 1px;
-            text-shadow: 1px 1px 0 rgba(255,255,255,0.8);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
+
         .event-info {
-            background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 20px;
-            margin: 0 auto 40px;
-            text-align: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            max-width: 90%;
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            max-width: 800px;
+            margin: 0 auto;
         }
+
         .event-info p {
             margin: 10px 0;
-            font-size: 16px;
+            font-size: 1.2em;
             line-height: 1.6;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
         }
+
+        .content {
+            padding: 40px 20px;
+        }
+
         .session {
-            padding: 25px;
-            margin-bottom: 20px;
+            padding: 30px;
+            margin: 0 auto 20px;
             border-radius: 16px;
             background: white;
+            max-width: 900px;
             box-shadow: 
                 0 4px 6px rgba(0,0,0,0.02),
                 0 1px 3px rgba(0,0,0,0.05);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s ease;
             border: 1px solid rgba(0,0,0,0.05);
             position: relative;
             overflow: hidden;
         }
-        .session::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 4px;
-            height: 100%;
-            background: #4b6cb7;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
+
         .session:hover {
-            transform: translateX(10px);
+            transform: translateY(-2px);
             box-shadow: 
                 0 10px 20px rgba(0,0,0,0.05),
                 0 4px 8px rgba(0,0,0,0.05);
         }
-        .session:hover::before {
-            opacity: 1;
-        }
+
         .time {
             display: inline-block;
             color: #4b6cb7;
-            font-size: 14px;
+            font-size: 1.1em;
             font-weight: 600;
-            padding: 6px 12px;
+            padding: 8px 16px;
             background: rgba(75,108,183,0.1);
             border-radius: 20px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
+
         .speaker {
-            font-size: 15px;
+            font-size: 1.1em;
             color: #666;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             line-height: 1.5;
         }
+
         .speaker b {
             color: #182848;
-            font-size: 17px;
+            font-size: 1.2em;
             font-weight: 700;
         }
+
         .topic {
             color: #182848;
             font-weight: 600;
-            font-size: 18px;
-            margin-top: 8px;
+            font-size: 1.3em;
+            margin-top: 10px;
             line-height: 1.4;
         }
+
         .break {
             background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
         }
-        .break .time {
-            background: rgba(255,255,255,0.5);
-            color: #3c8b6b;
-        }
+
         .social {
             background: linear-gradient(135deg, #bbd2ec 0%, #d6e3f3 100%);
         }
-        .social .time {
-            background: rgba(255,255,255,0.5);
-            color: #4b6cb7;
+
+        @media (min-width: 1040px) {
+            body {
+                padding: 40px;
+            }
+            .container {
+                border-radius: 30px;
+            }
+            .content {
+                padding: 60px 40px;
+            }
         }
 
         @media (max-width: 768px) {
             .title {
-                font-size: 28px;
+                font-size: 1.8em;
             }
-            .event-info {
-                padding: 20px;
+            .event-info p {
+                font-size: 1.1em;
+            }
+            .time {
+                font-size: 1em;
+            }
+            .speaker {
+                font-size: 1.1em;
+            }
+            .speaker b {
+                font-size: 1.2em;
+            }
+            .topic {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 0;
+            }
+            .container {
+                min-height: 100vh;
             }
             .session {
                 padding: 20px;
+            }
+            .title {
+                font-size: 1.6em;
+            }
+            .time {
+                font-size: 1.1em;
+            }
+            .speaker {
+                font-size: 1.2em;
+            }
+            .speaker b {
+                font-size: 1.3em;
+            }
+            .topic {
+                font-size: 1.3em;
+            }
+        }
+
+        .social-section {
+            margin: 60px -20px -40px;
+            padding: 40px;
+            background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            position: relative;
+        }
+
+        .social-section::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background: linear-gradient(to bottom right, transparent 49%, #4b6cb7 51%);
+        }
+
+        .social-title {
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: 800;
+            margin-bottom: 40px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .social-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-card {
+            flex: 1;
+            min-width: 280px;
+            max-width: 400px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .social-icon {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .social-time {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .social-name {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .social-description {
+            font-size: 1.1em;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .social-section {
+                margin: 40px -20px -40px;
+                padding: 30px 20px;
+            }
+            .social-title {
+                font-size: 1.6em;
+            }
+            .social-card {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .social-time {
+                font-size: 1.2em;
+            }
+            .social-name {
+                font-size: 1.5em;
+            }
+            .social-description {
+                font-size: 1.2em;
+            }
+        }
+
+        .container {
+            background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.08),
+                0 0 0 1px rgba(0,0,0,0.04),
+                0 0 100px rgba(0,0,0,0.03);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4668b1 0%, #192d54 100%);
+            padding: 50px 20px;
+        }
+
+        .title {
+            font-size: 2.8em;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            background: linear-gradient(to right, #ffffff, #e8eaed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 35px;
+        }
+
+        .event-info {
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .event-info p {
+            text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+        }
+
+        .session {
+            border: 1px solid rgba(0,0,0,0.08);
+            box-shadow: 
+                0 4px 6px rgba(0,0,0,0.02),
+                0 1px 3px rgba(0,0,0,0.05),
+                inset 0 1px 0 rgba(255,255,255,0.8);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .session:hover {
+            transform: translateY(-2px) translateX(5px);
+            box-shadow: 
+                0 12px 24px rgba(0,0,0,0.08),
+                0 4px 8px rgba(0,0,0,0.05),
+                inset 0 1px 0 rgba(255,255,255,0.8);
+        }
+
+        .time {
+            background: rgba(75,108,183,0.15);
+            border: 1px solid rgba(75,108,183,0.2);
+            box-shadow: inset 0 1px 2px rgba(255,255,255,0.9);
+        }
+
+        .topic {
+            background: linear-gradient(to right, #182848, #4b6cb7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .break {
+            background: linear-gradient(135deg, #b4ebd7 0%, #dcedc1 100%);
+            border: none;
+        }
+
+        .social-section {
+            background: linear-gradient(135deg, #4668b1 0%, #192d54 100%);
+            padding: 50px 40px;
+        }
+
+        .social-title {
+            font-size: 2em;
+            margin-bottom: 50px;
+            background: linear-gradient(to right, #ffffff, #e8eaed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .social-card {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 
+                0 4px 15px rgba(0,0,0,0.1),
+                inset 0 1px 0 rgba(255,255,255,0.1);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+            box-shadow: 
+                0 8px 25px rgba(0,0,0,0.15),
+                inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+
+        .social-time {
+            background: rgba(255,255,255,0.25);
+            border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .social-description {
+            line-height: 1.8;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 40px 15px;
+            }
+            
+            .social-section {
+                padding: 40px 20px;
+            }
+            
+            .social-card {
+                padding: 25px;
             }
         }
     </style>
@@ -194,90 +428,98 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1 class="title">12.21·深圳·哥飞的朋友们线下聚会</h1>
+            <h1 class="title">哥飞的朋友们线下聚会</h1>
+            <div class="event-info">
+                <p>🗓 时间：2024年12月21日 12:30</p>
+                <p>📍 地点：深圳后海·鹏润达广场11楼·夫子国际会议中心·海容厅</p>
+            </div>
         </div>
 
-        <div class="event-info">
-            <p><i>🗓</i> 时间：2024年12月21日 12:30 开始入场</p>
-            <p><i>📍</i> 地点：深圳后海·鹏润达广场11楼·夫子国际会议中心·海容厅</p>
-        </div>
+        <div class="content">
+            <!-- 会话内容保持不变，但移除了多余的HTML注释 -->
+            <div class="session">
+                <div class="time">12:30~13:25</div>
+                <div class="speaker">签到入场</div>
+                <div class="topic">自由交流、合影拍照</div>
+            </div>
 
-        <div class="session">
-            <div class="time">12:30~13:25</div>
-            <div class="speaker">签到入场</div>
-            <div class="topic">自由交流、合影拍照</div>
-        </div>
+            <div class="session">
+                <div class="time">13:30~13:55</div>
+                <div class="speaker"><b>idoubi</b>（前大厂高级研发，现独立全栈开发，自由职业，all in AI）</div>
+                <div class="topic">2024，我追过的 AI 风口</div>
+            </div>
 
-        <div class="session">
-            <div class="time">13:30~13:55</div>
-            <div class="speaker"><b>idoubi</b>（前大厂高级研发，现独立全栈开发，自由职业，all in AI）</div>
-            <div class="topic">2024，我追过的 AI 风口</div>
-        </div>
+            <div class="session">
+                <div class="time">14:00~14:25</div>
+                <div class="speaker"><b>Lucas小杨</b>（前字节产品经理，两个月转型独立开发）</div>
+                <div class="topic">产品经理探索AI工具出海经验分享</div>
+            </div>
 
-        <div class="session">
-            <div class="time">14:00~14:25</div>
-            <div class="speaker"><b>Lucas小杨</b>（前字节产品经理，两个月转型独立开发）</div>
-            <div class="topic">产品经理探索AI工具出海经验分享</div>
-        </div>
+            <div class="session">
+                <div class="time">14:30~14:55</div>
+                <div class="speaker"><b>龙轼</b>（前大厂技术专家，现出海独立开发者）</div>
+                <div class="topic">从技术人到独立开发者: 一个技术人的出海之旅</div>
+            </div>
 
-        <div class="session">
-            <div class="time">14:30~14:55</div>
-            <div class="speaker"><b>龙轼</b>（前大厂技术专家，现出海独立开发者）</div>
-            <div class="topic">从技术人到独立开发者: 一个技术人的出海之旅</div>
-        </div>
+            <div class="session">
+                <div class="time">15:00~15:25</div>
+                <div class="speaker"><b>蛋壳</b>（初中自学编程，曾创百万级用户产品，24年应届毕业生，现投身出海创业）</div>
+                <div class="topic">探索与突破：应届毕业生的出海创业之路</div>
+            </div>
 
-        <div class="session">
-            <div class="time">15:00~15:25</div>
-            <div class="speaker"><b>蛋壳</b>（初中自学编程，曾创百万级用户产品，24年应届毕业生，现投身出海创业）</div>
-            <div class="topic">探索与突破：应届毕业生的出海创业之路</div>
-        </div>
+            <div class="session break">
+                <div class="time">15:30~15:55</div>
+                <div class="speaker">茶歇</div>
+                <div class="topic">吃点水果点心，喝点饮料，休息一下</div>
+            </div>
 
-        <div class="session break">
-            <div class="time">15:30~15:55</div>
-            <div class="speaker">茶歇</div>
-            <div class="topic">吃点水果点心，喝点饮料，休息一下</div>
-        </div>
+            <div class="session">
+                <div class="time">16:00~16:25</div>
+                <div class="speaker"><b>良辰美</b>（全职奶爸，不懂代码，开创出新词新站游戏赚美金玩法）</div>
+                <div class="topic">不懂代码，AI上站赚美金的故事</div>
+            </div>
 
-        <div class="session">
-            <div class="time">16:00~16:25</div>
-            <div class="speaker"><b>良辰美</b>（全职奶爸，不懂代码，开创出新词新站游戏赚美金玩法）</div>
-            <div class="topic">不懂代码，AI上站赚美金的故事</div>
-        </div>
+            <div class="session">
+                <div class="time">16:30~16:55</div>
+                <div class="speaker"><b>Baird</b>（前字节后端开发，现出海新人，已实现月收入超工资）</div>
+                <div class="topic">从出海小白到收入超越工资：一个大厂程序员的转型之路</div>
+            </div>
 
-        <div class="session">
-            <div class="time">16:30~16:55</div>
-            <div class="speaker"><b>Baird</b>（前字节后端开发，现出海新人，已实现月收入超工资）</div>
-            <div class="topic">从出海小白到收入超越工资：一个大厂程序员的转型之路</div>
-        </div>
+            <div class="session">
+                <div class="time">17:00~17:25</div>
+                <div class="speaker"><b>Clara</b>（前腾讯后台开发，收入超过工资后离职。现自由职业2个月， 探索ai应用场景。）</div>
+                <div class="topic">从大厂程序员到自由职业：如何拥有自己的小生意</div>
+            </div>
 
-        <div class="session">
-            <div class="time">17:00~17:25</div>
-            <div class="speaker"><b>Clara</b>（前腾讯后台开发，收入超过工资后离职。现自由职业2个月， 探索ai应用场景。）</div>
-            <div class="topic">从大厂程序员到自由职业：如何拥有自己的小生意</div>
-        </div>
+            <div class="session">
+                <div class="time">17:30~17:55</div>
+                <div class="speaker"><b>BingNi</b>（前腾讯开发，现独立开发）</div>
+                <div class="topic">从做新词到高KD词的心路历程</div>
+            </div>
 
-        <div class="session">
-            <div class="time">17:30~17:55</div>
-            <div class="speaker"><b>BingNi</b>（前腾讯开发，现独立开发）</div>
-            <div class="topic">从做新词到高KD词的心路历程</div>
-        </div>
+            <div class="session">
+                <div class="time">18:00~18:25</div>
+                <div class="speaker"><b>哥飞</b>（出海AI工具创业者，出海鼓励师，SEO鼓励师）</div>
+                <div class="topic">如何从零开始你的出海赚钱之旅</div>
+            </div>
 
-        <div class="session">
-            <div class="time">18:00~18:25</div>
-            <div class="speaker"><b>哥飞</b>（出海AI工具创业者，出海鼓励师，SEO鼓励师）</div>
-            <div class="topic">如何从零开始你的出海赚钱之旅</div>
-        </div>
+            <div class="social-section">
+                <h2 class="social-title">欢乐时光</h2>
+                <div class="social-container">
+                    <div class="social-card">
+                        <div class="social-time">18:30~19:30</div>
+                        <div class="social-name">共享晚宴</div>
+                        <div class="social-description">十人一桌，觥筹交错。<br/>共话人生路，畅谈生意经。</div>
+                    </div>
+                    
+                    <div class="social-card">
+                        <div class="social-time">19:30~21:00</div>
+                        <div class="social-name">自由交流</div>
+                        <div class="social-description">三五知己，深入交流。<br/>结识同路人，开启新篇章。</div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="session social">
-            <div class="time">18:30~19:30</div>
-            <div class="speaker">晚宴</div>
-            <div class="topic">10人一桌，吃吃喝喝，畅聊人生</div>
-        </div>
-
-        <div class="session social">
-            <div class="time">19:30~21:00</div>
-            <div class="speaker">自由交流</div>
-            <div class="topic">三五成群小圈子自由交流</div>
         </div>
     </div>
 </body>
