@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创业者对话</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">创业者的诚恳对话</h1>
+            <div class="bg-white rounded-lg shadow-lg p-6" id="chat-container">
+                <div class="space-y-4" id="messages">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const messages = [
+            {
+                role: "Davidjpark96",
+                content: "我经营的TikTok代理业务达到了约30万美元的年度经常性收入(ARR)。\n\n这周我们关闭了它,原因如下:\n\n1. 太耗时了。我需要把95%的时间花在我的创业项目上,即使是5%的时间投入到代理业务上也让人感到烦躁。\n\n2. 因为我没有全身心投入,后期客户的服务质量开始下降,这是最令我难过的。我们退款给一些客户,为其他客户做了额外的免费工作。\n\n3. 开始这个代理业务的原因之一是我在想我是不是只是靠一个'GPT wrapper'运气好了。所以我的目标是用新业务快速达到10万美元ARR。当我们超过这个目标后,钱已经完全不能激励我了。这种内在动力的缺失是其他问题的根源。"
+            },
+            {
+                role: "Davidjpark96",
+                content: "4. 我对我的合伙人投入比我多得多感到内疚。我们开始是50/50,然后我把自己稀释到70/30,后来我就完全停止从新客户那里获取利润了,因为显然我几乎把全部精力都放在了Jenni上。我觉得如果Jenni AI发展得不太好,我本可以全职做这个代理业务,这可能会成为一个很大的生意。也许下辈子吧。"
+            },
+            {
+                role: "Davidjpark96",
+                content: "这个TikTok代理业务是我在Jenni AI之外第一次取得的成功,这是一次很有收获的经历。\n\n在巅峰时期，我们与一些大品牌合作，我也帮助了一些我一直很尊重的朋友。\n\n我们确实本可以把这个代理业务保留作为一个副业收入来源，但与其让代理业务继续勉强维持，不如干脆关掉它。"
+            },
+            {
+                role: "Davidjpark96",
+                content: "我开始这个代理业务是想知道自己是否只是靠Jenni AI走运，但现在我很幸运地已经四次达到了10万美元ARR，两次达到了100万美元ARR，而且很快就会达到1000万美元ARR。\n\n我仍然觉得在我创建或收购的所有业务中都经历了很多运气，但冒名顶替综合征似乎随着时间推移在减弱。\n\n在不久的将来我不太可能再做任何代理类业务，但这篇文章仍然可以作为我自己的一个小总结，也许对其他经历冒名顶替综合征的人有帮助。\n\n感谢MengMengDuck和所有相信我们代理业务的早期客户！"
+            },
+            {
+                role: "Levelsio",
+                content: "我给了你4000美元却没有带来任何销售，然后你就消失了。\n\n从未发给我后续总结或消息。\n\n感觉就像那些在我DM里的骗子，一旦你付款，他们就消失了。\n\n这让我留下了不好的印象，我认为这种情况应该处理得更好。"
+            },
+            {
+                role: "Davidjpark96",
+                content: "老兄，你这样描述完全不准确，我很惊讶你会这么说。\n\n我确实为没能给你带来我们都期待的结果道歉，但客观来说我并不是收了你的钱就消失了。"
+            },
+            {
+                role: "Davidjpark96",
+                content: "我不知道具体为你带来了多少销售，但我们在多个账号上用多个网红发布了大量视频，我们从所有这些工作中几乎没赚到钱，我甚至给了你第二个月的免费服务，还提出如果你不满意可以退还第一个月的费用（这个提议现在依然有效）。\n\n我们在付款后还进行了多次关于TikTok代理的对话，所以我真的不明白你为什么会这么说。"
+            },
+            {
+                role: "Davidjpark96",
+                content: "每当你要求更新时，我都在一两天内给你回复了，如果你觉得这不是事实，你可以查看我们的私信记录来核实。"
+            },
+            {
+                role: "Levelsio",
+                content: "算了。\n\n我只是觉得你在这里没有诚实地描述代理业务的情况。\n\n这就是为什么我觉得我应该回复。\n\n你是通过私信转售你朋友的低质量服务。\n\n我认为这些都不符合你平时的质量水准。\n\n所以关闭它确实是正确的选择。"
+            },
+            {
+                role: "Davidjpark96",
+                content: "负责运营代理业务的这位朋友是Jenni的营销主管。\n\n我之前经常提到他对我们在自然增长方面的成功做出的贡献，所以我相信服务质量至少会比大多数其他TikTok代理好。"
+            },
+            {
+                role: "Davidjpark96",
+                content: "而且我们用于视频的一些网红就是我们在Jenni账号上使用的同一批网红，你可以通过查看我们两个账号来验证这一点。\n\n所以我希望你相信我说的：我并不是在转售别人的工作或者说这是低质量的（除非你认为我们给Jenni做的也是低质量的工作）。"
+            },
+            {
+                role: "Davidjpark96",
+                content: "话说回来，我确实认为我本可以在更新和后续总结方面做得更主动，对此我道歉。\n\n我理解你的失望，我在原帖中说对于没能让你满意感到遗憾，这是真心的。"
+            },
+            {
+                role: "giannidreaming",
+                content: "作为一个前代理公司运营者，我理解你做出这个决定的原因。\n\n运营一个内容代理需要完全不同的投入。\n\n它可能会有回报，但需要比其他业务投入更多的精力。\n\n它需要一个真正热爱并沉浸在内容创作生活方式中的人。"
+            }
+        ];
+
+        function createMessageElement(message, index) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `opacity-0 transform translate-y-4 transition-all duration-500 ease-out ${
+                message.role === 'Levelsio' ? 'ml-auto' : ''
+            }`;
+            
+            const maxWidth = message.role === 'Levelsio' ? 'ml-12' : 'mr-12';
+            
+            messageDiv.innerHTML = `
+                <div class="flex items-start ${message.role === 'Levelsio' ? 'flex-row-reverse' : ''}">
+                    <div class="flex-shrink-0">
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center ${
+                            message.role === 'Levelsio' ? 'bg-blue-500' : 'bg-green-500'
+                        } text-white font-semibold">
+                            ${message.role[0].toUpperCase()}
+                        </div>
+                    </div>
+                    <div class="${maxWidth} px-4">
+                        <div class="mb-1 ${message.role === 'Levelsio' ? 'text-right' : ''}">
+                            <span class="font-semibold text-sm text-gray-600">${message.role}</span>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 shadow ${
+                            message.role === 'Levelsio' ? 'bg-blue-50' : 'bg-green-50'
+                        }">
+                            <div class="whitespace-pre-wrap text-gray-800">${message.content}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            return messageDiv;
+        }
+
+        function animateMessages() {
+            const container = document.getElementById('messages');
+            messages.forEach((message, index) => {
+                const messageEl = createMessageElement(message, index);
+                container.appendChild(messageEl);
+                
+                setTimeout(() => {
+                    messageEl.classList.remove('opacity-0', 'translate-y-4');
+                }, index * 2000);
+            });
+        }
+
+        // Start animation when page loads
+        window.addEventListener('load', animateMessages);
+    </script>
+    <div style="display: none;">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BE6037ZLBE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BE6037ZLBE');
+    </script>
+    </div>
+</body>
+</html>
