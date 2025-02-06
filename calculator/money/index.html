@@ -715,7 +715,7 @@
                 <!-- 外链策略 -->
                 <p>
                     外链建设策略：基于关键词难度 KD <span class="highlight">{{keywordKD}}</span>，
-                    每个网站需要获取 <span class="highlight">{{results.requiredDomains}}</span> 个优质外链域名。
+                    每个网站需要获取至少 <span class="highlight">{{results.requiredDomains}}</span> 个优质外链域名。
                     外链总投资预算 <span class="highlight">${{formatNumber(results.totalLinkCost)}}</span>。
                     <span v-if="results.totalLinkCost > monthlyIncome * 6" class="warning">
                         ⚠️ 注意：外链成本超过6个月收入，建议调整策略
