@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO收入目标拆解计算器 - 哥飞</title>
+    <meta name="description" content="SEO收入目标拆解计算器，由哥飞制作，基于目标收入和参数，拆解目标，计算达成目标所需的条件，帮助大家更好的评估SEO投入和产出。"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.global.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f1729 0%, #1e293b 100%);
+            padding: 2rem;
+            color: #1a1a1a;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #2563eb);
+            border-radius: 3px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        .settings-group {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .settings-group:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .settings-group h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #2563eb;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .settings-group h2::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 24px;
+            background: #2563eb;
+            border-radius: 2px;
+        }
+
+        .inputs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .input-group {
+            background: white;
+            padding: 1.25rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .input-group:hover {
+            border-color: #2563eb;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #334155;
+        }
+
+        .input-control {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn {
+            padding: 0.5rem;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            color: #64748b;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+        input[type="number"] {
+            width: 120px;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            text-align: center;
+            font-size: 1rem;
+            color: #1e293b;
+            transition: all 0.3s;
+        }
+
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .info-text {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-top: 0.5rem;
+            padding-left: 0.5rem;
+            border-left: 2px solid #e2e8f0;
+        }
+
+        .results {
+            margin-top: 3rem;
+        }
+
+        .results-row {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .results-row-1 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .results-row-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .results-row-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .results-row-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+
+        .result-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .result-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+        }
+
+        .result-card h3 {
+            font-size: 1rem;
+            color: #64748b;
+            margin-bottom: 0.75rem;
+        }
+
+        .result-card p {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2563eb;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .result-card p::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: #2563eb;
+            border-radius: 50%;
+        }
+
+        .calculation-steps {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-top: 2rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .calculation-steps h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #334155;
+        }
+
+        .calculation-steps ol {
+            padding-left: 2rem;
+            color: #475569;
+            font-size: 1rem;
+        }
+
+        .calculation-steps li {
+            margin-bottom: 0.75rem;
+            padding-left: 0.5rem;
+        }
+
+        .result-card.warning {
+            background: #fef2f2;
+            border-color: #dc2626;
+        }
+
+        .result-card.warning p {
+            color: #dc2626;
+        }
+
+        .result-card.warning p::before {
+            background: #dc2626;
+        }
+
+        @media (max-width: 1024px) {
+            body {
+                padding: 1rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+
+            .inputs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .results-row-1,
+            .results-row-2,
+            .results-row-3,
+            .results-row-4 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .feature-section {
+            padding: 3rem 0;
+            margin: 2rem 0;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .feature-section h2 {
+            font-size: 1.75rem;
+            color: #1e293b;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: #f0f7ff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: #2563eb;
+            font-size: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            color: #1e293b;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .how-it-works {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            counter-reset: step;
+        }
+
+        .step-card {
+            position: relative;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .step-card::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            top: -1rem;
+            left: -1rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #2563eb;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .faq-section {
+            margin-top: 3rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            color: #1e293b;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .faq-question i {
+            color: #2563eb;
+        }
+
+        .faq-answer {
+            color: #64748b;
+            line-height: 1.6;
+            padding-left: 2rem;
+        }
+
+        .result-analysis {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 2rem 0;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .result-analysis:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .result-analysis h3 {
+            color: #1e293b;
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .result-analysis h3 i {
+            color: #2563eb;
+            font-size: 1.5rem;
+        }
+        
+        .result-analysis p {
+            color: #475569;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+        
+        .result-analysis .highlight {
+            color: #2563eb;
+            font-weight: 600;
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            background: rgba(37, 99, 235, 0.1);
+        }
+        
+        .result-analysis .warning {
+            color: #dc2626;
+            font-weight: 600;
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            background: rgba(220, 38, 38, 0.1);
+        }
+
+        .result-analysis .warning-section {
+            background: #fff1f2;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            border-left: 4px solid #dc2626;
+            margin-top: 1rem;
+        }
+
+        .result-analysis .warning-section ul {
+            list-style: none;
+            margin: 0.5rem 0 0 0;
+            padding: 0;
+        }
+
+        .result-analysis .warning-section li {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .result-analysis .warning-section li::before {
+            content: "•";
+            color: #dc2626;
+            position: absolute;
+            left: 0.5rem;
+        }
+
+        .footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .footer-content {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .footer-disclaimer {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8fafc;
+            border-radius: 0.5rem;
+            color: #475569;
+            font-size: 0.9rem;
+        }
+
+        .footer-copyright {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+        }
+
+        .footer-divider {
+            display: inline-block;
+            margin: 0 0.5rem;
+            color: #cbd5e1;
+        }
+
+        .footer a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app" class="container">
+        <div class="header">
+            <h1>SEO收入目标拆解计算器 By 哥飞</h1>
+            <p>SEO收入目标拆解计算器，由哥飞制作，基于目标收入和参数，拆解目标，计算达成目标所需的条件，帮助大家更好的评估SEO投入和产出。</p>
+        </div>
+
+        <div class="settings-group">
+            <h2>目标收入和网站数据</h2>
+            <div class="inputs-grid">
+                <div class="input-group">
+                    <label>目标月收入（美元）</label>
+                    <div class="input-control">
+                        <button class="btn" @click="adjustValue('monthlyIncome', -100)">-</button>
+                        <input type="number" v-model.number="monthlyIncome" min="100" max="100000" step="100">
+                        <button class="btn" @click="adjustValue('monthlyIncome', 100)">+</button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>网站数量</label>
+                    <div class="input-control">
+                        <button class="btn" @click="adjustValue('websiteCount', -1)">-</button>
+                        <input type="number" v-model.number="websiteCount" min="1" max="10">
+                        <button class="btn" @click="adjustValue('websiteCount', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>每个网站的关键词数量</label>
+                    <div class="input-control">
+                        <button class="btn" @click="adjustValue('keywordsPerSite', -1)">-</button>
+                        <input type="number" v-model.number="keywordsPerSite" min="1" max="50">
+                        <button class="btn" @click="adjustValue('keywordsPerSite', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="settings-group">
+            <h2>收入参数</h2>
+            <div class="inputs-grid">
+                <div class="input-group">
+                    <label>目标排名位置</label>
+                    <div class="input-control">
+                        <button class="btn" @click="adjustValue('rankPosition', -1)">-</button>
+                        <input type="number" v-model.number="rankPosition" min="1" max="10">
+                        <button class="btn" @click="adjustValue('rankPosition', 1)">+</button>
+                    </div>
+                    <div class="info-text">当前排名点击率：{{rankClickRates[rankPosition]}}%</div>
+                </div>
+
+                <div class="input-group">
+                    <label>每1000PV广告收入（美元）</label>
+                    <div class="input-control">
+                        <button class="btn" @click="adjustValue('adRevenue', -0.1)">-</button>
+                        <input type="number" v-model.number="adRevenue" min="1" max="20" step="0.1">
+                        <button class="btn" @click="adjustValue('adRevenue', 0.1)">+</button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>每1000UV的SaaS收入（美元）</label>
+                    <div class="input-control">
+                        <button class="btn" @click="adjustValue('saasRevenue', -10)">-</button>
+                        <input type="number" v-model.number="saasRevenue" min="50" max="500" step="10">
+                        <button class="btn" @click="adjustValue('saasRevenue', 10)">+</button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>每UV产生PV数</label>
+                    <div class="input-control">
+                        <button class="btn" @click="adjustValue('pvPerUv', -0.1)">-</button>
+                        <input type="number" v-model.number="pvPerUv" min="1" max="5" step="0.1">
+                        <button class="btn" @click="adjustValue('pvPerUv', 0.1)">+</button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>关键词KD值</label>
+                    <div class="input-control">
+                        <button class="btn" @click="adjustValue('keywordKD', -10)">-</button>
+                        <input type="number" v-model.number="keywordKD" min="0" max="90" step="10">
+                        <button class="btn" @click="adjustValue('keywordKD', 10)">+</button>
+                    </div>
+                    <div class="info-text">所需外链域名数：{{kdToReferringDomains[keywordKD]}}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="results">
+            <div class="results-row results-row-2">
+                <div class="result-card">
+                    <h3>日均收入目标</h3>
+                    <p>${{results.dailyIncome}}</p>
+                </div>
+                <div class="result-card">
+                    <h3>每UV平均收益</h3>
+                    <p>${{results.revenuePerUv}}</p>
+                </div>
+            </div>
+
+            <div class="results-row results-row-3">
+                <div class="result-card">
+                    <h3>每网站所需日均UV</h3>
+                    <p>{{results.uvPerSite}}</p>
+                </div>
+                <div class="result-card">
+                    <h3>每网站预期日均PV</h3>
+                    <p>{{results.pvPerSite}}</p>
+                </div>
+                <div class="result-card">
+                    <h3>每关键词所需日搜索量</h3>
+                    <p>{{results.searchVolumePerKeyword}}</p>
+                </div>
+            </div>
+            <div class="results-row results-row-4">
+                <div class="result-card">
+                    <h3>每个网站最低所需外链域名数</h3>
+                    <p>{{results.requiredDomains}}</p>
+                </div>
+                <div class="result-card" :class="{ warning: results.totalLinkCost > monthlyIncome * 6 }">
+                    <h3>预计外链总成本</h3>
+                    <p>${{results.totalLinkCost}}</p>
+                </div>
+                <div class="result-card">
+                    <h3>12个月预期收入</h3>
+                    <p>${{results.yearlyIncome}}</p>
+                </div>
+                <div class="result-card" :class="{ warning: results.roi < 1 }">
+                    <h3>投资回报率 (12个月收入/外链成本)</h3>
+                    <p>{{results.roi}}x</p>
+                </div>
+            </div>
+
+            <!-- 结果分析 -->
+            <div class="result-analysis">
+                <h3><i class="fas fa-chart-bar"></i> 策略分析报告</h3>
+                
+                <!-- 基础目标概述 -->
+                <p>
+                    为实现月收入 <span class="highlight">${{formatNumber(monthlyIncome)}}</span> 的目标，
+                    如果建立 <span class="highlight">{{websiteCount}}</span> 个网站，
+                    为每个网站布局 <span class="highlight">{{keywordsPerSite}}</span> 个关键词。
+                    日均需要实现收入 <span class="highlight">${{results.dailyIncome}}</span>。
+                </p>
+                
+                <!-- 用户价值分析 -->
+                <p>
+                    根据当前设置，每位用户的价值组成：
+                    广告收入 <span class="highlight">${{results.adRevenuePerUv}}</span> + 
+                    SaaS收入 <span class="highlight">${{results.saasRevenuePerUv}}</span> = 
+                    总价值 <span class="highlight">${{results.revenuePerUv}}</span>。
+                    单用户平均访问 <span class="highlight">{{pvPerUv}}</span> 个页面。
+                </p>
+                
+                <!-- 流量需求分析 -->
+                <p>
+                    流量获取策略：每个网站需要日均获得 <span class="highlight">{{formatNumber(results.uvPerSite)}}</span> 位访客，
+                    预计产生 <span class="highlight">{{formatNumber(results.pvPerSite)}}</span> 次浏览。
+                    关键词排名目标第 <span class="highlight">{{rankPosition}}</span> 位
+                    （点击率 <span class="highlight">{{rankClickRates[rankPosition]}}%</span>），
+                    要求每个关键词日均搜索量达到 <span class="highlight">{{formatNumber(results.searchVolumePerKeyword)}}</span> 次。
+
+                    <span v-if="results.searchVolumePerKeyword > 10000" class="warning">
+                        ⚠️ 当前要求关键词每日搜索量大于10000，建议多做几个网站或者多布局几个关键词
+                    </span>
+                </p>
+                
+                <!-- 外链策略 -->
+                <p>
+                    外链建设策略：基于关键词难度 KD <span class="highlight">{{keywordKD}}</span>，
+                    每个网站需要获取 <span class="highlight">{{results.requiredDomains}}</span> 个优质外链域名。
+                    外链总投资预算 <span class="highlight">${{formatNumber(results.totalLinkCost)}}</span>。
+                    <span v-if="results.totalLinkCost > monthlyIncome * 6" class="warning">
+                        ⚠️ 注意：外链成本超过6个月收入，建议调整策略
+                    </span>
+                </p>
+                
+                <!-- ROI分析 -->
+                <p>
+                    投资回报分析：预计12个月可实现收入 <span class="highlight">${{formatNumber(results.yearlyIncome)}}</span>，
+                    投资回报率为 <span :class="{ 'highlight': results.roi >= 1, 'warning': results.roi < 1 }">
+                        {{results.roi}}x
+                    </span>。
+                    <span v-if="results.roi < 1" class="warning">
+                        ⚠️ 当前ROI低于1，项目可能存在风险
+                    </span>
+                </p>
+
+                <!-- 风险提示与建议 -->
+                <div v-if="results.risks.highSearchVolume || results.risks.lowRoi || results.risks.highCost || results.risks.inefficientKD" 
+                     class="warning-section">
+                    <strong>⚠️ 策略优化建议：</strong>
+                    <ul>
+                        <li v-if="results.risks.inefficientKD">
+                            当前关键词KD值({{keywordKD}})较高，但日均搜索量({{formatNumber(results.searchVolumePerKeyword)}})较低，投资回报比不理想。建议：
+                            <ul class="ml-4 mt-2">
+                                <li>寻找KD更低的相关关键词</li>
+                                <li>选择搜索量更大的关键词</li>
+                                <li>考虑转向长尾关键词策略</li>
+                            </ul>
+                        </li>
+                        <li v-if="results.risks.highSearchVolume">
+                            当前所需搜索量（{{formatNumber(results.searchVolumePerKeyword)}}）较大，建议多做几个网站，或增加关键词数量或调整收入预期
+                        </li>
+                        <li v-if="results.risks.lowRoi">
+                            当前ROI（{{results.roi}}x）偏低，建议提高用户价值或降低获客成本
+                        </li>
+                        <li v-if="results.risks.highCost">
+                            外链成本（${{formatNumber(results.totalLinkCost)}}）过高，建议选择难度更低的关键词
+                        </li>
+                        <li>考虑选择更低竞争度的关键词以减少所需外链数量</li>
+                        <li>优化网站体验提高用户停留时间和页面浏览量</li>
+                        <li>改善变现效率，提高广告收入和SaaS转化率</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="calculation-steps">
+                <h3>计算说明：</h3>
+                <ol>
+                    <li>月收入 ${{monthlyIncome}} 除以30天 = 日均目标 ${{results.dailyIncome}}</li>
+                    <li>每UV通过广告收入 ${{results.adRevenuePerUv}} + SaaS收入 ${{results.saasRevenuePerUv}} = ${{results.revenuePerUv}}</li>
+                    <li>要达到日收入 ${{results.dailyIncome}}，需要总UV：{{results.totalDailyUv}}</li>
+                    <li>分配到 {{websiteCount}} 个网站，每个网站需要UV：{{results.uvPerSite}}</li>
+                    <li>每个网站有 {{keywordsPerSite}} 个关键词，排名第{{rankPosition}}位点击率{{rankClickRates[rankPosition]}}%，每关键词需要搜索量：{{results.searchVolumePerKeyword}}</li>
+                    <li>每UV产生 {{pvPerUv}} 个PV，预期PV：{{results.pvPerSite}}</li>
+                    <li>根据KD {{keywordKD}} 需要 {{results.requiredDomains}} 个外链域名</li>
+                    <li>预计外链成本 ${{results.totalLinkCost}}（建议预算不超过6个月收入）</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h2>什么是SEO收入计算器？</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>智能规划工具</h3>
+                    <p>这是一款专为SEO从业者设计的收入规划工具，帮助你科学地评估和规划SEO项目的投资回报。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>数据驱动决策</h3>
+                    <p>基于实际市场数据和SEO经验数据，为你的业务决策提供可靠的数据支持。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>目标明确</h3>
+                    <p>从目标收入反推所需的具体指标，让你的SEO策略更有针对性。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h2>这个计算器能帮你什么？</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3>收入预测</h3>
+                    <p>精确计算达到目标收入所需的流量、排名和外链资源。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>成本评估</h3>
+                    <p>评估获取所需外链资源的成本，帮助你做出更明智的投资决策。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>ROI分析</h3>
+                    <p>计算投资回报率，确保你的SEO投入物有所值。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h2>如何使用这个计算器？</h2>
+            <div class="how-it-works">
+                <div class="step-card">
+                    <h3>设置收入目标</h3>
+                    <p>输入你期望达到的月收入目标，这将作为所有计算的基础。</p>
+                </div>
+                <div class="step-card">
+                    <h3>调整业务参数</h3>
+                    <p>设置网站数量、关键词数量等基础参数，以匹配你的业务规模。</p>
+                </div>
+                <div class="step-card">
+                    <h3>优化收入来源</h3>
+                    <p>调整广告收入和SaaS收入比例，优化你的收入结构。</p>
+                </div>
+                <div class="step-card">
+                    <h3>分析结果指标</h3>
+                    <p>查看计算结果，了解需要达到的具体指标和预期投资回报。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section faq-section">
+            <h2>常见问题</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <span>为什么要设置多个网站？</span>
+                </div>
+                <div class="faq-answer">
+                    设置多个网站可以分散风险，同时也能覆盖更多的关键词和市场领域。但需要注意，管理多个网站也意味着更高的维护成本。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <span>如何理解KD值？</span>
+                </div>
+                <div class="faq-answer">
+                    KD（Keyword Difficulty）值表示关键词的竞争难度，范围从0到100。KD值越高，意味着需要更多的外链支持才能在搜索结果中获得好的排名。
+                </div>
+            </div>
+
+
+            <!-- 基础概念解释 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <span>UV和PV是什么？它们有什么区别？</span>
+                </div>
+                <div class="faq-answer">
+                    UV（独立访客）是指访问网站的独立用户数量，同一用户多次访问只计算一次。PV（页面浏览量）是指网页被浏览的总次数。<br />例如，如果一个用户访问了网站的5个页面，就会产生1个UV和5个PV。计算器中的"每UV产生PV数"就是衡量用户浏览深度的指标。
+                </div>
+            </div>
+
+            <!-- 收入计算逻辑 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <span>如何计算每个UV的收入？</span>
+                </div>
+                <div class="faq-answer">
+                    每UV的收入由两部分组成：广告收入和SaaS收入。<br />
+                    广告收入 = (每1000PV广告收入 × 每UV产生的PV数) ÷ 1000<br />
+                    SaaS收入 = 每1000UV的SaaS收入 ÷ 1000<br />
+                    总收入 = 广告收入 + SaaS收入
+                </div>
+            </div>
+
+            <!-- 流量计算逻辑 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <span>如何计算达到目标收入所需的流量？</span>
+                </div>
+                <div class="faq-answer">
+                    1. 首先计算日均收入目标 = 月收入目标 ÷ 30<br />
+                    2. 然后计算所需总UV = 日均收入目标 ÷ 每UV收入<br />
+                    3. 每个网站所需UV = 总UV ÷ 网站数量<br />
+                    4. 每个网站所需PV = 每个网站UV × 每UV产生PV数
+                </div>
+            </div>
+
+            <!-- 搜索量计算 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <span>如何计算每个关键词所需的搜索量？</span>
+                </div>
+                <div class="faq-answer">
+                    计算公式：所需搜索量 = (每网站所需UV ÷ 关键词数量) ÷ 排名点击率<br />
+                    例如，如果一个网站需要1000UV，有10个关键词，排名第3位（点击率10.2%），<br />
+                    则每个关键词需要的搜索量 = (1000 ÷ 10) ÷ 10.2% ≈ 980
+                </div>
+            </div>
+
+            <!-- 点击率说明 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <span>不同排名位置的点击率是如何确定的？</span>
+                </div>
+                <div class="faq-answer">
+                    点击率数据基于搜索引擎研究统计：<br />
+                    第1位：39.8%<br />
+                    第2位：18.7%<br />
+                    第3位：10.2%<br />
+                    第4位：7.2%<br />
+                    第5位：5.1%<br />
+                    以此类推。这说明排名越靠前，获得的点击越多，第一位的点击率远高于其他位置。
+                </div>
+            </div>
+
+            <!-- 外链计算 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <span>如何根据KD值确定所需的外链数量？</span>
+                </div>
+                <div class="faq-answer">
+                    计算器使用以下对应关系：<br />
+                    KD 0: 0个外链<br />
+                    KD 10: 10个外链<br />
+                    KD 20: 22个外链<br />
+                    KD 30: 36个外链<br />
+                    KD 40: 56个外链<br />
+                    KD 50: 84个外链<br />
+                    KD 60: 129个外链<br />
+                    KD 70: 202个外链<br />
+                    KD 80: 353个外链<br />
+                    KD 90: 756个外链<br />
+                    这是基于大量数据分析得出的经验值。
+                </div>
+            </div>
+
+            <!-- 外链成本 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <span>外链成本是如何计算的？</span>
+                </div>
+                <div class="faq-answer">
+                    外链成本采用阶梯定价模型：<br />
+                    1. 前10个域名：每个100美元<br />
+                    2. 11-50个域名：每增加1个增加1%<br />
+                    3. 51-200个域名：每增加1个增加1.5%<br />
+                    4. 200个以上：每增加1个增加2%<br />
+                    这种定价模型反映了获取高质量外链的难度递增特性。
+                </div>
+            </div>
+
+            <!-- ROI计算 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <span>投资回报率(ROI)是如何计算的？</span>
+                </div>
+                <div class="faq-answer">
+                    ROI = 12个月预期收入 ÷ 外链总成本<br />
+                    例如，如果年收入预期是12万美元，外链成本是3万美元，则ROI = 4x<br />
+                    建议ROI至少大于1，即年收入至少要超过外链成本。外链成本建议不要超过6个月的目标收入。
+                </div>
+            </div>
+
+            <!-- 优化建议 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <span>如何优化收入模型？</span>
+                </div>
+                <div class="faq-answer">
+                    1. 提高广告收入：优化广告位置和形式，提高千次展示收入（CPM）<br />
+                    2. 提高SaaS收入：改善产品转化漏斗，提高用户转化率<br />
+                    3. 提高PV/UV比：优化内容质量和网站结构，提高用户停留时间<br />
+                    4. 降低获客成本：选择适当难度的关键词，平衡流量和竞争度<br />
+                    5. 多元化收入来源：在广告和SaaS之外开发新的收入渠道
+                </div>
+            </div>
+
+            <!-- 风险提示 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    <span>使用这个计算器需要注意什么？</span>
+                </div>
+                <div class="faq-answer">
+                    1. 计算结果是基于理想情况的估算，实际情况可能会有偏差<br />
+                    2. 搜索引擎算法经常变化，排名和流量可能不稳定<br />
+                    3. 外链价格会随市场变化而波动<br />
+                    4. 建议从小规模开始，验证模型可行性后再扩大投入<br />
+                    5. 需要持续监测和优化各项指标，及时调整策略
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-content">
+                <p>工具开发：<a href="https://x.com/gefei55" target="_blank">哥飞</a></p>
+            </div>
+            
+            <div class="footer-disclaimer">
+                <p>📢 免责声明</p>
+                <p>本工具基于SEO从业经验值进行估算，计算结果仅供参考。实际效果会受到多种因素影响，如：搜索引擎算法变化、市场竞争环境、网站质量、内容价值等。请结合实际情况谨慎决策。</p>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>© 2025 SEO收入目标拆解计算器 <span class="footer-divider">|</span> All Rights Reserved</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    monthlyIncome: 1000,
+                    websiteCount: 1,
+                    keywordsPerSite: 1,
+                    rankPosition: 3,
+                    adRevenue: 5,
+                    saasRevenue: 100,
+                    pvPerUv: 2,
+                    rankClickRates: {
+                        1: 39.8, 2: 18.7, 3: 10.2, 4: 7.2, 5: 5.1,
+                        6: 4.4, 7: 3.0, 8: 2.1, 9: 1.9, 10: 1.6
+                    },
+                    keywordKD: 30,
+                    kdToReferringDomains: {
+                        0: 0,
+                        10: 10,
+                        20: 22,
+                        30: 36,
+                        40: 56,
+                        50: 84,
+                        60: 129,
+                        70: 202,
+                        80: 353,
+                        90: 756,
+                        100: 1200
+                    }
+                };
+            },
+            computed: {
+                results() {
+                    const clickRate = this.rankClickRates[this.rankPosition] / 100;
+                    const dailyIncome = this.monthlyIncome / 30;
+                    const yearlyIncome = this.monthlyIncome * 12;
+                    const adRevenuePerUv = (this.adRevenue / 1000) * this.pvPerUv;
+                    const saasRevenuePerUv = this.saasRevenue / 1000;
+                    const totalRevenuePerUv = adRevenuePerUv + saasRevenuePerUv;
+                    
+                    const totalDailyUv = dailyIncome / totalRevenuePerUv;
+                    const uvPerSite = totalDailyUv / this.websiteCount;
+                    const pvPerSite = uvPerSite * this.pvPerUv;
+                    const searchVolumePerKeyword = (uvPerSite / this.keywordsPerSite) / clickRate;
+
+                    const requiredDomains = this.kdToReferringDomains[this.keywordKD];
+                    const totalLinkCost = this.websiteCount * this.getTotalLinkCost(requiredDomains);
+
+                    const roi = totalLinkCost > 0 ? Number((yearlyIncome / totalLinkCost).toFixed(2)) : 0;
+
+                    const risks = {
+                        highSearchVolume: searchVolumePerKeyword > 10000,
+                        lowRoi: roi < 1,
+                        highCost: totalLinkCost > this.monthlyIncome * 6,
+                        inefficientKD: this.keywordKD >= 30 && searchVolumePerKeyword < 1000
+                    };
+                    //risks.inefficientKD = risks.inefficientKD || risks.lowRoi || risks.highCost;
+
+                    return {
+                        dailyIncome: dailyIncome.toFixed(2),
+                        revenuePerUv: totalRevenuePerUv.toFixed(4),
+                        adRevenuePerUv: adRevenuePerUv.toFixed(4),
+                        saasRevenuePerUv: saasRevenuePerUv.toFixed(4),
+                        totalDailyUv: Math.round(totalDailyUv),
+                        uvPerSite: Math.round(uvPerSite),
+                        pvPerSite: Math.round(pvPerSite),
+                        searchVolumePerKeyword: Math.round(searchVolumePerKeyword),
+                        requiredDomains,
+                        totalLinkCost: Math.round(totalLinkCost),
+                        yearlyIncome: Math.round(yearlyIncome),
+                        roi,
+                        risks
+                    };
+                }
+            },
+            methods: {
+                formatNumber(num) {
+                    return new Intl.NumberFormat().format(num);
+                },
+                adjustValue(field, amount) {
+                    const config = {
+                        monthlyIncome: { min: 100, max: 100000 },
+                        websiteCount: { min: 1, max: 20 },
+                        keywordsPerSite: { min: 1, max: 50 },
+                        rankPosition: { min: 1, max: 10 },
+                        adRevenue: { min: 1, max: 20 },
+                        saasRevenue: { min: 50, max: 500 },
+                        pvPerUv: { min: 1, max: 5 },
+                        keywordKD: { min: 0, max: 100 }
+                    };
+
+                    const newValue = Math.round((this[field] + amount) * 100) / 100;
+                    if (newValue >= config[field].min && newValue <= config[field].max) {
+                        this[field] = newValue;
+                    }
+                },
+                getLinkCost(linkOrder) {
+                    if (linkOrder <= 10) {
+                        return 100;
+                    }
+                    
+                    if (linkOrder <= 50) {
+                        return 100 * (1 + (linkOrder - 10) * 0.01);
+                    }
+                    
+                    if (linkOrder <= 200) {
+                        return 100 * (1 + (50 - 10) * 0.01 + (linkOrder - 50) * 0.015);
+                    }
+                    
+                    return 100 * (1 + (50 - 10) * 0.01 + (200 - 50) * 0.015 + (linkOrder - 200) * 0.02);
+                },
+                getTotalLinkCost(totalLinks) {
+                    let totalCost = 0;
+                    for (let i = 1; i <= totalLinks; i++) {
+                        totalCost += this.getLinkCost(i);
+                    }
+                    return totalCost;
+                },
+                handleInput(field, event) {
+                    const config = {
+                        monthlyIncome: { min: 100, max: 100000 },
+                        websiteCount: { min: 1, max: 10 },
+                        keywordsPerSite: { min: 1, max: 50 },
+                        rankPosition: { min: 1, max: 10 },
+                        adRevenue: { min: 1, max: 20 },
+                        saasRevenue: { min: 50, max: 500 },
+                        pvPerUv: { min: 1, max: 5 },
+                        keywordKD: { min: 0, max: 100 }
+                    };
+
+                    const value = parseFloat(event.target.value);
+                    if (!isNaN(value)) {
+                        if (value < config[field].min) {
+                            this[field] = config[field].min;
+                        } else if (value > config[field].max) {
+                            this[field] = config[field].max;
+                        } else {
+                            this[field] = value;
+                        }
+                    }
+                }
+            }
+        }).mount('#app');
+    </script>
+    <div style="display: none;">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BE6037ZLBE"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-BE6037ZLBE');
+        </script>
+    </div>
+</body>
+</html>
+        
