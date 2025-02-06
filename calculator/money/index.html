@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEO收入目标拆解计算器 - 哥飞</title>
-    <meta name="description" content="SEO收入目标拆解计算器，由哥飞制作，基于目标收入和参数，拆解目标，计算达成目标所需的条件，帮助大家更好的评估SEO投入和产出。"/>
+    <title>SEO Revenue Target Calculator - GeFei</title>
+    <meta name="description" content="SEO Revenue Target Calculator, created by GeFei, breaks down goals based on target revenue and parameters, calculates the conditions needed to achieve targets, helping everyone better evaluate SEO investment and returns."/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.global.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -545,90 +545,84 @@
 <body>
     <div id="app" class="container">
         <div class="header">
-            <h1>SEO收入目标拆解计算器 By 哥飞</h1>
-            <p>SEO收入目标拆解计算器，由哥飞制作，基于目标收入和参数，拆解目标，计算达成目标所需的条件，帮助大家更好的评估SEO投入和产出。</p>
+            <h1>SEO Revenue Target Calculator By GeFei</h1>
+            <p>The SEO Revenue Target Calculator, created by GeFei, breaks down goals based on target revenue and parameters, calculates the conditions needed to achieve targets, helping you better evaluate SEO investments and returns.</p>
         </div>
 
         <div class="settings-group">
-            <h2>目标收入和网站数据</h2>
-            <div class="inputs-grid">
-                <div class="input-group">
-                    <label>目标月收入（美元）</label>
-                    <div class="input-control">
-                        <button class="btn" @click="adjustValue('monthlyIncome', -100)">-</button>
-                        <input type="number" v-model.number="monthlyIncome" min="100" max="100000" step="100">
-                        <button class="btn" @click="adjustValue('monthlyIncome', 100)">+</button>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <label>网站数量</label>
-                    <div class="input-control">
-                        <button class="btn" @click="adjustValue('websiteCount', -1)">-</button>
-                        <input type="number" v-model.number="websiteCount" min="1" max="10">
-                        <button class="btn" @click="adjustValue('websiteCount', 1)">+</button>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <label>每个网站的关键词数量</label>
-                    <div class="input-control">
-                        <button class="btn" @click="adjustValue('keywordsPerSite', -1)">-</button>
-                        <input type="number" v-model.number="keywordsPerSite" min="1" max="50">
-                        <button class="btn" @click="adjustValue('keywordsPerSite', 1)">+</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+           <h2>Target Revenue and Website Data</h2>
+           <div class="inputs-grid">
+               <div class="input-group">
+                   <label>Target Monthly Revenue (USD)</label>
+                   <div class="input-control">
+                       <button class="btn" @click="adjustValue('monthlyIncome', -100)">-</button>
+                       <input type="number" v-model.number="monthlyIncome" min="100" max="100000" step="100">
+                       <button class="btn" @click="adjustValue('monthlyIncome', 100)">+</button>
+                   </div>
+               </div>
+               <div class="input-group">
+                   <label>Number of Websites</label>
+                   <div class="input-control">
+                       <button class="btn" @click="adjustValue('websiteCount', -1)">-</button>
+                       <input type="number" v-model.number="websiteCount" min="1" max="10">
+                       <button class="btn" @click="adjustValue('websiteCount', 1)">+</button>
+                   </div>
+               </div>
+               <div class="input-group">
+                   <label>Keywords per Website</label>
+                   <div class="input-control">
+                       <button class="btn" @click="adjustValue('keywordsPerSite', -1)">-</button>
+                       <input type="number" v-model.number="keywordsPerSite" min="1" max="50">
+                       <button class="btn" @click="adjustValue('keywordsPerSite', 1)">+</button>
+                   </div>
+               </div>
+           </div>
+       </div>
 
         <div class="settings-group">
-            <h2>收入参数</h2>
+            <h2>Revenue Parameters</h2>
             <div class="inputs-grid">
                 <div class="input-group">
-                    <label>目标排名位置</label>
+                    <label>Target Ranking Position</label>
                     <div class="input-control">
-                        <button class="btn" @click="adjustValue('rankPosition', -1)">-</button>
-                        <input type="number" v-model.number="rankPosition" min="1" max="10">
-                        <button class="btn" @click="adjustValue('rankPosition', 1)">+</button>
+                       <button class="btn" @click="adjustValue('rankPosition', -1)">-</button>
+                       <input type="number" v-model.number="rankPosition" min="1" max="10">
+                       <button class="btn" @click="adjustValue('rankPosition', 1)">+</button>
                     </div>
-                    <div class="info-text">当前排名点击率：{{rankClickRates[rankPosition]}}%</div>
+                    <div class="info-text">Current Click-Through Rate: {{rankClickRates[rankPosition]}}%</div>
                 </div>
-
                 <div class="input-group">
-                    <label>每1000PV广告收入（美元）</label>
+                    <label>Ad Revenue per 1000 Pageviews (USD)</label>
                     <div class="input-control">
-                        <button class="btn" @click="adjustValue('adRevenue', -0.1)">-</button>
-                        <input type="number" v-model.number="adRevenue" min="1" max="20" step="0.1">
-                        <button class="btn" @click="adjustValue('adRevenue', 0.1)">+</button>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <label>每1000UV的SaaS收入（美元）</label>
-                    <div class="input-control">
-                        <button class="btn" @click="adjustValue('saasRevenue', -10)">-</button>
-                        <input type="number" v-model.number="saasRevenue" min="50" max="500" step="10">
-                        <button class="btn" @click="adjustValue('saasRevenue', 10)">+</button>
+                       <button class="btn" @click="adjustValue('adRevenue', -0.1)">-</button>
+                       <input type="number" v-model.number="adRevenue" min="1" max="20" step="0.1">
+                       <button class="btn" @click="adjustValue('adRevenue', 0.1)">+</button>
                     </div>
                 </div>
-
                 <div class="input-group">
-                    <label>每UV产生PV数</label>
+                    <label>SaaS Revenue per 1000 Unique Visitors (USD)</label>
                     <div class="input-control">
-                        <button class="btn" @click="adjustValue('pvPerUv', -0.1)">-</button>
-                        <input type="number" v-model.number="pvPerUv" min="1" max="5" step="0.1">
-                        <button class="btn" @click="adjustValue('pvPerUv', 0.1)">+</button>
+                       <button class="btn" @click="adjustValue('saasRevenue', -10)">-</button>
+                       <input type="number" v-model.number="saasRevenue" min="50" max="500" step="10">
+                       <button class="btn" @click="adjustValue('saasRevenue', 10)">+</button>
                     </div>
                 </div>
-
                 <div class="input-group">
-                    <label>关键词KD值</label>
+                    <label>Pageviews per Unique Visitor</label>
                     <div class="input-control">
-                        <button class="btn" @click="adjustValue('keywordKD', -10)">-</button>
-                        <input type="number" v-model.number="keywordKD" min="0" max="90" step="10">
-                        <button class="btn" @click="adjustValue('keywordKD', 10)">+</button>
+                       <button class="btn" @click="adjustValue('pvPerUv', -0.1)">-</button>
+                       <input type="number" v-model.number="pvPerUv" min="1" max="5" step="0.1">
+                       <button class="btn" @click="adjustValue('pvPerUv', 0.1)">+</button>
                     </div>
-                    <div class="info-text">所需外链域名数：{{kdToReferringDomains[keywordKD]}}</div>
+                </div>
+                <div class="input-group">
+                    <label>Keyword Difficulty (KD)</label>
+                    <div class="input-control">
+                       <button class="btn" @click="adjustValue('keywordKD', -10)">-</button>
+                       <input type="number" v-model.number="keywordKD" min="0" max="90" step="10">
+                       <button class="btn" @click="adjustValue('keywordKD', 10)">+</button>
+                    </div>
+                    <div class="info-text">Required Referring Domains: {{kdToReferringDomains[keywordKD]}}</div>
                 </div>
             </div>
         </div>
@@ -636,410 +630,373 @@
         <div class="results">
             <div class="results-row results-row-2">
                 <div class="result-card">
-                    <h3>日均收入目标</h3>
-                    <p>${{results.dailyIncome}}</p>
+                   <h3>Daily Revenue Target</h3>
+                   <p>${{results.dailyIncome}}</p>
                 </div>
                 <div class="result-card">
-                    <h3>每UV平均收益</h3>
-                    <p>${{results.revenuePerUv}}</p>
+                   <h3>Revenue per Unique Visitor</h3>
+                   <p>${{results.revenuePerUv}}</p>
                 </div>
             </div>
-
             <div class="results-row results-row-3">
                 <div class="result-card">
-                    <h3>每网站所需日均UV</h3>
-                    <p>{{results.uvPerSite}}</p>
+                   <h3>Daily Unique Visitors Required per Site</h3>
+                   <p>{{results.uvPerSite}}</p>
                 </div>
                 <div class="result-card">
-                    <h3>每网站预期日均PV</h3>
-                    <p>{{results.pvPerSite}}</p>
+                   <h3>Expected Daily Pageviews per Site</h3>
+                   <p>{{results.pvPerSite}}</p>
                 </div>
                 <div class="result-card">
-                    <h3>每关键词所需日搜索量</h3>
-                    <p>{{results.searchVolumePerKeyword}}</p>
+                   <h3>Required Daily Search Volume per Keyword</h3>
+                   <p>{{results.searchVolumePerKeyword}}</p>
                 </div>
             </div>
             <div class="results-row results-row-4">
                 <div class="result-card">
-                    <h3>每个网站最低所需外链域名数</h3>
-                    <p>{{results.requiredDomains}}</p>
+                   <h3>Minimum Required Referring Domains per Site</h3>
+                   <p>{{results.requiredDomains}}</p>
                 </div>
                 <div class="result-card" :class="{ warning: results.totalLinkCost > monthlyIncome * 6 }">
-                    <h3>预计外链总成本</h3>
-                    <p>${{results.totalLinkCost}}</p>
+                   <h3>Estimated Total Link Building Cost</h3>
+                   <p>${{results.totalLinkCost}}</p>
                 </div>
                 <div class="result-card">
-                    <h3>12个月预期收入</h3>
-                    <p>${{results.yearlyIncome}}</p>
+                   <h3>12-Month Projected Revenue</h3>
+                   <p>${{results.yearlyIncome}}</p>
                 </div>
                 <div class="result-card" :class="{ warning: results.roi < 1 }">
-                    <h3>投资回报率 (12个月收入/外链成本)</h3>
-                    <p>{{results.roi}}x</p>
+                   <h3>ROI (12-Month Revenue/Link Cost)</h3>
+                   <p>{{results.roi}}x</p>
                 </div>
             </div>
 
-            <!-- 结果分析 -->
             <div class="result-analysis">
-                <h3><i class="fas fa-chart-bar"></i> 策略分析报告</h3>
-                
-                <!-- 基础目标概述 -->
+                <h3><i class="fas fa-chart-bar"></i> Strategy Analysis Report</h3>
+                               
                 <p>
-                    为实现月收入 <span class="highlight">${{formatNumber(monthlyIncome)}}</span> 的目标，
-                    如果建立 <span class="highlight">{{websiteCount}}</span> 个网站，
-                    为每个网站布局 <span class="highlight">{{keywordsPerSite}}</span> 个关键词。
-                    日均需要实现收入 <span class="highlight">${{results.dailyIncome}}</span>。
-                </p>
-                
-                <!-- 用户价值分析 -->
-                <p>
-                    根据当前设置，每位用户的价值组成：
-                    广告收入 <span class="highlight">${{results.adRevenuePerUv}}</span> + 
-                    SaaS收入 <span class="highlight">${{results.saasRevenuePerUv}}</span> = 
-                    总价值 <span class="highlight">${{results.revenuePerUv}}</span>。
-                    单用户平均访问 <span class="highlight">{{pvPerUv}}</span> 个页面。
-                </p>
-                
-                <!-- 流量需求分析 -->
-                <p>
-                    流量获取策略：每个网站需要日均获得 <span class="highlight">{{formatNumber(results.uvPerSite)}}</span> 位访客，
-                    预计产生 <span class="highlight">{{formatNumber(results.pvPerSite)}}</span> 次浏览。
-                    关键词排名目标第 <span class="highlight">{{rankPosition}}</span> 位
-                    （点击率 <span class="highlight">{{rankClickRates[rankPosition]}}%</span>），
-                    要求每个关键词日均搜索量达到 <span class="highlight">{{formatNumber(results.searchVolumePerKeyword)}}</span> 次。
-
-                    <span v-if="results.searchVolumePerKeyword > 10000" class="warning">
-                        ⚠️ 当前要求关键词每日搜索量大于10000，建议多做几个网站或者多布局几个关键词
-                    </span>
-                </p>
-                
-                <!-- 外链策略 -->
-                <p>
-                    外链建设策略：基于关键词难度 KD <span class="highlight">{{keywordKD}}</span>，
-                    每个网站需要获取至少 <span class="highlight">{{results.requiredDomains}}</span> 个优质外链域名。
-                    外链总投资预算 <span class="highlight">${{formatNumber(results.totalLinkCost)}}</span>。
-                    <span v-if="results.totalLinkCost > monthlyIncome * 6" class="warning">
-                        ⚠️ 注意：外链成本超过6个月收入，建议调整策略
-                    </span>
-                </p>
-                
-                <!-- ROI分析 -->
-                <p>
-                    投资回报分析：预计12个月可实现收入 <span class="highlight">${{formatNumber(results.yearlyIncome)}}</span>，
-                    投资回报率为 <span :class="{ 'highlight': results.roi >= 1, 'warning': results.roi < 1 }">
-                        {{results.roi}}x
-                    </span>。
-                    <span v-if="results.roi < 1" class="warning">
-                        ⚠️ 当前ROI低于1，项目可能存在风险
-                    </span>
+                   To achieve the monthly revenue target of <span class="highlight">${{formatNumber(monthlyIncome)}}</span>,
+                   with <span class="highlight">{{websiteCount}}</span> websites,
+                   each targeting <span class="highlight">{{keywordsPerSite}}</span> keywords.
+                   The daily revenue target is <span class="highlight">${{results.dailyIncome}}</span>.
                 </p>
 
-                <!-- 风险提示与建议 -->
+                <p>
+                   Based on current settings, each visitor's value consists of:
+                   Ad revenue <span class="highlight">${{results.adRevenuePerUv}}</span> + 
+                   SaaS revenue <span class="highlight">${{results.saasRevenuePerUv}}</span> = 
+                   Total value <span class="highlight">${{results.revenuePerUv}}</span>.
+                   Each visitor averages <span class="highlight">{{pvPerUv}}</span> pageviews.
+                </p>
+
+                <p>
+                   Traffic acquisition strategy: Each website needs <span class="highlight">{{formatNumber(results.uvPerSite)}}</span> daily visitors,
+                   expected to generate <span class="highlight">{{formatNumber(results.pvPerSite)}}</span> pageviews.
+                   Target ranking position <span class="highlight">{{rankPosition}}</span>
+                   (click-through rate <span class="highlight">{{rankClickRates[rankPosition]}}%</span>),
+                   requires daily search volume of <span class="highlight">{{formatNumber(results.searchVolumePerKeyword)}}</span> per keyword.
+
+                   <span v-if="results.searchVolumePerKeyword > 10000" class="warning">
+                       ⚠️ Current required daily search volume exceeds 10,000, consider increasing the number of websites or keywords
+                   </span>
+                </p>
+
+                <p>
+                   Link building strategy: Based on keyword difficulty (KD) <span class="highlight">{{keywordKD}}</span>,
+                   each website needs at least <span class="highlight">{{results.requiredDomains}}</span> quality referring domains.
+                   Total link building budget <span class="highlight">${{formatNumber(results.totalLinkCost)}}</span>.
+                   <span v-if="results.totalLinkCost > monthlyIncome * 6" class="warning">
+                       ⚠️ Warning: Link building cost exceeds 6 months of revenue, strategy adjustment recommended
+                   </span>
+                </p>
+
+                <p>
+                   ROI analysis: Projected 12-month revenue <span class="highlight">${{formatNumber(results.yearlyIncome)}}</span>,
+                   return on investment is <span :class="{ 'highlight': results.roi >= 1, 'warning': results.roi < 1 }">
+                       {{results.roi}}x
+                   </span>.
+                   <span v-if="results.roi < 1" class="warning">
+                       ⚠️ Current ROI is below 1, project may be risky
+                   </span>
+                </p>
+
                 <div v-if="results.risks.highSearchVolume || results.risks.lowRoi || results.risks.highCost || results.risks.inefficientKD" 
-                     class="warning-section">
-                    <strong>⚠️ 策略优化建议：</strong>
-                    <ul>
-                        <li v-if="results.risks.inefficientKD">
-                            当前关键词KD值({{keywordKD}})较高，但日均搜索量({{formatNumber(results.searchVolumePerKeyword)}})较低，投资回报比不理想。建议：
-                            <ul class="ml-4 mt-2">
-                                <li>寻找KD更低的相关关键词</li>
-                                <li>选择搜索量更大的关键词</li>
-                                <li>考虑转向长尾关键词策略</li>
-                            </ul>
-                        </li>
-                        <li v-if="results.risks.highSearchVolume">
-                            当前所需搜索量（{{formatNumber(results.searchVolumePerKeyword)}}）较大，建议多做几个网站，或增加关键词数量或调整收入预期
-                        </li>
-                        <li v-if="results.risks.lowRoi">
-                            当前ROI（{{results.roi}}x）偏低，建议提高用户价值或降低获客成本
-                        </li>
-                        <li v-if="results.risks.highCost">
-                            外链成本（${{formatNumber(results.totalLinkCost)}}）过高，建议选择难度更低的关键词
-                        </li>
-                        <li>考虑选择更低竞争度的关键词以减少所需外链数量</li>
-                        <li>优化网站体验提高用户停留时间和页面浏览量</li>
-                        <li>改善变现效率，提高广告收入和SaaS转化率</li>
-                    </ul>
+                    class="warning-section">
+                   <strong>⚠️ Strategy Optimization Suggestions:</strong>
+                   <ul>
+                       <li v-if="results.risks.inefficientKD">
+                           Current keyword difficulty (KD: {{keywordKD}}) is high but daily search volume ({{formatNumber(results.searchVolumePerKeyword)}}) is low, resulting in poor ROI. Suggestions:
+                           <ul class="ml-4 mt-2">
+                               <li>Find related keywords with lower KD</li>
+                               <li>Choose keywords with higher search volume</li>
+                               <li>Consider long-tail keyword strategy</li>
+                           </ul>
+                       </li>
+                       <li v-if="results.risks.highSearchVolume">
+                           Current required search volume ({{formatNumber(results.searchVolumePerKeyword)}}) is too high, consider creating more websites, increasing the number of keywords, or adjusting revenue expectations
+                       </li>
+                       <li v-if="results.risks.lowRoi">
+                           Current ROI ({{results.roi}}x) is low, consider increasing user value or reducing acquisition costs
+                       </li>
+                       <li v-if="results.risks.highCost">
+                           Link building cost (${{formatNumber(results.totalLinkCost)}}) is too high, consider targeting keywords with lower difficulty
+                       </li>
+                       <li>Consider choosing keywords with lower competition to reduce required backlinks</li>
+                       <li>Optimize website experience to increase user time on site and pageviews</li>
+                       <li>Improve monetization efficiency by increasing ad revenue and SaaS conversion rates</li>
+                   </ul>
                 </div>
             </div>
 
             <div class="calculation-steps">
-                <h3>计算说明：</h3>
-                <ol>
-                    <li>月收入 ${{monthlyIncome}} 除以30天 = 日均目标 ${{results.dailyIncome}}</li>
-                    <li>每UV通过广告收入 ${{results.adRevenuePerUv}} + SaaS收入 ${{results.saasRevenuePerUv}} = ${{results.revenuePerUv}}</li>
-                    <li>要达到日收入 ${{results.dailyIncome}}，需要总UV：{{results.totalDailyUv}}</li>
-                    <li>分配到 {{websiteCount}} 个网站，每个网站需要UV：{{results.uvPerSite}}</li>
-                    <li>每个网站有 {{keywordsPerSite}} 个关键词，排名第{{rankPosition}}位点击率{{rankClickRates[rankPosition]}}%，每关键词需要搜索量：{{results.searchVolumePerKeyword}}</li>
-                    <li>每UV产生 {{pvPerUv}} 个PV，预期PV：{{results.pvPerSite}}</li>
-                    <li>根据KD {{keywordKD}} 需要 {{results.requiredDomains}} 个外链域名</li>
-                    <li>预计外链成本 ${{results.totalLinkCost}}（建议预算不超过6个月收入）</li>
-                </ol>
-            </div>
+               <h3>Calculation Details:</h3>
+               <ol>
+                   <li>Monthly revenue ${{monthlyIncome}} divided by 30 days = Daily target ${{results.dailyIncome}}</li>
+                   <li>Each visitor generates ${{results.adRevenuePerUv}} from ads + ${{results.saasRevenuePerUv}} from SaaS = ${{results.revenuePerUv}}</li>
+                   <li>To achieve daily revenue of ${{results.dailyIncome}}, total visitors needed: {{results.totalDailyUv}}</li>
+                   <li>Distributed across {{websiteCount}} websites, visitors needed per site: {{results.uvPerSite}}</li>
+                   <li>Each site targets {{keywordsPerSite}} keywords, rank position {{rankPosition}} has {{rankClickRates[rankPosition]}}% CTR, required search volume per keyword: {{results.searchVolumePerKeyword}}</li>
+                   <li>Each visitor generates {{pvPerUv}} pageviews, expected pageviews: {{results.pvPerSite}}</li>
+                   <li>Based on KD {{keywordKD}}, requires {{results.requiredDomains}} referring domains</li>
+                   <li>Estimated link building cost ${{results.totalLinkCost}} (recommended budget should not exceed 6 months of revenue)</li>
+               </ol>
+           </div>
         </div>
 
         <div class="feature-section">
-            <h2>什么是SEO收入计算器？</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3>智能规划工具</h3>
-                    <p>这是一款专为SEO从业者设计的收入规划工具，帮助你科学地评估和规划SEO项目的投资回报。</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>数据驱动决策</h3>
-                    <p>基于实际市场数据和SEO经验数据，为你的业务决策提供可靠的数据支持。</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>目标明确</h3>
-                    <p>从目标收入反推所需的具体指标，让你的SEO策略更有针对性。</p>
-                </div>
-            </div>
-        </div>
+           <h2>What is the SEO Revenue Calculator?</h2>
+           <div class="feature-grid">
+               <div class="feature-card">
+                   <div class="feature-icon">
+                       <i class="fas fa-calculator"></i>
+                   </div>
+                   <h3>Smart Planning Tool</h3>
+                   <p>A revenue planning tool designed specifically for SEO professionals, helping you scientifically evaluate and plan the ROI of your SEO projects.</p>
+               </div>
+               <div class="feature-card">
+                   <div class="feature-icon">
+                       <i class="fas fa-chart-line"></i>
+                   </div>
+                   <h3>Data-Driven Decisions</h3>
+                   <p>Based on real market data and SEO industry experience, providing reliable data support for your business decisions.</p>
+               </div>
+               <div class="feature-card">
+                   <div class="feature-icon">
+                       <i class="fas fa-bullseye"></i>
+                   </div>
+                   <h3>Clear Objectives</h3>
+                   <p>Work backwards from revenue targets to determine specific metrics needed, making your SEO strategy more targeted and focused.</p>
+               </div>
+           </div>
+       </div>
 
         <div class="feature-section">
-            <h2>这个计算器能帮你什么？</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-search-dollar"></i>
-                    </div>
-                    <h3>收入预测</h3>
-                    <p>精确计算达到目标收入所需的流量、排名和外链资源。</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-coins"></i>
-                    </div>
-                    <h3>成本评估</h3>
-                    <p>评估获取所需外链资源的成本，帮助你做出更明智的投资决策。</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <h3>ROI分析</h3>
-                    <p>计算投资回报率，确保你的SEO投入物有所值。</p>
-                </div>
-            </div>
-        </div>
+           <h2>How Can This Calculator Help You?</h2>
+           <div class="feature-grid">
+               <div class="feature-card">
+                   <div class="feature-icon">
+                       <i class="fas fa-search-dollar"></i>
+                   </div>
+                   <h3>Revenue Forecasting</h3>
+                   <p>Precisely calculate the traffic, rankings, and backlinks needed to achieve your revenue goals.</p>
+               </div>
+               <div class="feature-card">
+                   <div class="feature-icon">
+                       <i class="fas fa-coins"></i>
+                   </div>
+                   <h3>Cost Assessment</h3>
+                   <p>Evaluate the cost of acquiring necessary backlinks, helping you make smarter investment decisions.</p>
+               </div>
+               <div class="feature-card">
+                   <div class="feature-icon">
+                       <i class="fas fa-chart-pie"></i>
+                   </div>
+                   <h3>ROI Analysis</h3>
+                   <p>Calculate return on investment to ensure your SEO efforts deliver value for money.</p>
+               </div>
+           </div>
+       </div>
 
         <div class="feature-section">
-            <h2>如何使用这个计算器？</h2>
-            <div class="how-it-works">
-                <div class="step-card">
-                    <h3>设置收入目标</h3>
-                    <p>输入你期望达到的月收入目标，这将作为所有计算的基础。</p>
-                </div>
-                <div class="step-card">
-                    <h3>调整业务参数</h3>
-                    <p>设置网站数量、关键词数量等基础参数，以匹配你的业务规模。</p>
-                </div>
-                <div class="step-card">
-                    <h3>优化收入来源</h3>
-                    <p>调整广告收入和SaaS收入比例，优化你的收入结构。</p>
-                </div>
-                <div class="step-card">
-                    <h3>分析结果指标</h3>
-                    <p>查看计算结果，了解需要达到的具体指标和预期投资回报。</p>
-                </div>
-            </div>
-        </div>
+           <h2>How to Use This Calculator?</h2>
+           <div class="how-it-works">
+               <div class="step-card">
+                   <h3>Set Revenue Target</h3>
+                   <p>Enter your desired monthly revenue target, which will serve as the foundation for all calculations.</p>
+               </div>
+               <div class="step-card">
+                   <h3>Adjust Business Parameters</h3>
+                   <p>Set basic parameters like number of websites and keywords to match your business scale.</p>
+               </div>
+               <div class="step-card">
+                   <h3>Optimize Revenue Sources</h3>
+                   <p>Adjust the ratio between advertising and SaaS revenue to optimize your revenue structure.</p>
+               </div>
+               <div class="step-card">
+                   <h3>Analyze Results</h3>
+                   <p>Review the calculations to understand specific targets needed and expected return on investment.</p>
+               </div>
+           </div>
+       </div>
 
         <div class="feature-section faq-section">
-            <h2>常见问题</h2>
-
+            <h2>Frequently Asked Questions</h2>
             <div class="faq-item">
-                <div class="faq-question">
-                    <i class="fas fa-question-circle"></i>
-                    <span>为什么要设置多个网站？</span>
-                </div>
-                <div class="faq-answer">
-                    设置多个网站可以分散风险，同时也能覆盖更多的关键词和市场领域。但需要注意，管理多个网站也意味着更高的维护成本。
-                </div>
+               <div class="faq-question">
+                   <i class="fas fa-question-circle"></i>
+                   <span>Why create multiple websites?</span>
+               </div>
+               <div class="faq-answer">
+                   Having multiple websites helps diversify risk and allows you to cover more keywords and market segments. However, keep in mind that managing multiple websites also means higher maintenance costs.
+               </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">
-                    <i class="fas fa-question-circle"></i>
-                    <span>如何理解KD值？</span>
-                </div>
-                <div class="faq-answer">
-                    KD（Keyword Difficulty）值表示关键词的竞争难度，范围从0到100。KD值越高，意味着需要更多的外链支持才能在搜索结果中获得好的排名。
-                </div>
+               <div class="faq-question">
+                   <i class="fas fa-question-circle"></i>
+                   <span>What is KD (Keyword Difficulty)?</span>
+               </div>
+               <div class="faq-answer">
+                   KD (Keyword Difficulty) indicates the competition level for a keyword, ranging from 0 to 100. A higher KD value means you'll need more backlinks to achieve good rankings in search results.
+               </div>
             </div>
 
 
-            <!-- 基础概念解释 -->
             <div class="faq-item">
-                <div class="faq-question">
-                    <i class="fas fa-question-circle"></i>
-                    <span>UV和PV是什么？它们有什么区别？</span>
-                </div>
-                <div class="faq-answer">
-                    UV（独立访客）是指访问网站的独立用户数量，同一用户多次访问只计算一次。PV（页面浏览量）是指网页被浏览的总次数。<br />例如，如果一个用户访问了网站的5个页面，就会产生1个UV和5个PV。计算器中的"每UV产生PV数"就是衡量用户浏览深度的指标。
-                </div>
-            </div>
+               <div class="faq-question">
+                   <i class="fas fa-question-circle"></i>
+                   <span>What are UV and PV? What's the difference?</span>
+               </div>
+               <div class="faq-answer">
+                   UV (Unique Visitors) refers to the number of individual users visiting a website, with each user counted only once regardless of multiple visits. PV (Page Views) is the total number of times pages are viewed.<br />For example, if one user visits 5 pages on a website, this generates 1 UV and 5 PVs. The "Pageviews per Unique Visitor" metric in the calculator measures user engagement depth.
+               </div>
+           </div>
+           <div class="faq-item">
+               <div class="faq-question">
+                   <i class="fas fa-question-circle"></i>
+                   <span>How is revenue per visitor calculated?</span>
+               </div>
+               <div class="faq-answer">
+                   Revenue per visitor consists of two components: advertising revenue and SaaS revenue.<br />
+                   Ad Revenue = (Ad Revenue per 1000 Pageviews × Pageviews per Visitor) ÷ 1000<br />
+                   SaaS Revenue = SaaS Revenue per 1000 Visitors ÷ 1000<br />
+                   Total Revenue = Ad Revenue + SaaS Revenue
+               </div>
+           </div>
+           <div class="faq-item">
+               <div class="faq-question">
+                   <i class="fas fa-question-circle"></i>
+                   <span>How is the required traffic calculated for target revenue?</span>
+               </div>
+               <div class="faq-answer">
+                   1. First calculate daily revenue target = monthly revenue target ÷ 30<br />
+                   2. Then calculate total visitors needed = daily revenue target ÷ revenue per visitor<br />
+                   3. Visitors needed per website = total visitors ÷ number of websites<br />
+                   4. Pageviews needed per website = visitors per website × pageviews per visitor
+               </div>
+           </div>
 
-            <!-- 收入计算逻辑 -->
             <div class="faq-item">
-                <div class="faq-question">
-                    <i class="fas fa-question-circle"></i>
-                    <span>如何计算每个UV的收入？</span>
-                </div>
-                <div class="faq-answer">
-                    每UV的收入由两部分组成：广告收入和SaaS收入。<br />
-                    广告收入 = (每1000PV广告收入 × 每UV产生的PV数) ÷ 1000<br />
-                    SaaS收入 = 每1000UV的SaaS收入 ÷ 1000<br />
-                    总收入 = 广告收入 + SaaS收入
-                </div>
-            </div>
+               <div class="faq-question">
+                   <i class="fas fa-question-circle"></i>
+                   <span>What are UV and PV? What's the difference?</span>
+               </div>
+               <div class="faq-answer">
+                   UV (Unique Visitors) refers to the number of individual users visiting a website, with each user counted only once regardless of multiple visits. PV (Page Views) is the total number of times pages are viewed.<br />For example, if one user visits 5 pages on a website, this generates 1 UV and 5 PVs. The "Pageviews per Unique Visitor" metric in the calculator measures user engagement depth.
+               </div>
+           </div>
+           <div class="faq-item">
+               <div class="faq-question">
+                   <i class="fas fa-question-circle"></i>
+                   <span>How is revenue per visitor calculated?</span>
+               </div>
+               <div class="faq-answer">
+                   Revenue per visitor consists of two components: advertising revenue and SaaS revenue.<br />
+                   Ad Revenue = (Ad Revenue per 1000 Pageviews × Pageviews per Visitor) ÷ 1000<br />
+                   SaaS Revenue = SaaS Revenue per 1000 Visitors ÷ 1000<br />
+                   Total Revenue = Ad Revenue + SaaS Revenue
+               </div>
+           </div>
+           <div class="faq-item">
+               <div class="faq-question">
+                   <i class="fas fa-question-circle"></i>
+                   <span>How is the required traffic calculated for target revenue?</span>
+               </div>
+               <div class="faq-answer">
+                   1. First calculate daily revenue target = monthly revenue target ÷ 30<br />
+                   2. Then calculate total visitors needed = daily revenue target ÷ revenue per visitor<br />
+                   3. Visitors needed per website = total visitors ÷ number of websites<br />
+                   4. Pageviews needed per website = visitors per website × pageviews per visitor
+               </div>
+           </div>
 
-            <!-- 流量计算逻辑 -->
             <div class="faq-item">
-                <div class="faq-question">
-                    <i class="fas fa-question-circle"></i>
-                    <span>如何计算达到目标收入所需的流量？</span>
-                </div>
-                <div class="faq-answer">
-                    1. 首先计算日均收入目标 = 月收入目标 ÷ 30<br />
-                    2. 然后计算所需总UV = 日均收入目标 ÷ 每UV收入<br />
-                    3. 每个网站所需UV = 总UV ÷ 网站数量<br />
-                    4. 每个网站所需PV = 每个网站UV × 每UV产生PV数
-                </div>
-            </div>
+               <div class="faq-question">
+                   <i class="fas fa-question-circle"></i>
+                   <span>How are backlink costs calculated?</span>
+               </div>
+               <div class="faq-answer">
+                   Backlink costs follow a tiered pricing model:<br />
+                   1. First 10 domains: $100 each<br />
+                   2. Domains 11-50: 1% increase per additional domain<br />
+                   3. Domains 51-200: 1.5% increase per additional domain<br />
+                   4. Beyond 200 domains: 2% increase per additional domain<br />
+                   This pricing model reflects the increasing difficulty of acquiring high-quality backlinks.
+               </div>
+           </div>
+           
+           <div class="faq-item">
+               <div class="faq-question">
+                   <i class="fas fa-question-circle"></i>
+                   <span>How is Return on Investment (ROI) calculated?</span>
+               </div>
+               <div class="faq-answer">
+                   ROI = 12-month projected revenue ÷ total backlink cost<br />
+                   For example, if projected annual revenue is $120,000 and backlink cost is $30,000, then ROI = 4x<br />
+                   Recommended ROI should be greater than 1, meaning annual revenue should exceed backlink costs. Backlink costs should not exceed 6 months of target revenue.
+               </div>
+           </div>
+           <div class="faq-item">
+               <div class="faq-question">
+                   <i class="fas fa-question-circle"></i>
+                   <span>How to optimize the revenue model?</span>
+               </div>
+               <div class="faq-answer">
+                   1. Increase ad revenue: Optimize ad placement and formats, improve CPM (Cost Per Thousand Impressions)<br />
+                   2. Increase SaaS revenue: Improve product conversion funnel, increase user conversion rates<br />
+                   3. Improve pageviews per visitor ratio: Enhance content quality and site structure to increase time on site<br />
+                   4. Reduce acquisition costs: Choose keywords with appropriate difficulty, balance traffic and competition<br />
+                   5. Diversify revenue streams: Develop new revenue channels beyond advertising and SaaS
+               </div>
+           </div>
 
-            <!-- 搜索量计算 -->
             <div class="faq-item">
-                <div class="faq-question">
-                    <i class="fas fa-question-circle"></i>
-                    <span>如何计算每个关键词所需的搜索量？</span>
-                </div>
-                <div class="faq-answer">
-                    计算公式：所需搜索量 = (每网站所需UV ÷ 关键词数量) ÷ 排名点击率<br />
-                    例如，如果一个网站需要1000UV，有10个关键词，排名第3位（点击率10.2%），<br />
-                    则每个关键词需要的搜索量 = (1000 ÷ 10) ÷ 10.2% ≈ 980
-                </div>
-            </div>
-
-            <!-- 点击率说明 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <i class="fas fa-question-circle"></i>
-                    <span>不同排名位置的点击率是如何确定的？</span>
-                </div>
-                <div class="faq-answer">
-                    点击率数据基于搜索引擎研究统计：<br />
-                    第1位：39.8%<br />
-                    第2位：18.7%<br />
-                    第3位：10.2%<br />
-                    第4位：7.2%<br />
-                    第5位：5.1%<br />
-                    以此类推。这说明排名越靠前，获得的点击越多，第一位的点击率远高于其他位置。
-                </div>
-            </div>
-
-            <!-- 外链计算 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <i class="fas fa-question-circle"></i>
-                    <span>如何根据KD值确定所需的外链数量？</span>
-                </div>
-                <div class="faq-answer">
-                    计算器使用以下对应关系：<br />
-                    KD 0: 0个外链<br />
-                    KD 10: 10个外链<br />
-                    KD 20: 22个外链<br />
-                    KD 30: 36个外链<br />
-                    KD 40: 56个外链<br />
-                    KD 50: 84个外链<br />
-                    KD 60: 129个外链<br />
-                    KD 70: 202个外链<br />
-                    KD 80: 353个外链<br />
-                    KD 90: 756个外链<br />
-                    这是基于大量数据分析得出的经验值。
-                </div>
-            </div>
-
-            <!-- 外链成本 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <i class="fas fa-question-circle"></i>
-                    <span>外链成本是如何计算的？</span>
-                </div>
-                <div class="faq-answer">
-                    外链成本采用阶梯定价模型：<br />
-                    1. 前10个域名：每个100美元<br />
-                    2. 11-50个域名：每增加1个增加1%<br />
-                    3. 51-200个域名：每增加1个增加1.5%<br />
-                    4. 200个以上：每增加1个增加2%<br />
-                    这种定价模型反映了获取高质量外链的难度递增特性。
-                </div>
-            </div>
-
-            <!-- ROI计算 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <i class="fas fa-question-circle"></i>
-                    <span>投资回报率(ROI)是如何计算的？</span>
-                </div>
-                <div class="faq-answer">
-                    ROI = 12个月预期收入 ÷ 外链总成本<br />
-                    例如，如果年收入预期是12万美元，外链成本是3万美元，则ROI = 4x<br />
-                    建议ROI至少大于1，即年收入至少要超过外链成本。外链成本建议不要超过6个月的目标收入。
-                </div>
-            </div>
-
-            <!-- 优化建议 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <i class="fas fa-question-circle"></i>
-                    <span>如何优化收入模型？</span>
-                </div>
-                <div class="faq-answer">
-                    1. 提高广告收入：优化广告位置和形式，提高千次展示收入（CPM）<br />
-                    2. 提高SaaS收入：改善产品转化漏斗，提高用户转化率<br />
-                    3. 提高PV/UV比：优化内容质量和网站结构，提高用户停留时间<br />
-                    4. 降低获客成本：选择适当难度的关键词，平衡流量和竞争度<br />
-                    5. 多元化收入来源：在广告和SaaS之外开发新的收入渠道
-                </div>
-            </div>
-
-            <!-- 风险提示 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <i class="fas fa-question-circle"></i>
-                    <span>使用这个计算器需要注意什么？</span>
-                </div>
-                <div class="faq-answer">
-                    1. 计算结果是基于理想情况的估算，实际情况可能会有偏差<br />
-                    2. 搜索引擎算法经常变化，排名和流量可能不稳定<br />
-                    3. 外链价格会随市场变化而波动<br />
-                    4. 建议从小规模开始，验证模型可行性后再扩大投入<br />
-                    5. 需要持续监测和优化各项指标，及时调整策略
-                </div>
-            </div>
+               <div class="faq-question">
+                   <i class="fas fa-question-circle"></i>
+                   <span>What should you keep in mind when using this calculator?</span>
+               </div>
+               <div class="faq-answer">
+                   1. Calculations are estimates based on ideal conditions; actual results may vary<br />
+                   2. Search engine algorithms frequently change, affecting rankings and traffic stability<br />
+                   3. Backlink costs fluctuate with market conditions<br />
+                   4. Start small, validate the model's viability before scaling up investment<br />
+                   5. Continuously monitor and optimize metrics, adjusting strategy as needed
+               </div>
+           </div>
         </div>
 
         <div class="footer">
             <div class="footer-content">
-                <p>工具开发：<a href="https://x.com/gefei55" target="_blank">哥飞</a></p>
-            </div>
-            
-            <div class="footer-disclaimer">
-                <p>📢 免责声明</p>
-                <p>本工具基于SEO从业经验值进行估算，计算结果仅供参考。实际效果会受到多种因素影响，如：搜索引擎算法变化、市场竞争环境、网站质量、内容价值等。请结合实际情况谨慎决策。</p>
-            </div>
-            
-            <div class="footer-copyright">
-                <p>© 2025 SEO收入目标拆解计算器 <span class="footer-divider">|</span> All Rights Reserved</p>
-            </div>
+               <p>Developed by: <a href="https://x.com/gefei55" target="_blank">Gofei</a></p>
+           </div>
+           
+           <div class="footer-disclaimer">
+               <p>📢 Disclaimer</p>
+               <p>This tool provides estimates based on SEO industry experience. Results are for reference only. Actual outcomes may be affected by various factors including: search engine algorithm changes, market competition, website quality, content value, and more. Please make decisions carefully based on your specific circumstances.</p>
+           </div>
+           
+           <div class="footer-copyright">
+               <p>© 2025 SEO Revenue Target Calculator <span class="footer-divider">|</span> All Rights Reserved</p>
+           </div>
         </div>
 
     </div>
@@ -1102,7 +1059,6 @@
                         highCost: totalLinkCost > this.monthlyIncome * 6,
                         inefficientKD: this.keywordKD >= 30 && searchVolumePerKeyword < 1000
                     };
-                    //risks.inefficientKD = risks.inefficientKD || risks.lowRoi || risks.highCost;
 
                     return {
                         dailyIncome: dailyIncome.toFixed(2),
