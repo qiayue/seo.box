@@ -4393,52 +4393,6 @@
             },
             "HasAdsense": false,
             "EngagementScore": 1.0
-        },
-        {
-            "Category": "Unknown",
-            "SourceType": "ST",
-            "Change": 2.662538605469726,
-            "NewChange": false,
-            "Share": 0.0012437888042058248,
-            "FilteredShare": 0.0012437888042058246,
-            "TotalVisits": 17670.97963828428,
-            "Domain": "grid.upgrade",
-            "Favicon": "grid.upgrade",
-            "Rank": 156340,
-            "TotalShare": 0.0012437888042058248,
-            "TotalSharePerMonth": [
-                {
-                    "Key": "2025-01-01",
-                    "Value": 0.0
-                },
-                {
-                    "Key": "2025-02-01",
-                    "Value": 0.0012437888042058248
-                }
-            ],
-            "TotalVisitsAndSharePerMonth": {
-                "2025-02-01": [
-                    {
-                        "Site": "checkout.stripe.com",
-                        "Value": 1.0,
-                        "AbsValue": 17670.97963828428
-                    }
-                ],
-                "2025-01-01": [
-                    {
-                        "Site": "checkout.stripe.com",
-                        "Value": 0.0,
-                        "AbsValue": 0.0
-                    }
-                ]
-            },
-            "SiteOrigins": {
-                "checkout.stripe.com": 1.0
-            },
-            "HasAdsense": false,
-            "EngagementScores": {
-                "checkout.stripe.com": 1.0
-            }
         }
     ]
 }
