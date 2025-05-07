@@ -1,0 +1,4399 @@
+{
+    "TotalShare": 1.0000000000000022,
+    "TotalVisits": 16588983.535141459,
+    "TotalVisitsGlobalList": {
+        "checkout.stripe.com": 1.0
+    },
+    "TotalCount": 1466,
+    "TotalUnGroupedCount": 1467,
+    "Records": [
+        {
+            "Category": "Games~Video_Games_Consoles_and_Accessories",
+            "SourceType": "ST",
+            "Change": 0.006253170795403361,
+            "NewChange": false,
+            "Share": 0.1925942818163281,
+            "FilteredShare": 0.1925942818163281,
+            "TotalVisits": 3194943.370013461,
+            "Domain": "roblox.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=roblox.com&t=2&s=0&h=25fffffefa6ca95ed540e8a090f7fb9ecd4a54187105a3b15c3cc761ba04d90c",
+            "Rank": 53,
+            "TotalShare": 0.1925942818163281,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.1925942818163281
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 3194943.370013461
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": true,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+            "SourceType": "ST",
+            "Change": -0.0462930610040948,
+            "NewChange": false,
+            "Share": 0.037221458129610065,
+            "FilteredShare": 0.037221458129610065,
+            "TotalVisits": 617466.1560660586,
+            "Domain": "cursor.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=cursor.com&t=2&s=0&h=ec1dec8bba004f8a3d3bceb19ca183b3002ec3fcbb5dd8db4aa3050d53721c2c",
+            "Rank": 2895,
+            "TotalShare": 0.037221458129610065,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.037221458129610065
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 617466.1560660586
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+            "SourceType": "ST",
+            "Change": 0.08230729672482372,
+            "NewChange": false,
+            "Share": 0.023662983086695722,
+            "FilteredShare": 0.023662983086695722,
+            "TotalVisits": 392544.83681752614,
+            "Domain": "elevenlabs.io",
+            "Favicon": "https://site-images.similarcdn.com/image?url=elevenlabs.io&t=2&s=0&h=c5c4d64bb75290a0de4b628597c146554185ee43dfb18dfb7f63b6afb873be11",
+            "Rank": 2123,
+            "TotalShare": 0.023662983086695722,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.023662983086695722
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 392544.83681752614
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": 0.5529528896280812,
+            "NewChange": false,
+            "Share": 0.02094350600157616,
+            "FilteredShare": 0.02094350600157616,
+            "TotalVisits": 347431.47622828325,
+            "Domain": "mutualdropship.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=mutualdropship.com&t=2&s=0&h=25fd6c7f122eca16dffeca6d4d3b8c71076a383556d51349f3270587add49534",
+            "Rank": 251105,
+            "TotalShare": 0.02094350600157616,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.02094350600157616
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 347431.47622828325
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Games~Video_Games_Consoles_and_Accessories",
+            "SourceType": "ST",
+            "Change": 0.6523373848740018,
+            "NewChange": false,
+            "Share": 0.02088845510195057,
+            "FilteredShare": 0.02088845510195057,
+            "TotalVisits": 346518.2377607996,
+            "Domain": "app.runwayml.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.runwayml.com&t=2&s=0&h=e4b02b7b229820ab3d18ad473b7a03c5f67865ec3e3f8d6148c8455d8ecb2891",
+            "Rank": -1,
+            "TotalShare": 0.02088845510195057,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.02088845510195057
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 346518.2377607996
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": -0.12237700402578801,
+            "NewChange": false,
+            "Share": 0.019630389619308252,
+            "FilteredShare": 0.019630389619308252,
+            "TotalVisits": 325648.2101831164,
+            "Domain": "midjourney.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=midjourney.com&t=2&s=0&h=e428d1b6ef9796b0fb4e9788e517378fefe236715f2c961788895dd0ebdfbd9b",
+            "Rank": 1258,
+            "TotalShare": 0.019630389619308252,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.019630389619308252
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 325648.2101831164
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology",
+            "SourceType": "ST",
+            "Change": 0.3027417399753798,
+            "NewChange": false,
+            "Share": 0.019403362227453713,
+            "FilteredShare": 0.019403362227453713,
+            "TotalVisits": 321882.05651761533,
+            "Domain": "suno.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=suno.com&t=2&s=0&h=79c88e907cbe2544bab7dc50d918fc2ca6c997f7f8ddccc438f95c6fb80ed2d9",
+            "Rank": 755,
+            "TotalShare": 0.019403362227453713,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.019403362227453713
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 321882.05651761533
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Science_and_Education~Education",
+            "SourceType": "ST",
+            "Change": -0.07753560825143377,
+            "NewChange": false,
+            "Share": 0.016953738244653162,
+            "FilteredShare": 0.016953738244653162,
+            "TotalVisits": 281245.28459964937,
+            "Domain": "undetectable.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=undetectable.ai&t=2&s=0&h=bb15a3858a861802adb2274067f119143141991b8ee268666194e5272070d7db",
+            "Rank": 10216,
+            "TotalShare": 0.016953738244653162,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.016953738244653162
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 281245.28459964937
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Science_and_Education~Universities_and_Colleges",
+            "SourceType": "ST",
+            "Change": 0.8602284426216812,
+            "NewChange": false,
+            "Share": 0.013380480176758327,
+            "FilteredShare": 0.013380480176758327,
+            "TotalVisits": 221968.56534453057,
+            "Domain": "taxprep.sprintax.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=taxprep.sprintax.com&t=2&s=0&h=f8cc222e89adad868a27fbcb3a51ec379617e024b08a0c9a4c2748eb649017f8",
+            "Rank": -1,
+            "TotalShare": 0.013380480176758327,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.013380480176758327
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 221968.56534453057
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Unknown",
+            "SourceType": "ST",
+            "Change": 8.27609818512531,
+            "NewChange": false,
+            "Share": 0.012241445194730685,
+            "FilteredShare": 0.012241445194730685,
+            "TotalVisits": 203073.13278172386,
+            "Domain": "manus.im",
+            "Favicon": "https://site-images.similarcdn.com/image?url=manus.im&t=2&s=0&h=c0482fc6831db223d41d134ee137a35750133da7dc1941ffa775ae1eba583c93",
+            "Rank": 2947,
+            "TotalShare": 0.012241445194730685,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.012241445194730685
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 203073.13278172386
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Unknown",
+            "SourceType": "ST",
+            "Change": 7.913032560704369,
+            "NewChange": false,
+            "Share": 0.012140464696805941,
+            "FilteredShare": 0.012140464696805941,
+            "TotalVisits": 201397.9689642799,
+            "Domain": "app.klingai.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.klingai.com&t=2&s=0&h=37a6cfd21eeecce35c8b6ca412f25ded41c6089b865432b97baad5cb954ff73e",
+            "Rank": -1,
+            "TotalShare": 0.012140464696805941,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.012140464696805941
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 201397.9689642799
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Computers_Electronics_and_Technology",
+            "SourceType": "ST",
+            "Change": 0.1340607914198603,
+            "NewChange": false,
+            "Share": 0.011028061469760094,
+            "FilteredShare": 0.011028061469760094,
+            "TotalVisits": 182944.3301463781,
+            "Domain": "lovable.dev",
+            "Favicon": "https://site-images.similarcdn.com/image?url=lovable.dev&t=2&s=0&h=0b585f8890fe17b73b494b64eac919f460a4b06c3ef7ae6c688536443211cb80",
+            "Rank": 2960,
+            "TotalShare": 0.011028061469760094,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.011028061469760094
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 182944.3301463781
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Reference_Materials~Public_Records_and_Directories",
+            "SourceType": "ST",
+            "Change": -0.09322776696430521,
+            "NewChange": false,
+            "Share": 0.010292843915186986,
+            "FilteredShare": 0.010292843915186986,
+            "TotalVisits": 170747.81823881785,
+            "Domain": "ai.invideo.io",
+            "Favicon": "https://site-images.similarcdn.com/image?url=ai.invideo.io&t=2&s=0&h=f94e679bc9ce4647045ad8c0e6b7f70d1850b57cdfe100d37b5f8170bd3027c9",
+            "Rank": -1,
+            "TotalShare": 0.010292843915186986,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.010292843915186986
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 170747.81823881785
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Unknown",
+            "SourceType": "ST",
+            "Change": 0.0,
+            "NewChange": true,
+            "Share": 0.009491449194859076,
+            "FilteredShare": 0.009491449194859076,
+            "TotalVisits": 157453.49441814885,
+            "Domain": "windsurf.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=windsurf.com&t=2&s=0&h=d74eef39301b7f74ce0a13bcd84f39b31cb767c1da74b2424a0898c8000bb79b",
+            "Rank": 12470,
+            "TotalShare": 0.009491449194859076,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.009491449194859076
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 157453.49441814885
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+            "SourceType": "ST",
+            "Change": 0.1901064703647486,
+            "NewChange": false,
+            "Share": 0.009082391227698496,
+            "FilteredShare": 0.009082391227698496,
+            "TotalVisits": 150667.63853600356,
+            "Domain": "turboscribe.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=turboscribe.ai&t=2&s=0&h=0db0678e23907d67c58a710431d90ca6cb8b42fe0bbc759d05757290be60e8d1",
+            "Rank": 4696,
+            "TotalShare": 0.009082391227698496,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.009082391227698496
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 150667.63853600356
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+            "SourceType": "ST",
+            "Change": -0.004282274959411115,
+            "NewChange": false,
+            "Share": 0.008542552405246007,
+            "FilteredShare": 0.008542552405246007,
+            "TotalVisits": 141712.26119870908,
+            "Domain": "bolt.new",
+            "Favicon": "https://site-images.similarcdn.com/image?url=bolt.new&t=2&s=0&h=8945e79208b6045488d051020feba897220b1b951c418b3ee245314a7ef9527f",
+            "Rank": 7593,
+            "TotalShare": 0.008542552405246007,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.008542552405246007
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 141712.26119870908
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Games~Video_Games_Consoles_and_Accessories",
+            "SourceType": "ST",
+            "Change": -0.014907578373319824,
+            "NewChange": false,
+            "Share": 0.008509119143405134,
+            "FilteredShare": 0.008509119143405134,
+            "TotalVisits": 141157.63736850477,
+            "Domain": "csfloat.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=csfloat.com&t=2&s=0&h=90351c44be74ae0597ca73baf8b6c5c4b9cbef5f063cf6d88a54c922c4147959",
+            "Rank": 5473,
+            "TotalShare": 0.008509119143405134,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.008509119143405134
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 141157.63736850477
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Jobs_and_Career~Human_Resources",
+            "SourceType": "ST",
+            "Change": -0.10403649911303062,
+            "NewChange": false,
+            "Share": 0.007430339750397335,
+            "FilteredShare": 0.007430339750397335,
+            "TotalVisits": 123261.78377984848,
+            "Domain": "16personalities.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=16personalities.com&t=2&s=0&h=53015c6eecd12ea9a3cad22b592eec6ef29be6c7e9ab5cd709035eae62f07c80",
+            "Rank": 3406,
+            "TotalShare": 0.007430339750397335,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.007430339750397335
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 123261.78377984848
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+            "SourceType": "ST",
+            "Change": -0.5656421245064823,
+            "NewChange": false,
+            "Share": 0.007380545908870956,
+            "FilteredShare": 0.007380545908870956,
+            "TotalVisits": 122435.75456261594,
+            "Domain": "grok.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=grok.com&t=2&s=0&h=5f2be8fd5c0911d0646a313793511a5a9acc4816f25a1b301774b501e7aa7c94",
+            "Rank": 211,
+            "TotalShare": 0.007380545908870956,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.007380545908870956
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 122435.75456261594
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": 0.14623072128356399,
+            "NewChange": false,
+            "Share": 0.007364458388751995,
+            "FilteredShare": 0.007364458388751995,
+            "TotalVisits": 122168.87895624124,
+            "Domain": "app.manychat.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.manychat.com&t=2&s=0&h=19771ceffcdc5c0c55a06b0815d7a97528d44fc96b69a7bfaf8d2fdf28456acd",
+            "Rank": -1,
+            "TotalShare": 0.007364458388751995,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.007364458388751995
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 122168.87895624124
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Games~Games",
+            "SourceType": "ST",
+            "Change": 0.31099104400377064,
+            "NewChange": false,
+            "Share": 0.007014935899248865,
+            "FilteredShare": 0.007014935899248865,
+            "TotalVisits": 116370.65613271217,
+            "Domain": "humblebundle.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=humblebundle.com&t=2&s=0&h=805cc9c04810eb331710b3a72968e97f36a5730b75be66f1bf9d1b563e7ebc01",
+            "Rank": 5738,
+            "TotalShare": 0.007014935899248865,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.007014935899248865
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 116370.65613271217
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Computers_Electronics_and_Technology",
+            "SourceType": "ST",
+            "Change": -0.05741396099632319,
+            "NewChange": false,
+            "Share": 0.006602388267100061,
+            "FilteredShare": 0.006602388267100061,
+            "TotalVisits": 109526.91025553405,
+            "Domain": "brave.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=brave.com&t=2&s=0&h=4a9850642ec0a1cb8a67ca8bdf5c28acd2edd73c8b8f5d8607b1975cf4a10af2",
+            "Rank": 131,
+            "TotalShare": 0.006602388267100061,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.006602388267100061
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 109526.91025553405
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "Children": [
+                {
+                    "Category": "Computers_Electronics_and_Technology~Computers_Electronics_and_Technology",
+                    "Change": -0.018070945700832206,
+                    "NewChange": false,
+                    "Share": 0.0039016001644853883,
+                    "FilteredShare": 0.0039016001644853883,
+                    "TotalVisits": 64723.58088935331,
+                    "Domain": "api-dashboard.search.brave.com",
+                    "Favicon": "https://site-images.similarcdn.com/image?url=api-dashboard.search.brave.com&t=2&s=0&h=67118306787fb93c77c5fe9bfa37df0332a45510b9ce4376b9d74f1e851b6104",
+                    "Rank": -1,
+                    "TotalShare": 0.0039016001644853883,
+                    "SiteOrigins": {
+                        "checkout.stripe.com": 1.0
+                    },
+                    "HasAdsense": false
+                },
+                {
+                    "Category": "Computers_Electronics_and_Technology~Computer_Security",
+                    "Change": -0.10898712316892632,
+                    "NewChange": false,
+                    "Share": 0.0027007881026146724,
+                    "FilteredShare": 0.0027007881026146724,
+                    "TotalVisits": 44803.32936618074,
+                    "Domain": "account.brave.com",
+                    "Favicon": "https://site-images.similarcdn.com/image?url=account.brave.com&t=2&s=0&h=1857269aa6c7cf069403c4a2f6774bea3751adc074420ef4c18bcbf94001b6b3",
+                    "Rank": -1,
+                    "TotalShare": 0.0027007881026146724,
+                    "SiteOrigins": {
+                        "checkout.stripe.com": 1.0
+                    },
+                    "HasAdsense": false
+                }
+            ],
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Business_and_Consumer_Services~Business_and_Consumer_Services",
+            "SourceType": "ST",
+            "Change": 0.3146296074441773,
+            "NewChange": false,
+            "Share": 0.006445890133367917,
+            "FilteredShare": 0.006445890133367917,
+            "TotalVisits": 106930.76529177115,
+            "Domain": "clipto.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=clipto.com&t=2&s=0&h=393dfd5a054efbc9c85d64e14be24461042aa3b2643e2afa54f5740568e47f60",
+            "Rank": 5090,
+            "TotalShare": 0.006445890133367917,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.006445890133367917
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 106930.76529177115
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": true,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Unknown",
+            "SourceType": "ST",
+            "Change": 0.0,
+            "NewChange": true,
+            "Share": 0.00642361243929064,
+            "FilteredShare": 0.00642361243929064,
+            "TotalVisits": 106561.20099152229,
+            "Domain": "pay.binpay.me",
+            "Favicon": "https://site-images.similarcdn.com/image?url=pay.binpay.me&t=2&s=0&h=9cf64e1f98914023dd1e42c9fff19440d2e4c0a314397b50273bf77e81fcf61b",
+            "Rank": -1,
+            "TotalShare": 0.00642361243929064,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.00642361243929064
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 106561.20099152229
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+            "SourceType": "ST",
+            "Change": -0.7286011412553247,
+            "NewChange": false,
+            "Share": 0.006279987854148792,
+            "FilteredShare": 0.006279987854148792,
+            "TotalVisits": 104178.61511336266,
+            "Domain": "blackbox.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=blackbox.ai&t=2&s=0&h=aca585f4d056b4baa910be2b4ba396f3c7fdedcc10dc309c9cd87b94f53af732",
+            "Rank": 3120,
+            "TotalShare": 0.006279987854148792,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.006279987854148792
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 104178.61511336266
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+            "SourceType": "ST",
+            "Change": 0.2120985738207275,
+            "NewChange": false,
+            "Share": 0.005724027862734271,
+            "FilteredShare": 0.005724027862734271,
+            "TotalVisits": 94955.80396958978,
+            "Domain": "ideogram.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=ideogram.ai&t=2&s=0&h=4ec09da7c9632bc855e25e869e6c6869e5ab4a88fa916a861446565a23ab8cc5",
+            "Rank": 4128,
+            "TotalShare": 0.005724027862734271,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.005724027862734271
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 94955.80396958978
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": 1.6226630061192726,
+            "NewChange": false,
+            "Share": 0.005192841892344811,
+            "FilteredShare": 0.005192841892344811,
+            "TotalVisits": 86143.96865270089,
+            "Domain": "pixelcut.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=pixelcut.ai&t=2&s=0&h=9351b3a21e139722ffb8ee826b8eb13cd5fbcd98c59a874d6b737cf94ab9acdd",
+            "Rank": 2981,
+            "TotalShare": 0.005192841892344811,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.005192841892344811
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 86143.96865270089
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Computers_Electronics_and_Technology",
+            "SourceType": "ST",
+            "Change": 0.029079186645888162,
+            "NewChange": false,
+            "Share": 0.004755534992312271,
+            "FilteredShare": 0.004755534992312271,
+            "TotalVisits": 78889.49168825733,
+            "Domain": "app.leonardo.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.leonardo.ai&t=2&s=0&h=7726a12054837bf46597770b002888c3734e738cbc4317c50c786d94754081d6",
+            "Rank": -1,
+            "TotalShare": 0.004755534992312271,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.004755534992312271
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 78889.49168825733
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": 0.1338230642664967,
+            "NewChange": false,
+            "Share": 0.004675786060355755,
+            "FilteredShare": 0.004675786060355755,
+            "TotalVisits": 77566.53796908556,
+            "Domain": "dzine.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=dzine.ai&t=2&s=0&h=f4106bae6b77d29e1b550d1849d80d7dc815cf0413de8ff7abaf053835f35e71",
+            "Rank": 21595,
+            "TotalShare": 0.004675786060355755,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.004675786060355755
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 77566.53796908556
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Science_and_Education~Education",
+            "SourceType": "ST",
+            "Change": 0.7106466931453941,
+            "NewChange": false,
+            "Share": 0.004472027525913953,
+            "FilteredShare": 0.004472027525913953,
+            "TotalVisits": 74186.39099608596,
+            "Domain": "app.gptzero.me",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.gptzero.me&t=2&s=0&h=fa07591acf8c6be1361cb62ec02495a936d33690aa11181b0357d8227af2800e",
+            "Rank": -1,
+            "TotalShare": 0.004472027525913953,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.004472027525913953
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 74186.39099608596
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Health~Health",
+            "SourceType": "ST",
+            "Change": 0.04482999368589645,
+            "NewChange": false,
+            "Share": 0.004084117224922606,
+            "FilteredShare": 0.004084117224922606,
+            "TotalVisits": 67751.35339982873,
+            "Domain": "drmax.it",
+            "Favicon": "https://site-images.similarcdn.com/image?url=drmax.it&t=2&s=0&h=247812122db2b83ad3d7e27aa26957aea27ccc44e907b4e73949b8e345dea2c5",
+            "Rank": 20695,
+            "TotalShare": 0.004084117224922606,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.004084117224922606
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 67751.35339982873
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Web_Hosting_and_Domain_Names",
+            "SourceType": "ST",
+            "Change": 0.03696061188816014,
+            "NewChange": false,
+            "Share": 0.003809755512379125,
+            "FilteredShare": 0.003809755512379125,
+            "TotalVisits": 63199.97146777171,
+            "Domain": "porkbun.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=porkbun.com&t=2&s=0&h=da4522679c9ba7156d139ed7cfcc363b3d3c2b3bd77db0d4df60b96e6e19fe29",
+            "Rank": 41536,
+            "TotalShare": 0.003809755512379125,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.003809755512379125
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 63199.97146777171
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Lifestyle~Fashion_and_Apparel",
+            "SourceType": "ST",
+            "Change": 0.025122221236515325,
+            "NewChange": false,
+            "Share": 0.0037890570271517103,
+            "FilteredShare": 0.0037890570271517103,
+            "TotalVisits": 62856.604637131764,
+            "Domain": "pipiads.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=pipiads.com&t=2&s=0&h=42fb8676e562765d86b67c5f2f4d8b2f95082cf01f88191ebdfd38db0dfc2ff8",
+            "Rank": 67739,
+            "TotalShare": 0.0037890570271517103,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0037890570271517103
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 62856.604637131764
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Business_and_Consumer_Services~Online_Marketing",
+            "SourceType": "ST",
+            "Change": -0.22666174751200754,
+            "NewChange": false,
+            "Share": 0.0035773415779498047,
+            "FilteredShare": 0.0035773415779498047,
+            "TotalVisits": 59344.46053618628,
+            "Domain": "app.shophunter.io",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.shophunter.io&t=2&s=0&h=0891c122258ab9e7b899463fe4aa1c98b78fa7200ed70ce52358885e554eba2c",
+            "Rank": -1,
+            "TotalShare": 0.0035773415779498047,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0035773415779498047
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 59344.46053618628
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+            "SourceType": "ST",
+            "Change": 0.33825090072166614,
+            "NewChange": false,
+            "Share": 0.0032926471310409503,
+            "FilteredShare": 0.0032926471310409503,
+            "TotalVisits": 54621.669043869086,
+            "Domain": "t3.chat",
+            "Favicon": "https://site-images.similarcdn.com/image?url=t3.chat&t=2&s=0&h=59c127db2bec80b90c04b783afbffe6e22ce3caa1cbb72e31ad83d3b520b5094",
+            "Rank": 33540,
+            "TotalShare": 0.0032926471310409503,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0032926471310409503
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 54621.669043869086
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": 0.0,
+            "NewChange": true,
+            "Share": 0.0032860135091776236,
+            "FilteredShare": 0.0032860135091776236,
+            "TotalVisits": 54511.624,
+            "Domain": "app.trendtrack.io",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.trendtrack.io&t=2&s=0&h=4cfff8af32d5103c787e208d14b1d58d36ae110fc2833288a689d113c41ca79b",
+            "Rank": -1,
+            "TotalShare": 0.0032860135091776236,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0032860135091776236
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 54511.624
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 3.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Computers_Electronics_and_Technology",
+            "SourceType": "ST",
+            "Change": 0.6151191367234037,
+            "NewChange": false,
+            "Share": 0.003208757010217665,
+            "FilteredShare": 0.003208757010217665,
+            "TotalVisits": 53230.01721077057,
+            "Domain": "openart.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=openart.ai&t=2&s=0&h=3374f0c10a094ee6d13afc98a5f909dd911d4fd541a25a0aca32f2f6059a821f",
+            "Rank": 5359,
+            "TotalShare": 0.003208757010217665,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.003208757010217665
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 53230.01721077057
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Games~Video_Games_Consoles_and_Accessories",
+            "SourceType": "ST",
+            "Change": 0.6564171208344077,
+            "NewChange": false,
+            "Share": 0.003135520820247783,
+            "FilteredShare": 0.003135520820247783,
+            "TotalVisits": 52015.103261183714,
+            "Domain": "u7buy.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=u7buy.com&t=2&s=0&h=b0c5aab070f0b9e6f3cabaacdbf3394b4b15bfd2fb7fc478963b3c3a93ca22ca",
+            "Rank": 32519,
+            "TotalShare": 0.003135520820247783,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.003135520820247783
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 52015.103261183714
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+            "SourceType": "ST",
+            "Change": -0.1611731178858845,
+            "NewChange": false,
+            "Share": 0.0030968003789670026,
+            "FilteredShare": 0.0030968003789670026,
+            "TotalVisits": 51372.770498303435,
+            "Domain": "fal.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=fal.ai&t=2&s=0&h=69689a835a0c5b48cb0a05fc80f54924502327d587abf3d670be1a0c0bf52d7c",
+            "Rank": 35106,
+            "TotalShare": 0.0030968003789670026,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0030968003789670026
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 51372.770498303435
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Computers_Electronics_and_Technology",
+            "SourceType": "ST",
+            "Change": 0.004063123043235352,
+            "NewChange": false,
+            "Share": 0.0029244877998551152,
+            "FilteredShare": 0.0029244877998551152,
+            "TotalVisits": 48514.27996051858,
+            "Domain": "framer.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=framer.com&t=2&s=0&h=a56603e952a4902429ad2de7b0edef03a72a9104a8b4bba2af9d978217d3c77c",
+            "Rank": 8479,
+            "TotalShare": 0.0029244877998551152,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0029244877998551152
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 48514.27996051858
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Arts_and_Entertainment~Animation_and_Comics",
+            "SourceType": "ST",
+            "Change": 0.7513798500397336,
+            "NewChange": false,
+            "Share": 0.002881008366200544,
+            "FilteredShare": 0.002881008366200544,
+            "TotalVisits": 47793.000351505616,
+            "Domain": "flex.lezhin.es",
+            "Favicon": "https://site-images.similarcdn.com/image?url=flex.lezhin.es&t=2&s=0&h=a315d11f968e8105609beb8ed043dff1707262b6953aa62edd322dc0eb49051f",
+            "Rank": -1,
+            "TotalShare": 0.002881008366200544,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.002881008366200544
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 47793.000351505616
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": 0.2361474866211751,
+            "NewChange": false,
+            "Share": 0.00286837341616365,
+            "FilteredShare": 0.00286837341616365,
+            "TotalVisits": 47583.39937337625,
+            "Domain": "app.arcads.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.arcads.ai&t=2&s=0&h=488c3e48bcc953ee370da1da2ce9ab2c683cf2289ff7aea4b0541ba72e833394",
+            "Rank": -1,
+            "TotalShare": 0.00286837341616365,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.00286837341616365
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 47583.39937337625
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Email",
+            "SourceType": "ST",
+            "Change": -0.09862473917218285,
+            "NewChange": false,
+            "Share": 0.0028673367051868953,
+            "FilteredShare": 0.0028673367051868953,
+            "TotalVisits": 47566.201392052164,
+            "Domain": "app.instantly.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.instantly.ai&t=2&s=0&h=61a56e3541270920a671ab31d0ed276e02fcf060fc791fe64e514d8658a212f7",
+            "Rank": -1,
+            "TotalShare": 0.0028673367051868953,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0028673367051868953
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 47566.201392052164
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Games~Video_Games_Consoles_and_Accessories",
+            "SourceType": "ST",
+            "Change": -0.010561016805382196,
+            "NewChange": false,
+            "Share": 0.002853063123355233,
+            "FilteredShare": 0.002853063123355233,
+            "TotalVisits": 47329.41717805922,
+            "Domain": "mtcgame.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=mtcgame.com&t=2&s=0&h=e448961e4b94a9df6d7dc4b71b312112a846b8a9879b82a728063d7a11c7456e",
+            "Rank": 53833,
+            "TotalShare": 0.002853063123355233,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.002853063123355233
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 47329.41717805922
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": -0.16001604641256825,
+            "NewChange": false,
+            "Share": 0.0028137662308711483,
+            "FilteredShare": 0.0028137662308711483,
+            "TotalVisits": 46677.52167565852,
+            "Domain": "nim.video",
+            "Favicon": "https://site-images.similarcdn.com/image?url=nim.video&t=2&s=0&h=2c8f2868c7fd7cf47becc8d2014da916cb271e642ba911eb94f70f5f6e924760",
+            "Rank": 27845,
+            "TotalShare": 0.0028137662308711483,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0028137662308711483
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 46677.52167565852
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Unknown",
+            "SourceType": "ST",
+            "Change": 0.8235310151662655,
+            "NewChange": false,
+            "Share": 0.0026778283292248468,
+            "FilteredShare": 0.0026778283292248468,
+            "TotalVisits": 44422.45006344635,
+            "Domain": "same.new",
+            "Favicon": "https://site-images.similarcdn.com/image?url=same.new&t=2&s=0&h=c2a20803eb3ec39ec58a4ebbd37c159cefaaeb902547b28a03ebaebeeb5db89d",
+            "Rank": 40550,
+            "TotalShare": 0.0026778283292248468,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0026778283292248468
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 44422.45006344635
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": -0.3728121919363939,
+            "NewChange": false,
+            "Share": 0.002645896103891905,
+            "FilteredShare": 0.002645896103891905,
+            "TotalVisits": 43892.726903157745,
+            "Domain": "hailuoai.video",
+            "Favicon": "https://site-images.similarcdn.com/image?url=hailuoai.video&t=2&s=0&h=8a43379eded26b494db424603c1b6b84f8727d90f311a758d1776ce9cbb70d48",
+            "Rank": 2961,
+            "TotalShare": 0.002645896103891905,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.002645896103891905
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 43892.726903157745
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Health~Medicine",
+            "SourceType": "ST",
+            "Change": 0.4520059320489824,
+            "NewChange": false,
+            "Share": 0.0026335071177276885,
+            "FilteredShare": 0.0026335071177276885,
+            "TotalVisits": 43687.20621566247,
+            "Domain": "proscheduler.prometric.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=proscheduler.prometric.com&t=2&s=0&h=6f6d088f813e4158f40e955d8fecd95426ca1e1dcb49fb8688cd4621a562c10b",
+            "Rank": -1,
+            "TotalShare": 0.0026335071177276885,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0026335071177276885
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 43687.20621566247
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Business_and_Consumer_Services~Business_Services",
+            "SourceType": "ST",
+            "Change": 0.2729912750870606,
+            "NewChange": false,
+            "Share": 0.002624155867672462,
+            "FilteredShare": 0.002624155867672462,
+            "TotalVisits": 43532.07848246332,
+            "Domain": "account.sellvia.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=account.sellvia.com&t=2&s=0&h=1a55b0f963239a633686cced468bc34ee19b4a50bb8ab6dd4253e4c04ed8c977",
+            "Rank": -1,
+            "TotalShare": 0.002624155867672462,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.002624155867672462
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 43532.07848246332
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+            "SourceType": "ST",
+            "Change": 0.18687796333731,
+            "NewChange": false,
+            "Share": 0.0023271944753332115,
+            "FilteredShare": 0.0023271944753332115,
+            "TotalVisits": 38605.79083437481,
+            "Domain": "immersivetranslate.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=immersivetranslate.com&t=2&s=0&h=13398304f4fb22aef1d55d9f679c2ce5d8264e9a7dd4c6fdcf237ead6794a1db",
+            "Rank": 14487,
+            "TotalShare": 0.0023271944753332115,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0023271944753332115
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 38605.79083437481
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Finance~Investing",
+            "SourceType": "ST",
+            "Change": 0.3795566539358846,
+            "NewChange": false,
+            "Share": 0.002323210119270165,
+            "FilteredShare": 0.002323210119270165,
+            "TotalVisits": 38539.69441724679,
+            "Domain": "app.koinly.io",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.koinly.io&t=2&s=0&h=1d07c106969a6267d7e645fda539bda9f585bd588be82b81dce1a3da65308f6c",
+            "Rank": -1,
+            "TotalShare": 0.002323210119270165,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.002323210119270165
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 38539.69441724679
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": 0.520916915258657,
+            "NewChange": false,
+            "Share": 0.0022857308305489683,
+            "FilteredShare": 0.0022857308305489683,
+            "TotalVisits": 37917.95111374205,
+            "Domain": "vidu.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=vidu.com&t=2&s=0&h=ae070c890180d8fc25f75af17d4ac0cf7e1e849435c24df1ee89d4193f7a93e6",
+            "Rank": 14444,
+            "TotalShare": 0.0022857308305489683,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0022857308305489683
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 37917.95111374205
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": -0.15190856396827213,
+            "NewChange": false,
+            "Share": 0.002285463404131241,
+            "FilteredShare": 0.002285463404131241,
+            "TotalVisits": 37913.51478130151,
+            "Domain": "kalodata.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=kalodata.com&t=2&s=0&h=de5678fd4fbde28c883b77eaff470f174d65cdbeec186456f572b2dbf7bf80a4",
+            "Rank": 30489,
+            "TotalShare": 0.002285463404131241,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.002285463404131241
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 37913.51478130151
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Games~Video_Games_Consoles_and_Accessories",
+            "SourceType": "ST",
+            "Change": 0.03699361712531875,
+            "NewChange": false,
+            "Share": 0.0022330225048802833,
+            "FilteredShare": 0.0022330225048802833,
+            "TotalVisits": 37043.57356705936,
+            "Domain": "uploadhaven.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=uploadhaven.com&t=2&s=0&h=6fabf507d33d9e3705bb81b8531e06f0ea3bf37d2024eb36d83208c53ee12726",
+            "Rank": 10615,
+            "TotalShare": 0.0022330225048802833,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0022330225048802833
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 37043.57356705936
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Science_and_Education~Education",
+            "SourceType": "ST",
+            "Change": 1.6760893676071542,
+            "NewChange": false,
+            "Share": 0.0021887460800828723,
+            "FilteredShare": 0.0021887460800828723,
+            "TotalVisits": 36309.072685100175,
+            "Domain": "app.raena.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.raena.ai&t=2&s=0&h=41fc3a3f00efbe73cd7e24cc878959f969e59e89f864fdcf87fdcdd7dd567bf9",
+            "Rank": -1,
+            "TotalShare": 0.0021887460800828723,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0021887460800828723
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 36309.072685100175
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Lifestyle~Weddings",
+            "SourceType": "ST",
+            "Change": 0.19444406534990982,
+            "NewChange": false,
+            "Share": 0.00214860985224521,
+            "FilteredShare": 0.00214860985224521,
+            "TotalVisits": 35643.25346233851,
+            "Domain": "withjoy.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=withjoy.com&t=2&s=0&h=35fcc4d1337397df0f364af2c8a958e63a7d3cc68351f2a817fd65e066fd24bf",
+            "Rank": 4656,
+            "TotalShare": 0.00214860985224521,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.00214860985224521
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 35643.25346233851
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Sports~Sports",
+            "SourceType": "ST",
+            "Change": 0.9760767004101222,
+            "NewChange": false,
+            "Share": 0.0020927563675535565,
+            "FilteredShare": 0.0020927563675535565,
+            "TotalVisits": 34716.7009244084,
+            "Domain": "arenaclub.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=arenaclub.com&t=2&s=0&h=1b102cb667d4bf1f904b56ce8e35ab0f06f8fae7a64fe8514fc41ac3b57969be",
+            "Rank": 83846,
+            "TotalShare": 0.0020927563675535565,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0020927563675535565
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 34716.7009244084
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 4.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Computers_Electronics_and_Technology",
+            "SourceType": "ST",
+            "Change": -0.4526067840591671,
+            "NewChange": false,
+            "Share": 0.002018311447630974,
+            "FilteredShare": 0.002018311447630974,
+            "TotalVisits": 33481.73537353775,
+            "Domain": "js.stripe.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=js.stripe.com&t=2&s=0&h=7824ad071cd96bb771500554b3a9478de1acd98d3632a11a9be410b237cec5d1",
+            "Rank": -1,
+            "TotalShare": 0.002018311447630974,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.002018311447630974
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 33481.73537353775
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 4.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Computers_Electronics_and_Technology",
+            "SourceType": "ST",
+            "Change": 0.26343929448621617,
+            "NewChange": false,
+            "Share": 0.001978522747251121,
+            "FilteredShare": 0.001978522747251121,
+            "TotalVisits": 32821.68127805169,
+            "Domain": "audio.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=audio.com&t=2&s=0&h=32385b7c639a0859d0c25de0336d3a24d0bbc6f6f2de79c92dae3984711d0fb2",
+            "Rank": 29578,
+            "TotalShare": 0.001978522747251121,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.001978522747251121
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 32821.68127805169
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": true,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Business_and_Consumer_Services~Online_Marketing",
+            "SourceType": "ST",
+            "Change": -0.06802048521255108,
+            "NewChange": false,
+            "Share": 0.0019770156060709755,
+            "FilteredShare": 0.0019770156060709755,
+            "TotalVisits": 32796.679337829126,
+            "Domain": "app.gethookd.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.gethookd.ai&t=2&s=0&h=442446311c8e768b9f9aa635dd2200309a4c3aac681b84c4aa12b7fea597ffa7",
+            "Rank": -1,
+            "TotalShare": 0.0019770156060709755,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0019770156060709755
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 32796.679337829126
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Games~Games",
+            "SourceType": "ST",
+            "Change": 0.9119994951328128,
+            "NewChange": false,
+            "Share": 0.001941257808084823,
+            "FilteredShare": 0.001941257808084823,
+            "TotalVisits": 32203.493815783928,
+            "Domain": "tickets.nianticlabs.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=tickets.nianticlabs.com&t=2&s=0&h=200a474b6dc0809d13a0a7c8f99b491276d3c5769ddfcbaacde6f65fd8d6f642",
+            "Rank": -1,
+            "TotalShare": 0.001941257808084823,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.001941257808084823
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 32203.493815783928
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Games~Video_Games_Consoles_and_Accessories",
+            "SourceType": "ST",
+            "Change": -0.21606777619252054,
+            "NewChange": false,
+            "Share": 0.0018750865016313937,
+            "FilteredShare": 0.0018750865016313937,
+            "TotalVisits": 31105.779102529188,
+            "Domain": "poe.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=poe.com&t=2&s=0&h=90f955b73ccac4739ca5a2e33bd979870ae147f226234cc09eaae25e0f337bb5",
+            "Rank": 2510,
+            "TotalShare": 0.0018750865016313937,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0018750865016313937
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 31105.779102529188
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": true,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Finance~Banking_Credit_and_Lending",
+            "SourceType": "ST",
+            "Change": -0.2689822441585647,
+            "NewChange": false,
+            "Share": 0.0018577857446868736,
+            "FilteredShare": 0.0018577857446868736,
+            "TotalVisits": 30818.77713043106,
+            "Domain": "team3.inmatecanteen.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=team3.inmatecanteen.com&t=2&s=0&h=8d60b8b10f1d70502a4de0f4686025869a64ebd340b411b5e7045416878e6882",
+            "Rank": -1,
+            "TotalShare": 0.0018577857446868736,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0018577857446868736
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 30818.77713043106
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Games~Games",
+            "SourceType": "ST",
+            "Change": 0.00013556097978621989,
+            "NewChange": false,
+            "Share": 0.0018552635084284111,
+            "FilteredShare": 0.0018552635084284111,
+            "TotalVisits": 30776.93579466769,
+            "Domain": "mannco.store",
+            "Favicon": "https://site-images.similarcdn.com/image?url=mannco.store&t=2&s=0&h=7b49170bbbbd5adadfc393357fc7d33b3ec16187c87f038e41664c9120256f28",
+            "Rank": 73848,
+            "TotalShare": 0.0018552635084284111,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0018552635084284111
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 30776.93579466769
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Business_and_Consumer_Services~Real_Estate",
+            "SourceType": "ST",
+            "Change": 0.43481483548539035,
+            "NewChange": false,
+            "Share": 0.0018516548928525247,
+            "FilteredShare": 0.0018516548928525247,
+            "TotalVisits": 30717.072530294652,
+            "Domain": "rentspree.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=rentspree.com&t=2&s=0&h=fcb58076a9bfcbcfe7906227bc6d0cc0b288e9101529abda84f3a196755615c7",
+            "Rank": 48488,
+            "TotalShare": 0.0018516548928525247,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0018516548928525247
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 30717.072530294652
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Home_and_Garden~Home_and_Garden",
+            "SourceType": "ST",
+            "Change": 0.11365409202971663,
+            "NewChange": false,
+            "Share": 0.001787995361176346,
+            "FilteredShare": 0.001787995361176346,
+            "TotalVisits": 29661.025607463707,
+            "Domain": "rugs.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=rugs.com&t=2&s=0&h=df2e0a005724e9ec193a304a4729eebd0b5d116618a29902cf499082e992b5c5",
+            "Rank": 18739,
+            "TotalShare": 0.001787995361176346,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.001787995361176346
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 29661.025607463707
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "News_and_Media",
+            "SourceType": "ST",
+            "Change": -0.26073868002865147,
+            "NewChange": false,
+            "Share": 0.0017571654705410746,
+            "FilteredShare": 0.0017571654705410746,
+            "TotalVisits": 29149.589059324982,
+            "Domain": "linternaute.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=linternaute.com&t=2&s=0&h=5256fc08d662f89f8f44c20fce27dc3a4a5194cf2f55556fa85748404d4df8f7",
+            "Rank": 1926,
+            "TotalShare": 0.0017571654705410746,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0017571654705410746
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 29149.589059324982
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": true,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+            "SourceType": "ST",
+            "Change": 0.4762116520443367,
+            "NewChange": false,
+            "Share": 0.001748162652896595,
+            "FilteredShare": 0.001748162652896595,
+            "TotalVisits": 29000.241465650826,
+            "Domain": "studiotax.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=studiotax.com&t=2&s=0&h=dba0865b2856a7ec77fa7400966b20decfb402984ad18fe867ccb0f967bdb343",
+            "Rank": 148953,
+            "TotalShare": 0.001748162652896595,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.001748162652896595
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 29000.241465650826
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": true,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Business_and_Consumer_Services~Business_Services",
+            "SourceType": "ST",
+            "Change": -0.006173992494653878,
+            "NewChange": false,
+            "Share": 0.0017323035487461869,
+            "FilteredShare": 0.0017323035487461869,
+            "TotalVisits": 28737.155048017612,
+            "Domain": "app.winninghunter.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.winninghunter.com&t=2&s=0&h=4e301c1f46ecb705c7dc5c631b866f550073248f6a0531af2a04a9fed3528f94",
+            "Rank": -1,
+            "TotalShare": 0.0017323035487461869,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0017323035487461869
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 28737.155048017612
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Food_and_Drink~Cooking_and_Recipes",
+            "SourceType": "ST",
+            "Change": -0.24365697995561963,
+            "NewChange": false,
+            "Share": 0.001673976113815042,
+            "FilteredShare": 0.001673976113815042,
+            "TotalVisits": 27769.562190297816,
+            "Domain": "cuisineaz.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=cuisineaz.com&t=2&s=0&h=13c58e22e8792716e57af421290ea9b18e2a6e5924d7fbc6b57ac6b5990ed026",
+            "Rank": 4033,
+            "TotalShare": 0.001673976113815042,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.001673976113815042
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 27769.562190297816
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": true,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Computers_Electronics_and_Technology",
+            "SourceType": "ST",
+            "Change": 0.0023706759760865658,
+            "NewChange": false,
+            "Share": 0.001655086107133817,
+            "FilteredShare": 0.001655086107133817,
+            "TotalVisits": 27456.196180484265,
+            "Domain": "app.plusdocs.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.plusdocs.com&t=2&s=0&h=3d2a35037bc2088e3ac084e1fab7ced0627b8c9ee46ea8087ec66ae19bccb385",
+            "Rank": -1,
+            "TotalShare": 0.001655086107133817,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.001655086107133817
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 27456.196180484265
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": -0.19859466713366405,
+            "NewChange": false,
+            "Share": 0.001613733750386238,
+            "FilteredShare": 0.001613733750386238,
+            "TotalVisits": 26770.20261525938,
+            "Domain": "support.image-line.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=support.image-line.com&t=2&s=0&h=8628f0a38a051679600a3bde30c79291b6de1959822acf3df6c5e821152932e1",
+            "Rank": -1,
+            "TotalShare": 0.001613733750386238,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.001613733750386238
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 26770.20261525938
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Science_and_Education~Education",
+            "SourceType": "ST",
+            "Change": -0.2969947756818456,
+            "NewChange": false,
+            "Share": 0.00160363890960125,
+            "FilteredShare": 0.00160363890960125,
+            "TotalVisits": 26602.739467687337,
+            "Domain": "turbolearn.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=turbolearn.ai&t=2&s=0&h=ead604044aa7c125c0b5347cfa967a7d17557d215ecd4c54c8f9070d19aad474",
+            "Rank": 15133,
+            "TotalShare": 0.00160363890960125,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.00160363890960125
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 26602.739467687337
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": 0.2302024245250831,
+            "NewChange": false,
+            "Share": 0.0015957278761084303,
+            "FilteredShare": 0.0015957278761084303,
+            "TotalVisits": 26471.503463328998,
+            "Domain": "hedra.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=hedra.com&t=2&s=0&h=dec6992e209ec449930d2d1799a4f512dc6c45b78fbca4af4b8282d3a430ee8d",
+            "Rank": 21433,
+            "TotalShare": 0.0015957278761084303,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0015957278761084303
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 26471.503463328998
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Food_and_Drink~Cooking_and_Recipes",
+            "SourceType": "ST",
+            "Change": 0.7710905861766062,
+            "NewChange": false,
+            "Share": 0.0015581733802724899,
+            "FilteredShare": 0.0015581733802724899,
+            "TotalVisits": 25848.512550236046,
+            "Domain": "cuisine.journaldesfemmes.fr",
+            "Favicon": "https://site-images.similarcdn.com/image?url=cuisine.journaldesfemmes.fr&t=2&s=0&h=84abbc78c51195ffc7e97da7968b2948d6485c1c69321f6dfa3a73c40d40b631",
+            "Rank": -1,
+            "TotalShare": 0.0015581733802724899,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0015581733802724899
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 25848.512550236046
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": true,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Health~Health",
+            "SourceType": "ST",
+            "Change": 0.28646882365228876,
+            "NewChange": false,
+            "Share": 0.0015574455827820305,
+            "FilteredShare": 0.0015574455827820305,
+            "TotalVisits": 25836.439129649898,
+            "Domain": "drmax.ro",
+            "Favicon": "https://site-images.similarcdn.com/image?url=drmax.ro&t=2&s=0&h=7f998fcbf4aab1acf5715b402703262b41ee18dcc4245fd0fd6288fcdf1e65df",
+            "Rank": 10056,
+            "TotalShare": 0.0015574455827820305,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0015574455827820305
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 25836.439129649898
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Sports~Tennis",
+            "SourceType": "ST",
+            "Change": 0.11555183148506021,
+            "NewChange": false,
+            "Share": 0.0015192528986928612,
+            "FilteredShare": 0.0015192528986928612,
+            "TotalVisits": 25202.86132213181,
+            "Domain": "playtennis.usta.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=playtennis.usta.com&t=2&s=0&h=93b5908ee0b9d5b27c8c89855707549f5c9124b89a2ffd21d72b292d22ecf259",
+            "Rank": -1,
+            "TotalShare": 0.0015192528986928612,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0015192528986928612
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 25202.86132213181
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Sports~Sports",
+            "SourceType": "ST",
+            "Change": 0.8565678351253044,
+            "NewChange": false,
+            "Share": 0.0014939847377014967,
+            "FilteredShare": 0.0014939847377014967,
+            "TotalVisits": 24783.68821548276,
+            "Domain": "cinemasocietyclub.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=cinemasocietyclub.com&t=2&s=0&h=3e7644ac0a4d87ec08737e2cc4bbc182a08755111ec3d1b11733ec1b36b93131",
+            "Rank": 188349,
+            "TotalShare": 0.0014939847377014967,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0014939847377014967
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 24783.68821548276
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Gambling~Bingo",
+            "SourceType": "ST",
+            "Change": 0.24242040118486108,
+            "NewChange": false,
+            "Share": 0.0014824292442888719,
+            "FilteredShare": 0.0014824292442888719,
+            "TotalVisits": 24591.99432552029,
+            "Domain": "top-giftcards.topcashback.co.uk",
+            "Favicon": "https://site-images.similarcdn.com/image?url=top-giftcards.topcashback.co.uk&t=2&s=0&h=04b1ada243c4229f45ba2291545ee3fed0758d638af81ab50611cbb1c7566aa5",
+            "Rank": -1,
+            "TotalShare": 0.0014824292442888719,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0014824292442888719
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 24591.99432552029
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": -0.18297082209761,
+            "NewChange": false,
+            "Share": 0.0014548425252223537,
+            "FilteredShare": 0.0014548425252223537,
+            "TotalVisits": 24134.35869713725,
+            "Domain": "app.creatify.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.creatify.ai&t=2&s=0&h=b107a1c5844794057977cd7b1b760cf5988960c7b50f5429abeab4b94c7e2e75",
+            "Rank": -1,
+            "TotalShare": 0.0014548425252223537,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0014548425252223537
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 24134.35869713725
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Arts_and_Entertainment~Music",
+            "SourceType": "ST",
+            "Change": -0.038975830330579,
+            "NewChange": false,
+            "Share": 0.0014344950774898277,
+            "FilteredShare": 0.0014344950774898277,
+            "TotalVisits": 23796.815221720222,
+            "Domain": "app.landr.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.landr.com&t=2&s=0&h=ff338f4910be3c098ad764dba2dc6a2bda5e1a972cd982a12b15422947605319",
+            "Rank": -1,
+            "TotalShare": 0.0014344950774898277,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0014344950774898277
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 23796.815221720222
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+            "SourceType": "ST",
+            "Change": -0.8909425097451013,
+            "NewChange": false,
+            "Share": 0.0014121296638616963,
+            "FilteredShare": 0.0014121296638616963,
+            "TotalVisits": 23425.795743286522,
+            "Domain": "codeium.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=codeium.com&t=2&s=0&h=2bb54d94e6fe48848059e57aa1b1be6c4a459306e586c41ee7c87a4b914bf468",
+            "Rank": 71365,
+            "TotalShare": 0.0014121296638616963,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0014121296638616963
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 23425.795743286522
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": -0.003394398252155433,
+            "NewChange": false,
+            "Share": 0.0014115330275866337,
+            "FilteredShare": 0.0014115330275866337,
+            "TotalVisits": 23415.898153943042,
+            "Domain": "recraft.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=recraft.ai&t=2&s=0&h=b354362abd89b5cb17df5b8a777820b7c0d035b467e7fa301cf792508b94cc42",
+            "Rank": 17405,
+            "TotalShare": 0.0014115330275866337,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0014115330275866337
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 23415.898153943042
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": 0.2057542707996986,
+            "NewChange": false,
+            "Share": 0.0014103607949123617,
+            "FilteredShare": 0.0014103607949123617,
+            "TotalVisits": 23396.45200541019,
+            "Domain": "remaker.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=remaker.ai&t=2&s=0&h=cbb04afa8649337dc8c554f59b94e2daca115dcbaf55f34bc72f04596243d0e8",
+            "Rank": 8240,
+            "TotalShare": 0.0014103607949123617,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0014103607949123617
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 23396.45200541019
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Search_Engines",
+            "SourceType": "ST",
+            "Change": 0.5676554842331228,
+            "NewChange": false,
+            "Share": 0.0013992501317115753,
+            "FilteredShare": 0.0013992501317115753,
+            "TotalVisits": 23212.137396507842,
+            "Domain": "inlead.digital",
+            "Favicon": "https://site-images.similarcdn.com/image?url=inlead.digital&t=2&s=0&h=505527b87c08bf460cb406ebf26f6e8019038881ab2c75932c71cdc7a5f1fd18",
+            "Rank": 56833,
+            "TotalShare": 0.0013992501317115753,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0013992501317115753
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 23212.137396507842
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Gambling~Sports_Betting",
+            "SourceType": "ST",
+            "Change": 22.60099938086281,
+            "NewChange": false,
+            "Share": 0.0013917073862902726,
+            "FilteredShare": 0.0013917073862902726,
+            "TotalVisits": 23087.010916904088,
+            "Domain": "networks.minds.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=networks.minds.com&t=2&s=0&h=ca16cdf19165347bda4380b0521cb825c75d56b8b3d6b9ee6cdd7715f6158808",
+            "Rank": -1,
+            "TotalShare": 0.0013917073862902726,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0013917073862902726
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 23087.010916904088
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false
+        },
+        {
+            "Category": "Unknown",
+            "SourceType": "ST",
+            "Change": 0.0,
+            "NewChange": true,
+            "Share": 0.0013899718804697239,
+            "FilteredShare": 0.0013899718804697239,
+            "TotalVisits": 23058.22063942186,
+            "Domain": "buffalopizzayork.co.uk",
+            "Favicon": "https://site-images.similarcdn.com/image?url=buffalopizzayork.co.uk&t=2&s=0&h=857b2cdf4db467e97a1bfd94663e9d054a2a2a3b42e5e1eca8b070bff629b54b",
+            "Rank": 1402276,
+            "TotalShare": 0.0013899718804697239,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0013899718804697239
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 23058.22063942186
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Arts_and_Entertainment~Visual_Arts_and_Design",
+            "SourceType": "ST",
+            "Change": 0.1711647297516523,
+            "NewChange": false,
+            "Share": 0.0013583807652783626,
+            "FilteredShare": 0.0013583807652783626,
+            "TotalVisits": 22534.15614965561,
+            "Domain": "airbrush.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=airbrush.com&t=2&s=0&h=8a14815eb795b3061d28b9bc60f50c45ae710e4a56dac1f5187e3a82eff7ad6d",
+            "Rank": 34506,
+            "TotalShare": 0.0013583807652783626,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0013583807652783626
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 22534.15614965561
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Programming_and_Developer_Software",
+            "SourceType": "ST",
+            "Change": -0.137739998039792,
+            "NewChange": false,
+            "Share": 0.0013566131189611753,
+            "FilteredShare": 0.0013566131189611753,
+            "TotalVisits": 22504.83269400384,
+            "Domain": "meshy.ai",
+            "Favicon": "https://site-images.similarcdn.com/image?url=meshy.ai&t=2&s=0&h=b428c419729608f470c370c0248929a781d1be4c56263dcf3033888c59a1d933",
+            "Rank": 21708,
+            "TotalShare": 0.0013566131189611753,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0013566131189611753
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 22504.83269400384
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Business_and_Consumer_Services~Business_Services",
+            "SourceType": "ST",
+            "Change": 0.41294870885096324,
+            "NewChange": false,
+            "Share": 0.0013551158865283274,
+            "FilteredShare": 0.0013551158865283274,
+            "TotalVisits": 22479.995129827043,
+            "Domain": "app.fyxer.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=app.fyxer.com&t=2&s=0&h=fcd6d4ea7d2f13868286b7254d8fc9b3d9ca263d49c04039f5c9fac248910a55",
+            "Rank": -1,
+            "TotalShare": 0.0013551158865283274,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0013551158865283274
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 22479.995129827043
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Business_and_Consumer_Services~Business_Services",
+            "SourceType": "ST",
+            "Change": 0.16396671410283947,
+            "NewChange": false,
+            "Share": 0.0013297654815289453,
+            "FilteredShare": 0.0013297654815289453,
+            "TotalVisits": 22059.457678683128,
+            "Domain": "eprolo.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=eprolo.com&t=2&s=0&h=013d93a00cb386c6d90837c1b2f6cc19e101623e3fbbd8e39881db9f6030f615",
+            "Rank": 141003,
+            "TotalShare": 0.0013297654815289453,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0013297654815289453
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 22059.457678683128
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Lifestyle~Childcare",
+            "SourceType": "ST",
+            "Change": 1.394862625248317,
+            "NewChange": false,
+            "Share": 0.0013146953825658744,
+            "FilteredShare": 0.0013146953825658744,
+            "TotalVisits": 21809.46005511179,
+            "Domain": "wonderbly.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=wonderbly.com&t=2&s=0&h=1e07be253821a7b79972cdb713d24c34d738944a6ea2baf35910c07bb7e82666",
+            "Rank": 49919,
+            "TotalShare": 0.0013146953825658744,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0013146953825658744
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 21809.46005511179
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": -0.11689614189060023,
+            "NewChange": false,
+            "Share": 0.0013137665375315595,
+            "FilteredShare": 0.0013137665375315595,
+            "TotalVisits": 21794.051460130842,
+            "Domain": "faceless.video",
+            "Favicon": "https://site-images.similarcdn.com/image?url=faceless.video&t=2&s=0&h=306f754ed7f423901446ebc9d8c263758591320fd0aa8aa2cc2fb48be002d7ac",
+            "Rank": 90470,
+            "TotalShare": 0.0013137665375315595,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0013137665375315595
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 21794.051460130842
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Social_Networks_and_Online_Communities",
+            "SourceType": "ST",
+            "Change": -0.26498836048878316,
+            "NewChange": false,
+            "Share": 0.001294947484166401,
+            "FilteredShare": 0.001294947484166401,
+            "TotalVisits": 21481.862493709283,
+            "Domain": "nebula.tv",
+            "Favicon": "https://site-images.similarcdn.com/image?url=nebula.tv&t=2&s=0&h=8290c93782eed9278ca9d729c667da1f1694b1ee8e21ed72a3e0bf80e05ad9b5",
+            "Rank": 23257,
+            "TotalShare": 0.001294947484166401,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.001294947484166401
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 21481.862493709283
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Graphics_Multimedia_and_Web_Design",
+            "SourceType": "ST",
+            "Change": -0.0947625746306924,
+            "NewChange": false,
+            "Share": 0.0012897312216072169,
+            "FilteredShare": 0.0012897312216072169,
+            "TotalVisits": 21395.33,
+            "Domain": "tools.dreamfaceapp.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=tools.dreamfaceapp.com&t=2&s=0&h=910900c8150eddf261922ed47086ea1ea53b82037e0d1491da424eeef1bf8236",
+            "Rank": -1,
+            "TotalShare": 0.0012897312216072169,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0012897312216072169
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 21395.33
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 2.0
+        },
+        {
+            "Category": "Sports~Sports",
+            "SourceType": "ST",
+            "Change": 1.5348348710099617,
+            "NewChange": false,
+            "Share": 0.0012890573177864065,
+            "FilteredShare": 0.0012890573177864065,
+            "TotalVisits": 21384.15062061231,
+            "Domain": "secure.ashbournemanagement.co.uk",
+            "Favicon": "https://site-images.similarcdn.com/image?url=secure.ashbournemanagement.co.uk&t=2&s=0&h=d2f9bc3c41b7f225cf48700c9d06a7b3bbe60cfb12592840de230a48a22fc379",
+            "Rank": -1,
+            "TotalShare": 0.0012890573177864065,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0012890573177864065
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 21384.15062061231
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Web_Hosting_and_Domain_Names",
+            "SourceType": "ST",
+            "Change": 0.013803981126407218,
+            "NewChange": false,
+            "Share": 0.0012739085044236138,
+            "FilteredShare": 0.0012739085044236138,
+            "TotalVisits": 21132.84720516001,
+            "Domain": "nomads.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=nomads.com&t=2&s=0&h=8244359b4ee52180245d08d929774c4a164f9a3de74a6d4a967c99f945a8b91e",
+            "Rank": 113634,
+            "TotalShare": 0.0012739085044236138,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0012739085044236138
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 21132.84720516001
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Adult",
+            "SourceType": "ST",
+            "Change": 7.421639684820771,
+            "NewChange": false,
+            "Share": 0.0012691124337677843,
+            "FilteredShare": 0.0012691124337677843,
+            "TotalVisits": 21053.285268017076,
+            "Domain": "nofansapp.com",
+            "Favicon": "https://site-images.similarcdn.com/image?url=nofansapp.com&t=2&s=0&h=0bbbcc71c72008144e0acd8ad1548031579db90c1f0a4daff8f4aefb957211cb",
+            "Rank": 287652,
+            "TotalShare": 0.0012691124337677843,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0012691124337677843
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 21053.285268017076
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        },
+        {
+            "Category": "Computers_Electronics_and_Technology~Computers_Electronics_and_Technology",
+            "SourceType": "ST",
+            "Change": -0.2558743322617512,
+            "NewChange": false,
+            "Share": 0.0012650802459059241,
+            "FilteredShare": 0.0012650802459059241,
+            "TotalVisits": 20986.39536996608,
+            "Domain": "fly.io",
+            "Favicon": "https://site-images.similarcdn.com/image?url=fly.io&t=2&s=0&h=64acc52cbf292bfa4204244ca59dbc0be667de45d44ad4f94f887ba57e2ed9d4",
+            "Rank": 42082,
+            "TotalShare": 0.0012650802459059241,
+            "TotalSharePerMonth": [
+                {
+                    "Key": "2025-03-01",
+                    "Value": 0.0
+                },
+                {
+                    "Key": "2025-04-01",
+                    "Value": 0.0012650802459059241
+                }
+            ],
+            "TotalVisitsAndSharePerMonth": {
+                "2025-04-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 1.0,
+                        "AbsValue": 20986.39536996608
+                    }
+                ],
+                "2025-03-01": [
+                    {
+                        "Site": "checkout.stripe.com",
+                        "Value": 0.0,
+                        "AbsValue": 0.0
+                    }
+                ]
+            },
+            "SiteOrigins": {
+                "checkout.stripe.com": 1.0
+            },
+            "HasAdsense": false,
+            "EngagementScore": 1.0
+        }
+    ]
+}
