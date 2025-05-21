@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube红人报价评估计算器</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="canonical" href="https://seo.box/zh/influencer-calculator/"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    body {
+      background-color: #f8f9fa;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+    h2 {
+      margin: 25px 0 15px;
+      color: #2c3e50;
+      font-size: 18px;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 10px;
+    }
+    .calculator {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+    .calculator h3 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #d1d3e2;
+      border-radius: 4px;
+    }
+    select {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #d1d3e2;
+      border-radius: 4px;
+      background-color: white;
+    }
+    button {
+      background-color: #4e73df;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #2e59d9;
+    }
+    .result {
+      margin-top: 15px;
+      padding: 15px;
+      background-color: #f8f9fa;
+      border-radius: 4px;
+      border-left: 4px solid #4e73df;
+      display: none;
+    }
+    .key-finding {
+      background-color: #f8f9fa;
+      border-left: 4px solid #4e73df;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+    .key-finding h3 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .price-tier {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: bold;
+      color: white;
+    }
+    .tier-excellent {
+      background-color: #1cc88a;
+    }
+    .tier-good {
+      background-color: #4e73df;
+    }
+    .tier-fair {
+      background-color: #f6c23e;
+    }
+    .tier-poor {
+      background-color: #e74a3b;
+    }
+    .pricing-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    .pricing-header {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+    .pricing-body {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .pricing-item {
+      flex: 1;
+      min-width: 150px;
+      text-align: center;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 8px;
+      background-color: #f8f9fa;
+    }
+    .pricing-item h4 {
+      margin-bottom: 8px;
+      color: #5a5c69;
+    }
+    .pricing-item p {
+      font-size: 18px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    .pricing-item small {
+      display: block;
+      margin-top: 5px;
+      color: #858796;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+    .data-table th, .data-table td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #e9ecef;
+    }
+    .data-table th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+    }
+    .chart-container {
+      height: 300px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube红人报价评估计算器</h1>
+    <p style="text-align: center;margin-bottom: 10px;"><a href="../../influencer-calculator/">English</a> <a href="./">中文</a></p>
+    <div class="key-finding">
+      <h3>基于"5美元千播收入上限"和播放量衰减模型的报价分析</h3>
+      <p>这个工具考虑了视频播放量随时间衰减的实际情况，而不是简单地将每日播放量乘以生命周期天数，能帮您：</p>
+      <ul style="margin-top: 10px; margin-left: 20px; line-height: 1.6;">
+        <li>基于达人最近一个月的平均播放量和现实的衰减模型评估合理报价</li>
+        <li>考虑不同衰减率情况下的预期总播放量</li>
+        <li>计算千播成本与理想成本的差距</li>
+        <li>智能推荐接受报价、砍价或寻找其他达人</li>
+      </ul>
+    </div>
+
+    <div class="calculator">
+      <h3>达人报价计算器 (考虑播放量衰减)</h3>
+      <div class="form-group">
+        <label for="dailyViews">达人最近30天平均每日播放量</label>
+        <input type="number" id="dailyViews" placeholder="例如：1000">
+      </div>
+      <div class="form-group">
+        <label for="influencerPrice">达人报价 (美元)</label>
+        <input type="number" id="influencerPrice" placeholder="例如：500">
+      </div>
+      <div class="form-group">
+        <label for="revenuePerK">预期千次播放收益 (美元，默认5美元)</label>
+        <input type="number" id="revenuePerK" placeholder="5" value="5">
+      </div>
+      <div class="form-group">
+        <label for="lifecycle">预期视频生命周期 (天，默认180天)</label>
+        <input type="number" id="lifecycle" placeholder="180" value="180">
+      </div>
+      <div class="form-group">
+        <label for="decayRate">月播放量衰减率 (默认30%)</label>
+        <select id="decayRate">
+          <option value="0.2">20% - 缓慢衰减</option>
+          <option value="0.3" selected>30% - 中等衰减</option>
+          <option value="0.4">40% - 快速衰减</option>
+          <option value="0.5">50% - 高度衰减</option>
+        </select>
+      </div>
+      <button id="calculateBtn">计算报价评估</button>
+      <div id="calculationResult" class="result"></div>
+    </div>
+
+    <h2>价格评估等级说明</h2>
+    <div style="overflow-x: auto;">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>价格等级</th>
+            <th>千播成本</th>
+            <th>描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="price-tier tier-excellent">优秀</span></td>
+            <td>≤ $5</td>
+            <td>预期能产生正ROI，高度推荐合作</td>
+          </tr>
+          <tr>
+            <td><span class="price-tier tier-good">良好</span></td>
+            <td>$5 - $7.5</td>
+            <td>可能实现正ROI，值得考虑</td>
+          </tr>
+          <tr>
+            <td><span class="price-tier tier-fair">一般</span></td>
+            <td>$7.5 - $10</td>
+            <td>达到盈亏平衡点难度较大，谨慎考虑</td>
+          </tr>
+          <tr>
+            <td><span class="price-tier tier-poor">高价</span></td>
+            <td>> $10</td>
+            <td>很难实现正回报，不建议合作</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>新达人报价参考标准</h2>
+    <div class="pricing-card">
+      <div class="pricing-header">基于播放量衰减模型的合理报价标准(预估180天生命周期，月衰减率30%)</div>
+      <div class="pricing-body">
+        <div class="pricing-item">
+          <h4>普通达人</h4>
+          <p>$350</p>
+          <small>500播放/天</small>
+        </div>
+        <div class="pricing-item">
+          <h4>良好达人</h4>
+          <p>$700</p>
+          <small>1000播放/天</small>
+        </div>
+        <div class="pricing-item">
+          <h4>优秀达人</h4>
+          <p>$1,400</p>
+          <small>2000播放/天</small>
+        </div>
+        <div class="pricing-item">
+          <h4>顶级达人</h4>
+          <p>$3,500</p>
+          <small>5000播放/天</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="key-finding" style="border-left-color: #1cc88a; margin-top: 30px;">
+      <h3>投放建议</h3>
+      <ul style="margin-left: 20px; line-height: 1.6;">
+        <li><strong>优先合作千播成本低于5美元的达人</strong>：这些达人预期能产生正回报。</li>
+        <li><strong>使用最近一个月的数据评估</strong>：不要使用总平均播放量，而是使用最近一个月的平均播放量计算。</li>
+        <li><strong>新达人测试投放原则</strong>：对新达人先以较低价格小规模测试，根据实际表现调整。</li>
+        <li><strong>砍价策略</strong>：只有当达人要价高于合理价格但不超过30%时才尝试砍价，超过30%寻找其他达人。</li>
+        <li><strong>定期重估达人价值</strong>：每个月重新评估达人的"千播成本"，及时调整投放策略。</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 获取计算按钮并添加点击事件
+      document.getElementById('calculateBtn').addEventListener('click', calculatePricing);
+      
+      // 计算器功能
+      function calculatePricing() {
+        // 获取输入值
+        const dailyViews = parseFloat(document.getElementById('dailyViews').value) || 0;
+        const influencerPrice = parseFloat(document.getElementById('influencerPrice').value) || 0;
+        const revenuePerK = parseFloat(document.getElementById('revenuePerK').value) || 5;
+        const lifecycle = parseFloat(document.getElementById('lifecycle').value) || 180;
+        const decayRate = parseFloat(document.getElementById('decayRate').value) || 0.3;
+        
+        // 验证输入
+        if (dailyViews <= 0 || influencerPrice <= 0) {
+          alert('请输入有效的日均播放量和达人报价!');
+          return;
+        }
+        
+        // 计算带衰减的总播放量 - 使用衰减模型而不是简单乘法
+        // 使用常见的视频衰减模型: 初始流量会持续30天左右，然后开始以选定的速度衰减
+        
+        let estimatedTotalViews = 0;
+        let monthlyViews = 0;
+        
+        // 前30天 - 保持初始日播放量
+        monthlyViews = dailyViews * 30;
+        estimatedTotalViews += monthlyViews;
+        
+        // 剩余生命周期 - 应用衰减模型
+        const remainingMonths = Math.ceil((lifecycle - 30) / 30);
+        
+        let currentMonthlyViews = monthlyViews;
+        let viewsByMonth = [
+          { month: 1, views: monthlyViews, label: "第1月" }
+        ];
+        
+        for (let i = 0; i < remainingMonths; i++) {
+          currentMonthlyViews = currentMonthlyViews * (1 - decayRate); // 按选定比例衰减
+          estimatedTotalViews += currentMonthlyViews;
+          viewsByMonth.push({
+            month: i + 2,
+            views: currentMonthlyViews,
+            label: `第${i + 2}月`
+          });
+        }
+        
+        const estimatedViewsInK = estimatedTotalViews / 1000;
+        const reasonablePrice = estimatedViewsInK * revenuePerK;
+        const costPerKViews = influencerPrice / estimatedViewsInK;
+        
+        // 判断价格合理性
+        let priceTier = "poor";
+        let tierName = "高价";
+        let recommendation = "";
+        let priceReductionNeeded = 0;
+        let priceReductionPercent = 0;
+        let tierColor = "#e74a3b";
+        
+        if (costPerKViews <= 5) {
+          priceTier = "excellent";
+          tierName = "优秀";
+          recommendation = "接受报价";
+          tierColor = "#1cc88a";
+        } else if (costPerKViews <= 7.5) {
+          priceTier = "good";
+          tierName = "良好";
+          recommendation = "接受报价";
+          tierColor = "#4e73df";
+        } else if (costPerKViews <= 10) {
+          priceTier = "fair";
+          tierName = "一般";
+          recommendation = "可考虑适当砍价";
+          priceReductionNeeded = influencerPrice - reasonablePrice;
+          priceReductionPercent = (priceReductionNeeded / influencerPrice) * 100;
+          tierColor = "#f6c23e";
+        } else {
+          priceTier = "poor";
+          tierName = "高价";
+          priceReductionNeeded = influencerPrice - reasonablePrice;
+          priceReductionPercent = (priceReductionNeeded / influencerPrice) * 100;
+          
+          if (priceReductionPercent <= 30) {
+            recommendation = "尝试砍价";
+          } else {
+            recommendation = "寻找其他达人";
+          }
+          tierColor = "#e74a3b";
+        }
+        
+        // 展示结果
+        const resultDiv = document.getElementById('calculationResult');
+        resultDiv.style.display = 'block';
+        
+        resultDiv.innerHTML = `
+          <h4>评估结果</h4>
+          <p><strong>预计总播放量:</strong> ${Math.round(estimatedTotalViews).toLocaleString()}次 (考虑${decayRate * 100}%月衰减率)</p>
+          <p><strong>合理报价:</strong> $${reasonablePrice.toFixed(0)}</p>
+          <p><strong>千播成本:</strong> $${costPerKViews.toFixed(2)}</p>
+          <p><strong>价格等级:</strong> <span style="color:${tierColor};font-weight:bold;">${tierName}</span></p>
+          ${priceReductionNeeded > 0 ? `<p><strong>建议砍价:</strong> $${priceReductionNeeded.toFixed(0)} (${priceReductionPercent.toFixed(0)}%)</p>` : ''}
+          <p><strong>建议操作:</strong> ${recommendation}</p>
+          <div style="margin-top: 15px;">
+            <h4>播放量衰减预测</h4>
+            <div class="chart-container">
+              <canvas id="decayChart"></canvas>
+            </div>
+          </div>
+        `;
+        
+        // 绘制播放量衰减图表
+        setTimeout(() => {
+          const ctx = document.getElementById('decayChart').getContext('2d');
+          
+          new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: viewsByMonth.map(item => item.label),
+              datasets: [{
+                label: '月播放量',
+                data: viewsByMonth.map(item => item.views),
+                backgroundColor: 'rgba(78, 115, 223, 0.2)',
+                borderColor: 'rgba(78, 115, 223, 1)',
+                borderWidth: 2,
+                pointBackgroundColor: 'rgba(78, 115, 223, 1)',
+                pointBorderColor: '#fff',
+                pointRadius: 4,
+                tension: 0.4
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: '播放量'
+                  }
+                },
+                x: {
+                  title: {
+                    display: true,
+                    text: '月份'
+                  }
+                }
+              }
+            }
+          });
+        }, 100);
+      }
+    });
+  </script>
+<div style="display: none;">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BE6037ZLBE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BE6037ZLBE');
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Influencer Pricing Calculator</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="canonical" href="https://seo.box/influencer-calculator/"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f8f9fa;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+    h2 {
+      margin: 25px 0 15px;
+      color: #2c3e50;
+      font-size: 18px;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 10px;
+    }
+    .calculator {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+    .calculator h3 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #d1d3e2;
+      border-radius: 4px;
+    }
+    select {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #d1d3e2;
+      border-radius: 4px;
+      background-color: white;
+    }
+    button {
+      background-color: #4e73df;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #2e59d9;
+    }
+    .result {
+      margin-top: 15px;
+      padding: 15px;
+      background-color: #f8f9fa;
+      border-radius: 4px;
+      border-left: 4px solid #4e73df;
+      display: none;
+    }
+    .key-finding {
+      background-color: #f8f9fa;
+      border-left: 4px solid #4e73df;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+    .key-finding h3 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .price-tier {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: bold;
+      color: white;
+    }
+    .tier-excellent {
+      background-color: #1cc88a;
+    }
+    .tier-good {
+      background-color: #4e73df;
+    }
+    .tier-fair {
+      background-color: #f6c23e;
+    }
+    .tier-poor {
+      background-color: #e74a3b;
+    }
+    .pricing-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    .pricing-header {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+    .pricing-body {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .pricing-item {
+      flex: 1;
+      min-width: 150px;
+      text-align: center;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 8px;
+      background-color: #f8f9fa;
+    }
+    .pricing-item h4 {
+      margin-bottom: 8px;
+      color: #5a5c69;
+    }
+    .pricing-item p {
+      font-size: 18px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    .pricing-item small {
+      display: block;
+      margin-top: 5px;
+      color: #858796;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+    .data-table th, .data-table td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #e9ecef;
+    }
+    .data-table th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+    }
+    .chart-container {
+      height: 300px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Influencer Pricing Calculator</h1>
+    <p style="text-align: center;margin-bottom: 10px;"><a href="./">English</a> <a href="../zh/influencer-calculator/">中文</a></p>
+    <div class="key-finding">
+      <h3>Pricing Analysis Based on $5 CPM Revenue and View Decay Model</h3>
+      <p>This tool considers the natural decay of video views over time, rather than simply multiplying daily views by the lifecycle days. It helps you:</p>
+      <ul style="margin-top: 10px; margin-left: 20px; line-height: 1.6;">
+        <li>Evaluate reasonable pricing based on the influencer's average views from the last 30 days and a realistic decay model</li>
+        <li>Calculate the estimated total views considering different decay rates</li>
+        <li>Determine the cost per thousand views (CPM) compared to ideal costs</li>
+        <li>Get smart recommendations on whether to accept, negotiate, or look for other influencers</li>
+      </ul>
+    </div>
+
+    <div class="calculator">
+      <h3>Influencer Pricing Calculator (With View Decay)</h3>
+      <div class="form-group">
+        <label for="dailyViews">Influencer's Average Daily Views (Last 30 Days)</label>
+        <input type="number" id="dailyViews" placeholder="Example: 1000">
+      </div>
+      <div class="form-group">
+        <label for="influencerPrice">Influencer's Price (USD)</label>
+        <input type="number" id="influencerPrice" placeholder="Example: 500">
+      </div>
+      <div class="form-group">
+        <label for="revenuePerK">Expected Revenue per 1000 Views (Default: $5)</label>
+        <input type="number" id="revenuePerK" placeholder="5" value="5">
+      </div>
+      <div class="form-group">
+        <label for="lifecycle">Expected Video Lifecycle (Days, Default: 180)</label>
+        <input type="number" id="lifecycle" placeholder="180" value="180">
+      </div>
+      <div class="form-group">
+        <label for="decayRate">Monthly View Decay Rate (Default: 30%)</label>
+        <select id="decayRate">
+          <option value="0.2">20% - Slow Decay</option>
+          <option value="0.3" selected>30% - Medium Decay</option>
+          <option value="0.4">40% - Fast Decay</option>
+          <option value="0.5">50% - High Decay</option>
+        </select>
+      </div>
+      <button id="calculateBtn">Calculate Price Evaluation</button>
+      <div id="calculationResult" class="result"></div>
+    </div>
+
+    <h2>Price Tier Explanation</h2>
+    <div style="overflow-x: auto;">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Price Tier</th>
+            <th>Cost per 1000 Views</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="price-tier tier-excellent">Excellent</span></td>
+            <td>≤ $5</td>
+            <td>Expected to generate positive ROI, highly recommended</td>
+          </tr>
+          <tr>
+            <td><span class="price-tier tier-good">Good</span></td>
+            <td>$5 - $7.5</td>
+            <td>May achieve positive ROI, worth considering</td>
+          </tr>
+          <tr>
+            <td><span class="price-tier tier-fair">Fair</span></td>
+            <td>$7.5 - $10</td>
+            <td>Challenging to reach breakeven, consider carefully</td>
+          </tr>
+          <tr>
+            <td><span class="price-tier tier-poor">Poor</span></td>
+            <td>> $10</td>
+            <td>Difficult to achieve positive returns, not recommended</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Reference Pricing Standards for New Influencers</h2>
+    <div class="pricing-card">
+      <div class="pricing-header">Reasonable Pricing Based on View Decay Model (Estimated 180-day lifecycle, 30% monthly decay)</div>
+      <div class="pricing-body">
+        <div class="pricing-item">
+          <h4>Standard</h4>
+          <p>$350</p>
+          <small>500 views/day</small>
+        </div>
+        <div class="pricing-item">
+          <h4>Good</h4>
+          <p>$700</p>
+          <small>1000 views/day</small>
+        </div>
+        <div class="pricing-item">
+          <h4>Excellent</h4>
+          <p>$1,400</p>
+          <small>2000 views/day</small>
+        </div>
+        <div class="pricing-item">
+          <h4>Premium</h4>
+          <p>$3,500</p>
+          <small>5000 views/day</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="key-finding" style="border-left-color: #1cc88a; margin-top: 30px;">
+      <h3>Placement Recommendations</h3>
+      <ul style="margin-left: 20px; line-height: 1.6;">
+        <li><strong>Prioritize influencers with CPM below $5</strong>: These influencers are expected to generate positive returns.</li>
+        <li><strong>Use recent data for evaluation</strong>: Don't use total average views, but instead use the average from the most recent month.</li>
+        <li><strong>New influencer testing principle</strong>: For new influencers, start with smaller budgets for testing, then adjust based on actual performance.</li>
+        <li><strong>Negotiation strategy</strong>: Only attempt price negotiation when the influencer's price is above reasonable but not exceeding by more than 30%. If over 30%, look for other influencers.</li>
+        <li><strong>Regularly reassess influencer value</strong>: Re-evaluate the "cost per thousand views" monthly and adjust your strategy accordingly.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get calculate button and add click event
+      document.getElementById('calculateBtn').addEventListener('click', calculatePricing);
+      
+      // Calculator function
+      function calculatePricing() {
+        // Get input values
+        const dailyViews = parseFloat(document.getElementById('dailyViews').value) || 0;
+        const influencerPrice = parseFloat(document.getElementById('influencerPrice').value) || 0;
+        const revenuePerK = parseFloat(document.getElementById('revenuePerK').value) || 5;
+        const lifecycle = parseFloat(document.getElementById('lifecycle').value) || 180;
+        const decayRate = parseFloat(document.getElementById('decayRate').value) || 0.3;
+        
+        // Validate input
+        if (dailyViews <= 0 || influencerPrice <= 0) {
+          alert('Please enter valid daily views and influencer price!');
+          return;
+        }
+        
+        // Calculate total views with decay model
+        // Using the common video decay model: initial traffic will last for about 30 days, then decay at the selected rate
+        
+        let estimatedTotalViews = 0;
+        let monthlyViews = 0;
+        
+        // First 30 days - maintain initial daily views
+        monthlyViews = dailyViews * 30;
+        estimatedTotalViews += monthlyViews;
+        
+        // Remaining lifecycle - apply decay model
+        const remainingMonths = Math.ceil((lifecycle - 30) / 30);
+        
+        let currentMonthlyViews = monthlyViews;
+        let viewsByMonth = [
+          { month: 1, views: monthlyViews, label: "Month 1" }
+        ];
+        
+        for (let i = 0; i < remainingMonths; i++) {
+          currentMonthlyViews = currentMonthlyViews * (1 - decayRate); // Apply selected decay rate
+          estimatedTotalViews += currentMonthlyViews;
+          viewsByMonth.push({
+            month: i + 2,
+            views: currentMonthlyViews,
+            label: `Month ${i + 2}`
+          });
+        }
+        
+        const estimatedViewsInK = estimatedTotalViews / 1000;
+        const reasonablePrice = estimatedViewsInK * revenuePerK;
+        const costPerKViews = influencerPrice / estimatedViewsInK;
+        
+        // Determine price reasonability
+        let priceTier = "poor";
+        let tierName = "Poor";
+        let recommendation = "";
+        let priceReductionNeeded = 0;
+        let priceReductionPercent = 0;
+        let tierColor = "#e74a3b";
+        
+        if (costPerKViews <= 5) {
+          priceTier = "excellent";
+          tierName = "Excellent";
+          recommendation = "Accept the price";
+          tierColor = "#1cc88a";
+        } else if (costPerKViews <= 7.5) {
+          priceTier = "good";
+          tierName = "Good";
+          recommendation = "Accept the price";
+          tierColor = "#4e73df";
+        } else if (costPerKViews <= 10) {
+          priceTier = "fair";
+          tierName = "Fair";
+          recommendation = "Consider negotiating";
+          priceReductionNeeded = influencerPrice - reasonablePrice;
+          priceReductionPercent = (priceReductionNeeded / influencerPrice) * 100;
+          tierColor = "#f6c23e";
+        } else {
+          priceTier = "poor";
+          tierName = "Poor";
+          priceReductionNeeded = influencerPrice - reasonablePrice;
+          priceReductionPercent = (priceReductionNeeded / influencerPrice) * 100;
+          
+          if (priceReductionPercent <= 30) {
+            recommendation = "Try to negotiate";
+          } else {
+            recommendation = "Look for other influencers";
+          }
+          tierColor = "#e74a3b";
+        }
+        
+        // Show results
+        const resultDiv = document.getElementById('calculationResult');
+        resultDiv.style.display = 'block';
+        
+        resultDiv.innerHTML = `
+          <h4>Evaluation Results</h4>
+          <p><strong>Estimated Total Views:</strong> ${Math.round(estimatedTotalViews).toLocaleString()} (Considering ${decayRate * 100}% monthly decay rate)</p>
+          <p><strong>Reasonable Price:</strong> $${reasonablePrice.toFixed(0)}</p>
+          <p><strong>Cost per 1000 Views:</strong> $${costPerKViews.toFixed(2)}</p>
+          <p><strong>Price Tier:</strong> <span style="color:${tierColor};font-weight:bold;">${tierName}</span></p>
+          ${priceReductionNeeded > 0 ? `<p><strong>Suggested Negotiation:</strong> $${priceReductionNeeded.toFixed(0)} (${priceReductionPercent.toFixed(0)}%)</p>` : ''}
+          <p><strong>Recommendation:</strong> ${recommendation}</p>
+          <div style="margin-top: 15px;">
+            <h4>View Decay Prediction</h4>
+            <div class="chart-container">
+              <canvas id="decayChart"></canvas>
+            </div>
+          </div>
+        `;
+        
+        // Draw view decay chart
+        setTimeout(() => {
+          const ctx = document.getElementById('decayChart').getContext('2d');
+          
+          new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: viewsByMonth.map(item => item.label),
+              datasets: [{
+                label: 'Monthly Views',
+                data: viewsByMonth.map(item => item.views),
+                backgroundColor: 'rgba(78, 115, 223, 0.2)',
+                borderColor: 'rgba(78, 115, 223, 1)',
+                borderWidth: 2,
+                pointBackgroundColor: 'rgba(78, 115, 223, 1)',
+                pointBorderColor: '#fff',
+                pointRadius: 4,
+                tension: 0.4
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: 'Views'
+                  }
+                },
+                x: {
+                  title: {
+                    display: true,
+                    text: 'Month'
+                  }
+                }
+              }
+            }
+          });
+        }, 100);
+      }
+    });
+  </script>
+<div style="display: none;">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BE6037ZLBE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BE6037ZLBE');
+</script>
+</div>
+</body>
+</html>
