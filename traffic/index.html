@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站流量数据分析器</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .upload-area {
+            border: 3px dashed #667eea;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin: 30px 0;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .upload-area:hover {
+            border-color: #764ba2;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+            transform: translateY(-2px);
+        }
+
+        .upload-area.dragover {
+            border-color: #764ba2;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
+        }
+
+        .upload-icon {
+            font-size: 3em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .upload-text {
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .upload-hint {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .url-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid;
+            transition: all 0.3s ease;
+        }
+
+        .url-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .url-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .url-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #2c3e50;
+            word-break: break-all;
+        }
+
+        .url-stats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 10px 15px;
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+            border-radius: 10px;
+        }
+
+        .stat-label {
+            font-size: 0.8em;
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin-top: 20px;
+            background: #fafafa;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 60px 20px;
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.1em;
+            color: #667eea;
+        }
+
+        .summary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .summary h3 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .color-0 { border-left-color: #e74c3c; }
+        .color-1 { border-left-color: #3498db; }
+        .color-2 { border-left-color: #2ecc71; }
+        .color-3 { border-left-color: #f39c12; }
+        .color-4 { border-left-color: #9b59b6; }
+        .color-5 { border-left-color: #1abc9c; }
+        .color-6 { border-left-color: #e67e22; }
+        .color-7 { border-left-color: #34495e; }
+        .color-8 { border-left-color: #e91e63; }
+        .color-9 { border-left-color: #00bcd4; }
+
+        .key-points {
+            margin: 20px 0;
+            padding: 20px;
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+            border-radius: 10px;
+        }
+
+        .key-points h4 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+
+        .points-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .point-item {
+            background: white;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border-left: 4px solid;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+            transition: transform 0.2s ease;
+        }
+
+        .point-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .point-date {
+            font-size: 0.85em;
+            color: #6c757d;
+            margin-bottom: 4px;
+        }
+
+        .point-label {
+            font-weight: 600;
+            font-size: 0.95em;
+            margin-bottom: 4px;
+        }
+
+        .point-desc {
+            font-size: 0.8em;
+            color: #495057;
+            line-height: 1.3;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .url-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .url-stats {
+                width: 100%;
+                justify-content: space-around;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 网站流量数据分析器</h1>
+        
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">📊</div>
+            <div class="upload-text">点击或拖拽上传CSV文件</div>
+            <div class="upload-hint">支持包含时间和URL访问量数据的CSV文件</div>
+            <input type="file" id="fileInput" accept=".csv" />
+        </div>
+
+        <div id="results"></div>
+    </div>
+
+    <script>
+        const colors = [
+            '#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6',
+            '#1abc9c', '#e67e22', '#34495e', '#e91e63', '#00bcd4'
+        ];
+
+        let chartInstances = [];
+
+        document.getElementById('uploadArea').addEventListener('click', () => {
+            document.getElementById('fileInput').click();
+        });
+
+        document.getElementById('fileInput').addEventListener('change', handleFileSelect);
+
+        // 拖拽功能
+        const uploadArea = document.getElementById('uploadArea');
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        });
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                handleFile(file);
+            }
+        }
+
+        function handleFile(file) {
+            if (!file.name.toLowerCase().endsWith('.csv')) {
+                alert('请上传CSV文件');
+                return;
+            }
+
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<div class="loading">正在解析文件...</div>';
+
+            Papa.parse(file, {
+                header: true,
+                dynamicTyping: true,
+                skipEmptyLines: true,
+                complete: function(results) {
+                    processData(results.data);
+                },
+                error: function(error) {
+                    resultsDiv.innerHTML = '<div class="no-data">文件解析失败: ' + error.message + '</div>';
+                }
+            });
+        }
+
+        function processData(data) {
+            // 清理之前的图表
+            chartInstances.forEach(chart => chart.destroy());
+            chartInstances = [];
+
+            if (!data || data.length === 0) {
+                document.getElementById('results').innerHTML = '<div class="no-data">没有找到有效数据</div>';
+                return;
+            }
+
+            // 获取所有URL列（排除日期列）
+            const firstRow = data[0];
+            const urlColumns = Object.keys(firstRow).filter(key => 
+                key.toLowerCase() !== 'date' && 
+                key.trim() !== ''
+            );
+
+            if (urlColumns.length === 0) {
+                document.getElementById('results').innerHTML = '<div class="no-data">没有找到URL数据列</div>';
+                return;
+            }
+
+            // 解析所有日期并找到有数据的最早日期
+            const allDatesWithData = [];
+            data.forEach(row => {
+                const date = row.Date || row.date || Object.values(row)[0];
+                if (date && !isNaN(new Date(date).getTime())) {
+                    // 检查这一天是否有任何URL有流量数据
+                    const hasTraffic = urlColumns.some(url => {
+                        const traffic = parseInt(row[url]) || 0;
+                        return traffic > 0;
+                    });
+                    
+                    if (hasTraffic) {
+                        allDatesWithData.push(date);
+                    }
+                }
+            });
+
+            // 找到最早有数据的日期
+            const earliestDataDate = allDatesWithData.length > 0 ? 
+                allDatesWithData.sort((a, b) => new Date(a) - new Date(b))[0] : null;
+
+            // 收集所有有效日期
+            const validDates = data
+                .map(row => row.Date || row.date || Object.values(row)[0])
+                .filter(date => date && !isNaN(new Date(date).getTime()))
+                .map(date => new Date(date));
+
+            // 处理每个URL的数据
+            let globalEarliestLaunchDate = null;
+            let homepageIndex = 0;
+            const urlData = urlColumns.map((url, index) => {
+                const urlTraffic = data.map(row => ({
+                    date: row.Date || row.date || Object.values(row)[0],
+                    traffic: parseInt(row[url]) || 0
+                })).filter(item => item.date && !isNaN(new Date(item.date).getTime()));
+
+                // 如果有最早数据日期，从那个日期开始显示数据
+                let filteredTraffic = urlTraffic;
+                if (earliestDataDate) {
+                    const startDate = new Date(earliestDataDate);
+                    filteredTraffic = urlTraffic.filter(item => new Date(item.date) >= startDate);
+                }
+
+                // 找到第一次有流量的时间（上线时间），且日期有效且大于等于数据最早日期
+                const launchDate = filteredTraffic.find(item =>
+                    item.traffic > 0 &&
+                    item.date && !isNaN(new Date(item.date).getTime()) &&
+                    validDates.length > 0 && new Date(item.date) >= validDates[0]
+                )?.date;
+                // 记录全局最早上线时间
+                if (launchDate) {
+                    if (!globalEarliestLaunchDate || new Date(launchDate) < new Date(globalEarliestLaunchDate)) {
+                        globalEarliestLaunchDate = launchDate;
+                    }
+                }
+                // 判断是否为首页（无路径或只有域名）
+                if (homepageIndex === 0) {
+                    try {
+                        const u = new URL(url);
+                        if (!u.pathname || u.pathname === '/' || u.pathname === '') {
+                            homepageIndex = index;
+                        }
+                    } catch (e) {}
+                }
+                // 分析关键节点
+                const keyPoints = analyzeKeyPoints(filteredTraffic, launchDate);
+                // 计算统计信息
+                const totalTraffic = filteredTraffic.reduce((sum, item) => sum + item.traffic, 0);
+                const maxTraffic = Math.max(...filteredTraffic.map(item => item.traffic));
+                const avgTraffic = filteredTraffic.length > 0 ? Math.round(totalTraffic / filteredTraffic.length) : 0;
+
+                return {
+                    url: url.replace(/^https?:\/\//, '').replace(/\/$/, ''),
+                    fullUrl: url,
+                    data: filteredTraffic,
+                    launchDate,
+                    keyPoints,
+                    totalTraffic,
+                    maxTraffic,
+                    avgTraffic,
+                    color: colors[index % colors.length],
+                    colorClass: `color-${index % 10}`,
+                    earliestDataDate
+                };
+            }).filter(item => item.data.length > 0);
+
+            // 检查并修正首页上线时间（无条件）
+            if (urlData.length > 0 && globalEarliestLaunchDate) {
+                const homepage = urlData[homepageIndex] || urlData[0];
+                let earliestStr = typeof globalEarliestLaunchDate === 'string'
+                    ? globalEarliestLaunchDate
+                    : globalEarliestLaunchDate.toISOString().slice(0, 10);
+                homepage.launchDate = earliestStr;
+                // 重新分析关键节点，保证首页所有事件以最早上线时间为起点
+                homepage.keyPoints = analyzeKeyPoints(homepage.data, homepage.launchDate);
+            }
+
+            renderResults(urlData, earliestDataDate);
+        }
+
+        function analyzeKeyPoints(trafficData, launchDate) {
+            let keyPoints = [];
+            
+            // 用于跟踪已被占用的时间段，避免重合
+            const occupiedPeriods = [];
+            function isTimeOverlap(startDate, endDate) {
+                const start = new Date(startDate);
+                const end = new Date(endDate);
+                return occupiedPeriods.some(period => {
+                    const periodStart = new Date(period.start);
+                    const periodEnd = new Date(period.end);
+                    return (start <= periodEnd && end >= periodStart);
+                });
+            }
+            function addOccupiedPeriod(startDate, endDate) {
+                occupiedPeriods.push({
+                    start: startDate,
+                    end: endDate
+                });
+            }
+
+            if (!trafficData || trafficData.length < 2) return keyPoints;
+
+            // 只分析上线时间之后的数据
+            let validStartIdx = 0;
+            if (launchDate) {
+                validStartIdx = trafficData.findIndex(item => item.date === launchDate);
+                if (validStartIdx === -1) validStartIdx = 0;
+            }
+
+            // 1. 先识别长期趋势事件 (优先级最高)
+            // 持续增长期 (至少7天)
+            let growthStreak = 0;
+            let growthStart = null;
+            let growthStartValue = 0;
+            for (let i = Math.max(1, validStartIdx); i < trafficData.length; i++) {
+                if (trafficData[i].traffic > trafficData[i-1].traffic) {
+                    if (growthStreak === 0) {
+                        growthStart = trafficData[i-1].date;
+                        growthStartValue = trafficData[i-1].traffic;
+                    }
+                    growthStreak++;
+                } else {
+                    if (growthStreak >= 7) {
+                        let growthEnd = trafficData[i-1].date;
+                        let endValue = trafficData[i-1].traffic;
+                        // 修正增长期起点不能早于上线时间
+                        if (launchDate && new Date(growthStart) < new Date(launchDate)) {
+                            growthStart = launchDate;
+                            growthStartValue = trafficData.find(item => item.date === launchDate)?.traffic || 0;
+                        }
+                        // 起点为0则跳过
+                        if (growthStartValue > 0 && !isTimeOverlap(growthStart, growthEnd)) {
+                            const totalGrowth = ((endValue - growthStartValue) / growthStartValue * 100).toFixed(1);
+                            keyPoints.push({
+                                date: growthStart,
+                                endDate: growthEnd,
+                                type: 'growth_period',
+                                label: `持续增长期 ${formatDate(growthStart)} - ${formatDate(growthEnd)}`,
+                                description: `连续增长${growthStreak}天 (${growthStartValue.toLocaleString()} → ${endValue.toLocaleString()}，增长${totalGrowth}%)`,
+                                color: '#27ae60'
+                            });
+                            addOccupiedPeriod(growthStart, growthEnd);
+                        }
+                    }
+                    growthStreak = 0;
+                }
+            }
+
+            // 持续下降期 (至少5天)
+            let declineStreak = 0;
+            let declineStart = null;
+            let declineStartValue = 0;
+            for (let i = Math.max(1, validStartIdx); i < trafficData.length; i++) {
+                if (trafficData[i].traffic < trafficData[i-1].traffic && trafficData[i-1].traffic > 0) {
+                    if (declineStreak === 0) {
+                        declineStart = trafficData[i-1].date;
+                        declineStartValue = trafficData[i-1].traffic;
+                    }
+                    declineStreak++;
+                } else {
+                    if (declineStreak >= 5) {
+                        const declineEnd = trafficData[i-1].date;
+                        const endValue = trafficData[i-1].traffic;
+                        
+                        if (!isTimeOverlap(declineStart, declineEnd)) {
+                            const totalDecline = ((declineStartValue - endValue) / declineStartValue * 100).toFixed(1);
+                            
+                            if(totalDecline > 30){
+                                keyPoints.push({
+                                    date: declineStart,
+                                    endDate: declineEnd,
+                                    type: 'decline_period',
+                                    label: `持续下降期 ${formatDate(declineStart)} - ${formatDate(declineEnd)}`,
+                                    description: `连续下降${declineStreak}天 (${declineStartValue.toLocaleString()} → ${endValue.toLocaleString()}，下降${totalDecline}%)`,
+                                    color: '#c0392b'
+                                });
+                                
+                                addOccupiedPeriod(declineStart, declineEnd);
+                            }
+                        }
+                    }
+                    declineStreak = 0;
+                }
+            }
+
+            // 稳定期 (至少10天)
+            let stableStreak = 0;
+            let stableStart = null;
+            let stableValues = [];
+            for (let i = Math.max(1, validStartIdx); i < trafficData.length; i++) {
+                if (trafficData[i-1].traffic > 0) {
+                    const changeRate = Math.abs((trafficData[i].traffic - trafficData[i-1].traffic) / trafficData[i-1].traffic);
+                    if (changeRate < 0.30) {
+                        if (stableStreak === 0) {
+                            stableStart = trafficData[i-1].date;
+                            stableValues = [trafficData[i-1].traffic];
+                        }
+                        stableValues.push(trafficData[i].traffic);
+                        stableStreak++;
+                    } else {
+                        if (stableStreak >= 10) {
+                            const stableEnd = trafficData[i-1].date;
+                            if (!isTimeOverlap(stableStart, stableEnd)) {
+                                const avgTraffic = Math.round(stableValues.reduce((sum, val) => sum + val, 0) / stableValues.length);
+                                const minVal = Math.min(...stableValues);
+                                const maxVal = Math.max(...stableValues);
+                                keyPoints.push({
+                                    date: stableStart,
+                                    endDate: stableEnd,
+                                    type: 'stable_period',
+                                    label: `稳定期 ${formatDate(stableStart)} - ${formatDate(stableEnd)}`,
+                                    description: `稳定${stableStreak}天，流量范围${minVal.toLocaleString()}-${maxVal.toLocaleString()}，平均${avgTraffic.toLocaleString()}`,
+                                    color: '#16a085',
+                                    min: minVal,
+                                    max: maxVal,
+                                    avg: avgTraffic
+                                });
+                                addOccupiedPeriod(stableStart, stableEnd);
+                            }
+                        }
+                        stableStreak = 0;
+                        stableValues = [];
+                    }
+                }
+            }
+            // 合并稳定期节点
+            let mergedKeyPoints = [];
+            for (let i = 0; i < keyPoints.length; i++) {
+                const kp = keyPoints[i];
+                if (kp.type !== 'stable_period') {
+                    mergedKeyPoints.push(kp);
+                    continue;
+                }
+                // 尝试与上一个稳定期合并
+                const last = mergedKeyPoints.length > 0 ? mergedKeyPoints[mergedKeyPoints.length - 1] : null;
+                if (
+                    last && last.type === 'stable_period' &&
+                    (new Date(kp.date) - new Date(last.endDate) <= 24 * 60 * 60 * 1000 * 3)
+                ) {
+                    const avgDiff = kp.avg - last.avg;
+                    if (avgDiff / last.avg > 0.5) {
+                        // 均值提升超过50%，插入上台阶节点
+                        const stepDate = kp.date;
+                        mergedKeyPoints.push({
+                            date: stepDate,
+                            endDate: stepDate,
+                            type: 'step_up',
+                            label: `上台阶 ${formatDate(stepDate)}`,
+                            description: `流量水平从 ${last.avg.toLocaleString()} 提升至 ${kp.avg.toLocaleString()}`,
+                            color: '#f39c12'
+                        });
+                        mergedKeyPoints.push(kp);
+                    } else if (Math.abs(kp.avg - last.avg) / last.avg < 0.5) {
+                        // 均值接近，合并区间
+                        last.endDate = kp.endDate;
+                        last.min = Math.min(last.min, kp.min);
+                        last.max = Math.max(last.max, kp.max);
+                        last.avg = Math.round((last.avg + kp.avg) / 2);
+                        last.label = `稳定期 ${formatDate(last.date)} - ${formatDate(last.endDate)}`;
+                        const days = Math.round((new Date(last.endDate) - new Date(last.date)) / (24*60*60*1000) + 1);
+                        last.description = `稳定${days}天，流量范围${last.min.toLocaleString()}-${last.max.toLocaleString()}，平均${last.avg.toLocaleString()}`;
+                    } else {
+                        mergedKeyPoints.push(kp);
+                    }
+                } else {
+                    mergedKeyPoints.push(kp);
+                }
+            }
+            keyPoints = mergedKeyPoints;
+
+            // 新增：流量低谷期识别（流量连续低于阈值，且持续天数大于5天）
+            const avgAll = trafficData.reduce((sum, item) => sum + item.traffic, 0) / trafficData.length;
+            const minThreshold = avgAll * 0.3; // 低于全局均值30%算低谷
+            let valleyStreak = 0;
+            let valleyStart = null;
+            let valleyValues = [];
+            for (let i = validStartIdx; i < trafficData.length; i++) {
+                if (trafficData[i].traffic > 0 && trafficData[i].traffic < minThreshold) {
+                    if (valleyStreak === 0) {
+                        valleyStart = trafficData[i].date;
+                        valleyValues = [trafficData[i].traffic];
+                    } else {
+                        valleyValues.push(trafficData[i].traffic);
+                    }
+                    valleyStreak++;
+                } else {
+                    if (valleyStreak >= 5) {
+                        const valleyEnd = trafficData[i - 1].date;
+                        if (!isTimeOverlap(valleyStart, valleyEnd)) {
+                            const avgValley = Math.round(valleyValues.reduce((sum, v) => sum + v, 0) / valleyValues.length);
+                            const minVal = Math.min(...valleyValues);
+                            keyPoints.push({
+                                date: valleyStart,
+                                endDate: valleyEnd,
+                                type: 'valley_period',
+                                label: `流量低谷期 ${formatDate(valleyStart)} - ${formatDate(valleyEnd)}`,
+                                description: `连续${valleyStreak}天流量低迷，最低${minVal.toLocaleString()}，平均${avgValley.toLocaleString()}`,
+                                color: '#34495e'
+                            });
+                            addOccupiedPeriod(valleyStart, valleyEnd);
+                        }
+                    }
+                    valleyStreak = 0;
+                    valleyValues = [];
+                }
+            }
+            // 结尾也要判断
+            if (valleyStreak >= 5) {
+                const valleyEnd = trafficData[trafficData.length - 1].date;
+                if (!isTimeOverlap(valleyStart, valleyEnd)) {
+                    const avgValley = Math.round(valleyValues.reduce((sum, v) => sum + v, 0) / valleyValues.length);
+                    const minVal = Math.min(...valleyValues);
+                    keyPoints.push({
+                        date: valleyStart,
+                        endDate: valleyEnd,
+                        type: 'valley_period',
+                        label: `流量低谷期 ${formatDate(valleyStart)} - ${formatDate(valleyEnd)}`,
+                        description: `连续${valleyStreak}天流量低迷，最低${minVal.toLocaleString()}，平均${avgValley.toLocaleString()}`,
+                        color: '#34495e'
+                    });
+                    addOccupiedPeriod(valleyStart, valleyEnd);
+                }
+            }
+
+            // 2. 然后识别单点事件
+            // --- 新的上台阶区间识别逻辑 ---
+            // 先收集所有上台阶点
+            const stepUps = [];
+            for (let i = Math.max(1, validStartIdx); i < trafficData.length; i++) {
+                const current = trafficData[i];
+                const previous = trafficData[i - 1];
+                const growthRate = (current.traffic - previous.traffic) / previous.traffic;
+                const absoluteGrowth = current.traffic - previous.traffic;
+                if (absoluteGrowth > 500 && growthRate > 0.5) {
+                    // 计算维持天数
+                    let sustainedDays = 0;
+                    const threshold = current.traffic * 0.8;
+                    for (let j = i; j < Math.min(i + 30, trafficData.length); j++) {
+                        if (trafficData[j].traffic >= threshold) {
+                            sustainedDays++;
+                        } else {
+                            break;
+                        }
+                    }
+                    if (sustainedDays >= 3) {
+                        stepUps.push({
+                            index: i,
+                            date: current.date,
+                            prevValue: previous.traffic,
+                            newValue: current.traffic,
+                            sustainedDays
+                        });
+                    }
+                }
+            }
+            // 计算每个台阶的结束时间
+            for (let k = 0; k < stepUps.length; k++) {
+                const startIdx = stepUps[k].index;
+                const startDate = stepUps[k].date;
+                let endIdx = startIdx + stepUps[k].sustainedDays - 1;
+                // 如果下一个台阶在维持期内，提前结束
+                if (k + 1 < stepUps.length && stepUps[k + 1].index <= endIdx) {
+                    endIdx = stepUps[k + 1].index - 1;
+                }
+                const endDate = trafficData[endIdx] ? trafficData[endIdx].date : trafficData[trafficData.length - 1].date;
+                if (!isTimeOverlap(startDate, endDate)) {
+                    keyPoints.push({
+                        date: startDate,
+                        endDate: endDate,
+                        type: 'step_up',
+                        label: `上台阶 ${formatDate(startDate)} - ${formatDate(endDate)}`,
+                        description: `流量水平从 ${stepUps[k].prevValue.toLocaleString()} 提升至 ${stepUps[k].newValue.toLocaleString()} (维持${endIdx - startIdx + 1}天)` ,
+                        color: '#f39c12'
+                    });
+                    addOccupiedPeriod(startDate, endDate);
+                }
+            }
+            // --- 其余单点事件保持原样 ---
+            for (let i = Math.max(1, validStartIdx); i < trafficData.length; i++) {
+                const current = trafficData[i];
+                const previous = trafficData[i - 1];
+                if (previous.traffic === 0) continue;
+                if (isTimeOverlap(current.date, current.date)) continue;
+                const growthRate = (current.traffic - previous.traffic) / previous.traffic;
+                const absoluteGrowth = current.traffic - previous.traffic;
+                // 流量爆发点
+                if (growthRate > 0.5 && absoluteGrowth > 100) {
+                    keyPoints.push({
+                        date: current.date,
+                        endDate: current.date,
+                        type: 'surge',
+                        label: `流量爆发 ${formatDate(current.date)}`,
+                        description: `流量暴涨 ${Math.round(growthRate * 100)}% (${previous.traffic.toLocaleString()} → ${current.traffic.toLocaleString()})`,
+                        color: '#e74c3c'
+                    });
+                    addOccupiedPeriod(current.date, current.date);
+                }
+                // 流量大幅下跌
+                else if (growthRate < -0.5 && Math.abs(absoluteGrowth) > 200) {
+                    keyPoints.push({
+                        date: current.date,
+                        endDate: current.date,
+                        type: 'crash',
+                        label: `流量骤降 ${formatDate(current.date)}`,
+                        description: `流量大跌 ${Math.round(Math.abs(growthRate) * 100)}% (${previous.traffic.toLocaleString()} → ${current.traffic.toLocaleString()})`,
+                        color: '#8e44ad'
+                    });
+                    addOccupiedPeriod(current.date, current.date);
+                }
+                // 下台阶点（保持原逻辑）
+                else if (absoluteGrowth < -300 && growthRate < -0.5) {
+                    let sustainedDays = 0;
+                    const threshold = current.traffic * 1.2;
+                    for (let j = i; j < Math.min(i + 7, trafficData.length); j++) {
+                        if (trafficData[j].traffic <= threshold) {
+                            sustainedDays++;
+                        }
+                    }
+                    if (sustainedDays >= 3) {
+                        keyPoints.push({
+                            date: current.date,
+                            endDate: current.date,
+                            type: 'step_down',
+                            label: `下台阶 ${formatDate(current.date)}`,
+                            description: `流量水平从 ${previous.traffic.toLocaleString()} 下降至 ${current.traffic.toLocaleString()} (维持${sustainedDays}天+)`,
+                            color: '#007bff'
+                        });
+                        addOccupiedPeriod(current.date, current.date);
+                    }
+                }
+            }
+
+            // 3. 最后添加特殊节点（历史峰值和低谷）
+            const maxTraffic = Math.max(...trafficData.map(item => item.traffic));
+            const peakPoint = trafficData.find(item => item.traffic === maxTraffic);
+            if (peakPoint && maxTraffic > 1000 && !isTimeOverlap(peakPoint.date, peakPoint.date)) {
+                keyPoints.push({
+                    date: peakPoint.date,
+                    endDate: peakPoint.date,
+                    type: 'peak',
+                    label: `历史峰值 ${formatDate(peakPoint.date)}`,
+                    description: `达到最高访问量 ${maxTraffic.toLocaleString()}`,
+                    color: '#9b59b6'
+                });
+            }
+
+            const nonZeroTraffic = trafficData.filter(item => item.traffic > 0);
+            if (nonZeroTraffic.length > 30) {
+                const minTraffic = Math.min(...nonZeroTraffic.slice(15).map(item => item.traffic));
+                const valleyPoint = nonZeroTraffic.find(item => item.traffic === minTraffic);
+                if (valleyPoint && minTraffic < maxTraffic * 0.3 && !isTimeOverlap(valleyPoint.date, valleyPoint.date)) {
+                    keyPoints.push({
+                        date: valleyPoint.date,
+                        endDate: valleyPoint.date,
+                        type: 'valley',
+                        label: `历史低谷 ${formatDate(valleyPoint.date)}`,
+                        description: `降至最低访问量 ${minTraffic.toLocaleString()}`,
+                        color: '#34495e'
+                    });
+                }
+            }
+
+            // 保证上线节点始终作为第一个关键节点
+            if (launchDate) {
+                keyPoints.push({
+                    date: launchDate,
+                    endDate: launchDate,
+                    type: 'launch',
+                    label: `上线 ${formatDate(launchDate)}`,
+                    description: '首次有访问量',
+                    color: '#2ecc71'
+                });
+            }
+
+            // 按日期排序
+            keyPoints.sort((a, b) => new Date(a.date) - new Date(b.date));
+            // 保证上线节点始终在最前面
+            if (launchDate) {
+                const launchIdx = keyPoints.findIndex(kp => kp.type === 'launch');
+                if (launchIdx > 0) {
+                    const [launchNode] = keyPoints.splice(launchIdx, 1);
+                    keyPoints.unshift(launchNode);
+                }
+            }
+            // 补充：在下台阶前自动插入上台阶事件（如有必要）
+            let finalKeyPoints = [];
+            for (let i = 0; i < keyPoints.length; i++) {
+                const kp = keyPoints[i];
+                if (kp.type === 'step_down' && i > 0) {
+                    // 找前一个稳定期或上台阶
+                    let prev = keyPoints[i - 1];
+                    if (prev && (prev.type === 'stable_period' || prev.type === 'step_up')) {
+                        const prevAvg = prev.avg || prev.value || 0;
+                        // 解析下台阶起点
+                        let match = kp.description.match(/从 ([\d,]+)/);
+                        let stepDownStart = match ? parseInt(match[1].replace(/,/g, ''), 10) : 0;
+                        if (prevAvg > 0 && stepDownStart > prevAvg * 1.5) {
+                            finalKeyPoints.push({
+                                date: kp.date,
+                                endDate: kp.date,
+                                type: 'step_up',
+                                label: `上台阶 ${formatDate(kp.date)}`,
+                                description: `流量水平从 ${prevAvg.toLocaleString()} 提升至 ${stepDownStart.toLocaleString()}`,
+                                color: '#f39c12'
+                            });
+                        }
+                    }
+                }
+                finalKeyPoints.push(kp);
+            }
+            keyPoints = finalKeyPoints;
+            return keyPoints;
+        }
+
+        function renderResults(urlData, earliestDataDate) {
+            const resultsDiv = document.getElementById('results');
+            
+            // 创建汇总信息
+            const totalUrls = urlData.length;
+            const urlsWithTraffic = urlData.filter(item => item.totalTraffic > 0).length;
+            
+            let html = `
+                <div class="summary">
+                    <h3>📈 数据概览</h3>
+                    <p>共分析了 <strong>${totalUrls}</strong> 个URL，其中 <strong>${urlsWithTraffic}</strong> 个有访问量数据</p>
+                    ${earliestDataDate ? `<p>数据分析起始时间：<strong>${formatDate(earliestDataDate)}</strong> (首次有访问量的日期)</p>` : ''}
+                </div>
+            `;
+
+            // 按上线时间排序，最早的排在前面
+            urlData.sort((a, b) => {
+                // 没有上线时间的排在最后
+                if (!a.launchDate && !b.launchDate) return 0;
+                if (!a.launchDate) return 1;
+                if (!b.launchDate) return -1;
+                // 按上线时间从早到晚排序
+                return new Date(a.launchDate) - new Date(b.launchDate);
+            });
+
+            urlData.forEach((item, index) => {
+                const chartId = `chart-${index}`;
+                html += `
+                    <div class="url-card ${item.colorClass}">
+                        <div class="url-header">
+                            <div class="url-title">${item.url}</div>
+                            <div class="url-stats">
+                                ${item.launchDate ? `
+                                    <div class="stat-item">
+                                        <div class="stat-label">上线时间</div>
+                                        <div class="stat-value">${formatDate(item.launchDate)}</div>
+                                    </div>
+                                ` : ''}
+                                <div class="stat-item">
+                                    <div class="stat-label">总访问量</div>
+                                    <div class="stat-value">${item.totalTraffic.toLocaleString()}</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-label">峰值访问量</div>
+                                    <div class="stat-value">${item.maxTraffic.toLocaleString()}</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-label">平均访问量</div>
+                                    <div class="stat-value">${item.avgTraffic.toLocaleString()}</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-label">关键节点</div>
+                                    <div class="stat-value">${item.keyPoints.length}</div>
+                                </div>
+                            </div>
+                        </div>
+                        ${item.totalTraffic > 0 ? `
+                            ${item.keyPoints.length > 0 ? `
+                                <div class="key-points">
+                                    <h4>📍 关键时间节点</h4>
+                                    <div class="points-list">
+                                        ${item.keyPoints.map(point => `
+                                            <div class="point-item" style="border-left-color: ${point.color}">
+                                                <div class="point-label" style="color: ${point.color}">${point.label}</div>
+                                                <div class="point-desc">${point.description}</div>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            ` : ''}
+                            <div class="chart-container">
+                                <canvas id="${chartId}"></canvas>
+                            </div>
+                        ` : '<div class="no-data">该URL暂无访问量数据</div>'}
+                    </div>
+                `;
+            });
+
+            resultsDiv.innerHTML = html;
+
+            // 创建图表
+            urlData.forEach((item, index) => {
+                if (item.totalTraffic > 0) {
+                    createChart(`chart-${index}`, item);
+                }
+            });
+        }
+
+        function createChart(canvasId, urlData) {
+            const ctx = document.getElementById(canvasId);
+            if (!ctx) return;
+
+            // 准备关键点的注释
+            const annotations = urlData.keyPoints.map(point => {
+                const dataIndex = urlData.data.findIndex(item => item.date === point.date);
+                return {
+                    type: 'point',
+                    xValue: dataIndex,
+                    yValue: urlData.data[dataIndex]?.traffic || 0,
+                    backgroundColor: point.color,
+                    borderColor: point.color,
+                    borderWidth: 3,
+                    radius: 8,
+                    label: {
+                        display: true,
+                        content: point.label,
+                        position: 'top',
+                        backgroundColor: point.color,
+                        color: 'white',
+                        padding: 4,
+                        borderRadius: 4,
+                        font: {
+                            size: 10
+                        }
+                    }
+                };
+            });
+
+            const chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: urlData.data.map(item => formatDate(item.date)),
+                    datasets: [{
+                        label: '访问量',
+                        data: urlData.data.map(item => item.traffic),
+                        borderColor: urlData.color,
+                        backgroundColor: urlData.color + '20',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: urlData.color,
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        pointRadius: 4,
+                        pointHoverRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                afterBody: function(context) {
+                                    const dataIndex = context[0].dataIndex;
+                                    const date = urlData.data[dataIndex].date;
+                                    const keyPoint = urlData.keyPoints.find(point => point.date === date);
+                                    return keyPoint ? [`🎯 ${keyPoint.label}: ${keyPoint.description}`] : [];
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                color: '#e9ecef'
+                            },
+                            ticks: {
+                                maxTicksLimit: 10
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#e9ecef'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return value.toLocaleString();
+                                }
+                            }
+                        }
+                    },
+                    elements: {
+                        point: {
+                            hoverBackgroundColor: urlData.color
+                        }
+                    },
+                    interaction: {
+                        intersect: false,
+                        mode: 'index'
+                    },
+                    onHover: (event, activeElements) => {
+                        event.native.target.style.cursor = activeElements.length > 0 ? 'pointer' : 'default';
+                        
+                        // 高亮关键点
+                        if (activeElements.length > 0) {
+                            const dataIndex = activeElements[0].index;
+                            const date = urlData.data[dataIndex].date;
+                            const isKeyPoint = urlData.keyPoints.some(point => point.date === date);
+                            if (isKeyPoint) {
+                                event.native.target.style.cursor = 'help';
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 手动添加关键点标记
+            urlData.keyPoints.forEach(point => {
+                const dataIndex = urlData.data.findIndex(item => item.date === point.date);
+                if (dataIndex !== -1) {
+                    // 修改对应点的样式
+                    chart.data.datasets[0].pointBackgroundColor = chart.data.datasets[0].pointBackgroundColor || [];
+                    chart.data.datasets[0].pointBorderColor = chart.data.datasets[0].pointBorderColor || [];
+                    chart.data.datasets[0].pointRadius = chart.data.datasets[0].pointRadius || [];
+                    
+                    if (Array.isArray(chart.data.datasets[0].pointBackgroundColor)) {
+                        chart.data.datasets[0].pointBackgroundColor[dataIndex] = point.color;
+                        chart.data.datasets[0].pointBorderColor[dataIndex] = '#fff';
+                        chart.data.datasets[0].pointRadius[dataIndex] = 8;
+                    }
+                }
+            });
+
+            chart.update();
+            chartInstances.push(chart);
+        }
+
+        function formatDate(dateStr) {
+            try {
+                const date = new Date(dateStr);
+                return date.toLocaleDateString('zh-CN', {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit'
+                });
+            } catch (e) {
+                return dateStr;
+            }
+        }
+    </script>
+</body>
+</html>
