@@ -151,8 +151,8 @@
         
 
         <div class="input-group">
-            <label for="allintitle">Allintitle搜索结果数量:</label>
-            <input type="number" id="allintitle" placeholder="输入allintitle搜索结果数量" min="0">
+            <label for="intitle">intitle搜索结果数量:</label>
+            <input type="number" id="intitle" placeholder="输入intitle搜索结果数量" min="0">
             <div class="info-tooltip">标题中包含完整关键词的页面数量</div>
         </div>
 
@@ -212,7 +212,7 @@
                     <text x="0" y="0" font-size="20" font-weight="bold">KGR (Keyword Golden Ratio):</text>
                     <text x="300" y="0" font-size="20">= </text>
                     <line x1="320" y1="-5" x2="520" y2="-5" stroke="#333" stroke-width="2"/>
-                    <text x="420" y="-15" text-anchor="middle" font-size="20">allintitle results</text>
+                    <text x="420" y="-15" text-anchor="middle" font-size="20">intitle results</text>
                     <text x="420" y="20" text-anchor="middle" font-size="20">monthly search volume</text>
                 </g>
                 
@@ -221,7 +221,7 @@
                     <text x="0" y="0" font-size="20" font-weight="bold">EKGR (Enhanced KGR):</text>
                     <text x="300" y="0" font-size="20">= </text>
                     <line x1="320" y1="-5" x2="620" y2="-5" stroke="#333" stroke-width="2"/>
-                    <text x="470" y="-15" text-anchor="middle" font-size="20">allintitle × (1 + KD/100)</text>
+                    <text x="470" y="-15" text-anchor="middle" font-size="20">intitle × (1 + KD/100)</text>
                     <text x="470" y="20" text-anchor="middle" font-size="20">monthly search volume</text>
                 </g>
 
@@ -342,11 +342,11 @@
         }
 
         function calculateAll() {
-            const allintitle = parseFloat(document.getElementById('allintitle').value);
+            const intitle = parseFloat(document.getElementById('intitle').value);
             const searchVolume = parseFloat(document.getElementById('searchVolume').value);
             const kd = parseFloat(document.getElementById('kd').value);
             
-            if (isNaN(allintitle) || isNaN(searchVolume) || isNaN(kd)) {
+            if (isNaN(intitle) || isNaN(searchVolume) || isNaN(kd)) {
                 alert('请填写所有必填字段！');
                 return;
             }
@@ -362,20 +362,20 @@
             }
 
             // Calculate KGR
-            const kgr = allintitle / searchVolume;
+            const kgr = intitle / searchVolume;
             document.getElementById('kgr-calculation').innerHTML = `
-                KGR = allintitle / 月搜索量<br>
-                = ${allintitle} / ${searchVolume}<br>
+                KGR = intitle / 月搜索量<br>
+                = ${intitle} / ${searchVolume}<br>
                 = ${kgr.toFixed(3)}
             `;
             document.getElementById('kgrValue').textContent = kgr.toFixed(3);
             
             // Calculate EKGR
             const kdFactor = 1 + (kd / 100);
-            const ekgr = (allintitle * kdFactor) / searchVolume;
+            const ekgr = (intitle * kdFactor) / searchVolume;
             document.getElementById('ekgr-calculation').innerHTML = `
-                EKGR = (allintitle × (1 + KD/100)) / 月搜索量<br>
-                = (${allintitle} × ${kdFactor.toFixed(2)}) / ${searchVolume}<br>
+                EKGR = (intitle × (1 + KD/100)) / 月搜索量<br>
+                = (${intitle} × ${kdFactor.toFixed(2)}) / ${searchVolume}<br>
                 = ${ekgr.toFixed(3)}
             `;
             document.getElementById('ekgrValue').textContent = ekgr.toFixed(3);
@@ -446,7 +446,7 @@
             
 
             // Add detailed analysis to each metric
-            kgrRec.innerHTML += `<br><br>附加分析:<br>• 每个结果的月均搜索量: ${(searchVolume/allintitle).toFixed(1)}`;
+            kgrRec.innerHTML += `<br><br>附加分析:<br>• 每个结果的月均搜索量: ${(searchVolume/intitle).toFixed(1)}`;
             
             ekgrRec.innerHTML += `<br><br>附加分析:
                 <br>• KD系数: ${kdFactor.toFixed(2)}
