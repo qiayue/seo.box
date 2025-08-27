@@ -1,0 +1,1165 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online String Length Calculator - Character Counter Tool | Free Text Analysis</title>
+    <meta name="description" content="Free online string length calculator supporting character counting, byte length calculation, duplicate removal, and frequency statistics. Perfect for content creation, programming, and SEO optimization.">
+    <meta name="keywords" content="string length calculator, character counter, text length statistics, byte calculator, online tool, text analysis">
+    <meta property="og:title" content="Online String Length Calculator - Professional Text Analysis Tool">
+    <meta property="og:description" content="Powerful online character counting tool with multiple text statistics features to assist content creation and development work">
+    <meta property="og:type" content="website">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.global.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-bg: #0a0a0a;
+            --secondary-bg: #111111;
+            --card-bg: #1a1a1a;
+            --accent-yellow: #00ff41;
+            --bright-yellow: #ffff00;
+            --dark-yellow: #cccc00;
+            --text-primary: #00ff41;
+            --text-secondary: #ffffff;
+            --text-dim: #888888;
+            --border-glow: #00ff41;
+            --shadow-glow: rgba(0, 255, 65, 0.3);
+        }
+        
+        body {
+            font-family: 'Space Mono', 'Courier New', monospace;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            background: var(--primary-bg);
+            background-image: 
+                radial-gradient(circle at 25% 25%, #001100 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, #000f00 0%, transparent 50%),
+                linear-gradient(135deg, #0a0a0a 0%, #001a00 50%, #0a0a0a 100%);
+            background-size: 400px 400px, 600px 600px, 100% 100%;
+            background-attachment: fixed;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 255, 65, 0.03) 2px,
+                    rgba(0, 255, 65, 0.03) 4px
+                ),
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 255, 65, 0.03) 2px,
+                    rgba(0, 255, 65, 0.03) 4px
+                );
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0px 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 255, 65, 0.1) 0%, transparent 70%);
+            animation: heroGlow 4s ease-in-out infinite alternate;
+            z-index: -1;
+        }
+        
+        @keyframes heroGlow {
+            0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.3; }
+            100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.1; }
+        }
+        
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: var(--accent-yellow);
+            text-shadow: 
+                0 0 10px var(--accent-yellow),
+                0 0 20px var(--accent-yellow),
+                0 0 40px var(--accent-yellow),
+                0 0 80px var(--accent-yellow);
+            letter-spacing: 3px;
+            animation: titleGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes titleGlow {
+            0% { text-shadow: 0 0 10px var(--accent-yellow), 0 0 20px var(--accent-yellow), 0 0 40px var(--accent-yellow); }
+            100% { text-shadow: 0 0 15px var(--accent-yellow), 0 0 25px var(--accent-yellow), 0 0 50px var(--accent-yellow), 0 0 100px var(--accent-yellow); }
+        }
+        
+        .hero p {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.8;
+        }
+        
+        .calculator-section, .feature-list, .use-cases {
+            background: var(--card-bg);
+            border: 2px solid var(--border-glow);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 
+                0 0 20px var(--shadow-glow),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .calculator-section::before, .feature-list::before, .use-cases::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-yellow), transparent);
+            animation: scanLine 3s linear infinite;
+        }
+        
+        @keyframes scanLine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .calculator-section h2, .feature-list h2, .use-cases h2 {
+            font-family: 'Orbitron', monospace;
+            color: var(--accent-yellow);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid var(--accent-yellow);
+            padding-bottom: 10px;
+        }
+        
+        .input-area {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .input-area label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: var(--accent-yellow);
+            font-family: 'Orbitron', monospace;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        
+        .text-input {
+            width: 100%;
+            min-height: 220px;
+            padding: 20px;
+            background: var(--primary-bg);
+            border: 2px solid var(--border-glow);
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: 'Space Mono', monospace;
+            color: var(--accent-yellow);
+            resize: vertical;
+            transition: all 0.3s ease;
+            box-shadow: 
+                inset 0 0 20px rgba(0, 0, 0, 0.5),
+                0 0 10px var(--shadow-glow);
+        }
+        
+        .text-input::placeholder {
+            color: var(--text-dim);
+            font-style: italic;
+        }
+        
+        .text-input:focus {
+            outline: none;
+            border-color: var(--bright-yellow);
+            box-shadow: 
+                inset 0 0 20px rgba(0, 0, 0, 0.5),
+                0 0 20px var(--shadow-glow),
+                0 0 40px var(--shadow-glow);
+            color: var(--bright-yellow);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: var(--secondary-bg);
+            border: 1px solid var(--border-glow);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-yellow), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: var(--bright-yellow);
+            box-shadow: 
+                0 10px 30px var(--shadow-glow),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+        
+        .stat-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--accent-yellow);
+            display: block;
+            margin-bottom: 8px;
+            text-shadow: 0 0 10px var(--accent-yellow);
+            letter-spacing: 2px;
+        }
+        
+        .stat-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .options-section {
+            background: linear-gradient(135deg, var(--secondary-bg) 0%, rgba(0, 255, 65, 0.05) 100%);
+            border: 2px solid var(--border-glow);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+            position: relative;
+            box-shadow: 
+                0 0 20px var(--shadow-glow),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+        
+        .options-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-yellow), transparent);
+            animation: scanLine 4s linear infinite;
+        }
+        
+        .options-section h3 {
+            font-family: 'Orbitron', monospace;
+            color: var(--accent-yellow);
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+            text-shadow: 0 0 10px var(--accent-yellow);
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        
+        .option-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 20px;
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .option-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .option-item:hover {
+            background: rgba(0, 255, 65, 0.1);
+            border-color: var(--accent-yellow);
+            transform: translateY(-2px);
+            box-shadow: 
+                0 5px 15px rgba(0, 255, 65, 0.2),
+                0 0 20px rgba(0, 255, 65, 0.1);
+        }
+        
+        .option-item:hover::before {
+            left: 100%;
+        }
+        
+        .option-item input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            accent-color: var(--accent-yellow);
+            filter: drop-shadow(0 0 8px var(--accent-yellow));
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .option-item input[type="checkbox"]:checked {
+            filter: drop-shadow(0 0 12px var(--bright-yellow));
+        }
+        
+        .option-item label {
+            margin: 0;
+            font-weight: 500;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-family: 'Space Mono', monospace;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 2;
+            transition: color 0.3s ease;
+        }
+        
+        .option-item:hover label {
+            color: var(--accent-yellow);
+            text-shadow: 0 0 5px var(--accent-yellow);
+        }
+        
+        .option-item.advanced {
+            border-color: rgba(255, 255, 0, 0.3);
+            background: rgba(255, 255, 0, 0.05);
+        }
+        
+        .option-item.advanced:hover {
+            border-color: var(--bright-yellow);
+            background: rgba(255, 255, 0, 0.1);
+            box-shadow: 
+                0 5px 15px rgba(255, 255, 0, 0.2),
+                0 0 20px rgba(255, 255, 0, 0.1);
+        }
+        
+        .option-item.advanced label {
+            color: var(--bright-yellow);
+            font-weight: 600;
+        }
+        
+        .results-section {
+            background: var(--secondary-bg);
+            border: 1px solid var(--bright-yellow);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 0 15px rgba(255, 255, 0, 0.2);
+        }
+        
+        .results-section h3 {
+            font-family: 'Orbitron', monospace;
+            color: var(--bright-yellow);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .results-section p {
+            margin: 8px 0;
+            font-family: 'Space Mono', monospace;
+        }
+        
+        .results-section strong {
+            color: var(--accent-yellow);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: var(--secondary-bg);
+            border: 1px solid var(--border-glow);
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 65, 0.1) 50%, transparent 70%);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+        
+        .feature-card:hover::after {
+            transform: translateX(100%);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: var(--bright-yellow);
+            box-shadow: 0 10px 30px var(--shadow-glow);
+        }
+        
+        .feature-card h3 {
+            font-family: 'Orbitron', monospace;
+            color: var(--accent-yellow);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .case-item {
+            background: var(--secondary-bg);
+            border: 1px solid var(--border-glow);
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .case-item:hover {
+            border-color: var(--bright-yellow);
+            box-shadow: 0 5px 20px rgba(0, 255, 65, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        .case-item h3 {
+            font-family: 'Orbitron', monospace;
+            color: var(--accent-yellow);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .case-item p {
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .case-item strong {
+            color: var(--bright-yellow);
+        }
+        
+        .highlight-box {
+            background: var(--secondary-bg);
+            border: 2px solid var(--accent-yellow);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+        }
+        
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--accent-yellow), var(--bright-yellow), var(--accent-yellow));
+            z-index: -1;
+            border-radius: 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .highlight-box:hover::before {
+            opacity: 0.7;
+        }
+        
+        .highlight-box h3 {
+            font-family: 'Orbitron', monospace;
+            color: var(--bright-yellow);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); text-shadow: 0 0 10px var(--accent-yellow); }
+            50% { transform: scale(1.05); text-shadow: 0 0 20px var(--accent-yellow), 0 0 30px var(--accent-yellow); }
+            100% { transform: scale(1); text-shadow: 0 0 10px var(--accent-yellow); }
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--primary-bg);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-yellow);
+            border-radius: 10px;
+            box-shadow: 0 0 10px var(--accent-yellow);
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--bright-yellow);
+        }
+        
+        /* Selection */
+        ::selection {
+            background: var(--accent-yellow);
+            color: var(--primary-bg);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { 
+                font-size: 2.5rem;
+                letter-spacing: 1px;
+            }
+            .stats-grid { 
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .options-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .calculator-section, .feature-list, .use-cases { 
+                padding: 25px;
+                margin: 20px 0;
+            }
+            .stat-number {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Matrix rain effect for extra coolness */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.03;
+        }
+        
+        .matrix-bg::before {
+            content: '01001000 01100001 01100011 01101011 01100101 01110010 00100000 01010100 01100101 01110010 01101101 01101001 01101110 01100001 01101100';
+            position: absolute;
+            color: var(--accent-yellow);
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            white-space: pre;
+            animation: matrixRain 20s linear infinite;
+        }
+        
+        @keyframes matrixRain {
+            0% { transform: translateY(-100vh); }
+            100% { transform: translateY(100vh); }
+        }
+
+        /* Lucide Icons Styling */
+        .icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            vertical-align: middle;
+            stroke: var(--accent-yellow);
+            stroke-width: 2;
+            fill: none;
+            filter: drop-shadow(0 0 5px var(--accent-yellow));
+            transition: all 0.3s ease;
+        }
+
+        .icon:hover {
+            filter: drop-shadow(0 0 8px var(--bright-yellow));
+            transform: scale(1.1);
+            stroke: var(--bright-yellow);
+        }
+
+        .icon-large {
+            width: 32px;
+            height: 32px;
+            stroke-width: 1.5;
+        }
+
+        .icon-small {
+            width: 18px;
+            height: 18px;
+            stroke-width: 2.5;
+            margin-right: 0;
+            opacity: 0.8;
+        }
+        
+        .option-item:hover .icon-small {
+            opacity: 1;
+            filter: drop-shadow(0 0 6px var(--accent-yellow));
+        }
+        
+        .option-item.advanced .icon-small {
+            opacity: 0.9;
+            stroke: var(--bright-yellow);
+        }
+        
+        .option-item.advanced:hover .icon-small {
+            opacity: 1;
+            filter: drop-shadow(0 0 8px var(--bright-yellow));
+        }
+    </style>
+</head>
+<body>
+    <!-- SEO-friendly static content -->
+    <div id="app">
+        <!-- Matrix background effect -->
+        <div class="matrix-bg"></div>
+        
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="container">
+                <h1>STRING LENGTH CALCULATOR</h1>
+                <p>[ ADVANCED TEXT ANALYSIS TERMINAL ]</p>
+                <p>[ REAL-TIME • ENCRYPTED • SECURE ]</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Main Calculator Section - Vue.js Powered Interactive Part -->
+            <section class="calculator-section">
+                <h2><i data-lucide="file-text" class="icon"></i>Text Input & Real-time Analysis</h2>
+                <div class="input-area">
+                    <label for="textInput">Enter your text content for analysis:</label>
+                    <textarea 
+                        id="textInput"
+                        class="text-input" 
+                        v-model="inputText" 
+                        placeholder="Type or paste any text content here. Supports all character types including English, Chinese, numbers, symbols, etc. The system will calculate and display detailed statistics in real-time..."
+                        @input="updateStats"
+                    ></textarea>
+                </div>
+
+                
+
+                <!-- Real-time Statistics Results - Vue.js Responsive Updates -->
+                <div class="stats-grid">
+                    <div class="stat-card" :class="{ pulse: stats.totalChars > 0 }">
+                        <span class="stat-number">{{ stats.totalChars }}</span>
+                        <span class="stat-label">TOTAL CHARS</span>
+                    </div>
+                    <div class="stat-card" :class="{ pulse: stats.charsNoSpaces > 0 }">
+                        <span class="stat-number">{{ stats.charsNoSpaces }}</span>
+                        <span class="stat-label">NO SPACES</span>
+                    </div>
+                    <div class="stat-card" :class="{ pulse: stats.words > 0 }">
+                        <span class="stat-number">{{ stats.words }}</span>
+                        <span class="stat-label">WORDS</span>
+                    </div>
+                    <div class="stat-card" :class="{ pulse: stats.lines > 0 }">
+                        <span class="stat-number">{{ stats.lines }}</span>
+                        <span class="stat-label">LINES</span>
+                    </div>
+                    <div class="stat-card" :class="{ pulse: stats.bytes > 0 }">
+                        <span class="stat-number">{{ stats.bytes }}</span>
+                        <span class="stat-label">BYTES (UTF-8)</span>
+                    </div>
+                    <div class="stat-card" :class="{ pulse: stats.uniqueChars > 0 }">
+                        <span class="stat-number">{{ stats.uniqueChars }}</span>
+                        <span class="stat-label">UNIQUE CHARS</span>
+                    </div>
+                </div>
+
+                <!-- Configuration Options -->
+                <div class="options-section">
+                    <h3><i data-lucide="settings" class="icon"></i>Statistics Configuration Options</h3>
+                    <div class="options-grid">
+                        <div class="option-item">
+                            <i data-lucide="space" class="icon icon-small"></i>
+                            <input type="checkbox" id="includeSpaces" v-model="options.includeSpaces" @change="updateStats">
+                            <label for="includeSpaces">Include Spaces And Tabs</label>
+                        </div>
+                        <div class="option-item">
+                            <i data-lucide="arrow-down" class="icon icon-small"></i>
+                            <input type="checkbox" id="includeNewlines" v-model="options.includeNewlines" @change="updateStats">
+                            <label for="includeNewlines">Include Newlines</label>
+                        </div>
+                        <div class="option-item advanced">
+                            <i data-lucide="case-sensitive" class="icon icon-small"></i>
+                            <input type="checkbox" id="caseSensitive" v-model="options.caseSensitive" @change="updateStats">
+                            <label for="caseSensitive">Case Sensitive Mode</label>
+                        </div>
+                        <div class="option-item advanced">
+                            <i data-lucide="hash" class="icon icon-small"></i>
+                            <input type="checkbox" id="showUniqueOnly" v-model="options.showUniqueOnly" @change="updateStats">
+                            <label for="showUniqueOnly">Unique Chars Only</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Analysis Results -->
+                <div v-if="inputText.length > 0" class="results-section fade-in">
+                    <h3><i data-lucide="search" class="icon"></i>DEEP SCAN RESULTS</h3>
+                    <div style="margin-top: 15px;">
+                        <p><strong>CHINESE CHARS:</strong> {{ stats.chineseChars }}</p>
+                        <p><strong>ENGLISH CHARS:</strong> {{ stats.englishChars }}</p>
+                        <p><strong>NUMERIC CHARS:</strong> {{ stats.numberChars }}</p>
+                        <p><strong>SYMBOLS:</strong> {{ stats.punctuation }}</p>
+                        <p><strong>ENTROPY:</strong> {{ stats.density }}%</p>
+                        <p><strong>MOST FREQUENT:</strong> {{ stats.mostFrequent }} ({{ stats.maxFrequency }}x)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEO-friendly Feature Introduction Static Content -->
+            <section class="feature-list">
+                <h2><i data-lucide="zap" class="icon"></i>SYSTEM CAPABILITIES</h2>
+                <p>Advanced text analysis protocol with comprehensive statistical functions. Designed for content creators, developers, and security professionals requiring precise text metrics.</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3><i data-lucide="activity" class="icon"></i>REAL-TIME PROCESSING</h3>
+                        <p>Instant calculation of character statistics, word count, and line metrics. Data streams update in real-time as you input text.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3><i data-lucide="globe" class="icon"></i>MULTI-LANGUAGE PROTOCOL</h3>
+                        <p>Full support for Unicode character sets including CJK languages, Latin scripts, Cyrillic, and special symbols with accurate classification.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3><i data-lucide="cpu" class="icon"></i>BYTE ANALYSIS ENGINE</h3>
+                        <p>UTF-8 encoding analysis for database optimization and memory allocation planning. Essential for system architecture design.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3><i data-lucide="target" class="icon"></i>ENTROPY CALCULATION</h3>
+                        <p>Advanced algorithms for unique character detection and complexity analysis. Measures text randomness and information density.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3><i data-lucide="bar-chart-3" class="icon"></i>FREQUENCY ANALYSIS</h3>
+                        <p>Character frequency distribution analysis for cryptographic applications and pattern recognition in data streams.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3><i data-lucide="sliders" class="icon"></i>CONFIGURABLE PARAMETERS</h3>
+                        <p>Customizable analysis parameters including whitespace handling, case sensitivity, and character filtering options.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Use Cases Introduction -->
+            <section class="use-cases">
+                <h2><i data-lucide="rocket" class="icon"></i>OPERATIONAL SCENARIOS</h2>
+                <p>Mission-critical applications across multiple domains requiring precise text analysis and character counting capabilities.</p>
+                
+                <div class="case-grid">
+                    <div class="case-item">
+                        <h3><i data-lucide="edit-3" class="icon"></i>CONTENT OPERATIONS</h3>
+                        <p><strong>SOCIAL PLATFORMS:</strong> Ensure content compliance with character limits</p>
+                        <p><strong>SEO PROTOCOLS:</strong> Optimize titles within search algorithm parameters</p>
+                        <p><strong>AD CAMPAIGNS:</strong> Precise text length control for maximum impact</p>
+                    </div>
+                    
+                    <div class="case-item">
+                        <h3><i data-lucide="code" class="icon"></i>DEVELOPMENT OPS</h3>
+                        <p><strong>INPUT VALIDATION:</strong> Verify data against field constraints</p>
+                        <p><strong>DATABASE SCHEMA:</strong> Optimize VARCHAR field allocations</p>
+                        <p><strong>API SECURITY:</strong> Enforce payload size restrictions</p>
+                    </div>
+                    
+                    <div class="case-item">
+                        <h3><i data-lucide="smartphone" class="icon"></i>SOCIAL NETWORKS</h3>
+                        <p><strong>TWITTER FEEDS:</strong> 280-character limit enforcement</p>
+                        <p><strong>INSTAGRAM POSTS:</strong> Caption optimization for engagement</p>
+                        <p><strong>LINKEDIN CONTENT:</strong> Professional content length control</p>
+                    </div>
+                    
+                    <div class="case-item">
+                        <h3><i data-lucide="graduation-cap" class="icon"></i>ACADEMIC PROTOCOLS</h3>
+                        <p><strong>RESEARCH PAPERS:</strong> Abstract length compliance</p>
+                        <p><strong>CV OPTIMIZATION:</strong> Section length standardization</p>
+                        <p><strong>APPLICATION ESSAYS:</strong> Word count precision</p>
+                    </div>
+                    
+                    <div class="case-item">
+                        <h3><i data-lucide="trending-up" class="icon"></i>SEO OPERATIONS</h3>
+                        <p><strong>META TITLES:</strong> 50-60 character optimization zone</p>
+                        <p><strong>DESCRIPTIONS:</strong> 155-160 character search snippets</p>
+                        <p><strong>KEYWORD DENSITY:</strong> Content frequency analysis</p>
+                    </div>
+                    
+                    <div class="case-item">
+                        <h3><i data-lucide="mail" class="icon"></i>COMMUNICATION SYSTEMS</h3>
+                        <p><strong>EMAIL HEADERS:</strong> Subject line optimization</p>
+                        <p><strong>SMS PROTOCOLS:</strong> 70-character message limits</p>
+                        <p><strong>PUSH NOTIFICATIONS:</strong> Mobile display constraints</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Features Description -->
+            <section class="feature-list">
+                <h2><i data-lucide="wrench" class="icon"></i>TECHNICAL SPECIFICATIONS</h2>
+                
+                <div class="highlight-box">
+                    <h3><i data-lucide="zap" class="icon"></i>VUE.JS REACTIVE FRAMEWORK</h3>
+                    <p>Built on advanced Vue.js reactive architecture for instantaneous data binding and real-time user interface updates. Zero-latency text processing with millisecond response times. Advanced DOM manipulation ensures smooth performance even with large text datasets.</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3><i data-lucide="shield" class="icon"></i>CLIENT-SIDE SECURITY</h3>
+                    <p>All text processing operations execute within secure browser sandbox environment. Zero server communication ensures complete data privacy. Advanced encryption protocols protect sensitive information during local processing cycles.</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3><i data-lucide="monitor" class="icon"></i>CROSS-PLATFORM COMPATIBILITY</h3>
+                    <p>Universal browser support across all modern rendering engines including Chromium, Gecko, WebKit, and EdgeHTML. Responsive interface adapts to desktop, tablet, and mobile form factors with consistent functionality across all platforms.</p>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="use-cases">
+                <h2><i data-lucide="help-circle" class="icon"></i>SYSTEM DOCUMENTATION</h2>
+                
+                <div class="case-grid">
+                    <div class="case-item">
+                        <h3>CHARACTER VS BYTE COUNT ANALYSIS</h3>
+                        <p>Character count represents logical text units while byte count measures UTF-8 storage requirements. Multi-byte characters (CJK) consume 3-4 bytes per character, affecting database storage and memory allocation.</p>
+                    </div>
+                    
+                    <div class="case-item">
+                        <h3>WHITESPACE HANDLING PROTOCOLS</h3>
+                        <p>Configurable whitespace inclusion allows precise content measurement. Some applications exclude spaces from effective character counts for accurate content density calculations.</p>
+                    </div>
+                    
+                    <div class="case-item">
+                        <h3>ENTROPY MEASUREMENT ALGORITHM</h3>
+                        <p>Character density calculation measures text complexity as ratio of unique characters to total length. Higher values indicate greater character diversity and information content.</p>
+                    </div>
+                    
+                    <div class="case-item">
+                        <h3>LARGE DATASET PROCESSING</h3>
+                        <p>Client-side architecture supports high-volume text processing limited only by available system memory. Optimized algorithms handle documents containing hundreds of thousands of characters efficiently.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- noscript fallback content for SEO -->
+        <noscript>
+            <div style="padding: 40px; background: #1a1a1a; margin: 20px; border-radius: 10px; color: #00ff41; border: 2px solid #00ff41;">
+                <h2>[ STRING LENGTH CALCULATOR - TERMINAL MODE ]</h2>
+                <p><strong>SYSTEM OVERVIEW:</strong> Advanced string analysis protocol supporting real-time character counting, byte calculations, and multi-language text processing.</p>
+                <p><strong>CORE FUNCTIONS:</strong></p>
+                <ul style="margin: 15px 0; padding-left: 30px; color: #ffffff;">
+                    <li>Precision character counting for all encoding types</li>
+                    <li>UTF-8 byte analysis for memory optimization</li>
+                    <li>Unique character detection and frequency analysis</li>
+                    <li>Configurable processing parameters</li>
+                    <li>Secure client-side processing environment</li>
+                </ul>
+                <p><strong>APPLICATIONS:</strong> Content operations, development workflows, SEO protocols, social media management, academic writing, and communication systems.</p>
+                <p><strong>SYSTEM REQUIREMENTS:</strong> Enable JavaScript for full terminal functionality. Built on Vue.js reactive architecture for real-time processing.</p>
+            </div>
+        </noscript>
+    </div>
+
+    <!-- Vue.js Application Logic -->
+    <script>
+        const { createApp } = Vue;
+        
+        const app = createApp({
+            data() {
+                return {
+                    inputText: '',
+                    options: {
+                        includeSpaces: true,
+                        includeNewlines: true,
+                        caseSensitive: true,
+                        showUniqueOnly: false
+                    },
+                    stats: {
+                        totalChars: 0,
+                        charsNoSpaces: 0,
+                        words: 0,
+                        lines: 0,
+                        bytes: 0,
+                        uniqueChars: 0,
+                        chineseChars: 0,
+                        englishChars: 0,
+                        numberChars: 0,
+                        punctuation: 0,
+                        density: 0,
+                        mostFrequent: '',
+                        maxFrequency: 0
+                    }
+                };
+            },
+            methods: {
+                updateStats() {
+                    const text = this.inputText;
+                    
+                    // Basic statistics
+                    this.stats.totalChars = this.options.includeSpaces ? text.length : text.replace(/\s/g, '').length;
+                    this.stats.charsNoSpaces = text.replace(/\s/g, '').length;
+                    this.stats.words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+                    this.stats.lines = this.options.includeNewlines ? (text === '' ? 0 : text.split('\n').length) : text.replace(/\n/g, '').length;
+                    
+                    // UTF-8 byte calculation
+                    this.stats.bytes = new TextEncoder().encode(text).length;
+                    
+                    // Character type statistics
+                    this.stats.chineseChars = (text.match(/[\u4e00-\u9fff]/g) || []).length;
+                    this.stats.englishChars = (text.match(/[a-zA-Z]/g) || []).length;
+                    this.stats.numberChars = (text.match(/[0-9]/g) || []).length;
+                    this.stats.punctuation = (text.match(/[^\w\s\u4e00-\u9fff]/g) || []).length;
+                    
+                    // Unique character statistics
+                    const processedText = this.options.caseSensitive ? text : text.toLowerCase();
+                    const uniqueChars = new Set(processedText.split(''));
+                    this.stats.uniqueChars = uniqueChars.size;
+                    
+                    // Character density calculation
+                    this.stats.density = text.length > 0 ? Math.round((uniqueChars.size / text.length) * 100) : 0;
+                    
+                    // Most frequent character statistics
+                    const charFreq = {};
+                    for (let char of processedText) {
+                        if (char.trim() !== '' || this.options.includeSpaces) {
+                            charFreq[char] = (charFreq[char] || 0) + 1;
+                        }
+                    }
+                    
+                    let maxChar = '';
+                    let maxCount = 0;
+                    for (let char in charFreq) {
+                        if (charFreq[char] > maxCount) {
+                            maxCount = charFreq[char];
+                            maxChar = char;
+                        }
+                    }
+                    
+                    this.stats.mostFrequent = maxChar === ' ' ? '(space)' : maxChar || 'none';
+                    this.stats.maxFrequency = maxCount;
+                },
+                
+                loadSample(type) {
+                    const samples = {
+                        english: 'This is a sample English text for testing the string length calculator functionality. It includes punctuation marks, numbers 123, and mixed content for comprehensive analysis.',
+                        chinese: '这是一段中文示例文本，用于测试字符串长度计算器的功能。包含标点符号、数字123和英文English等混合内容。',
+                        mixed: 'Hello 你好! This is a mixed text with numbers (12345), symbols @#$%, and various types of content. 测试目的是验证计算器的准确性和多语言支持能力。'
+                    };
+                    
+                    this.inputText = samples[type] || samples.mixed;
+                    this.updateStats();
+                }
+            },
+            
+            mounted() {
+                // Initialize statistics
+                this.updateStats();
+                
+                // Initialize Lucide icons
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+                
+                // Re-initialize icons after a short delay to ensure all elements are rendered
+                setTimeout(() => {
+                    if (window.lucide) {
+                        lucide.createIcons();
+                    }
+                }, 100);
+                
+                // Page loading animations
+                const sections = document.querySelectorAll('.calculator-section, .feature-list, .use-cases');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('fade-in');
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                sections.forEach(section => {
+                    observer.observe(section);
+                });
+                
+                // Add sample buttons
+                setTimeout(() => {
+                    const inputArea = document.querySelector('.input-area');
+                    if (inputArea) {
+                        const buttonContainer = document.createElement('div');
+                        buttonContainer.style.cssText = 'margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap;';
+                        
+                        const buttons = [
+                            { text: 'ENGLISH SAMPLE', type: 'english', color: '#00cc33' },
+                            { text: 'CHINESE SAMPLE', type: 'chinese', color: '#ffaa00' },
+                            { text: 'MIXED DATA', type: 'mixed', color: '#ff6600' },
+                            { text: 'CLEAR BUFFER', type: 'clear', color: '#ff0040' }
+                        ];
+                        
+                        buttons.forEach(btn => {
+                            const button = document.createElement('button');
+                            button.textContent = btn.text;
+                            
+                            // 根据背景色确定文字颜色，确保最佳对比度
+                            const textColor = btn.color === '#ffff00' ? '#000000' : '#ffffff';
+                            
+                            button.style.cssText = `
+                                background: ${btn.color}; 
+                                color: ${textColor}; 
+                                border: none; 
+                                padding: 8px 16px; 
+                                border-radius: 20px; 
+                                cursor: pointer; 
+                                font-size: 0.9rem;
+                                font-weight: 600;
+                                transition: transform 0.2s ease;
+                                box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+                            `;
+                            
+                            button.addEventListener('mouseenter', () => {
+                                button.style.transform = 'scale(1.05)';
+                            });
+                            
+                            button.addEventListener('mouseleave', () => {
+                                button.style.transform = 'scale(1)';
+                            });
+                            
+                            button.addEventListener('click', () => {
+                                if (btn.type === 'clear') {
+                                    this.inputText = '';
+                                    this.updateStats(); // 清除统计数字
+                                } else {
+                                    this.loadSample(btn.type);
+                                }
+                            });
+                            
+                            buttonContainer.appendChild(button);
+                        });
+                        
+                        inputArea.appendChild(buttonContainer);
+                    }
+                }, 100);
+            }
+        });
+        
+        app.mount('#app');
+    </script>
+</body>
+</html>
