@@ -851,7 +851,7 @@
                         id="textInput"
                         class="text-input" 
                         v-model="inputText" 
-                        placeholder="Type or paste any text content here. Supports all character types including English, Chinese, numbers, symbols, etc. The system will calculate and display detailed statistics in real-time..."
+                        placeholder="Type or paste any text content here. Supports all character types including English, CJK languages, numbers, symbols, etc. The system will calculate and display detailed statistics in real-time..."
                         @input="updateStats"
                     ></textarea>
                 </div>
@@ -917,7 +917,7 @@
                 <div v-if="inputText.length > 0" class="results-section fade-in">
                     <h3><i data-lucide="search" class="icon"></i>DEEP SCAN RESULTS</h3>
                     <div style="margin-top: 15px;">
-                        <p><strong>CHINESE CHARS:</strong> {{ stats.chineseChars }}</p>
+                        <p><strong>CJK CHARS:</strong> {{ stats.cjkChars }}</p>
                         <p><strong>ENGLISH CHARS:</strong> {{ stats.englishChars }}</p>
                         <p><strong>NUMERIC CHARS:</strong> {{ stats.numberChars }}</p>
                         <p><strong>SYMBOLS:</strong> {{ stats.punctuation }}</p>
@@ -1088,8 +1088,8 @@
                     </div>
                     
                     <div class="case-item">
-                        <h3>Does the calculator support Chinese characters?</h3>
-                        <p>Yes, our <strong>string length calculator</strong> fully supports Chinese characters and all CJK languages. The tool accurately counts both character length and UTF-8 byte size, essential for database storage planning and content management systems.</p>
+                        <h3>Does the calculator support CJK characters?</h3>
+                        <p>Yes, our <strong>string length calculator</strong> fully supports Chinese, Japanese, Korean characters and all CJK languages. The tool accurately counts both character length and UTF-8 byte size, essential for database storage planning and content management systems.</p>
                     </div>
                     
                     <div class="case-item">
@@ -1386,7 +1386,7 @@
                         lines: 0,
                         bytes: 0,
                         uniqueChars: 0,
-                        chineseChars: 0,
+                        cjkChars: 0,
                         englishChars: 0,
                         numberChars: 0,
                         punctuation: 0,
@@ -1410,7 +1410,7 @@
                     this.stats.bytes = new TextEncoder().encode(text).length;
                     
                     // Character type statistics
-                    this.stats.chineseChars = (text.match(/[\u4e00-\u9fff]/g) || []).length;
+                    this.stats.cjkChars = (text.match(/[\u4e00-\u9fff]/g) || []).length;
                     this.stats.englishChars = (text.match(/[a-zA-Z]/g) || []).length;
                     this.stats.numberChars = (text.match(/[0-9]/g) || []).length;
                     this.stats.punctuation = (text.match(/[^\w\s\u4e00-\u9fff]/g) || []).length;
@@ -1447,8 +1447,9 @@
                 loadSample(type) {
                     const samples = {
                         english: 'This is a sample English text for testing the string length calculator functionality. It includes punctuation marks, numbers 123, and mixed content for comprehensive analysis.',
-                        chinese: '这是一段中文示例文本，用于测试字符串长度计算器的功能。包含标点符号、数字123和英文English等混合内容。',
-                        mixed: 'Hello 你好! This is a mixed text with numbers (12345), symbols @#$%, and various types of content. 测试目的是验证计算器的准确性和多语言支持能力。'
+                        japanese: 'これは文字列長計算機の機能をテストするためのサンプル日本語テキストです。句読点、数字123、英語Englishなどの混合コンテンツを含みます。',
+                        korean: '이것은 문자열 길이 계산기 기능을 테스트하기 위한 샘플 한국어 텍스트입니다. 문장 부호, 숫자 123, 영어 English 등의 혼합 콘텐츠를 포함합니다.',
+                        mixed: 'Hello こんにちは! This is a mixed text with numbers (12345), symbols @#$%, and various types of content. 안녕하세요! 多言語サポート機能の検証を目的としたテストです。'
                     };
                     
                     this.inputText = samples[type] || samples.mixed;
@@ -1495,8 +1496,9 @@
                         
                         const buttons = [
                             { text: 'ENGLISH SAMPLE', type: 'english', color: '#00cc33' },
-                            { text: 'CHINESE SAMPLE', type: 'chinese', color: '#ffaa00' },
-                            { text: 'MIXED DATA', type: 'mixed', color: '#ff6600' },
+                            { text: 'JAPANESE SAMPLE', type: 'japanese', color: '#ffaa00' },
+                            { text: 'KOREAN SAMPLE', type: 'korean', color: '#ff6600' },
+                            { text: 'MIXED DATA', type: 'mixed', color: '#ff8800' },
                             { text: 'CLEAR BUFFER', type: 'clear', color: '#ff0040' }
                         ];
                         
@@ -1504,8 +1506,8 @@
                             const button = document.createElement('button');
                             button.textContent = btn.text;
                             
-                            // 根据背景色确定文字颜色，确保最佳对比度
-                            const textColor = btn.color === '#ffff00' ? '#000000' : '#ffffff';
+                            // Determine text color based on background color for optimal contrast
+                            const textColor = (btn.color === '#ffff00' || btn.color === '#ffaa00') ? '#000000' : '#ffffff';
                             
                             button.style.cssText = `
                                 background: ${btn.color}; 
@@ -1531,7 +1533,7 @@
                             button.addEventListener('click', () => {
                                 if (btn.type === 'clear') {
                                     this.inputText = '';
-                                    this.updateStats(); // 清除统计数字
+                                    this.updateStats(); // Clear statistics
                                 } else {
                                     this.loadSample(btn.type);
                                 }
