@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building in the AI Era: The HeyGen Way HeyGen 之道</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.3s ease-out;
+        }
+        .insight-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .insight-content.expanded {
+            max-height: 500px;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-4xl font-bold mb-3">Building in the AI Era: The HeyGen Way</h1>
+            <p class="text-xl text-indigo-100 mb-2">在 AI 时代构建产品：HeyGen 之道</p>
+            <p class="text-sm text-indigo-200">How We Ride the Wave, Ship Fast, and Win in an Unstable World</p>
+            <p class="text-sm text-indigo-200">我们如何冲浪、快速交付，并在不稳定的世界中获胜</p>
+        </div>
+    </div>
+
+    <!-- Key Principles Cards -->
+    <div class="max-w-6xl mx-auto px-6 -mt-8 mb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-white rounded-lg shadow-lg p-5 border-t-4 border-transparent hover:shadow-xl transition-shadow">
+                <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-3">
+                    <div class="text-white font-bold text-lg">1</div>
+                </div>
+                <h3 class="font-bold text-lg mb-1">Wave Riding</h3>
+                <p class="text-sm text-gray-600 mb-2">冲浪模式</p>
+                <p class="text-xs text-gray-500 mb-1">Design products that automatically improve as AI models advance</p>
+                <p class="text-xs text-gray-500">设计随 AI 模型进步自动改进的产品</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-5 border-t-4 border-transparent hover:shadow-xl transition-shadow">
+                <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-3">
+                    <div class="text-white font-bold text-lg">2</div>
+                </div>
+                <h3 class="font-bold text-lg mb-1">2-Month Cycles</h3>
+                <p class="text-sm text-gray-600 mb-2">2 个月周期</p>
+                <p class="text-xs text-gray-500 mb-1">Align planning with AI model upgrade cycles</p>
+                <p class="text-xs text-gray-500">规划与 AI 模型升级周期对齐</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-5 border-t-4 border-transparent hover:shadow-xl transition-shadow">
+                <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-3">
+                    <div class="text-white font-bold text-lg">3</div>
+                </div>
+                <h3 class="font-bold text-lg mb-1">Prototype First</h3>
+                <p class="text-sm text-gray-600 mb-2">原型优先</p>
+                <p class="text-xs text-gray-500 mb-1">Build → Validate → Polish (not the reverse)</p>
+                <p class="text-xs text-gray-500">构建 → 验证 → 打磨（而非相反）</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-5 border-t-4 border-transparent hover:shadow-xl transition-shadow">
+                <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-3">
+                    <div class="text-white font-bold text-lg">4</div>
+                </div>
+                <h3 class="font-bold text-lg mb-1">Quality Paradox</h3>
+                <p class="text-sm text-gray-600 mb-2">质量悖论</p>
+                <p class="text-xs text-gray-500 mb-1">Moving fast enables better long-term quality through 5x learning</p>
+                <p class="text-xs text-gray-500">快速行动通过 5 倍学习实现更好的长期质量</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto px-6 pb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <!-- Sidebar Navigation -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-md p-4 sticky top-6">
+                    <h3 class="font-bold text-lg mb-4 text-gray-800">目录 / Contents</h3>
+                    <nav class="space-y-2" id="nav-menu">
+                        <a href="#intro" class="nav-link active w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                            <div class="text-sm">
+                                <div>Introduction</div>
+                                <div class="text-xs opacity-75">引言</div>
+                            </div>
+                        </a>
+
+                        <a href="#philosophy" class="nav-link w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            <div class="text-sm">
+                                <div>Core Philosophy</div>
+                                <div class="text-xs opacity-75">核心哲学</div>
+                            </div>
+                        </a>
+
+                        <a href="#rhythm" class="nav-link w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <div class="text-sm">
+                                <div>Our Rhythm</div>
+                                <div class="text-xs opacity-75">工作节奏</div>
+                            </div>
+                        </a>
+
+                        <a href="#speed" class="nav-link w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                            <div class="text-sm">
+                                <div>Speed Is Everything</div>
+                                <div class="text-xs opacity-75">速度至上</div>
+                            </div>
+                        </a>
+
+                        <a href="#team" class="nav-link w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                            <div class="text-sm">
+                                <div>Team Structure</div>
+                                <div class="text-xs opacity-75">团队结构</div>
+                            </div>
+                        </a>
+
+                        <a href="#growth" class="nav-link w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                            <div class="text-sm">
+                                <div>Core vs Growth Teams</div>
+                                <div class="text-xs opacity-75">核心 vs 增长团队</div>
+                            </div>
+                        </a>
+
+                        <a href="#antipatterns" class="nav-link w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                            <div class="text-sm">
+                                <div>Anti-Patterns</div>
+                                <div class="text-xs opacity-75">反模式</div>
+                            </div>
+                        </a>
+
+                        <a href="#winning" class="nav-link w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                            <div class="text-sm">
+                                <div>Why We'll Win</div>
+                                <div class="text-xs opacity-75">为什么我们会赢</div>
+                            </div>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="lg:col-span-3 space-y-6">
+                <!-- Section: Introduction -->
+                <div id="intro" class="section bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-4">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                            <div>
+                                <h2 class="text-2xl font-bold">Introduction</h2>
+                                <p class="text-indigo-100 text-sm">引言</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-1 h-4 bg-indigo-500 rounded"></div>
+                                <h3 class="font-semibold text-gray-700">Original Text / 原文</h3>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-indigo-300">
+                                <p class="text-gray-800 leading-relaxed italic">Our Mission: Make visual storytelling accessible to all. We focus on Communication Videos—business updates, tutorials, interviews, podcasts, explainers.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-1 h-4 bg-purple-500 rounded"></div>
+                                <h3 class="font-semibold text-gray-700">中文翻译</h3>
+                            </div>
+                            <div class="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-300">
+                                <p class="text-gray-800 leading-relaxed">我们的使命：让视觉叙事人人可及。我们专注于沟通类视频——商业更新、教程、访谈、播客、解说视频。</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button onclick="toggleInsight('intro')" class="w-full flex items-center justify-between gap-2 mb-2 group">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-1 h-4 bg-amber-500 rounded"></div>
+                                    <h3 class="font-semibold text-gray-700 group-hover:text-amber-600 transition-colors">
+                                        💡 Claude 的见解与批注
+                                    </h3>
+                                </div>
+                                <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            
+                            <div id="insight-intro" class="insight-content">
+                                <div class="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-400">
+                                    <p class="text-gray-700 leading-relaxed">HeyGen 清晰地定义了边界：专注于沟通类视频，而非电影级制作。这种战略聚焦避免了资源分散，是快速迭代的前提。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Philosophy -->
+                <div id="philosophy" class="section bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-4">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            <div>
+                                <h2 class="text-2xl font-bold">Core Philosophy</h2>
+                                <p class="text-indigo-100 text-sm">核心哲学</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-1 h-4 bg-indigo-500 rounded"></div>
+                                <h3 class="font-semibold text-gray-700">Original Text / 原文</h3>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-indigo-300">
+                                <p class="text-gray-800 leading-relaxed italic">Move fast and be the absolute best. Ride the AI wave, embrace research uncertainty, bet six months ahead, and build flexible products that upgrade themselves as models improve.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-1 h-4 bg-purple-500 rounded"></div>
+                                <h3 class="font-semibold text-gray-700">中文翻译</h3>
+                            </div>
+                            <div class="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-300">
+                                <p class="text-gray-800 leading-relaxed">快速行动，做到绝对最好。顺应 AI 浪潮，拥抱研究不确定性，提前六个月下注，构建随模型改进而自动升级的灵活产品。</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button onclick="toggleInsight('philosophy')" class="w-full flex items-center justify-between gap-2 mb-2 group">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-1 h-4 bg-amber-500 rounded"></div>
+                                    <h3 class="font-semibold text-gray-700 group-hover:text-amber-600 transition-colors">
+                                        💡 Claude 的见解与批注
+                                    </h3>
+                                </div>
+                                <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            
+                            <div id="insight-philosophy" class="insight-content">
+                                <div class="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-400">
+                                    <p class="text-gray-700 leading-relaxed">关键洞察：传统软件基于稳定技术栈，但 AI 时代每 2-3 个月就有重大突破。HeyGen 的策略是'冲浪'而非'筑堤' - 设计能随 AI 进步自动改善的产品架构。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Rhythm -->
+                <div id="rhythm" class="section bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-4">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <div>
+                                <h2 class="text-2xl font-bold">Our Rhythm</h2>
+                                <p class="text-indigo-100 text-sm">工作节奏</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-1 h-4 bg-indigo-500 rounded"></div>
+                                <h3 class="font-semibold text-gray-700">Original Text / 原文</h3>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-indigo-300">
+                                <p class="text-gray-800 leading-relaxed italic">2-month roadmap planning (aligned with model upgrade cycles), 6-12 month strategic bets, bi-weekly commitment lists, daily shipping.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-1 h-4 bg-purple-500 rounded"></div>
+                                <h3 class="font-semibold text-gray-700">中文翻译</h3>
+                            </div>
+                            <div class="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-300">
+                                <p class="text-gray-800 leading-relaxed">2 个月路线图规划（与模型升级周期同步），6-12 个月战略押注，每两周承诺清单，每天发布。</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button onclick="toggleInsight('rhythm')" class="w-full flex items-center justify-between gap-2 mb-2 group">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-1 h-4 bg-amber-500 rounded"></div>
+                                    <h3 class="font-semibold text-gray-700 group-hover:text-amber-600 transition-colors">
+                                        💡 Claude 的见解与批注
+                                    </h3>
+                                </div>
+                                <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            
+                            <div id="insight-rhythm" class="insight-content">
+                                <div class="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-400">
+                                    <p class="text-gray-700 leading-relaxed">传统软件按季度或半年规划，HeyGen 缩短到 2 个月。这不是随意的选择，而是精确对齐 AI 模型的更新周期。这种节奏让他们能在竞争对手完成一次迭代时，完成 3 次学习循环。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Speed -->
+                <div id="speed" class="section bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-4">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                            <div>
+                                <h2 class="text-2xl font-bold">Speed Is Everything</h2>
+                                <p class="text-indigo-100 text-sm">速度至上</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-1 h-4 bg-indigo-500 rounded"></div>
+                                <h3 class="font-semibold text-gray-700">Original Text / 原文</h3>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-indigo-300">
+                                <p class="text-gray-800 leading-relaxed italic">Ship in days, not weeks. When in doubt, ship an experiment. Moving slow is the only unforgivable sin. Speed isn't just execution—it's a mindset.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-1 h-4 bg-purple-500 rounded"></div>
+                                <h3 class="font-semibold text-gray-700">中文翻译</h3>
+                            </div>
+                            <div class="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-300">
+                                <p class="text-gray-800 leading-relaxed">以天为单位发布，而非周。有疑问时，发布实验。行动缓慢是唯一不可饶恕的罪过。速度不仅是执行力，更是一种心态。</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button onclick="toggleInsight('speed')" class="w-full flex items-center justify-between gap-2 mb-2 group">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-1 h-4 bg-amber-500 rounded"></div>
+                                    <h3 class="font-semibold text-gray-700 group-hover:text-amber-600 transition-colors">
+                                        💡 Claude 的见解与批注
+                                    </h3>
+                                </div>
+                                <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            
+                            <div id="insight-speed" class="insight-content">
+                                <div class="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-400">
+                                    <p class="text-gray-700 leading-relaxed">深刻之处：速度不是牺牲质量，而是学习速度。他们一个月发布 5 个实验 vs 竞争对手 1 个功能 = 5 倍学习速度。学习复利最终带来更好的产品质量。但注意边界：服务稳定性和用户体验质量绝不妥协。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Team -->
+                <div id="team" class="section bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-4">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                            <div>
+                                <h2 class="text-2xl font-bold">Team Structure</h2>
+                                <p class="text-indigo-100 text-sm">团队结构</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-1 h-4 bg-indigo-500 rounded"></div>
+                                <h3 class="font-semibold text-gray-700">Original Text / 原文</h3>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-indigo-300">
+                                <p class="text-gray-800 leading-relaxed italic">All teams: PM + Engineering + Design + Data Science. The 2-Person Rule: One PM/Designer + One Engineer builds prototypes. Prove it works, then polish.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-1 h-4 bg-purple-500 rounded"></div>
+                                <h3 class="font-semibold text-gray-700">中文翻译</h3>
+                            </div>
+                            <div class="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-300">
+                                <p class="text-gray-800 leading-relaxed">所有团队：PM + 工程 + 设计 + 数据科学。2 人规则：一个 PM/设计师 + 一个工程师构建原型。先验证可行，再打磨。</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button onclick="toggleInsight('team')" class="w-full flex items-center justify-between gap-2 mb-2 group">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-1 h-4 bg-amber-500 rounded"></div>
+                                    <h3 class="font-semibold text-gray-700 group-hover:text-amber-600 transition-colors">
+                                        💡 Claude 的见解与批注
+                                    </h3>
+                                </div>
+                                <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            
+                            <div id="insight-team" class="insight-content">
+                                <div class="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-400">
+                                    <p class="text-gray-700 leading-relaxed">颠覆传统：不是'PM 定义 → 设计师设计 → 工程师实现'的瀑布流程，而是 2 人小组快速构建原型验证。避免了过早投入设计资源在未经验证的概念上。设计师的价值在验证后的简化和体验统一。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Growth -->
+                <div id="growth" class="section bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-4">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                            <div>
+                                <h2 class="text-2xl font-bold">Core vs Growth Teams</h2>
+                                <p class="text-indigo-100 text-sm">核心 vs 增长团队</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-1 h-4 bg-indigo-500 rounded"></div>
+                                <h3 class="font-semibold text-gray-700">Original Text / 原文</h3>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-indigo-300">
+                                <p class="text-gray-800 leading-relaxed italic">Core Product: Build foundational features, longer cycles, zero-bugs aspiration. Growth Teams: Experiment engine, maximize learning velocity, 20% input for 80% outcome.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-1 h-4 bg-purple-500 rounded"></div>
+                                <h3 class="font-semibold text-gray-700">中文翻译</h3>
+                            </div>
+                            <div class="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-300">
+                                <p class="text-gray-800 leading-relaxed">核心产品：构建基础功能，较长周期，追求零 bug。增长团队：实验引擎，最大化学习速度，20% 投入获得 80% 产出。</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button onclick="toggleInsight('growth')" class="w-full flex items-center justify-between gap-2 mb-2 group">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-1 h-4 bg-amber-500 rounded"></div>
+                                    <h3 class="font-semibold text-gray-700 group-hover:text-amber-600 transition-colors">
+                                        💡 Claude 的见解与批注
+                                    </h3>
+                                </div>
+                                <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            
+                            <div id="insight-growth" class="insight-content">
+                                <div class="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-400">
+                                    <p class="text-gray-700 leading-relaxed">清晰的团队定位差异：核心产品追求体验完整性和稳定性（像 Figma、Canva 那样少 bug），增长团队追求实验速度和学习效率。不同的游戏规则，不同的成功指标。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Anti-Patterns -->
+                <div id="antipatterns" class="section bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-4">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                            <div>
+                                <h2 class="text-2xl font-bold">Anti-Patterns</h2>
+                                <p class="text-indigo-100 text-sm">反模式</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-1 h-4 bg-indigo-500 rounded"></div>
+                                <h3 class="font-semibold text-gray-700">Original Text / 原文</h3>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-indigo-300">
+                                <p class="text-gray-800 leading-relaxed italic">7 Deadly Sins: Perfect Architecture, Research Paralysis, Stable Foundation Fantasy, Consensus Trap, Quality Excuse, Big Bang Release, Sunk Cost Fallacy.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-1 h-4 bg-purple-500 rounded"></div>
+                                <h3 class="font-semibold text-gray-700">中文翻译</h3>
+                            </div>
+                            <div class="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-300">
+                                <p class="text-gray-800 leading-relaxed">七宗罪：完美架构、研究瘫痪、稳定基础幻想、共识陷阱、质量借口、大爆炸发布、沉没成本谬误。</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button onclick="toggleInsight('antipatterns')" class="w-full flex items-center justify-between gap-2 mb-2 group">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-1 h-4 bg-amber-500 rounded"></div>
+                                    <h3 class="font-semibold text-gray-700 group-hover:text-amber-600 transition-colors">
+                                        💡 Claude 的见解与批注
+                                    </h3>
+                                </div>
+                                <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            
+                            <div id="insight-antipatterns" class="insight-content">
+                                <div class="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-400">
+                                    <p class="text-gray-700 leading-relaxed">这些'反模式'在传统软件开发中往往被视为'最佳实践'。HeyGen 明确指出：在 AI 快速变化的环境下，这些做法会致命。特别是'完美架构' - 当你设计好架构时，底层 AI 能力已经变了。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Winning -->
+                <div id="winning" class="section bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-4">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                            <div>
+                                <h2 class="text-2xl font-bold">Why We'll Win</h2>
+                                <p class="text-indigo-100 text-sm">为什么我们会赢</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-1 h-4 bg-indigo-500 rounded"></div>
+                                <h3 class="font-semibold text-gray-700">Original Text / 原文</h3>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-indigo-300">
+                                <p class="text-gray-800 leading-relaxed italic">We ship 5x faster than competitors. Learning compounds into better products. Instability is our advantage. We focus on quality for users, speed for learning, innovation for differentiation.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-1 h-4 bg-purple-500 rounded"></div>
+                                <h3 class="font-semibold text-gray-700">中文翻译</h3>
+                            </div>
+                            <div class="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-300">
+                                <p class="text-gray-800 leading-relaxed">我们的发布速度是竞争对手的 5 倍。学习复利带来更好的产品。不稳定性是我们的优势。我们专注于用户质量、学习速度、创新差异化。</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button onclick="toggleInsight('winning')" class="w-full flex items-center justify-between gap-2 mb-2 group">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-1 h-4 bg-amber-500 rounded"></div>
+                                    <h3 class="font-semibold text-gray-700 group-hover:text-amber-600 transition-colors">
+                                        💡 Claude 的见解与批注
+                                    </h3>
+                                </div>
+                                <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            
+                            <div id="insight-winning" class="insight-content">
+                                <div class="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-400">
+                                    <p class="text-gray-700 leading-relaxed">核心竞争力的来源：不是技术壁垒（AI 能力大家都能用），而是学习速度。5 倍的实验速度 = 5 倍的学习机会 = 复利增长的产品洞察。这是指数级的优势，不是线性的。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final Summary -->
+                <div class="bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-lg shadow-lg p-8">
+                    <h2 class="text-2xl font-bold mb-4">🎯 核心启示 / Key Takeaways</h2>
+                    <div class="space-y-3 text-indigo-50">
+                        <p>✦ <strong>范式转变：</strong>从"建在稳定基础上"到"冲浪不确定性" - AI 时代的根本性思维转变</p>
+                        <p>✦ <strong>速度复利：</strong>5 倍实验速度 = 5 倍学习机会 = 指数级产品洞察增长</p>
+                        <p>✦ <strong>质量新定义：</strong>不是"打磨再发布"，而是"快速迭代至最佳"</p>
+                        <p>✦ <strong>架构哲学：</strong>构建能随 AI 模型自动改进的产品，而非追求技术完美</p>
+                        <p>✦ <strong>团队协作：</strong>2 人原型组 + 验证后设计打磨，避免过早优化</p>
+                        <p class="text-sm mt-4 border-t border-indigo-400 pt-4">
+                            这不仅是一套开发方法论，更是对 AI 时代产品开发本质的深刻理解：当技术基础每 2-3 个月剧变时，
+                            唯一的竞争优势是学习速度和适应能力。传统的"最佳实践"在此环境下反而成为致命弱点。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle insight sections
+        function toggleInsight(id) {
+            const content = document.getElementById('insight-' + id);
+            const button = event.currentTarget;
+            const chevron = button.querySelector('.chevron');
+            
+            content.classList.toggle('expanded');
+            chevron.style.transform = content.classList.contains('expanded') ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+
+        // Handle navigation clicks and active states
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.section');
+            
+            // Update active nav link based on scroll position
+            function updateActiveNav() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 100)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active', 'bg-indigo-50', 'text-indigo-700', 'font-semibold');
+                    link.classList.add('text-gray-600');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active', 'bg-indigo-50', 'text-indigo-700', 'font-semibold');
+                        link.classList.remove('text-gray-600');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateActiveNav);
+            
+            // Smooth scroll on nav link click
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        const offset = 80;
+                        const targetPosition = targetSection.offsetTop - offset;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <div style="display: none;">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BE6037ZLBE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BE6037ZLBE');
+    </script>
+    </div>
+</body>
+</html>
