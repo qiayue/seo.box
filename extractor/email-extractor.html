@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>邮箱提取器</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+SC:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #12121a;
+    --border: #1e1e2e;
+    --accent: #00e5a0;
+    --accent-dim: #00e5a020;
+    --text: #e0e0e8;
+    --text-dim: #6a6a80;
+    --danger: #ff4d6a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at 30% 20%, #00e5a008 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, #4d6aff06 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 720px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .header {
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  .header h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--accent), #4df0c0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .header p {
+    color: var(--text-dim);
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+  }
+
+  .panel:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-dim);
+  }
+
+  .panel-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .panel-label .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: inline-block;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 180px;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    resize: vertical;
+    outline: none;
+  }
+
+  textarea::placeholder {
+    color: var(--text-dim);
+    opacity: 0.5;
+  }
+
+  .actions {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 12px 28px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-extract {
+    background: var(--accent);
+    color: #0a0a0f;
+    flex: 1;
+  }
+
+  .btn-extract:hover {
+    background: #00ffb3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px #00e5a030;
+  }
+
+  .btn-extract:active { transform: translateY(0); }
+
+  .btn-clear {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+    padding: 12px 20px;
+  }
+
+  .btn-clear:hover {
+    border-color: var(--danger);
+    color: var(--danger);
+  }
+
+  .btn-copy {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 12px 20px;
+  }
+
+  .btn-copy:hover {
+    background: var(--accent-dim);
+  }
+
+  .stats {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+    text-align: right;
+    padding: 8px 0;
+  }
+
+  .stats span {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  #output {
+    min-height: 120px;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+
+  .empty-state {
+    color: var(--text-dim);
+    font-size: 13px;
+    opacity: 0.4;
+    font-style: italic;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .panel { animation: fadeIn 0.4s ease both; }
+  .panel:nth-child(2) { animation-delay: 0.1s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>📧 Email Extractor</h1>
+    <p>粘贴任意文本，自动提取所有邮箱地址</p>
+  </div>
+
+  <div class="panel">
+    <div class="panel-label"><span class="dot"></span>输入文本</div>
+    <textarea id="input" placeholder="在这里粘贴包含邮箱的文本内容...&#10;&#10;例如：请联系 hello@example.com 或 support@company.cn 获取更多信息"></textarea>
+  </div>
+
+  <div class="actions">
+    <button class="btn-extract" onclick="extract()">提取邮箱</button>
+    <button class="btn-clear" onclick="clearAll()">清空</button>
+    <button class="btn-copy" onclick="copyResult()">复制结果</button>
+  </div>
+
+  <div class="panel">
+    <div class="panel-label"><span class="dot"></span>提取结果</div>
+    <div class="stats" id="stats"></div>
+    <textarea id="output" readonly placeholder="提取的邮箱将显示在这里..."></textarea>
+  </div>
+</div>
+
+<script>
+  function extract() {
+    const text = document.getElementById('input').value;
+    const regex = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/g;
+    const matches = text.match(regex);
+
+    const output = document.getElementById('output');
+    const stats = document.getElementById('stats');
+
+    if (matches && matches.length > 0) {
+      const unique = [...new Set(matches)];
+      output.value = unique.join('\n');
+      stats.innerHTML = `找到 <span>${unique.length}</span> 个邮箱` +
+        (unique.length < matches.length ? `（去重前 ${matches.length} 个）` : '');
+    } else {
+      output.value = '';
+      stats.innerHTML = '未找到邮箱地址';
+    }
+  }
+
+  function clearAll() {
+    document.getElementById('input').value = '';
+    document.getElementById('output').value = '';
+    document.getElementById('stats').innerHTML = '';
+  }
+
+  function copyResult() {
+    const output = document.getElementById('output');
+    if (!output.value) return;
+    navigator.clipboard.writeText(output.value).then(() => {
+      const btn = document.querySelector('.btn-copy');
+      const orig = btn.textContent;
+      btn.textContent = '已复制 ✓';
+      setTimeout(() => btn.textContent = orig, 1500);
+    });
+  }
+
+  // 实时提取：输入时自动提取
+  document.getElementById('input').addEventListener('input', extract);
+</script>
+
+</body>
+</html>
